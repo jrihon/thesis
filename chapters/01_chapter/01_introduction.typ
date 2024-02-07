@@ -2,12 +2,9 @@
 == Introduction
 === Welcome to the thesis
 
-//#locate(location => {
-//  let a = counter(page).at(location).first()
-//  let b = location.position()
-//  b.at("y")
-//}
-//)
+#lorem(50)
+#text(colorPalette.anthracite)[I did a thing here !]
+==== An addition to the text not worth header 3
 #lorem(50)
 #text(colorPalette.anthracite)[I did a thing here !]
 //\ And another thing

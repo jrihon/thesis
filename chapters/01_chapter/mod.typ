@@ -8,7 +8,3 @@
 #include {"./01_resultdiscussion.typ"}
 #include {"./01_conclusion.typ"}
 
-
-#pagebreak()
-// testing headers
-= The _pucke.rs_ toolkit to calculation puckers values of biomolecular monomers.
