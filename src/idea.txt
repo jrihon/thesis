@@ -1,0 +1,47 @@
+In order to get the references in order, I can do the following : 
+
+
+
+1. Write a parser, in python, to scan the entire chapter file for the references.
+    These need to be ordered by order of appearance, so easy enough. 
+
+    Find the function that is called for the citation to happen, this will be the unique identifier.
+        -> Look for `#`
+        -> Is this `citefunctionCustom` ?
+        -> parse contents: go from `(` to `)`
+        -> append to list
+        -> make sure that the list is unique
+
+    Write this data out as a typst file, by enumerating over the appearances and writing it out like a typst dict.
+    Single variable in that file; the dict type https://typst.app/docs/reference/foundations/dictionary/
+
+    We only need to write out the name of the key (header key) to a typst dict. => just do it in order
+
+
+2. include / import the generated file to include the dict as a variable into the chapter.typ
+    Whenever we want to cite something, we prompt the header of the bib file and have that parsed.
+    This is done by called the 'at()' method on dict;  dict.at("Sega2011Sixring") . This returns the number in order of appearance in the reference list. 
+
+    This is then put into the text itself as plain text, which has to be evaluated to a reference to a citation in the bibliography.
+
+
+3. <OPTIONAL> Use the 'hayagriva' file format to convert bib files to yml
+    https://github.com/typst/hayagriva
+    `cargo install hayagriva --features cli`
+
+    Convert to hayagriva
+    `hayagriva literature.bib > converted.yml`
+
+
+4. Read in the yml file and be able to parse it all and format it according to the citation style
+
+    When formatting it correctly, we need to add references  to both
+    the citation in the customised bibliography and to the part in the text, so typst can hyperlink it properly
+    item to reference : <Sega2011Sixring-chapter01>
+    reference to the item : 
+        - @Sega2011Sixring-chapter01
+        - #cite(<Sega2011Sixring-chapter01>)
+
+    If this cannot be procedurally generated, it might have to be done by hand. We'll see ...
+
+    see : https://typst.app/docs/reference/model/ref/
