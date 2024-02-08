@@ -115,7 +115,7 @@
 //! COLOUR PALETTE
 //! 
 //! 
-#let colorPalette = (
+#let colourPalette = (
   // base colors
   anthracite: rgb("#767F94"),
   // Pallete 1
@@ -127,9 +127,33 @@
 
   // Pallete 2
   airBlue: rgb("#7C9EB2"),
-  ultraViolet: rgb("#52528C"),
+  ultraViolet: rgb("#4B4E6D"),
   russianViolet: rgb("#372554"),
-  darkPurple: rgb("#231123"),
+//  darkPurple: rgb("#231123"),
   black: rgb("#000000"),
 
+  // Palette 3
+  onyx: rgb("#36393B"),
+  jet: rgb("#2F2F2F"),
+  raisinblack: rgb("#2E2E24"),
+  rosybrown: rgb("#C49799"),
+  teagreen: rgb("#C7DFA9"),
+
+  // Palette 4
+//  darksteel: rgb("#355C7D"),
+  charcoal: rgb("#364958"),
+//  darkpurple: rgb("#6C5B7B"),
+  darkpurple: rgb("#7B597A"),
+//  darkpurple: rgb("#7A5B6F"),
+//  darkrose: rgb("#C06C84"),
+  darkrose: rgb("#B3647A"),
+  coralred: rgb("#F67280"),
+  sanddune: rgb("#F8B195"),
+//  fountain: rgb("#5BAEB7"),
+  fountain: rgb("#5C91B8"),
+  moonstone: rgb("#779FA1"),
+//  myrtlegreen: rgb("#538083"),
+  myrtlegreen: rgb("#538883"),
+//  myrtlegreen: rgb("#528275"),
+//  coffee: rgb("#694A38")
 )
