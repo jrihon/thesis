@@ -1,4 +1,5 @@
 // Layout template file
+#import "colours.typ": colourPalette
 
 
 
@@ -7,7 +8,7 @@
 //! PAGE LAY-OUT
 //! 
 //! 
-#let layout(document, numeral) = {
+#let layout(document, pagenumbers, headernumbers) = {
   set text(
     font: "CormorantGaramond",
     weight: "regular",
@@ -22,15 +23,17 @@
       top: 2cm,
       bottom: 2cm,
     ),
-    numbering: numbering(numeral, 1),
+    numbering: numbering(pagenumbers, 1),
   )
   set par(
     justify: true,
   )
   set heading(
-    numbering: "1.1.1.", // only go three depths before we make inlined headers
+    numbering: headernumbers, // only go three depths before we make inlined headers
   )
+
   document
+
 }
 
 //! 
@@ -39,6 +42,11 @@
 //! 
 //! 
 #let headerstate = state("headercount", 1)
+#let entrystate = state("entrystate", 1)
+
+#let prelude_header(body, colour) = {
+    text(body.body, size: 18pt, font: "Roboto", colour)
+}
 
 #let headerL1(element, colour) = {
 
@@ -102,7 +110,7 @@
 
   // Outlines the table of contents
   outline(
-    title: text("CONTENTS", size: 16pt, font: "Roboto", colour),
+    title: text("CONTENTS\n", size: 18pt, font: "Roboto", colour),
     depth: 3,
     fill: repeat("  .  "), // optionally, fill in blank space
     indent: 2em, // `auto`  only works with numbered headers
@@ -110,50 +118,53 @@
 
 }
 
-//! 
-//! 
-//! COLOUR PALETTE
-//! 
-//! 
-#let colourPalette = (
-  // base colors
-  anthracite: rgb("#767F94"),
-  // Pallete 1
-  cambridgeBlue: rgb("#99C1B9"),
-  almondBeige: rgb("#F1E3D3"),
-  puceRed: rgb("#D88C9A"),
-  lightOrange: rgb("#F2D0A9"),
-  TropicalIndigo: rgb("#8E7DBE"),
+// https://github.com/typst/typst/issues/2196 -- recursively join content into string
+#let to-string(content) = {
+  if content.has("text") {
+    content.text
+  } else if content.has("children") {
+    content.children.map(to-string).join("")
+  } else if content.has("body") {
+    to-string(content.body)
+  } else if content == [ ] {
+    " "
+  }
+}
 
-  // Pallete 2
-  airBlue: rgb("#7C9EB2"),
-  ultraViolet: rgb("#4B4E6D"),
-  russianViolet: rgb("#372554"),
-//  darkPurple: rgb("#231123"),
-  black: rgb("#000000"),
+#let format-entries(element) = { 
 
-  // Palette 3
-  onyx: rgb("#36393B"),
-  jet: rgb("#2F2F2F"),
-  raisinblack: rgb("#2E2E24"),
-  rosybrown: rgb("#C49799"),
-  teagreen: rgb("#C7DFA9"),
+  if element.element.numbering == none {
+    text(element, font: "Roboto", colourPalette.charcoal)
+  } else if element.element.level == 1 {
+    let string = to-string(element.body).at(0)
+    if string == "1" {
+      text(element, font: "Roboto", colourPalette.darkpurple)
+    } else if string == "2" {
+      text(element, font: "Roboto", colourPalette.darkrose)
+    } else if string == "3" {
+      text(element, font: "Roboto", colourPalette.fountain)
+    } else if string == "4" {
+      text(element, font: "Roboto", colourPalette.myrtlegreen)
+    } else if string == "5" {
+      text(element, font: "Roboto", colourPalette.yellow)
+    } else if string == "6" {
+      text(element, font: "Roboto", colourPalette.roseorange)
+    }
+  } else {
+    text(element, font: "Roboto")
 
-  // Palette 4
-//  darksteel: rgb("#355C7D"),
-  charcoal: rgb("#364958"),
-//  darkpurple: rgb("#6C5B7B"),
-  darkpurple: rgb("#7B597A"),
-//  darkpurple: rgb("#7A5B6F"),
-//  darkrose: rgb("#C06C84"),
-  darkrose: rgb("#B3647A"),
-  coralred: rgb("#F67280"),
-  sanddune: rgb("#F8B195"),
-//  fountain: rgb("#5BAEB7"),
-  fountain: rgb("#5C91B8"),
-  moonstone: rgb("#779FA1"),
-//  myrtlegreen: rgb("#538083"),
-  myrtlegreen: rgb("#538883"),
-//  myrtlegreen: rgb("#528275"),
-//  coffee: rgb("#694A38")
-)
+  }
+  v(-6.5mm)
+}
+
+
+
+
+
+
+
+
+
+
+
+

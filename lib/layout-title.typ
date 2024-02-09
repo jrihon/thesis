@@ -1,4 +1,4 @@
-#import "./layout.typ": colourPalette
+#import "colours.typ": colourPalette
 // Place affiliations
 #let affiliations(content) = {
   place(
@@ -22,8 +22,7 @@
   text(title,
     size: 20pt,
     weight: "bold",
-//    colourPalette.onyx
-    colourPalette.raisinblack
+    colourPalette.jet
   )
 }
 

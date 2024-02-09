@@ -29,7 +29,7 @@ Laboratory of Medicinal Chemistry
 Rega Institute for Medical Research"
 )
 
-#layout-title.place_logo("../chapters/00_titlepage/kuleuven_logo.svg")
+#layout-title.place_logo("../chapters/99_prelude/kuleuven_logo.svg")
 
 #v(10fr)
 #layout-title.set_title("MOLECULAR MODELING TOOLS TO IMPROVE AND EXPAND COMPUTATIONAL RESEARCH ON
@@ -87,7 +87,7 @@ Laboratorium van Medicinale Chemie
 Rega Instituut voor Medisch Onderzoek"
 )
 
-#layout-title.place_logo("../chapters/00_titlepage/kuleuven_logo.svg")
+#layout-title.place_logo("../chapters/99_prelude/kuleuven_logo.svg")
 
 
 #v(10fr)

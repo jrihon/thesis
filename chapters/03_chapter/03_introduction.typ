@@ -1,4 +1,4 @@
-#import "../../lib/layout.typ" : colourPalette
+#import "../../lib/colours.typ" : colourPalette
 == Introduction
 === Welcome to the thesis
 
