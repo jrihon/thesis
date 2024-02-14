@@ -1,6 +1,20 @@
 // Layout template file
 #import "colours.typ": colourPalette
 
+
+// https://github.com/typst/typst/issues/2196 -- recursively join content into string
+#let to-string(content) = {
+  if content.has("text") {
+    content.text
+  } else if content.has("children") {
+    content.children.map(to-string).join("")
+  } else if content.has("body") {
+    to-string(content.body)
+  } else if content == [ ] {
+    " "
+  }
+}
+
 //! 
 //! 
 //! HEADERNOTE AT TOP OF PAGES
@@ -51,15 +65,37 @@
       align(left, [Chapter #chapternum.at(0) : #name_chapter.body])
 
     } else { // if page is uneven
-      let name_subsection = {
-        query( 
-          selector(heading.where(level: 2)).before(loc), loc,
-        ).last()
-      }
 
-      // Get section number
-      let secnum = counter(heading).at(loc)
-      align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+      let next_subsection = query(selector(heading.where(level: 2)).after(loc), loc)
+      let ref_text = to-string(next_subsection.first().body)
+
+      if ref_text == "References" {
+        // Get section number
+        let map_bibs = next_subsection.map(x => {
+            let refsubsections = to-string(x.body)
+            if refsubsections == "References" {
+              x.location().page()
+            }
+        })
+        let filtered_set = map_bibs.filter(x => x != none)
+        let current_page = loc.page()
+        // if the current page is in the set of pages that contains the references heading L2, then
+        if current_page in filtered_set {
+          let secnum = counter(heading).at(loc)
+          secnum.at(1) += 1
+          align(right, [ #secnum.at(0).#secnum.at(1) : References])
+        }
+      } else {
+        let name_subsection = {
+          query( 
+            selector(heading.where(level: 2)).before(loc), loc,
+          ).last()
+        }
+
+        // Get section number
+        let secnum = counter(heading).at(loc)
+        align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+      }
     }
 
     // Place line
@@ -183,19 +219,6 @@
     indent: 2em, // `auto`  only works with numbered headers
   )
 
-}
-
-// https://github.com/typst/typst/issues/2196 -- recursively join content into string
-#let to-string(content) = {
-  if content.has("text") {
-    content.text
-  } else if content.has("children") {
-    content.children.map(to-string).join("")
-  } else if content.has("body") {
-    to-string(content.body)
-  } else if content == [ ] {
-    " "
-  }
 }
 
 #let format-entries(element) = { 
