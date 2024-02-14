@@ -4,7 +4,7 @@
 #import "../../lib/multi-bib.typ": mbibliography
 #import "bib_01_chapter.typ": biblio
 
-=  The Ducque model builder as a tool to create synthetic nucleic acid structures
+=  The Ducque model builder tool to predict synthetic nucleic acid duplexes
 
 #boxed-text(
   title: "Structural insights into the Morpholino Nucleic Acid/RNA duplex using the new XNA builder Ducque in a molecular modeling pipeline.",

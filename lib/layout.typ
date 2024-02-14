@@ -113,7 +113,9 @@
 
 #let layout(document, pagenumbers, headernumbers, colour) = {
   set text(
-    font: "CormorantGaramond",
+//    font: "IBM Plex Serif",
+    font: "Source Serif 4",
+//    font: "Cormorant Garamond",
     weight: "regular",
     size: 11pt,
   )
@@ -131,6 +133,7 @@
   )
   set par(
     justify: true,
+    leading: 0.85em,
   )
   set heading(
     numbering: headernumbers, // only go three depths before we make inlined headers
@@ -216,7 +219,7 @@
     title: text("CONTENTS\n", size: 18pt, font: "Roboto", colour),
     depth: 3,
     fill: repeat("  .  "), // optionally, fill in blank space
-    indent: 2em, // `auto`  only works with numbered headers
+    indent: 1em, // `auto`  only works with numbered headers
   )
 
 }
