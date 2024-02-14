@@ -41,15 +41,18 @@
     // "key of the publication in yml" + "the name of the bibliography.yml file"
     link(
       label(name_pub + basename), // string coerced into label
-      text(weight: "bold",
-        fill: rgb("#FF4252"),     // red, just for highlights, can be deleted later
-        super(str(val)))          // the citation-indexing superscripted
+      text(
+//        weight: "bold",
+//        fill: rgb("#FF4252"),     // red, just for highlights, can be deleted later
+//        super(str(val)))          // the citation-indexing superscripted
+        "[" + str(val) + "]")          // the citation-indexing superscripted
     ) 
 
   // if the type is an array
   } else if type(arr_of_pubs) == "array" {
 
     let counter = 0
+    text("[")
     for name_pub in arr_of_pubs {
 
       let val = bibchapter.at(name_pub, default: 404)
@@ -65,21 +68,26 @@
         // "key of the publication in yml" + "the name of the bibliography.yml file"
         link(
           label(name_pub + basename), // string coerced into label
-          text(weight: "bold",
-            fill: rgb("#FF4252"),     // red, just for highlights, can be deleted later
-            super(str(val)))          // the citation-indexing superscripted
+          text(
+//        weight: "bold",
+//        fill: rgb("#FF4252"),     // red, just for highlights, can be deleted later
+//        super(str(val)))          // the citation-indexing superscripted
+        str(val))          // the citation-indexing superscripted
         )
       } else {  // if there are multiple citations
         link(
           label(name_pub + basename), 
-          text(weight: "bold",
-            fill: rgb("#FF4252"),
-            super(",") + super(str(val))  // add comma in between citations
+          text(
+//            weight: "bold",
+//            fill: rgb("#FF4252"),
+//            super(",") + super(str(val))  // add comma in between citations
+            ", " + str(val)  // add comma in between citations
           ) 
         )
       }
       counter += 1
     }
+    text("]")
   } else {
     panic("Invalid parameters passed to mcite() : " + str(type(arr_of_pubs)))
   }
@@ -179,11 +187,12 @@
 
 #let set_doi(publication, fontsize) = {
   let doi = publication.at("doi", default: 404)
+  let url = publication.at("url", default: 404)
 
   if doi == 404 {
     [#text("NO DOI", size: fontsize)]
   } else {
-    [#text(str(doi), size: fontsize)  ]
+    [#link(url)[doi: #doi]]
   }
 }
 
@@ -202,8 +211,9 @@
     counter += 1
 
     // unique labels indicate the name of the `author key` and the name of the `yaml bibliography`
-    [#text(str(counter) + ". ", size: fontsize) #label(name_pub + basename)] // labels have to remain in lobal scope to their appended text
-    h(1em) // extra space before citation
+//    [[]#text(str(counter) + ". ", size: fontsize) #label(name_pub + basename)] // labels have to remain in local scope to their appended text
+    [#text("[" + str(counter) + "] ", size: fontsize) #label(name_pub + basename)] // labels have to remain in local scope to their appended text
+    h(0.5em) // extra space before citation
     
     // Authors, Date, Title, Journal, volume number(issue number), pages, DOI
 
@@ -234,7 +244,8 @@
   pagebreak() // page break to start bibliography
 
   let fontsize = 10pt
-  [#text("Bibliography", weight: "bold", size: 16pt) \ ]
+  [== References]
+//  [#text("Bibliography", weight: "bold", size: 16pt) \ ]
 
   if style == "apa" {
     apa_style(biblio)

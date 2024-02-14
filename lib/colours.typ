@@ -25,7 +25,14 @@
   charcoal: rgb("#364958"),
   darkpurple: rgb("#264653"),
   darkrose: rgb("#287271"),
-  fountain: rgb("#2a9d8f"),
+//  fountain: rgb("#2a9d8f"),
+//  fountain: rgb("#a36d90"), // Mountbatten Pink - not
+//  fountain: rgb("#cc7e85"), // Old Rose - not
+//  fountain: rgb("#444b6e"), // YlnMn Blue 
+//  fountain: rgb("#7d4e57"), // Rose Taupe
+//  fountain: rgb("#316B78"), // turquois dark
+  fountain: rgb("#387B8A"), // turquois dark
+//  fountain: rgb("#657494"), // glaucous
 //  myrtlegreen: rgb("#ff7b74"),
   myrtlegreen: rgb("#F0726C"),
 //  yellow: rgb("#e47874"),

@@ -1,6 +1,72 @@
 // Layout template file
 #import "colours.typ": colourPalette
 
+//! 
+//! 
+//! HEADERNOTE AT TOP OF PAGES
+//! 
+//! 
+#let make-headernotes(colour) = {
+
+  locate(loc => {
+
+    // query elements at the current heading
+    let headings_at_page = {
+      query(
+        selector(heading).before(loc),
+        loc,
+    )}
+    // if there are no elements, return.
+    if headings_at_page.len() == 0 { return }
+
+    let currenthead = headings_at_page.last()
+
+    // if page has roman numerals, return. These pages are part of the prelude
+    if currenthead.numbering == none { return } 
+
+    // get current page
+    let currentpage = loc.page()
+
+    // get the pages containing all the `level: 1` headings and find their pages
+    let nextheading-l1 = query(heading.where(level: 1), loc)
+    let all-l1-pages = nextheading-l1.map(x => x.location().page())
+
+    // if the current page contains a `level: 1` heading, skip this page
+    if currentpage in all-l1-pages {
+      return
+    }
+
+    // get page number
+    let pagenumber = counter(page).at(loc).at(0) 
+
+    if calc.rem-euclid(pagenumber, 2) == 0 { // if page is even
+      let name_chapter = { 
+        query( 
+          selector(heading.where(level: 1)).before(loc), loc,
+        ).last()
+      }
+
+      // Get chapter number
+      let chapternum = counter(heading).at(loc)
+      align(left, [Chapter #chapternum.at(0) : #name_chapter.body])
+
+    } else { // if page is uneven
+      let name_subsection = {
+        query( 
+          selector(heading.where(level: 2)).before(loc), loc,
+        ).last()
+      }
+
+      // Get section number
+      let secnum = counter(heading).at(loc)
+      align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+    }
+
+    // Place line
+    line(length: 100%, stroke: colour)
+
+  })
+}
 
 
 //! 
@@ -8,7 +74,8 @@
 //! PAGE LAY-OUT
 //! 
 //! 
-#let layout(document, pagenumbers, headernumbers) = {
+
+#let layout(document, pagenumbers, headernumbers, colour) = {
   set text(
     font: "CormorantGaramond",
     weight: "regular",
@@ -23,59 +90,7 @@
       top: 2cm,
       bottom: 2cm,
     ),
-    header:  
-      locate(loc => {
-
-        // query elements at the current heading
-        let headings_at_page = {
-          query(
-            selector(heading).before(loc),
-            loc,
-        )}
-        if headings_at_page.len() == 0 { // if there are no elements, do not add anything
-          return
-        } else {
-          let currenthead = headings_at_page.last()
-          // if page has roman numerals
-          if currenthead.numbering == none {
-            return
-          } else {
-            let haveLevel = {
-              query(
-                selector(heading).after(loc),
-                loc,
-              ).first().level
-            }
-            if haveLevel == 1 {
-              return
-            } else {
-            let pagenumber = counter(page).at(loc).at(0) // get page number
-            if calc.rem-euclid(pagenumber, 2) == 0 {
-              let name_chapter = query( 
-                  selector(heading.where(level: 1)).before(loc), loc,
-              ).last()
-
-              // Get chapter number
-              let chapternum = counter(heading).at(loc)
-
-              // align
-              align(left, [Chapter #chapternum.at(0) : #name_chapter.body])
-            } else {
-              let name_subsection = query( 
-                  selector(heading.where(level: 2)).before(loc), loc,
-              ).last()
-
-              // Get section number
-              let secnum = counter(heading).at(loc)
-              align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
-            }
-            // Place line
-            line(length: 100%, stroke: colourPalette.darkpurple)
-            }
-
-          }
-        }
-      }),
+    header: make-headernotes(colour),
     numbering: numbering(pagenumbers, 1),
   )
   set par(
@@ -185,10 +200,13 @@
 
 #let format-entries(element) = { 
 
-  if element.element.numbering == none {
-    text(element, font: "Roboto", colourPalette.charcoal)
-  } else if element.element.level == 1 {
-    text(element, font: "Roboto", colourPalette.darkrose)
+//  if element.element.numbering == none {
+//    text(element, font: "Roboto", colourPalette.fountain)
+//  } else if element.element.level == 1 {
+//    text(element, font: "Roboto", colourPalette.fountain)
+
+  if element.element.level == 1 {
+    text(element, font: "Roboto", colourPalette.fountain)
 //    let string = to-string(element.body).at(0)
 //    if string == "1" {
 //      text(element, font: "Roboto", colourPalette.darkpurple)
@@ -213,7 +231,15 @@
 #let boxed-text(title: "", authors: "", journal: "", doi: "www.github.com/jrihon", colour: rgb("#000000")) = {
 
   // Start content
-  let contents = "Adapted from the following manuscript : \n"
+
+  let contents = ""
+  if doi != "www.github.com/jrihon" {
+    let doilink = link("https://www.doi.org/" + doi)[#emph(doi)]
+    contents += "Adapted from the following manuscript " + doilink + " : \n"
+  } else {
+    let doilink = link(doi)[#emph("xxx/aaa/xxxxx")]
+    contents += "Adapted from the following manuscript " + doilink + " : \n"
+  }
 
   // Add authors
   let c = 0
@@ -227,13 +253,13 @@
     }
     c += 1
   }
-  contents += ". "
+  contents += " "
   contents += ["#emph(title)" ]
   contents += journal + ". "
-  contents += link(doi)[doi: xxx/xxxxxx]
+//  contents += link("https://www.doi.org/" + doi)[(#doi)]
 
   let lightColour = colour.components()
-  lightColour.at(3) = 25% // set alpha to 25%
+  lightColour.at(3) = 30% // set alpha to 30%
 
   v(1.5em)
   block(
@@ -243,6 +269,6 @@
     radius: 2pt,
     inset: 10pt,
 //    body
-    text(fill: rgb("#287271"), contents)
+    text(fill: colour, contents)
   )
 }

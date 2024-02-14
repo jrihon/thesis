@@ -1,0 +1,48 @@
+neese2020orca:
+  type: article
+  title: The ORCA quantum chemistry program package
+  author:
+  - Neese, Frank
+  - Wennmohs, Frank
+  - Becker, Ute
+  - Riplinger, Christoph
+  date: 2020
+  page-range: 224108
+  doi: 10.1063/5.0004608
+  url: https://www.doi.org/10.1063/5.0004608
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing LLC
+    issue: 22
+    volume: 152
+iupac1983nucleicacids:
+  type: article
+  title: Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
+  author:
+    - IUPAC-IUB, Joint Commission
+  date: 1983
+  page-range: 1273-1280
+  parent:
+    type: periodical
+    title: Journal of Pure and Applied Chemistry
+    volume: 55
+  doi: 0033—4545/83
+  url: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
+cremer1975general:
+  type: article
+  title: General definition of ring puckering coordinates
+  author:
+  - Cremer, DT
+  - Pople, JA
+  date: 1975
+  page-range: 1354–1358
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: ACS Publications
+    issue: 6
+    volume: 97
+  doi: 10.1021/JA00839A011
+  url: https://doi.org/10.1021/JA00839A011
+

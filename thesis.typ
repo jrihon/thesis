@@ -8,9 +8,9 @@
 //!
 //!
 // Pages to roman numerals, do not include numbering in headers and ToC
-#show: document => layout(document, "I", none) 
+#let colour00 = colourPalette.fountain
+#show: document => layout(document, "I", none, colour00) 
 
-#let colour00 = colourPalette.charcoal
 //Format Headers
 #show heading.where(level: 1): element => prelude_header(element, colour00)
 
@@ -26,11 +26,11 @@
 //! CHAPTER 00
 //!
 //!
-#show: document => layout(document, "1", "1.1.1.")  // Set page counter to arabic numbers
+#let colour01 = colourPalette.fountain
+#show: document => layout(document, "1", "1.1.1.", colour01)  // Set page counter to arabic numbers
 #counter(page).update(1)                // Reset page counters
 
 // Format headers
-#let colour01 = colourPalette.darkrose
 #show heading.where(level: 1): element => headerL1(element, colour01)
 #show heading.where(level: 2): element => headerL2(element, colour01)
 #show heading.where(level: 3): element => headerL3(element, colour01)

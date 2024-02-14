@@ -1,9 +1,8 @@
-#import "../../lib/colours.typ" : colourPalette
+#import "../../lib/multi-bib.typ": mcite
+#import "bib_01_chapter.typ": biblio
 == Introduction
 === Welcome to the thesis
 
-#lorem(50)
-#text(colourPalette.anthracite)[I did a thing here !]
-==== An addition to the text not worth header 3
-#lorem(50)
-#text(colourPalette.anthracite)[I did a thing here !]
+#lorem(450) #mcite(("neese2020orca"), biblio)
+==== An addition to the text
+#lorem(50) #mcite(("iupac1983nucleicacids"), biblio)
