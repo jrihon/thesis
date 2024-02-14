@@ -26,8 +26,10 @@
   darkpurple: rgb("#264653"),
   darkrose: rgb("#287271"),
   fountain: rgb("#2a9d8f"),
-  myrtlegreen: rgb("#ff7b74"),
-  yellow: rgb("#e47874"),
+//  myrtlegreen: rgb("#ff7b74"),
+  myrtlegreen: rgb("#F0726C"),
+//  yellow: rgb("#e47874"),
+  yellow: rgb("#D96C68"),
   roseorange: rgb("#ad7175"),
 )
 

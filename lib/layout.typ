@@ -23,6 +23,59 @@
       top: 2cm,
       bottom: 2cm,
     ),
+    header:  
+      locate(loc => {
+
+        // query elements at the current heading
+        let headings_at_page = {
+          query(
+            selector(heading).before(loc),
+            loc,
+        )}
+        if headings_at_page.len() == 0 { // if there are no elements, do not add anything
+          return
+        } else {
+          let currenthead = headings_at_page.last()
+          // if page has roman numerals
+          if currenthead.numbering == none {
+            return
+          } else {
+            let haveLevel = {
+              query(
+                selector(heading).after(loc),
+                loc,
+              ).first().level
+            }
+            if haveLevel == 1 {
+              return
+            } else {
+            let pagenumber = counter(page).at(loc).at(0) // get page number
+            if calc.rem-euclid(pagenumber, 2) == 0 {
+              let name_chapter = query( 
+                  selector(heading.where(level: 1)).before(loc), loc,
+              ).last()
+
+              // Get chapter number
+              let chapternum = counter(heading).at(loc)
+
+              // align
+              align(left, [Chapter #chapternum.at(0) : #name_chapter.body])
+            } else {
+              let name_subsection = query( 
+                  selector(heading.where(level: 2)).before(loc), loc,
+              ).last()
+
+              // Get section number
+              let secnum = counter(heading).at(loc)
+              align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+            }
+            // Place line
+            line(length: 100%, stroke: colourPalette.darkpurple)
+            }
+
+          }
+        }
+      }),
     numbering: numbering(pagenumbers, 1),
   )
   set par(
@@ -41,8 +94,7 @@
 //! HEADERS
 //! 
 //! 
-#let headerstate = state("headercount", 1)
-#let entrystate = state("entrystate", 1)
+#let headingstate = state("headercount", 1)
 
 #let prelude_header(body, colour) = {
     text(body.body, size: 18pt, font: "Roboto", colour)
@@ -57,9 +109,9 @@
   box(width: 85%, upper(element.body))
 
   if element.outlined { // the table of contents is not outlined
-    place(top + right, text(headerstate.display(), size: 76pt))
+    place(top + right, text(headingstate.display(), size: 76pt))
   }
-  headerstate.update(x => x + 1)
+  headingstate.update(x => x + 1)
 
 }
 
@@ -136,20 +188,21 @@
   if element.element.numbering == none {
     text(element, font: "Roboto", colourPalette.charcoal)
   } else if element.element.level == 1 {
-    let string = to-string(element.body).at(0)
-    if string == "1" {
-      text(element, font: "Roboto", colourPalette.darkpurple)
-    } else if string == "2" {
-      text(element, font: "Roboto", colourPalette.darkrose)
-    } else if string == "3" {
-      text(element, font: "Roboto", colourPalette.fountain)
-    } else if string == "4" {
-      text(element, font: "Roboto", colourPalette.myrtlegreen)
-    } else if string == "5" {
-      text(element, font: "Roboto", colourPalette.yellow)
-    } else if string == "6" {
-      text(element, font: "Roboto", colourPalette.roseorange)
-    }
+    text(element, font: "Roboto", colourPalette.darkrose)
+//    let string = to-string(element.body).at(0)
+//    if string == "1" {
+//      text(element, font: "Roboto", colourPalette.darkpurple)
+//    } else if string == "2" {
+//      text(element, font: "Roboto", colourPalette.darkrose)
+//    } else if string == "3" {
+//      text(element, font: "Roboto", colourPalette.fountain)
+//    } else if string == "4" {
+//      text(element, font: "Roboto", colourPalette.myrtlegreen)
+//    } else if string == "5" {
+//      text(element, font: "Roboto", colourPalette.yellow)
+//    } else if string == "6" {
+//      text(element, font: "Roboto", colourPalette.roseorange)
+//    }
   } else {
     text(element, font: "Roboto")
 
@@ -157,14 +210,39 @@
   v(-6.5mm)
 }
 
+#let boxed-text(title: "", authors: "", journal: "", doi: "www.github.com/jrihon", colour: rgb("#000000")) = {
 
+  // Start content
+  let contents = "Adapted from the following manuscript : \n"
 
+  // Add authors
+  let c = 0
+  for author in authors { 
+    if author == "Rihon J." {
+      if c != 0 { contents += ", " }
+      contents += text(author, weight: "semibold")
+    } else { 
+      if c != 0 { contents += ", " }
+      contents += author 
+    }
+    c += 1
+  }
+  contents += ". "
+  contents += ["#emph(title)" ]
+  contents += journal + ". "
+  contents += link(doi)[doi: xxx/xxxxxx]
 
+  let lightColour = colour.components()
+  lightColour.at(3) = 25% // set alpha to 25%
 
-
-
-
-
-
-
-
+  v(1.5em)
+  block(
+    width: 100%,
+    fill: rgb(..lightColour), // unpack array into the rgb() function
+    stroke: 1pt + colour,
+    radius: 2pt,
+    inset: 10pt,
+//    body
+    text(fill: rgb("#287271"), contents)
+  )
+}

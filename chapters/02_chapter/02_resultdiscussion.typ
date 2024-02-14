@@ -1,4 +1,4 @@
 
 == Result & Discussion
 
-#lorem(50)
+#lorem(400)
