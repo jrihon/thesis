@@ -7,6 +7,7 @@ neese2020orca:
   - Becker, Ute
   - Riplinger, Christoph
   date: 2020
+  month: jun
   page-range: 224108
   doi: 10.1063/5.0004608
   url: https://www.doi.org/10.1063/5.0004608
@@ -21,6 +22,7 @@ iupac1983nucleicacids:
   title: Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
   author:
     - IUPAC-IUB, Joint Commission
+  month: aug
   date: 1983
   page-range: 1273-1280
   parent:
@@ -35,6 +37,7 @@ cremer1975general:
   author:
   - Cremer, DT
   - Pople, JA
+  month: mar
   date: 1975
   page-range: 1354–1358
   parent:

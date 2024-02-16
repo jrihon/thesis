@@ -1,5 +1,6 @@
 #import "../../lib/layout-title.typ" as layout-title
 
+
 #set text(font: "Roboto")
 #set align(left)
 #set page(
@@ -12,6 +13,7 @@
     ),
   )
 
+#counter(page).update(1)                // Reset page counters
 
 
 ///////////////

@@ -104,7 +104,7 @@
         if type(auth) == "string" {
           let lastname = auth.split(",").at(0)
           let firstname = auth.split(",").at(1, default:"Err").slice(0,2)
-          [#text(lastname + "," + firstname + "., ", size: fontsize)]
+          [#text(lastname + "." + firstname + "., ", size: fontsize)]
         }
       }
   }
@@ -115,9 +115,9 @@
   let title = publication.at("title", default: 404)
 
   if title == 404 {
-    [#text("NO TITLE, ", style: "italic", size: fontsize)]
+    [#text("NO TITLE, ", size: fontsize)]
   } else {
-    [#text(title + ", ", style: "italic", size: fontsize)]
+    [#text(" \"" + title + "\" ", size: fontsize)]
   }
 }
 
@@ -128,7 +128,8 @@
   if date == 404 {
     [#text("NO DATE, ", style: "italic", size: fontsize)]
   } else {
-    [#text("(" + str(date) + ")", size: fontsize)  ]
+//    [#text("(" + str(date) + ")", size: fontsize)  ]
+    [#text(str(date) + ", ", size: fontsize)  ]
   }
 }
 
@@ -159,18 +160,18 @@
     [#text("NO PARENT FOUND, ", style: "italic", size: fontsize)]
   } else {
 
-    let issue = parent.at("issue", default: 404)
-    if issue == 404 {
-      [#text(str("NO ISSUE"), style: "italic", size: fontsize)  ]
-    } else {
-      [#text(str(issue), style: "italic", size: fontsize)  ]
-    }
+//    let issue = parent.at("issue", default: 404)
+//    if issue == 404 {
+//      [#text(str("NO ISSUE"), style: "italic", size: fontsize)  ]
+//    } else {
+//      [#text("vol." + str(issue), style: "italic", size: fontsize)  ]
+//    }
 
     let volume = parent.at("volume", default: 404)
     if volume == 404 {
       [#text("(" + str("NO VOLUME") + "),", size: fontsize)  ]
     } else {
-      [#text("(" + str(volume) + "),", size: fontsize)  ]
+      [#text("vol. " + str(volume) + ", ", size: fontsize)  ]
     }
   }
 }
@@ -181,7 +182,7 @@
   if pagerange == 404 {
     [#text("NO PAGERANGE", size: fontsize)]
   } else {
-    [#text(str(pagerange), size: fontsize)  ]
+    [#text("pp. " + str(pagerange) + ", ", size: fontsize)  ]
   }
 }
 
@@ -195,8 +196,20 @@
     [#link(url)[doi: #doi]]
   }
 }
+#let set_month(publication, fontsize) = {
 
-#let apa_style(biblio) = {
+  let month = publication.at("month", default: 404)
+
+  if month == 404 {
+    [#text("")]
+  } else {
+    let Imonth = upper(month.at(0))
+    let Emonth = month.slice(1)
+    [#text(Imonth + Emonth + ". ", size: fontsize)]
+  }
+
+}
+#let ieee_style(biblio) = {
 
   let bibchapter = biblio.bibchapter
   let bibyml = yaml(biblio.bibyml)
@@ -220,11 +233,12 @@
     let publication = bibyml.at(name_pub)
 
     set_authors(publication, fontsize)
-    set_date(publication, fontsize) 
     set_title(publication, fontsize)
     set_journal(publication, fontsize)
     set_issue(publication, fontsize)
-    set_pages(publication, fontsize); [#text(". ")] // punctuation before DOI
+    set_pages(publication, fontsize)
+    set_month(publication, fontsize)
+    set_date(publication, fontsize)
     set_doi(publication, fontsize)
     [ \ ] // set newline
 
@@ -243,12 +257,10 @@
 
   pagebreak() // page break to start bibliography
 
-  let fontsize = 10pt
   [== References]
-//  [#text("Bibliography", weight: "bold", size: 16pt) \ ]
 
-  if style == "apa" {
-    apa_style(biblio)
+  if style == "ieee" {
+    ieee_style(biblio)
   } else {
     panic("Style of the bilbiography " + style + "is not implemented.")
   }

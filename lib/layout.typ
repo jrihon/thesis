@@ -84,6 +84,17 @@
           let secnum = counter(heading).at(loc)
           secnum.at(1) += 1
           align(right, [ #secnum.at(0).#secnum.at(1) : References])
+        } else {
+          let name_subsection = {
+            query( 
+              selector(heading.where(level: 2)).before(loc), loc,
+            ).last()
+          }
+
+          // Get section number
+          let secnum = counter(heading).at(loc)
+          align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+
         }
       } else {
         let name_subsection = {
