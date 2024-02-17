@@ -69,7 +69,8 @@ Pharmaceutical Sciences"
 
 
 
-#pagebreak(to: "odd") // insert blank page after this page
+//#pagebreak(to: "odd") // insert blank page after this page
+#pagebreak(to: "even") // insert blank page after this page
 
 
 
@@ -137,4 +138,4 @@ Farmaceutische Wetenschappen"
 
 
 
-#pagebreak(to: "even") // insert blank page after this page
+#pagebreak(to: "odd") // insert blank page after this page
