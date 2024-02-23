@@ -20,6 +20,20 @@
 #show outline.entry: it => format-entries(it)
 #tableofcontents(colour00)
 
+// Format figure captions for the entire document
+#show figure.caption: set text(size: 8pt, style: "italic")
+#show figure.caption: set align(left)
+// https://github.com/typst/typst/issues/606
+//#show: set figure(numbering: "1.1.")
+#show: set figure(numbering: num => {
+  locate(loc => {
+    let fig_loc = query(figure, loc).at(num - 1).location()
+    let chap = counter(heading.where(level: 1)).at(fig_loc).first()
+    let chap_loc = query(heading.where(level: 1), loc).at(chap - 1).location()
+    let num_before = counter(figure).at(chap_loc).first()
+    str(chap) + "-" + str(num - num_before)
+  })
+})
 
 //!
 //!
@@ -107,3 +121,14 @@
 //#show heading.where(level: 4): element => headerL4(element, colour05)
 // Include manuscript
 #include {"./chapters/05_chapter/mod.typ"} 
+
+
+//!
+//!
+//! APPENDIX
+//!
+//!
+#show: document => layout(document, "1", none, colour00) 
+#show heading.where(level: 1): element => prelude_header(element, colour00)
+#show heading.where(level: 2): element => prelude_subheader(element, colour00)
+#include {"./chapters/06_appendix/mod.typ"} 

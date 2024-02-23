@@ -11,6 +11,6 @@ cd ..
 
 
 # Call function to bib files
-convert 01_chapter
+#convert 01_chapter
 convert 02_chapter
-convert 03_chapter
+#convert 03_chapter

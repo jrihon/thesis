@@ -1,4 +1,470 @@
-neese2020orca:
+Chaput2019whatxna:
+  type: article
+  title: What Is XNA?
+  author:
+  - Chaput, John C.
+  - Herdewijn, Piet
+  date: 2019-07
+  page-range: 11570
+  url: http://dx.doi.org/10.1002/anie.201905999
+  serial-number:
+    doi: 10.1002/anie.201905999
+    issn: 1521-3773
+  parent:
+    type: periodical
+    title: Angewandte Chemie International Edition
+    publisher: Wiley
+    issue: 34
+    volume: 58
+Egli2023oligonucs:
+  type: article
+  title: Chemistry, structure and function of approved oligonucleotide therapeutics
+  author:
+  - Egli, Martin
+  - Manoharan, Muthiah
+  date: 2023-03
+  page-range: 2529
+  url: http://dx.doi.org/10.1093/nar/gkad067
+  serial-number:
+    doi: 10.1093/nar/gkad067
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 6
+    volume: 51
+Gait2022historyna:
+  type: chapter
+  title: Introduction and History of the Chemistry of Nucleic Acids Therapeutics
+  author:
+  - Gait, Michael J.
+  - Agrawal, Sudhir
+  date: 2022
+  page-range: 3
+  url: http://dx.doi.org/10.1007/978-1-0716-2010-6_1
+  serial-number:
+    doi: 10.1007/978-1-0716-2010-6_1
+    isbn: '9781071620106'
+    issn: 1940-6029
+  parent:
+    type: book
+    title: Antisense RNA Design, Delivery, and Analysis
+    publisher: Springer US
+Pinheiro2012geneticpolymer:
+  type: article
+  title: Synthetic Genetic Polymers Capable of Heredity and Evolution
+  author:
+  - Pinheiro, Vitor B.
+  - Taylor, Alexander I.
+  - Cozens, Christopher
+  - Abramov, Mikhail
+  - Renders, Marleen
+  - Zhang, Su
+  - Chaput, John C.
+  - Wengel, Jesper
+  - Peak-Chew, Sew-Yeu
+  - McLaughlin, Stephen H.
+  - Herdewijn, Piet
+  - Holliger, Philipp
+  date: 2012-04
+  page-range: 341
+  url: http://dx.doi.org/10.1126/science.1217622
+  serial-number:
+    doi: 10.1126/science.1217622
+    issn: 1095-9203
+  parent:
+    type: periodical
+    title: Science
+    publisher: American Association for the Advancement of Science (AAAS)
+    issue: 6079
+    volume: 336
+Groaz2023hna:
+  type: chapter
+  title: 'Hexitol Nucleic Acid (HNA): From Chemical Design to Functional Genetic Polymer'
+  author:
+  - Groaz, Elisabetta
+  - Herdewijn, Piet
+  date: 2023
+  page-range: 1
+  url: http://dx.doi.org/10.1007/978-981-16-1313-5_15-1
+  serial-number:
+    doi: 10.1007/978-981-16-1313-5_15-1
+    isbn: '9789811613135'
+  parent:
+    type: book
+    title: Handbook of Chemical Biology of Nucleic Acids
+    publisher: Springer Nature Singapore
+Lescrinier2003difference:
+  type: article
+  title: Difference in conformational diversity between nucleic acids with a six-membered ‘sugar’unit and natural ‘furanose’nucleic acids
+  author:
+  - Lescrinier, Eveline
+  - Froeyen, Matheus
+  - Herdewijn, Piet
+  date: 2003
+  page-range: 2975–2989
+  parent:
+    type: periodical
+    title: Nucleic acids research
+    publisher: Oxford University Press
+    issue: 12
+    volume: 31
+Koshkin1998lna:
+  type: article
+  title: 'LNA (Locked Nucleic Acids): Synthesis of the adenine, cytosine, guanine, 5-methylcytosine, thymine and uracil bicyclonucleoside monomers, oligomerisation, and unprecedented nucleic acid recognition'
+  author:
+  - Koshkin, Alexei A.
+  - Singh, Sanjay K.
+  - Nielsen, Poul
+  - Rajwanshi, Vivek K.
+  - Kumar, Ravindra
+  - Meldgaard, Michael
+  - Olsen, Carl Erik
+  - Wengel, Jesper
+  date: 1998-04
+  page-range: 3607
+  url: http://dx.doi.org/10.1016/S0040-4020(98)00094-5
+  serial-number:
+    doi: 10.1016/s0040-4020(98)00094-5
+    issn: 0040-4020
+  parent:
+    type: periodical
+    title: Tetrahedron
+    publisher: Elsevier BV
+    issue: 14
+    volume: 54
+Mattelaer2021dxylose:
+  type: article
+  title: Stable Hairpin Structures Formed by Xylose‐Based Nucleic Acids
+  author:
+  - Mattelaer, Charles‐Alexandre
+  - Maiti, Mohitosh
+  - Smets, Laurent
+  - Maiti, Munmun
+  - Schepers, Guy
+  - Mattelaer, Henri‐Philippe
+  - Rosemeyer, Helmut
+  - Herdewijn, Piet
+  - Lescrinier, Eveline
+  date: 2021-02
+  page-range: 1638
+  url: http://dx.doi.org/10.1002/cbic.202000803
+  serial-number:
+    doi: 10.1002/cbic.202000803
+    issn: 1439-7633
+  parent:
+    type: periodical
+    title: ChemBioChem
+    publisher: Wiley
+    issue: 9
+    volume: 22
+Yang2023CrispBases:
+  type: article
+  title: CRISPR-Cas9 recognition of enzymatically synthesized base-modified nucleic acids
+  author:
+  - Yang, Hui
+  - Eremeeva, Elena
+  - Abramov, Mikhail
+  - Jacquemyn, Maarten
+  - Groaz, Elisabetta
+  - Daelemans, Dirk
+  - Herdewijn, Piet
+  date: 2023-01
+  page-range: 1501
+  url: http://dx.doi.org/10.1093/nar/gkac1147
+  serial-number:
+    doi: 10.1093/nar/gkac1147
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 4
+    volume: 51
+Roshmi2019viltolarsen:
+  type: article
+  title: Viltolarsen for the treatment of Duchenne muscular dystrophy
+  author:
+  - Roshmi, R.
+  - Yokota, T.
+  date: 2019
+  page-range: 627
+  url: http://dx.doi.org/10.1358/dot.2019.55.10.3045038
+  serial-number:
+    doi: 10.1358/dot.2019.55.10.3045038
+    issn: 1699-4019
+  parent:
+    type: periodical
+    title: Drugs of Today
+    publisher: Portico
+    issue: 10
+    volume: 55
+Moulton2017using:
+  type: article
+  title: Using Morpholinos to Control Gene Expression
+  author: Moulton, Jon D.
+  date: 2017-03
+  url: http://dx.doi.org/10.1002/cpnc.21
+  serial-number:
+    doi: 10.1002/cpnc.21
+    issn: 1934-9289
+  parent:
+    type: periodical
+    title: Current Protocols in Nucleic Acid Chemistry
+    publisher: Wiley
+    issue: 1
+    volume: 68
+Chen2016synthesis:
+  type: article
+  title: Synthesis of a Morpholino Nucleic Acid (MNA)-Uridine Phosphoramidite, and Exon Skipping Using MNA/2′-O-Methyl Mixmer Antisense Oligonucleotide
+  author:
+  - Chen, Suxiang
+  - Le, Bao
+  - Rahimizadeh, Kamal
+  - Shaikh, Khalil
+  - Mohal, Narinder
+  - Veedu, Rakesh
+  date: 2016-11
+  page-range: 1582
+  url: http://dx.doi.org/10.3390/molecules21111582
+  serial-number:
+    doi: 10.3390/molecules21111582
+    issn: 1420-3049
+  parent:
+    type: periodical
+    title: Molecules
+    publisher: MDPI AG
+    issue: 11
+    volume: 21
+Corey2001morpholino:
+  type: article
+  author:
+  - Corey, David R
+  - Abrams, John M
+  date: 2001
+  page-range: reviews1015.1
+  url: http://dx.doi.org/10.1186/gb-2001-2-5-reviews1015
+  serial-number:
+    doi: 10.1186/gb-2001-2-5-reviews1015
+    issn: 1465-6906
+  parent:
+    type: periodical
+    title: Genome Biology
+    publisher: Springer Science, Business Media LLC
+    issue: 5
+    volume: 2
+Roberts2020advances:
+  type: article
+  title: Advances in oligonucleotide drug delivery
+  author:
+  - Roberts, Thomas C.
+  - Langer, Robert
+  - Wood, Matthew J. A.
+  date: 2020-08
+  page-range: 673
+  url: http://dx.doi.org/10.1038/s41573-020-0075-7
+  serial-number:
+    doi: 10.1038/s41573-020-0075-7
+    issn: 1474-1784
+  parent:
+    type: periodical
+    title: Nature Reviews Drug Discovery
+    publisher: Springer Science, Business Media LLC
+    issue: 10
+    volume: 19
+Nan2018antisense:
+  type: article
+  title: Antisense Phosphorodiamidate Morpholino Oligomers as Novel Antiviral Compounds
+  author:
+  - Nan, Yuchen
+  - Zhang, Yan-Jin
+  date: 2018-04
+  url: http://dx.doi.org/10.3389/fmicb.2018.00750
+  serial-number:
+    doi: 10.3389/fmicb.2018.00750
+    issn: 1664-302X
+  parent:
+    type: periodical
+    title: Frontiers in Microbiology
+    publisher: Frontiers Media SA
+    volume: 9
+Lebleu2008MNAblocks:
+  type: article
+  title: Cell penetrating peptide conjugates of steric block oligonucleotides
+  author:
+  - Lebleu, Bernard
+  - Moulton, Hong M.
+  - Abes, Rachida
+  - Ivanova, Gabriela D.
+  - Abes, Said
+  - Stein, David A.
+  - Iversen, Patrick L.
+  - Arzumanov, Andrey A.
+  - Gait, Michael J.
+  date: 2008-03
+  page-range: 517
+  url: http://dx.doi.org/10.1016/j.addr.2007.09.002
+  serial-number:
+    doi: 10.1016/j.addr.2007.09.002
+    issn: 0169-409X
+  parent:
+    type: periodical
+    title: Advanced Drug Delivery Reviews
+    publisher: Elsevier BV
+    issue: 4–5
+    volume: 60
+Vanmeert2019XNAligase:
+  type: article
+  title: Rational design of an XNA ligase through docking of unbound nucleic acids to toroidal proteins
+  author:
+  - Vanmeert, Michiel
+  - Razzokov, Jamoliddin
+  - Mirza, Muhammad Usman
+  - Weeks, Stephen D
+  - Schepers, Guy
+  - Bogaerts, Annemie
+  - Rozenski, Jef
+  - Froeyen, Mathy
+  - Herdewijn, Piet
+  - Pinheiro, Vitor B
+  - Lescrinier, Eveline
+  date: 2019-06
+  page-range: 7130
+  url: http://dx.doi.org/10.1093/nar/gkz551
+  serial-number:
+    doi: 10.1093/nar/gkz551
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 13
+    volume: 47
+Macke1996nab:
+  type: thesis
+  title: 'NAB: a language for molecular manipulation'
+  author: Macke, Thomas Joel
+  date: 1996
+  organization: The Scripps Research Institute
+Alenaizan2020pnab:
+  type: article
+  title: 'The proto-Nucleic Acid Builder: a software tool for constructing nucleic acid analogs'
+  author:
+  - Alenaizan, Asem
+  - Barnett, Joshua L
+  - Hud, Nicholas V
+  - Sherrill, C David
+  - Petrov, Anton S
+  date: 2020-12
+  page-range: 79
+  url: http://dx.doi.org/10.1093/nar/gkaa1159
+  serial-number:
+    doi: 10.1093/nar/gkaa1159
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 1
+    volume: 49
+Lu20083DNA:
+  type: article
+  title: '3DNA: a versatile, integrated software system for the analysis, rebuilding and visualization of three-dimensional nucleic-acid structures'
+  author:
+  - Lu, Xiang-Jun
+  - Olson, Wilma K
+  date: 2008-07
+  page-range: 1213
+  url: http://dx.doi.org/10.1038/nprot.2008.104
+  serial-number:
+    doi: 10.1038/nprot.2008.104
+    issn: 1750-2799
+  parent:
+    type: periodical
+    title: Nature Protocols
+    publisher: Springer Science, Business Media LLC
+    issue: 7
+    volume: 3
+Lavery2009CurvesS:
+  type: article
+  title: 'Conformational analysis of nucleic acids revisited: Curves+'
+  author:
+  - Lavery, R.
+  - Moakher, M.
+  - Maddocks, J. H.
+  - Petkeviciute, D.
+  - Zakrzewska, K.
+  date: 2009-07
+  page-range: 5917
+  url: http://dx.doi.org/10.1093/nar/gkp608
+  serial-number:
+    doi: 10.1093/nar/gkp608
+    issn: 0305-1048
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 17
+    volume: 37
+Duffy2020nextgenxna:
+  type: article
+  title: 'Modified nucleic acids: replication, evolution, and next-generation therapeutics'
+  author:
+  - Duffy, Karen
+  - Arangundy-Franklin, Sebastian
+  - Holliger, Philipp
+  date: 2020-09
+  url: http://dx.doi.org/10.1186/s12915-020-00803-6
+  serial-number:
+    doi: 10.1186/s12915-020-00803-6
+    issn: 1741-7007
+  parent:
+    type: periodical
+    title: BMC Biology
+    publisher: Springer Science, Business Media LLC
+    issue: 1
+    volume: 18
+Eremeeva2019noncanonical:
+  type: article
+  title: Non canonical genetic material
+  author:
+  - Eremeeva, Elena
+  - Herdewijn, Piet
+  date: 2019-06
+  page-range: 25
+  url: http://dx.doi.org/10.1016/j.copbio.2018.12.001
+  serial-number:
+    doi: 10.1016/j.copbio.2018.12.001
+    issn: 0958-1669
+  parent:
+    type: periodical
+    title: Current Opinion in Biotechnology
+    publisher: Elsevier BV
+    volume: 57
+Anosova2015structuraldiversity:
+  type: article
+  title: The structural diversity of artificial genetic polymers
+  author:
+  - Anosova, Irina
+  - Kowal, Ewa A.
+  - Dunn, Matthew R.
+  - Chaput, John C.
+  - Van Horn, Wade D.
+  - Egli, Martin
+  date: 2015-12
+  page-range: 1007
+  url: http://dx.doi.org/10.1093/nar/gkv1472
+  serial-number:
+    doi: 10.1093/nar/gkv1472
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 3
+    volume: 44
+Neese2020orca:
   type: article
   title: The ORCA quantum chemistry program package
   author:
@@ -6,46 +472,1079 @@ neese2020orca:
   - Wennmohs, Frank
   - Becker, Ute
   - Riplinger, Christoph
-  date: 2020
-  month: jun
-  page-range: 224108
-  doi: 10.1063/5.0004608
-  url: https://www.doi.org/10.1063/5.0004608
+  date: 2020-06
+  url: http://dx.doi.org/10.1063/5.0004608
+  serial-number:
+    doi: 10.1063/5.0004608
+    issn: 1089-7690
   parent:
     type: periodical
     title: The Journal of Chemical Physics
-    publisher: AIP Publishing LLC
+    publisher: AIP Publishing
     issue: 22
     volume: 152
-iupac1983nucleicacids:
-  type: article
-  title: Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
-  author:
-    - IUPAC-IUB, Joint Commission
-  month: aug
-  date: 1983
-  page-range: 1273-1280
-  parent:
-    type: periodical
-    title: Journal of Pure and Applied Chemistry
-    volume: 55
-  doi: 0033—4545/83
-  url: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
-cremer1975general:
+Cremer1975general:
   type: article
   title: General definition of ring puckering coordinates
   author:
-  - Cremer, DT
-  - Pople, JA
-  month: mar
-  date: 1975
-  page-range: 1354–1358
+  - Cremer, D.
+  - Pople, J. A.
+  date: 1975-03
+  page-range: 1354
+  url: http://dx.doi.org/10.1021/JA00839A011
+  serial-number:
+    doi: 10.1021/ja00839a011
+    issn: 1520-5126
   parent:
     type: periodical
     title: Journal of the American Chemical Society
-    publisher: ACS Publications
+    publisher: American Chemical Society (ACS)
     issue: 6
     volume: 97
-  doi: 10.1021/JA00839A011
-  url: https://doi.org/10.1021/JA00839A011
+Iupac1983nucleicacids:
+  type: article
+  title: Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
+  author: IUPAC-IUB, JCBN
+  date: 1983
+  page-range: 9–15
+  parent:
+    type: periodical
+    title: European Journal of Biochemistry
+    volume: 131
+Mattelaer2021efficient:
+  type: article
+  title: Efficient and Accurate Potential Energy Surfaces of Puckering in Sugar-Modified Nucleosides
+  author:
+  - Mattelaer, Charles-Alexandre
+  - Mattelaer, Henri-Philippe
+  - Rihon, Jérôme
+  - Froeyen, Matheus
+  - Lescrinier, Eveline
+  date: 2021-05
+  page-range: 3814
+  url: http://dx.doi.org/10.1021/acs.jctc.1c00270
+  serial-number:
+    doi: 10.1021/acs.jctc.1c00270
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 6
+    volume: 17
+Deserno2004generate:
+  type: article
+  title: How to generate equidistributed points on the surface of a sphere
+  author: Deserno, Markus
+  date: 2004
+  parent:
+    type: periodical
+    title: If Polymerforshung (Ed.)
+    issue: 2
+    volume: 99
+Strauss1970conformational:
+  type: article
+  title: Conformational structure, energy, and inversion rates of cyclohexane and some related oxanes
+  author:
+  - Strauss, Herbert L.
+  - Pickett, Herbert M.
+  date: 1970-12
+  page-range: 7281
+  url: http://dx.doi.org/10.1021/ja00728a009
+  serial-number:
+    doi: 10.1021/ja00728a009
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 25
+    volume: 92
+Harris2020numpy:
+  type: article
+  title: Array programming with NumPy
+  author:
+  - Harris, Charles R.
+  - Millman, K. Jarrod
+  - name: Walt
+    given-name: Stéfan J.
+    prefix: van der
+  - Gommers, Ralf
+  - Virtanen, Pauli
+  - Cournapeau, David
+  - Wieser, Eric
+  - Taylor, Julian
+  - Berg, Sebastian
+  - Smith, Nathaniel J.
+  - Kern, Robert
+  - Picus, Matti
+  - Hoyer, Stephan
+  - name: Kerkwijk
+    given-name: Marten H.
+    prefix: van
+  - Brett, Matthew
+  - Haldane, Allan
+  - name: Río
+    given-name: Jaime Fernández
+    prefix: del
+  - Wiebe, Mark
+  - Peterson, Pearu
+  - Gérard-Marchant, Pierre
+  - Sheppard, Kevin
+  - Reddy, Tyler
+  - Weckesser, Warren
+  - Abbasi, Hameer
+  - Gohlke, Christoph
+  - Oliphant, Travis E.
+  date: 2020-09
+  page-range: 357
+  url: http://dx.doi.org/10.1038/s41586-020-2649-2
+  serial-number:
+    doi: 10.1038/s41586-020-2649-2
+    issn: 1476-4687
+  parent:
+    type: periodical
+    title: Nature
+    publisher: Springer Science, Business Media LLC
+    issue: 7825
+    volume: 585
+Lavery2009curves:
+  type: article
+  title: 'Conformational analysis of nucleic acids revisited: Curves+'
+  author:
+  - Lavery, R.
+  - Moakher, M.
+  - Maddocks, J. H.
+  - Petkeviciute, D.
+  - Zakrzewska, K.
+  date: 2009-07
+  page-range: 5917
+  url: http://dx.doi.org/10.1093/nar/gkp608
+  serial-number:
+    doi: 10.1093/nar/gkp608
+    issn: 0305-1048
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 17
+    volume: 37
+Case2005amber:
+  type: article
+  title: The Amber biomolecular simulation programs
+  author:
+  - Case, David A.
+  - Cheatham, Thomas E.
+  - Darden, Tom
+  - Gohlke, Holger
+  - Luo, Ray
+  - Merz, Kenneth M.
+  - Onufriev, Alexey
+  - Simmerling, Carlos
+  - Wang, Bing
+  - Woods, Robert J.
+  date: 2005-09
+  page-range: 1668
+  url: http://dx.doi.org/10.1002/jcc.20290
+  serial-number:
+    doi: 10.1002/jcc.20290
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 16
+    volume: 26
+Salomon2013amberpackage:
+  type: article
+  title: An overview of the Amber biomolecular simulation package
+  author:
+  - Salomon‐Ferrer, Romelia
+  - Case, David A.
+  - Walker, Ross C.
+  date: 2012-09
+  page-range: 198
+  url: http://dx.doi.org/10.1002/wcms.1121
+  serial-number:
+    doi: 10.1002/wcms.1121
+    issn: 1759-0884
+  parent:
+    type: periodical
+    title: WIREs Computational Molecular Science
+    publisher: Wiley
+    issue: 2
+    volume: 3
+Bayly1993wellbehaved:
+  type: article
+  title: 'A well-behaved electrostatic potential based method using charge restraints for deriving atomic charges: the RESP model'
+  author:
+  - Bayly, Christopher I.
+  - Cieplak, Piotr
+  - Cornell, Wendy
+  - Kollman, Peter A.
+  date: 1993-10
+  page-range: 10269
+  url: http://dx.doi.org/10.1021/j100142a004
+  serial-number:
+    doi: 10.1021/j100142a004
+    issn: 1541-5740
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry
+    publisher: American Chemical Society (ACS)
+    issue: 40
+    volume: 97
+Besler1990semiempirical:
+  type: article
+  title: Atomic charges derived from semiempirical methods
+  author:
+  - Besler, Brent H.
+  - Merz, Kenneth M.
+  - Kollman, Peter A.
+  date: 1990-05
+  page-range: 431
+  url: http://dx.doi.org/10.1002/jcc.540110404
+  serial-number:
+    doi: 10.1002/jcc.540110404
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 4
+    volume: 11
+Singh1984approach:
+  type: article
+  title: An approach to computing electrostatic charges for molecules
+  author:
+  - Singh, U. Chandra
+  - Kollman, Peter A.
+  date: 1984-04
+  page-range: 129
+  url: http://dx.doi.org/10.1002/jcc.540050204
+  serial-number:
+    doi: 10.1002/jcc.540050204
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 2
+    volume: 5
+Dupradeau2010redtools:
+  type: article
+  title: 'The R.E.D. tools: advances in RESP and ESP charge derivation and force field library building'
+  author:
+  - Dupradeau, François-Yves
+  - Pigache, Adrien
+  - Zaffran, Thomas
+  - Savineau, Corentin
+  - Lelong, Rodolphe
+  - Grivel, Nicolas
+  - Lelong, Dimitri
+  - Rosanski, Wilfried
+  - Cieplak, Piotr
+  date: 2010
+  page-range: 7821
+  url: http://dx.doi.org/10.1039/C0CP00111B
+  serial-number:
+    doi: 10.1039/c0cp00111b
+    issn: 1463-9084
+  parent:
+    type: periodical
+    title: Physical Chemistry Chemical Physics
+    publisher: Royal Society of Chemistry (RSC)
+    issue: 28
+    volume: 12
+Cieplak1995respnuc:
+  type: article
+  title: 'Application of the multimolecule and multiconformational RESP methodology to biopolymers: Charge derivation for DNA, RNA, and proteins'
+  author:
+  - Cieplak, Piotr
+  - Cornell, Wendy D.
+  - Bayly, Christopher
+  - Kollman, Peter A.
+  date: 1995-11
+  page-range: 1357
+  url: http://dx.doi.org/10.1002/jcc.540161106
+  serial-number:
+    doi: 10.1002/jcc.540161106
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 11
+    volume: 16
+Sanner1996surface:
+  type: article
+  title: 'Reduced surface: An efficient way to compute molecular surfaces'
+  author:
+  - Sanner, Michel F.
+  - Olson, Arthur J.
+  - Spehner, Jean-Claude
+  date: 1996-03
+  page-range: 305
+  url: http://dx.doi.org/10.1002/(sici)1097-0282(199603)38:3%3C305::aid-bip4%3E3.0.co;2-y
+  serial-number:
+    doi: 10.1002/(sici)1097-0282(199603)38:3<305::aid-bip4>3.0.co;2-y
+    issn: 1097-0282
+  parent:
+    type: periodical
+    title: Biopolymers
+    publisher: Wiley
+    issue: 3
+    volume: 38
+Connolly1983analytical:
+  type: article
+  title: Analytical molecular surface calculation
+  author: Connolly, M. L.
+  date: 1983-10
+  page-range: 548
+  url: http://dx.doi.org/10.1107/S0021889883010985
+  serial-number:
+    doi: 10.1107/s0021889883010985
+    issn: 0021-8898
+  parent:
+    type: periodical
+    title: Journal of Applied Crystallography
+    publisher: International Union of Crystallography (IUCr)
+    issue: 5
+    volume: 16
+Aduri2007paramnuc:
+  type: article
+  title: AMBER Force Field Parameters for the Naturally Occurring Modified Nucleosides in RNA
+  author:
+  - Aduri, Raviprasad
+  - Psciuk, Brian T.
+  - Saro, Pirro
+  - Taniga, Hariprakash
+  - Schlegel, H. Bernhard
+  - SantaLucia, John
+  date: 2007-06
+  page-range: 1464
+  url: http://dx.doi.org/10.1021/ct600329w
+  serial-number:
+    doi: 10.1021/ct600329w
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 4
+    volume: 3
+Chirlian1987atomic:
+  type: article
+  title: 'Atomic charges derived from electrostatic potentials: A detailed study'
+  author:
+  - Chirlian, Lisa Emily
+  - Francl, Michelle Miller
+  date: 1987-09
+  page-range: 894
+  url: http://dx.doi.org/10.1002/jcc.540080616
+  serial-number:
+    doi: 10.1002/jcc.540080616
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 6
+    volume: 8
+Gourdon2020gamess:
+  type: article
+  title: Recent developments in the general atomic and molecular electronic structure system
+  author:
+  - Barca, Giuseppe M. J.
+  - Bertoni, Colleen
+  - Carrington, Laura
+  - Datta, Dipayan
+  - De Silva, Nuwan
+  - Deustua, J. Emiliano
+  - Fedorov, Dmitri G.
+  - Gour, Jeffrey R.
+  - Gunina, Anastasia O.
+  - Guidez, Emilie
+  - Harville, Taylor
+  - Irle, Stephan
+  - Ivanic, Joe
+  - Kowalski, Karol
+  - Leang, Sarom S.
+  - Li, Hui
+  - Li, Wei
+  - Lutz, Jesse J.
+  - Magoulas, Ilias
+  - Mato, Joani
+  - Mironov, Vladimir
+  - Nakata, Hiroya
+  - Pham, Buu Q.
+  - Piecuch, Piotr
+  - Poole, David
+  - Pruitt, Spencer R.
+  - Rendell, Alistair P.
+  - Roskop, Luke B.
+  - Ruedenberg, Klaus
+  - Sattasathuchana, Tosaporn
+  - Schmidt, Michael W.
+  - Shen, Jun
+  - Slipchenko, Lyudmila
+  - Sosonkina, Masha
+  - Sundriyal, Vaibhav
+  - Tiwari, Ananta
+  - Galvez Vallejo, Jorge L.
+  - Westheimer, Bryce
+  - Włoch, Marta
+  - Xu, Peng
+  - Zahariev, Federico
+  - Gordon, Mark S.
+  date: 2020-04
+  url: http://dx.doi.org/10.1063/5.0005188
+  serial-number:
+    doi: 10.1063/5.0005188
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 15
+    volume: 152
+Betz2015paramfit:
+  type: article
+  title: 'Paramfit: Automated optimization of force field parameters for molecular dynamics simulations'
+  author:
+  - Betz, Robin M.
+  - Walker, Ross C.
+  date: 2014-11
+  page-range: 79
+  url: http://dx.doi.org/10.1002/jcc.23775
+  serial-number:
+    doi: 10.1002/jcc.23775
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 2
+    volume: 36
+Weiner1984originalamber:
+  type: article
+  title: A new force field for molecular mechanical simulation of nucleic acids and proteins
+  author:
+  - Weiner, Scott J.
+  - Kollman, Peter A.
+  - Case, David A.
+  - Singh, U. Chandra
+  - Ghio, Caterina
+  - Alagona, Guliano
+  - Profeta, Salvatore
+  - Weiner, Paul
+  date: 1984-02
+  page-range: 765
+  url: http://dx.doi.org/10.1021/ja00315a051
+  serial-number:
+    doi: 10.1021/ja00315a051
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 3
+    volume: 106
+Darden1993pmemd:
+  type: article
+  title: 'Particle mesh Ewald: An N⋅log(N) method for Ewald sums in large systems'
+  author:
+  - Darden, Tom
+  - York, Darrin
+  - Pedersen, Lee
+  date: 1993-06
+  page-range: 10089
+  url: http://dx.doi.org/10.1063/1.464397
+  serial-number:
+    doi: 10.1063/1.464397
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 12
+    volume: 98
+Zgarbova2015dnaol15:
+  type: article
+  title: Refinement of the Sugar–Phosphate Backbone Torsion Beta for AMBER Force Fields Improves the Description of Z- and B-DNA
+  author:
+  - Zgarbová, Marie
+  - Šponer, Jiří
+  - Otyepka, Michal
+  - Cheatham, Thomas E.
+  - Galindo-Murillo, Rodrigo
+  - Jurečka, Petr
+  date: 2015-11
+  page-range: 5723
+  url: http://dx.doi.org/10.1021/acs.jctc.5b00716
+  serial-number:
+    doi: 10.1021/acs.jctc.5b00716
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 12
+    volume: 11
+Zgarbova2011rnaol3:
+  type: article
+  title: Refinement of the Cornell et al. Nucleic Acids Force Field Based on Reference Quantum Chemical Calculations of Glycosidic Torsion Profiles
+  author:
+  - Zgarbová, Marie
+  - Otyepka, Michal
+  - Šponer, Jiří
+  - Mládek, Arnošt
+  - Banáš, Pavel
+  - Cheatham, Thomas E.
+  - Jurečka, Petr
+  date: 2011-08
+  page-range: 2886
+  url: http://dx.doi.org/10.1021/ct200162x
+  serial-number:
+    doi: 10.1021/ct200162x
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 9
+    volume: 7
+Schofield2023hnaaptamer:
+  type: article
+  title: Characterization of an HNA aptamer suggests a non-canonical G-quadruplex motif
+  author:
+  - Schofield, Peter
+  - Taylor, Alexander I
+  - Rihon, Jérôme
+  - Peña Martinez, Cristian D
+  - Zinn, Sacha
+  - Mattelaer, Charles-Alexandre
+  - Jackson, Jennifer
+  - Dhaliwal, Gurpreet
+  - Schepers, Guy
+  - Herdewijn, Piet
+  - Lescrinier, Eveline
+  - Christ, Daniel
+  - Holliger, Philipp
+  date: 2023-07
+  page-range: 7736
+  url: http://dx.doi.org/10.1093/nar/gkad592
+  serial-number:
+    doi: 10.1093/nar/gkad592
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 15
+    volume: 51
+Davidchack2009langevin:
+  type: article
+  title: Langevin thermostat for rigid body dynamics
+  author:
+  - Davidchack, Ruslan L.
+  - Handel, Richard
+  - Tretyakov, M. V.
+  date: 2009-06
+  url: http://dx.doi.org/10.1063/1.3149788
+  serial-number:
+    doi: 10.1063/1.3149788
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 23
+    volume: 130
+Berendsen1984molecular:
+  type: article
+  title: Molecular dynamics with coupling to an external bath
+  author:
+  - Berendsen, H. J. C.
+  - Postma, J. P. M.
+  - name: Gunsteren
+    given-name: W. F.
+    prefix: van
+  - DiNola, A.
+  - Haak, J. R.
+  date: 1984-10
+  page-range: 3684
+  url: http://dx.doi.org/10.1063/1.448118
+  serial-number:
+    doi: 10.1063/1.448118
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 8
+    volume: 81
+Roe2013cpptraj:
+  type: article
+  title: 'PTRAJ and CPPTRAJ: Software for Processing and Analysis of Molecular Dynamics Trajectory Data'
+  author:
+  - Roe, Daniel R.
+  - Cheatham, Thomas E.
+  date: 2013-06
+  page-range: 3084
+  url: http://dx.doi.org/10.1021/ct400341p
+  serial-number:
+    doi: 10.1021/ct400341p
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 7
+    volume: 9
+Salomon2013cuda1:
+  type: article
+  title: Routine Microsecond Molecular Dynamics Simulations with AMBER on GPUs. 2. Explicit Solvent Particle Mesh Ewald
+  author:
+  - Salomon-Ferrer, Romelia
+  - Götz, Andreas W.
+  - Poole, Duncan
+  - Le Grand, Scott
+  - Walker, Ross C.
+  date: 2013-08
+  page-range: 3878
+  url: http://dx.doi.org/10.1021/ct400314y
+  serial-number:
+    doi: 10.1021/ct400314y
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 9
+    volume: 9
+Legrand2013spfpcuda2:
+  type: article
+  title: 'SPFP: Speed without compromise—A mixed precision model for GPU accelerated molecular dynamics simulations'
+  author:
+  - Le Grand, Scott
+  - Götz, Andreas W.
+  - Walker, Ross C.
+  date: 2013-02
+  page-range: 374
+  url: http://dx.doi.org/10.1016/j.cpc.2012.09.022
+  serial-number:
+    doi: 10.1016/j.cpc.2012.09.022
+    issn: 0010-4655
+  parent:
+    type: periodical
+    title: Computer Physics Communications
+    publisher: Elsevier BV
+    issue: 2
+    volume: 184
+Krautler2001shake:
+  type: article
+  title: A fast SHAKE algorithm to solve distance constraint equations for small molecules in molecular dynamics simulations
+  author:
+  - Kräutler, Vincent
+  - name: Gunsteren
+    given-name: Wilfred F.
+    prefix: van
+  - Hünenberger, Philippe H.
+  date: 2001
+  page-range: 501
+  url: http://dx.doi.org/10.1002/1096-987X(20010415)22:5%3C501::AID-JCC1021%3E3.0.CO;2-V
+  serial-number:
+    doi: 10.1002/1096-987x(20010415)22:5<501::aid-jcc1021>3.0.co;2-v
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 5
+    volume: 22
+Langner2020thiophosphoramidate:
+  type: article
+  title: Synthesis and Characterization of Thiophosphoramidate Morpholino Oligonucleotides and Chimeras
+  author:
+  - Langner, Heera K.
+  - Jastrzebska, Katarzyna
+  - Caruthers, Marvin H.
+  date: 2020-08
+  page-range: 16240
+  url: http://dx.doi.org/10.1021/jacs.0c04335
+  serial-number:
+    doi: 10.1021/jacs.0c04335
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 38
+    volume: 142
+Zhang2019templatemna:
+  type: article
+  title: Template-Directed Nonenzymatic Primer Extension Using 2-Methylimidazole-Activated Morpholino Derivatives of Guanosine and Cytidine
+  author:
+  - Zhang, Weicheng
+  - Pal, Ayan
+  - Ricardo, Alonso
+  - Szostak, Jack W.
+  date: 2019-07
+  page-range: 12159
+  url: http://dx.doi.org/10.1021/jacs.9b06453
+  serial-number:
+    doi: 10.1021/jacs.9b06453
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 30
+    volume: 141
+Nikolova2011hgindna:
+  type: article
+  title: Transient Hoogsteen base pairs in canonical duplex DNA
+  author:
+  - Nikolova, Evgenia N.
+  - Kim, Eunae
+  - Wise, Abigail A.
+  - O’Brien, Patrick J.
+  - Andricioaei, Ioan
+  - Al-Hashimi, Hashim M.
+  date: 2011-01
+  page-range: 498
+  url: http://dx.doi.org/10.1038/nature09775
+  serial-number:
+    doi: 10.1038/nature09775
+    issn: 1476-4687
+  parent:
+    type: periodical
+    title: Nature
+    publisher: Springer Science, Business Media LLC
+    issue: 7335
+    volume: 470
+Vreede2019wcftohg:
+  type: article
+  title: Atomistic insight into the kinetic pathways for Watson–Crick to Hoogsteen transitions in DNA
+  author:
+  - Vreede, Jocelyne
+  - name: Alba Ortíz
+    given-name: Alberto
+    prefix: Pérez de
+  - Bolhuis, Peter G
+  - Swenson, David W H
+  date: 2019-10
+  page-range: 11069
+  url: http://dx.doi.org/10.1093/nar/gkz837
+  serial-number:
+    doi: 10.1093/nar/gkz837
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 21
+    volume: 47
+Lescrinier2000rnahna:
+  type: article
+  title: Solution structure of a HNA–RNA hybrid
+  author:
+  - Lescrinier, E
+  - Esnouf, R
+  - Schraml, J
+  - Busson, R
+  - Heus, HA
+  - Hilbers, CW
+  - Herdewijn, P
+  date: 2000-09
+  page-range: 719
+  url: http://dx.doi.org/10.1016/S1074-5521(00)00017-X
+  serial-number:
+    doi: 10.1016/s1074-5521(00)00017-x
+    issn: 1074-5521
+  parent:
+    type: periodical
+    title: Chemistry &amp; Biology
+    publisher: Elsevier BV
+    issue: 9
+    volume: 7
+Egli2006hna:
+  type: article
+  title: Crystal Structure of Homo-DNA and Nature’s Choice of Pentose over Hexose in the Genetic System
+  author:
+  - Egli, Martin
+  - Pallan, Pradeep S.
+  - Pattanayek, Rekha
+  - Wilds, Christopher J.
+  - Lubini, Paolo
+  - Minasov, George
+  - Dobler, Max
+  - Leumann, Christian J.
+  - Eschenmoser, Albert
+  date: 2006-08
+  page-range: 10847
+  url: http://dx.doi.org/10.1021/ja062548x
+  serial-number:
+    doi: 10.1021/ja062548x
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 33
+    volume: 128
+Eschenmoser2011naalternatives:
+  type: misc
+  title: Searching for Nucleic Acid Alternatives
+  author: Eschenmoser, Albert
+  date: 2011-02
+  publisher: Wiley
+  page-range: 5
+  url: http://dx.doi.org/10.1002/9780470977873.ch1
+  serial-number:
+    doi: 10.1002/9780470977873.ch1
+    isbn: '9780470977873'
+Humphrey1996vmd:
+  type: article
+  title: 'VMD: Visual molecular dynamics'
+  author:
+  - Humphrey, William
+  - Dalke, Andrew
+  - Schulten, Klaus
+  date: 1996-02
+  page-range: 33
+  url: http://dx.doi.org/10.1016/0263-7855(96)00018-5
+  serial-number:
+    doi: 10.1016/0263-7855(96)00018-5
+    issn: 0263-7855
+  parent:
+    type: periodical
+    title: Journal of Molecular Graphics
+    publisher: Elsevier BV
+    issue: 1
+    volume: 14
+Pettersen2004ucsf:
+  type: article
+  title: UCSF Chimera—A visualization system for exploratory research and analysis
+  author:
+  - Pettersen, Eric F.
+  - Goddard, Thomas D.
+  - Huang, Conrad C.
+  - Couch, Gregory S.
+  - Greenblatt, Daniel M.
+  - Meng, Elaine C.
+  - Ferrin, Thomas E.
+  date: 2004-07
+  page-range: 1605
+  url: http://dx.doi.org/10.1002/jcc.20084
+  serial-number:
+    doi: 10.1002/jcc.20084
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 13
+    volume: 25
+Vanquelef2011redsa:
+  type: article
+  title: 'R.E.D. Server: a web service for deriving RESP and ESP charges and building force field libraries for new molecules and molecular fragments'
+  author:
+  - Vanquelef, Enguerran
+  - Simon, Sabrina
+  - Marquant, Gaelle
+  - Garcia, Elodie
+  - Klimerak, Geoffroy
+  - Delepine, Jean Charles
+  - Cieplak, Piotr
+  - Dupradeau, François-Yves
+  date: 2011-05
+  page-range: W511–W517
+  url: http://dx.doi.org/10.1093/nar/gkr288
+  serial-number:
+    doi: 10.1093/nar/gkr288
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: suppl_2
+    volume: 39
+Sychrovsky2009pyramidnuc:
+  type: article
+  title: 'Revisiting the planarity of nucleic acid bases: Pyramidilization at glycosidic nitrogen in purine bases is modulated by orientation of glycosidic torsion'
+  author:
+  - Sychrovsky, Vladimir
+  - Foldynova-Trantirkova, Silvie
+  - Spackova, Nada
+  - Robeyns, Koen
+  - Van Meervelt, Luc
+  - Blankenfeldt, Wulf
+  - Vokacova, Zuzana
+  - Sponer, Jiri
+  - Trantirek, Lukas
+  date: 2009-09
+  page-range: 7321
+  url: http://dx.doi.org/10.1093/nar/gkp783
+  serial-number:
+    doi: 10.1093/nar/gkp783
+    issn: 0305-1048
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 21
+    volume: 37
+Zierkiewicz2008cbsamine:
+  type: article
+  title: 'The Amino Group in Adenine: MP2 and CCSD(T) Complete Basis Set Limit Calculations of the Planarization Barrier and DFT/B3LYP Study of the Anharmonic Frequencies of Adenine'
+  author:
+  - Zierkiewicz, Wiktor
+  - Komorowski, Ludwik
+  - Michalska, Danuta
+  - Cerny, Jiri
+  - Hobza, Pavel
+  date: 2008-12
+  page-range: 16734
+  url: http://dx.doi.org/10.1021/jp8058118
+  serial-number:
+    doi: 10.1021/jp8058118
+    issn: 1520-5207
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry B
+    publisher: American Chemical Society (ACS)
+    issue: 51
+    volume: 112
+Davis2015rnadna:
+  type: article
+  title: Crystal structure of RNA-DNA duplex provides insight into conformational changes induced by RNase H binding
+  author:
+  - Davis, Ryan R
+  - Shaban, Nadine M
+  - Perrino, Fred W
+  - Hollis, Thomas
+  date: 2015-02
+  page-range: 668
+  url: http://dx.doi.org/10.4161/15384101.2014.994996
+  serial-number:
+    doi: 10.4161/15384101.2014.994996
+    issn: 1551-4005
+  parent:
+    type: periodical
+    title: Cell Cycle
+    publisher: Informa UK Limited
+    issue: 4
+    volume: 14
+Ramaswamy2017xylonastruct:
+  type: article
+  title: Molecular Dynamics of Double Stranded Xylo-Nucleic Acid
+  author:
+  - Ramaswamy, Amutha
+  - Smyrnova, Daryna
+  - Froeyen, Mathy
+  - Maiti, Mohitosh
+  - Herdewijn, Piet
+  - Ceulemans, Arnout
+  date: 2017-09
+  page-range: 5028
+  url: http://dx.doi.org/10.1021/acs.jctc.7b00309
+  serial-number:
+    doi: 10.1021/acs.jctc.7b00309
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 10
+    volume: 13
+Ramaswamy2009xylonastruct:
+  type: article
+  title: Helical Structure of Xylose-DNA
+  author:
+  - Ramaswamy, Amutha
+  - Froeyen, Mathy
+  - Herdewijn, Piet
+  - Ceulemans, Arnout
+  date: 2009-12
+  page-range: 587
+  url: http://dx.doi.org/10.1021/ja9065877
+  serial-number:
+    doi: 10.1021/ja9065877
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 2
+    volume: 132
+Maiti2011deoxyxylose:
+  type: article
+  title: 'Solution Structure and Conformational Dynamics of Deoxyxylonucleic Acids (dXNA): An Orthogonal Nucleic Acid Candidate'
+  author:
+  - Maiti, Mohitosh
+  - Siegmund, Vanessa
+  - Abramov, Mikhail
+  - Lescrinier, Eveline
+  - Rosemeyer, Helmut
+  - Froeyen, Mathy
+  - Ramaswamy, Amutha
+  - Ceulemans, Arnout
+  - Marx, Andreas
+  - Herdewijn, Piet
+  date: 2011-12
+  page-range: 869
+  url: http://dx.doi.org/10.1002/chem.201102509
+  serial-number:
+    doi: 10.1002/chem.201102509
+    issn: 1521-3765
+  parent:
+    type: periodical
+    title: Chemistry – A European Journal
+    publisher: Wiley
+    issue: 3
+    volume: 18
+Wang2004gaff:
+  type: article
+  title: Development and testing of a general amber force field
+  author:
+  - Wang, Junmei
+  - Wolf, Romain M.
+  - Caldwell, James W.
+  - Kollman, Peter A.
+  - Case, David A.
+  date: 2004-04
+  page-range: 1157
+  url: http://dx.doi.org/10.1002/jcc.20035
+  serial-number:
+    doi: 10.1002/jcc.20035
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 9
+    volume: 25
+Zhang2015polarizable:
+  type: article
+  title: Polarizable Multipole-Based Force Field for Dimethyl and Trimethyl Phosphate
+  author:
+  - Zhang, Changsheng
+  - Lu, Chao
+  - Wang, Qiantao
+  - Ponder, Jay W.
+  - Ren, Pengyu
+  date: 2015-10
+  page-range: 5326
+  url: http://dx.doi.org/10.1021/acs.jctc.5b00562
+  serial-number:
+    doi: 10.1021/acs.jctc.5b00562
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 11
+    volume: 11
 

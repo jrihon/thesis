@@ -1,3 +1,4 @@
 == Conclusion
 
-#lorem(350)
+#lorem(300)
+

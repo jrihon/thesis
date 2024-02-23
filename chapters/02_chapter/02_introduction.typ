@@ -2,11 +2,47 @@
 #import "bib_02_chapter.typ": biblio
 
 == Introduction
-#lorem(50)
-=== Welcome to the thesis
-#lorem(100)
+The potential of nucleic acid therapeutics was recognized more than 50 years ago, but nucleases that hydrolyse phosphodiester linkages in oligonucleotide (ON) strands represented one of the hurdles that significantly slowed down their rise in the therapeutic field #mcite(("Gait2022historyna"), biblio). Analogues carrying modifications in the backbone and nucleobase (xenobiotic nucleic acids, XNAs #mcite(("Chaput2019whatxna"), biblio)) accelerated development of nucleic acids therapeutics in the mid-1980s, as they allowed to modulate catalytic degradation of ONs and/or increase affinity to the selected target. Several XNA chemistries were used for various clinical applications, of which some have reached the market #mcite(("Egli2023oligonucs"), biblio). While XNA were initially designed to modulate RNA activity upon hybridisation, some XNA alterations have also been developed for applications such as therapeutic aptamers and an alternative genetic system in synthetic biology. This has lead to the engineering of enzymes able to process such ON strands, in order to promote XNA ON manipulation methodologies to a higher level of efficiency, for both researcher and cell #mcite(("Pinheiro2012geneticpolymer", "Groaz2023hna"), biblio).
 
-==== Intermezzo to add something 
-#lorem(50) #mcite(("cremer1975general", "iupac1983nucleicacids"), biblio)
-=== Let's talk about something relevant again
-#lorem(370)
+Conformational preorganization of sugar moieties in the XNA backbone is a key feature for their binding capacity to native nucleotides.
+Chemical modifications such as pyranose units #mcite(("Lescrinier2003difference"), biblio) and locked nucleic acids (LNA) #mcite(("Koshkin1998lna"), biblio) freeze the sugar moiety in the nucleic acid backbone and offer the ultimate control of conformational preorganization and fix their recognition potential for either DNA or RNA.
+The xylose-based chemistries, on the other hand, avoid hybridisation with native nucleotides #mcite(("Mattelaer2021dxylose"), biblio). 
+Nucleobase alterations can provide hybridisation stability, which benefits duplex formation, or extends binding potential, broadening the range of possible aptamer-target interactions. Recently, these XNA have been successfully employed in CRISPR-Cas9 research, using the _#super("th")G_ modification #mcite(("Yang2023CrispBases"), biblio).
+
+The morpholino nucleic acids (MNAs) are a prime example of highly modified nucleic acids in antisense oligonucleotide (ASO) research and therapies #mcite(("Roshmi2019viltolarsen" , "Chen2016synthesis"), biblio). Their presumed mechanism of action is to sterically block RNA splicing or translation, by binding to their RNA complement. Preclinical studies in zebrafish have popularised the use of such gene-knockdown mechanisms with MNA ONs #mcite(("Moulton2017using"), biblio). MNA are commonly used in the treatment for Duchenne’s Muscular Distrophy, where binding to the specific exon-51 sequence leads to trimming of the distrophin protein. In short, the binding of an ASO to its target sequence results in cancelling the propagation of that exon-51 RNA sequence into a peptide strand, thereby halting the translation into a full-fledged protein. This is in contrast with the endogenous RNA degradation exploited by other XNA chemistries for ASO and silencing RNA (siRNA) purposes #mcite(("Corey2001morpholino","Roberts2020advances", "Nan2018antisense"), biblio) catalysed by the RNase H enzyme or RISC complex, that break RNA strands upon hydridisation with complementary DNA and RNA strands respectively. In such a mechanism, the XNA::RNA duplex must be recognised by the processing machinery through similarity to the natural substrate #mcite(("Lebleu2008MNAblocks"), biblio).
+Experimental structures of a range of XNA chemistries in homoduplexes and bound to a complementary nucleic acid sequence proved useful in understanding their biophysical and biological properties #mcite(("Groaz2023hna"), biblio).
+
+#figure(
+  image("figures/workflow.svg"),
+  caption: [ *A.* QM approach to perform conformational sampling to describe the torsional behaviour.
+  *B.* The Ducque model builder receives input from the computed PES to use curated conformers as building block to generate duplex models.
+  *C.* From the PES, one can derive a force field by virtue of the predicted behaviour. A charge derivation scheme has been implemented for ORCA. Curated conformers are to be used to derive torsional parameters for the force field.
+  *D.* Combining the products of (B., an (X)NA molecular model) and (C., a representative force field), we can predict the molecular structure of an XNA model duplex through the use of an MM package, which can be used for antisense design, (X)NA enzyme engineering and more.
+  This project workflow has been validated on HNA and dXyNA and has been applied to predict the RNA::MNA heteroduplex.
+  ]
+) <ducque_fig_workflow>
+//    \includegraphics[width=\textwidth, keepaspectratio]{./99_figures/02_workflow.pdf"), biblio)
+//            Proposed workflow. 
+//            \textbf{A."), biblio) QM approach to perform conformational sampling to describe the torsional behaviour.
+//            \textbf{B."), biblio) The Ducque model builder receives input from the computed PES to use curated conformers as building block to generate duplex models.
+//            \textbf{C."), biblio) From the PES, one can derive a force field by virtue of the predicted behaviour. A charge derivation scheme has been implemented for ORCA. Curated conformers are to be used to derive torsional parameters for the force field.
+//            \textbf{D."), biblio) Combining the products of (B., an (X)NA molecular model) and (C., a representative force field), we can predict the molecular structure of an XNA model duplex through the use of an MM package, which can be used for antisense design, (X)NA enzyme engineering and more.\\ 
+//%            \textbf{D."), biblio) Combining the products of (B., \revision{an (X)NA molecular model"), biblio)) and (C., \revision{a representative force field"), biblio)), we can predict the molecular structure of an XNA model duplex \revision{through the use of an MM package"), biblio), which can be used for antisense design, (X)NA enzyme engineering and more.\\ 
+//            This project workflow has been validated on HNA and dXyNA and has been applied to predict the RNA::MNA heteroduplex.
+//    "), biblio)
+//\label{fig:workflow"), biblio)
+//\end{figure*"), biblio)
+
+Molecular modeling of XNA::RNA duplexes can predict possible XNA applications and guide the design of XNA and XNA processing enzymes #mcite(("Vanmeert2019XNAligase"), biblio). Model building nucleic acids has been facilitated in the mid ’90s thanks to the release of the Nucleic Acid Builder (NAB) software and its domain-specific language #mcite(("Macke1996nab"), biblio). This was followed with many implementations of the NAB language in a variety of wrappers and servers to allow model building for DNA and RNA.
+The proto-Nucleic Acid Builder has taken a small step towards XNA building by including a set of modifications known to build into mainly A-type structures #mcite(("Alenaizan2020pnab"), biblio). It uses parameters from experimentally derived structures, using the convention of 3DNA #mcite(("Lu20083DNA"), biblio) of basis reference frames, which differ slightly from the definition of Curves+ #mcite(("Lavery2009CurvesS"), biblio). It also makes a good attempt at minimising duplex models with force fields (FFs) that were developed for small molecule minimisation and evaluation.
+The claimed predictions simply build along a set of given vectors from data gathered from wet lab experiments. Consequently, such building schemes are not applicable for many unsolved and underresearched chemistries structures.
+
+Because of the amount of new chemistries developed for many different applications #mcite(("Duffy2020nextgenxna" , "Eremeeva2019noncanonical"), biblio), an urgent need arised to design a platform that can handle the influx of existing XNAs and modifications that have yet to be developed. With this in mind, we developed the Ducque software from scratch, independent from the approach of the traditional Nucleic Acid Builder. It comes with a user costumisable library for linker and sugar moieties, reserving functionality for purine- and pyrimidine-like bases, to build XNA models with a virtually unlimited set of chemistries on the backbone, with a future outlook on customising nucleobase modifications. This approach easily allows to build all models exemplified in Anosova _et al._ #mcite(("Anosova2015structuraldiversity"), biblio), regardless of complexity.
+
+The Ducque model builder is part of an elaborate workflow to implement new chemistries for accurate molecular dynamics (MD) simulations (@ducque_fig_workflow). The model builder also boasts a neat graphic user interface (GUI) that makes the flow of importing new building blocks, randomising and building structures smooth and concise, by allowing access to the various modules in a chained fashion.
+%The Ducque model builder is part of an elaborate workflow to implement new chemistries for accurate molecular dynamics (MD) simulations (Figure WORKFLOW). The model builder also boasts a neat graphic user interface (GUI) that makes the flow of importing new building blocks, randomising and building structures smooth and concise, by allowing access to the various modules in a chained fashion.
+A potential energy surface (PES) describes the nucleoside's behavior along its puckering profile. This data feeds directly into Ducque and the creation of a suitable FF, respectively.
+Additionally, an AMBER-specific implementation of the parametrisation scheme was developed for the ORCA package.
+While Ducque is used to build an initial model, the force field is essential for the final Molecular Mechanics (MM) stage that provides an accurate structure.
+Here, we demonstrate Ducque against natural nucleic acids using NAB as our benchmark and show its functionality across a range of well-characterised XNAs.
+The workflow was validated on Hexitol Nucleic Acid (HNA) and deoxy-xylose nucleic acid (dXyNA), and challenged on the RNA::MNA duplex, a heteroduplex with clinical relevance for which no experimental structure is available to date. 

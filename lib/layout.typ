@@ -67,7 +67,12 @@
     } else { // if page is uneven
 
       let next_subsection = query(selector(heading.where(level: 2)).after(loc), loc)
-      let ref_text = to-string(next_subsection.first().body)
+      let ref_text = ""
+      if next_subsection.len() == 0 {
+        ref_text += "Appendix"
+      } else {
+        ref_text += to-string(next_subsection.at(0).body)
+      }
 
       if ref_text == "References" {
         // Get section number
@@ -162,18 +167,21 @@
 #let headingstate = state("headercount", 1)
 
 #let prelude_header(body, colour) = {
-    text(body.body, size: 18pt, font: "Roboto", colour)
+    text(body.body, size: 18pt, font: "Roboto", colour, weight: "medium")
+}
+#let prelude_subheader(body, colour) = {
+    text(body.body, size: 14pt, font: "Roboto", colour, weight: "light")
 }
 
 #let headerL1(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 18pt)
+  set text(font: "Roboto", colour, size: 18pt, weight: "medium")
   set align(left)
 
   // Place title
   box(width: 85%, upper(element.body))
 
-  if element.outlined { // the table of contents is not outlined
+  if element.outlined { // if the element is not in the outline() (ToC)
     place(top + right, text(headingstate.display(), size: 76pt))
   }
   headingstate.update(x => x + 1)
@@ -182,7 +190,7 @@
 
 #let headerL2(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 14pt)
+  set text(font: "Roboto", colour, size: 14pt, weight: "medium")
   set align(left)
   let c = counter(heading).display()
   [#c #element.body]
@@ -192,7 +200,7 @@
 #let headerL3(element, colour) = {
 
 
-  set text(font: "Roboto", colour)
+  set text(font: "Roboto", colour, weight: "medium")
   set align(left)
 
   let c = counter(heading).display()
@@ -203,7 +211,7 @@
 #let headerL4(element, colour) = {
 
 
-  set text(font: "Roboto", colour, size: 11pt)
+  set text(font: "Roboto", colour, size: 11pt, weight: "medium")
   set align(left)
 
   let original = read("../src/svg/chevron-arrow.svg")

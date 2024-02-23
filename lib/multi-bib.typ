@@ -100,13 +100,32 @@
   if authors == 404 {
       [#text("NO AUTHORS, ", size: fontsize)]
   } else {
-      for auth in authors {
-        if type(auth) == "string" {
-          let lastname = auth.split(",").at(0)
-          let firstname = auth.split(",").at(1, default:"Err").slice(0,2)
-          [#text(lastname + "." + firstname + "., ", size: fontsize)]
+      if type(authors) == "array" {
+        for auth in authors {
+          if type(auth) == "string" {
+            let splitnames = auth.split(",")
+            let lastname = splitnames.at(0)
+            let firstname = ""
+//            if splitnames.at(1, default: "Err") == "Err" {
+//              [HERE]
+//            }
+            if splitnames.at(1).len() < 3 {
+              firstname += splitnames.at(1, default:"Err")
+              [#text(lastname + "." + firstname + ", ", size: fontsize)]
+            } else  {
+              firstname += splitnames.at(1, default:"Err").slice(0,2)
+              [#text(lastname + "." + firstname + "., ", size: fontsize)]
+            }
         }
       }
+    } else {
+        if type(authors) == "string" {
+          let splitnames = authors.split(",")
+          let lastname = splitnames.at(0)
+          let firstname = splitnames.at(1).slice(0,2)
+            [#text(lastname + "." + firstname + ". ", size: fontsize)]
+        }
+    }
   }
 }
 
@@ -187,12 +206,13 @@
 }
 
 #let set_doi(publication, fontsize) = {
-  let doi = publication.at("doi", default: 404)
+  let serial-number = publication.at("serial-number", default: 404)
   let url = publication.at("url", default: 404)
 
-  if doi == 404 {
+  if serial-number == 404 {
     [#text("NO DOI", size: fontsize)]
   } else {
+    let doi = serial-number.at("doi", default: 404)
     [#link(url)[doi: #doi]]
   }
 }
@@ -221,8 +241,11 @@
   let counter = 0
 
   for name_pub in bibchapter.keys() {
-    counter += 1
 
+    let publication = bibyml.at(name_pub, default: 404)
+    if publication == 404 { continue }
+
+    counter += 1
     // unique labels indicate the name of the `author key` and the name of the `yaml bibliography`
 //    [[]#text(str(counter) + ". ", size: fontsize) #label(name_pub + basename)] // labels have to remain in local scope to their appended text
     [#text("[" + str(counter) + "] ", size: fontsize) #label(name_pub + basename)] // labels have to remain in local scope to their appended text
@@ -230,7 +253,6 @@
     
     // Authors, Date, Title, Journal, volume number(issue number), pages, DOI
 
-    let publication = bibyml.at(name_pub)
 
     set_authors(publication, fontsize)
     set_title(publication, fontsize)
