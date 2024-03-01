@@ -1547,4 +1547,16 @@ Zhang2015polarizable:
     publisher: American Chemical Society (ACS)
     issue: 11
     volume: 11
+Saenger1984:
+  type: chapter
+  title: Principles of Nucleic Acid Structure
+  author: Saenger, Wolfram
+  date: 1984
+  page-range: XX-556
+  url: https://doi.org/10.1007/978-1-4612-5190-3
+  serial-number:
+    doi: 10.1007/978-1-4612-5190-3
+  parent:
+    type: book
+    issue: 1
 

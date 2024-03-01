@@ -1,6 +1,8 @@
 #import "../../lib/multi-bib.typ": mcite
 #import "bib_02_chapter.typ": biblio
 
+// https://github.com/PgBiel/typst-tablex/
+#import "@preview/tablex:0.0.8": tablex, rowspanx, colspanx
 == Results 
 === Charge derivation using ORCA
 The ORCA QM package does not contain the MK population analysis scheme. To keep the workflow free, local and easy to use, we implemented the population analysis scheme for ORCA to generate ESP charges that are ready to use for the RESP fitting.
@@ -47,142 +49,139 @@ The methodology of deriving torsional parameters for HNA has been validated alre
 ///////
 === Using the proposed workflow to gain insight in RNA::MNA
 ==== Quantum Mechanics to characterise the nucleosides and linker
-Following the procedure described by Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio), PESs were generated for the morpholino nucleosides with adenine, guanine, thymine and cytosine nucleobases. We observed intramolecular hydrogen bonds in the initial calculations, inflating equatorial conformations towards higher energy potentials (Figure PESunrestrained). Those observed hydrogen bonds, which would not exist in a polymeric molecule, introduce a forced steric strain on the nucleoside that would not yield representative FF parameters that are applicable for simulations on oligonucleotides. For the capped MNA variant (Figure PESmethylMNA, Table relEnergyconformers), we see a global minimum on the north pole of the CP-sphere, a #super("4'")C#sub("1'") configuration for all four nucleosides. Local minima are observed mainly on the upper hemisphere, separated by large peaks corresponding to envelope configurations. Equatorial puckering modes tend to be more energetically favourable, with boats and skews alike. A final local minimum is observed on the southern hemisphere, in the East.
-//%
-//%%% FIGURE
-//%\begin{figure*"), biblio)[t] % left bottom right top 
-//\begin{figure*"), biblio)[ht!] % left bottom right top 
-//\includegraphics[trim={0 2cm 0 2cm"), biblio),width=\textwidth, keepaspectratio]{./99_figures/MethylMorpholino_PES.pdf"), biblio)
-//    \caption{%
-//        Potential Energy Surface of the Morpholino Nucleic Acid. Methyl-caps substitued the HO6$'$ and NH3$'$ on the O6$'$ and N3$'$ atoms respectively, to mimic estimated backbone angles and prevent internal hydrogens bonds from occurring during geometry optimisations.
-//        "), biblio)
-//    \label{fig:PES_methylMNA"), biblio)
-//\end{figure*"), biblio)
-//%\end{figure*"), biblio)
+Following the procedure described by Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio), PESs were generated for the morpholino nucleosides with adenine, guanine, thymine and cytosine nucleobases. We observed intramolecular hydrogen bonds in the initial calculations, inflating equatorial conformations towards higher energy potentials (Figure PESunrestrained). Those observed hydrogen bonds, which would not exist in a polymeric molecule, introduce a forced steric strain on the nucleoside that would not yield representative FF parameters that are applicable for simulations on oligonucleotides. For the capped MNA variant (@fig-MethylMorpholinoPES, @tbl-ErelConformers), we see a global minimum on the north pole of the CP-sphere, a #super("4'")C#sub("1'") configuration for all four nucleosides. Local minima are observed mainly on the upper hemisphere, separated by large peaks corresponding to envelope configurations. Equatorial puckering modes tend to be more energetically favourable, with boats and skews alike. A final local minimum is observed on the southern hemisphere, in the East.
+//
+//
+//
+//
 #figure(
   image("./figures/MethylMorpholino_PES_InkScaped.svg"),
   caption : [
     Potential Energy Surface of the Morpholino Nucleic Acid. Methyl-caps substitued the HO6_'_ and NH3_'_ on the O6_'_ and N3_'_ atoms respectively, to mimic estimated backbone angles and prevent internal hydrogens bonds from occurring during geometry optimisations.
   ]
-) <MethylMorpholinoPES>
-//%
-//%
-//%%% TABLE
-//\begin{table"), biblio)[h!]
-//\tableparts{
-//\caption{%
-//$E_{rel"), biblio)$ of the distinct conformers with energy values and their respective position on the CP-sphere's surface, per given nucleoside, $r$ is ommitted as this is assumed constant.  $E_{rel"), biblio)$ $^\diamond$ expressed in kcal/mol. "), biblio)
-//\label{table:relEnergy_conformers"), biblio)
-//"), biblio){%
-//\begin{tabular*"), biblio){\columnwidth"), biblio){@{"), biblio)llllll@{"), biblio)"), biblio)
-//\toprule
-//Conformer  & mA$^\diamond$ & mG$^\diamond$ & mC$^\diamond$ & mT$^\diamond$ & $(\theta, \phi_2)$\\ \colrule
-//$ ^{4'"), biblio)C_{1'"), biblio)$  & 0.00       &  0.00      &  0.00      &  0.00      & (  4.01, 119.75)   \\ %\hline
-//$ ^{2'"), biblio)T_{3'"), biblio)$  & 7.41       &  7.48      &  8.03      &  7.64      & ( 53.29, 150.11)   \\ %\hline
-//$ E_{3'"), biblio)$       & 15.41      & 15.59      & 15.83      & 15.50      & ( 53.29, 179.91)   \\ %\hline
-//$ ^{2'"), biblio)S_{4'"), biblio)$  & 10.64      & 10.77      & 11.25      & 11.28      & ( 93.97,  80.21)   \\ %\hline
-//$ ^{4'"), biblio)S_{2'"), biblio)$  & 7.59       &  8.06      &  8.97      &  8.60      & ( 93.97, 264.13)   \\ %\hline
-//$ ^{3'"), biblio)E$       & 18.76      & 19.39      & 18.46      & 18.40      & (126.62,   0.00)   \\ %\hline
-//$ ^{3'"), biblio)T_{2'"), biblio)$  & 8.90       &  9.71      &  9.35      &  9.14      & (126.62, 330.02)   \\ %\hline
-//$ ^{1'"), biblio)C_{4'"), biblio)$  & 17.04      & 17.65      & 19.55      & 19.15      & (175.90,   0.00)   \\ 
-//\botrule
-//\end{tabular*"), biblio)
-//"), biblio){"), biblio)
-//\vspace{-7mm"), biblio)
-//\end{table"), biblio)
+) <fig-MethylMorpholinoPES>
+
 //
-The N,N-dimethylaminophosphoramidate represents the linkage between successive morpholino nucleosides, where the N,N-dimethylamino mimics the effect of the preceeding mopholino ring. A sampling of the ($zeta$, $alpha$) dihedral dyad was carried out too.  Minima found at (t, g#super("+"), (t, g#super("-")), (g#super("-"),g#super("-")), (g#super("+"),g#super("+")) and (g#super("-"),ap#super("+")), Figure PESlinker. A hard ridge ($alpha$ = 180$degree$ $plus.minus$ 30) splits the PES in two. Its cause is attributed to steric clashes during the sampling itself, due to methyls on either end of the linker residing in close proximity of one another at $alpha$ in the _anti_ range. 
+//
+//
+//
+//
+//
+The N,N-dimethylaminophosphoramidate represents the linkage between successive morpholino nucleosides, where the N,N-dimethylamino mimics the effect of the preceeding mopholino ring. A sampling of the ($zeta$, $alpha$) dihedral dyad was carried out too.  Minima found at (t, g#super("+"), (t, g#super("-")), (g#super("-"),g#super("-")), (g#super("+"),g#super("+")) and (g#super("-"),ap#super("+")), @fig-PesLinker. A hard ridge ($alpha$ = 180$degree$ $plus.minus$ 30) splits the PES in two. Its cause is attributed to steric clashes during the sampling itself, due to methyls on either end of the linker residing in close proximity of one another at $alpha$ in the _anti_ range. 
+//
+//
+//
+#figure(
+  tablex(
+    columns: 6,
+    // Header
+    [Conformer]  , [mA#super($diamond.filled$)] , [mG#super($diamond.filled$)] , [mC#super($diamond.filled$)] , [mT#super($diamond.filled$)] , [$(theta, phi_2)$],
+    // Content
+    [#super("4'")C#sub("1'")]  , [0.00 ]      , [ 0.00]      , [ 0.00]      , [ 0.00]      , [(  4.01, 119.75)]  ,
+    [#super("2'")T#sub("3'")]  , [7.41 ]      , [ 7.48]      , [ 8.03]      , [ 7.64]      , [( 53.29, 150.11)]  ,
+    [   E#sub("3'")  ]         , [15.41]      , [15.59]      , [15.83]      , [15.50]      , [( 53.29, 179.91)]  ,
+    [#super("2'")S#sub("4'")]  , [10.64]      , [10.77]      , [11.25]      , [11.28]      , [( 93.97,  80.21)]  ,
+    [#super("4'")S#sub("2'")]  , [7.59 ]      , [ 8.06]      , [ 8.97]      , [ 8.60]      , [( 93.97, 264.13)]  ,
+    [#super("3'")E   ]         , [18.76]      , [19.39]      , [18.46]      , [18.40]      , [(126.62,   0.00)]  ,
+    [#super("3'")T#sub("2'")]  , [8.90 ]      , [ 9.71]      , [ 9.35]      , [ 9.14]      , [(126.62, 330.02)]  ,
+    [#super("1'")C#sub("4'")]  , [17.04]      , [17.65]      , [19.55]      , [19.15]      , [(175.90,   0.00)]  ,
+  ),
+  caption : [
+    E#sub("rel") of the distinct conformers with energy values and their respective position on the CP-sphere's surface, per given nucleoside, _r_ is ommitted as this is assumed constant.  #super($diamond.filled$)E#sub("rel")  expressed in kcal/mol. 
+  ]
+) <tbl-ErelConformers>
 //
 //
 //
 ==== Force field parametrisation
 The PESs of the four morpholino nucleosides succesfully provided valuable information on transitional pathways. By using the improper dihedrals ($alpha_1$, $alpha_2$, $alpha_3$) as restraints on the pyranose ring, we gained information of possible transitions of conformations as well as puckers we should be expecting. 
-Conformations highlighted in Table relEnergyconformers are conformations that were initially considered for parametrisation, specifically for fitting of the sugar torsion angles (see Fig. sphericalconvention for a reference to their respective physical location on the PES).
-//Parameters for dihedral terms of only the morpholino ring were refined by fitting to QM conformational energy #mcite(("Betz2015paramfit"), biblio) . In this procedure, the quality of the force field depends on the functionals and basis sets used for optimisations, as well as which conformations should be curated from the PES and included in the fitting process. The methylated ends were kept during optimisation and the fitting, as the initial problem of internal hydrogen bonds observed during PES calculation reappeared when reverting back to hydroxyls. Iterative curation of the returned parameters resulted in a simplification of the dataset; only the morpholino cytosine was included with the following puckers : $^{4'"), biblio)C_{1'"), biblio)$, $^{2'"), biblio)T_{3'"), biblio)$, $^{2'"), biblio)S_{4'"), biblio)$, $^{4'"), biblio)S_{2'"), biblio)$, $^{3'"), biblio)T_{2'"), biblio)$.
+Conformations highlighted in @tbl-ErelConformers are conformations that were initially considered for parametrisation, specifically for fitting of the sugar torsion angles (see Fig. sphericalconvention for a reference to their respective physical location on the PES).
+Parameters for dihedral terms of only the morpholino ring were refined by fitting to QM conformational energy #mcite(("Betz2015paramfit"), biblio) . In this procedure, the quality of the force field depends on the functionals and basis sets used for optimisations, as well as which conformations should be curated from the PES and included in the fitting process. The methylated ends were kept during optimisation and the fitting, as the initial problem of internal hydrogen bonds observed during PES calculation reappeared when reverting back to hydroxyls. Iterative curation of the returned parameters resulted in a simplification of the dataset; only the morpholino cytosine was included with the following puckers : #super("4'")C#sub("1'"), #super("2'")T#sub("3'"), #super("2'")S#sub("4'"), #super("4'")S#sub("2'"), #super("3'")T#sub("2'").
 
 For the linker fragment, the minima and transition (g#super("-"),g#super("+")) conformers of the lower half were used to derive partial charges. Since upper half conformers are mirror images of the lower half, they were not considered.
-The linker torsional parameters were obtained from GAFF2 #mcite(("Wang2004gaff"), biblio) and are in good agreement with the PES. (Figure PESlinker C.). The ($zeta$, $alpha$) dihedral dyad values were extracted from the simulation and categorised into discrete integer values, for then to be normalised and plotted. This shows a clear and single peak at the (t, g#super("-")) range, which is in contrast with the standard phosphate, that stabilises in the (g#super("-"),g#super("+")) range in a DNA or RNA duplex #mcite(("Zhang2015polarizable"), biblio). This validates usage of the GAFF2 parameters for the linker. _Nota bene_, a single peak is attributed to the conformational constraints that the linker is submitted to in a polynucleotide chain, which clarifies why multiple minima are perceived in the PES, but only one can be inhabited.
+The linker torsional parameters were obtained from GAFF2 #mcite(("Wang2004gaff"), biblio) and are in good agreement with the PES. (@fig-PesLinker C.). The ($zeta$, $alpha$) dihedral dyad values were extracted from the simulation and categorised into discrete integer values, for then to be normalised and plotted. This shows a clear and single peak at the (t, g#super("-")) range, which is in contrast with the standard phosphate, that stabilises in the (g#super("-"),g#super("+")) range in a DNA or RNA duplex #mcite(("Zhang2015polarizable"), biblio). This validates usage of the GAFF2 parameters for the linker. _Nota bene_, a single peak is attributed to the conformational constraints that the linker is submitted to in a polynucleotide chain, which clarifies why multiple minima are perceived in the PES, but only one can be inhabited.
 //
 //
+#figure(
+  image("./figures/Linker_PES_prevalence.svg"),
+  caption : [
+        Validation of the parametrised backbone N,N-dimethyl-O-methylaminophosphoroamidate linker; PES and torsional prevalence during the simulation. 
+            *A.* The ($zeta, alpha$) dihedral dyad over which we extracted all conformers of the N,N-dimethyl-O-methylaminophosphoroamidate linker.
+            *B.* Potential Energy Surface of the conformational landschape of the N,N-dimethyl-O-methylaminophosphoroamidate linker. 
+            *C.* The prevalence of the ($zeta$, $alpha$) phosphoroamidate linker backbone, extracted from the last 50 ns of the 200 ns simulation. Data was extracted from the simulation and normalised according to the prevalence count of the dihedral dyad.
+  ]
+) <fig-PesLinker>
 //
 //
-//\begin{figure*}[t]
-//    \includegraphics[trim={0 1cm 0 1cm"), biblio),width=\textwidth, keepaspectratio]{./99_figures/Linker_PES_prevalence.png"), biblio) 
-//    \caption{%
-//        Validation of the parametrised backbone N,N-dimethyl-O-methylaminophosphoroamidate linker; PES and torsional prevalence during the simulation. 
-//            \textbf{A."), biblio) The ($\zeta, \alpha$) dihedral dyad over which we extracted all conformers of the N,N-dimethyl-O-methylaminophosphoroamidate linker.
-//            \textbf{B."), biblio) Potential Energy Surface of the conformational landschape of the N,N-dimethyl-O-methylaminophosphoroamidate linker. 
-//            \textbf{C."), biblio) The prevalence of the ($\zeta$, $\alpha$) phosphoroamidate linker backbone, extracted from the last 50 ns of the 200 ns simulation. Data was extracted from the simulation and normalised according to the prevalence count of the dihedral dyad.\\ 
-//    "), biblio)
-//    \label{fig:PES_linker"), biblio)
-//\end{figure*"), biblio)
-//% 
 ==== Molecular model of RNA::MNA
 The RNA::MNA duplex was built in Ducque starting with a 24-mer RNA sequence corresponding to a double-Drew-Dickerson-Dodecamer (double-DDD : 5_'_-CGCGAAUUCGCGCGCGAAUUCGCG-3_'_, residues 1-24) with the geometry of an A-type duplex. All #super("4'")C#sub("1'") MNA nucleosides were ported into Ducque and queried as the complementary strand (residues 25-48). The obtained initial structure was subjected to an MM simulation. An RNA::RNA duplex with identical sequence was generated and simulated for comparative purposes.
-Results of the simulation are summarised in Figure ResultFINALSIMRNAMNA. In the last 50 ns of the MD trajectory, a pronounced prevalence for the #super("3'")E conformation in the conformational wheel is observed for RNA nucleosides in both the dsRNA and heteroduplex model (Figure ResultFINALSIMRNAMNA C,D, Table backbone). The puckering modes for the morpholino rings observed  on the CP-sphere (Figure ResultFINALSIMRNAMNA C), in the same timeframe as stated earlier, largely correspond to the low energy regions of the PES (Figure PES_methylMNA"), biblio)) The scattered, equatorial conformers correspond to residues 30-31.
-//\begin{figure*"), biblio)[t]
-//    \includegraphics[width=\textwidth, keepaspectratio]{./99_figures/FULL_RNAMNA.png"), biblio)
-//    \caption{%
-//        Comparison of the RNA::MNA and RNA::MNA duplexes. Trajectory of the simulation in Fig. \ref{fig:XNAtrajectories"), biblio). Scatterplots are not to be confused with prevalence plots, as scatterplots do not represent normalised data, but represent all data extracted.
-//            \textbf{A."), biblio) Visualisation of the diameter and the helicity for the RNA::MNA duplex. \textbf{B."), biblio) Visualisation of the diameter and the helicity for the RNA::RNA duplex. \textbf{C."), biblio) Scatterplot to represent puckering modes of both RNA (leading) and MNA (complementary) during the last 50 ns of the simulation. \textbf{D."), biblio) Scatterplot to represent puckering modes of RNA (both leading and complementary) during the last 50 ns of the simulation.
-//        "), biblio)
-//    \label{fig:Result_FINALSIM_RNAMNA"), biblio)
-//\end{figure*"), biblio)
+Results of the simulation are summarised in @fig-fullRNAMNA. In the last 50 ns of the MD trajectory, a pronounced prevalence for the #super("3'")E conformation in the conformational wheel is observed for RNA nucleosides in both the dsRNA and heteroduplex model (@fig-fullRNAMNA C,D, Table backbone). The puckering modes for the morpholino rings observed  on the CP-sphere (@fig-fullRNAMNA C), in the same timeframe as stated earlier, largely correspond to the low energy regions of the PES (@fig-MethylMorpholinoPES) The scattered, equatorial conformers correspond to residues 30-31.
+
+#figure(
+  image("./figures/FULL_RNAMNA.svg"),
+  caption : [
+        Comparison of the RNA::MNA and RNA::MNA duplexes. Trajectory of the simulation in Fig. XNAtrajectories. Scatterplots are not to be confused with prevalence plots, as scatterplots do not represent normalised data, but represent all data extracted.
+            *A.* Visualisation of the diameter and the helicity for the RNA::MNA duplex.
+            *B.* Visualisation of the diameter and the helicity for the RNA::RNA duplex.
+            *C.* Scatterplot to represent puckering modes of both RNA (leading) and MNA (complementary) during the last 50 ns of the simulation.
+            *D.* Scatterplot to represent puckering modes of RNA (both leading and complementary) during the last 50 ns of the simulation.
+  ]
+) <fig-fullRNAMNA>
 //
 //
 //
 Their appearance correlate with a K#super("+")-ion that had been enclosed by two MNA residues (30-31) during the second half of the simulation. Its binding induced local backbone angles to deviate substantially from the other nucleosides, off-setting average and standard deviations (std.) parameters by several degrees. Up to four (25-28) residues had frayed (forming $C$, $E$ and $B$ conformers alike), causing residue 28 with guanine nucleobase (mG28) to have its $beta$ angle to twist into an unfavourable position. Structural changes due to K#super("+")-binding destabilised downstream stacking, which causes mA30 to lose pairing with its complement. This resulted in a nearby K#super("+")-ion to alter the $chi$ angle's orientation, of the freed nucleotide, from _anti_ to _syn_ #mcite(("Iupac1983nucleicacids"), biblio). The basepairing of mA30 with its complement was reinstated later, in Hoogsteen (HG), with the ion bound (Figure IonBackbone). The K#super("+") ion is coordinated by mT31:O6_'_, mT31:O5_'_ and mA30:N3_'_ in the MNA backbone and N3 of the nucleobase in mA30.
 Coordination of K#super("+") by N3_'_ in the morpholino ring of mA30 forces it into metastable configurations (Fig. IonBackbone-justfig), as can also be seen on the scatterplots, around the equator (Figure ResultFINALSIMRNAMNA C).
 As this obvious abnormality is attributable to an odd occurrence of the simulation and not the FF itself, data of mA30 and m31 are excluded in Table HelicalParams, Backbone. This behaviour was not observed in the preliminary RNA::MNA simulations (Figure XNAtrajectories).
-//%
-//\begin{table"), biblio)[ht]
-//\tableparts{
-//\caption{%
-//    Helical parameters of the RNA::MNA heteroduplex in comparison with the RNA::RNA homoduplex (top), and the $\chi$-restrained RNA::RNA homoduplexes (bottom. Data extracted from the last 50 ns of the 200 ns simulation. Grooves and helicity as determined in Saenger et al #mcite(("Saenger1984"), biblio). Tilt, twist and roll parameters, determined by the Curves+ software on a 1000 frames that were extracted over the whole length of the trajectory #mcite(("Lavery2009CurvesS"), biblio). See Fig. \ref{fig:basisframe"), biblio) for details on interbasepair parameters.
-//    "), biblio)
-//\label{table:helicalparams"), biblio)
-//"), biblio){
-//    \begin{tabular*"), biblio){\columnwidth"), biblio){@{"), biblio)lrrrr@{"), biblio)"), biblio)
-//    \toprule
-//    Helical Parameter                             & RNA::MNA                        & RNA::RNA            \\ \colrule
-//    Helicity ($\frac{\r{A"), biblio)"), biblio){2\pi"), biblio)$)               & 35.83 ($\pm$ 4.74)              & 32.50 ($\pm$ 3.04)  \\ %\hline
-//    Basepairs per turn ($\frac{bp"), biblio){2\pi"), biblio)$)        & 12                              & 11                  \\ %\hline
-//    Major Groove  (\r{A"), biblio))                         & 15.90 ($\pm$ 3.30)              &  9.86 ($\pm$ 3.21)  \\ %\hline
-//    Minor Groove (\r{A"), biblio))                          &  6.69 ($\pm$ 0.62)              &  9.76 ($\pm$ 0.62)  \\ %\hline
-//    Diameter (\r{A"), biblio))                              & 20.18 ($\pm$ 0.50)              & 19.07 ($\pm$ 0.55)  \\ %\colrule
-//    Tilt      ($^\circ$)                          & -1.34 ($\pm$ 4.73)              & -0.05 ($\pm$ 4.61)  \\ %\hline
-//    Twist     ($^\circ$)                          & 28.06 ($\pm$ 3.99)              & 29.64 ($\pm$ 4.18)  \\ %\hline
-//    Roll      ($^\circ$)                          &  5.51 ($\pm$ 6.27)              &  7.37 ($\pm$ 6.42)  \\ %\hline
-//    \botrule
-//    Helical Parameter                             & RNA::RNA$\chi_{194"), biblio)$             & RNA::RNA$\chi_{189"), biblio)$ \\ \colrule
-//    Helicity ($\frac{\r{A"), biblio)"), biblio){2\pi"), biblio)$)               & 35.54 ($\pm$ 2.89)               & 37.92 ($\pm$ 3.23)   \\ %\hline
-//    Basepairs per turn ($\frac{bp"), biblio){2\pi"), biblio)$)        & 12                               & 12 - 13              \\ %\hline
-//    Major Groove  (\r{A"), biblio))                         &  9.98 ($\pm$ 3.17)               & 13.27 ($\pm$ 2.91)   \\ %\hline
-//    Minor Groove (\r{A"), biblio))                          &  9.64 ($\pm$ 0.49)               &  9.43 ($\pm$ 0.44)   \\ %\hline
-//    Diameter (\r{A"), biblio))                              & 18.99 ($\pm$ 0.55)               & 18.91 ($\pm$ 0.60)   \\ %\colrule
-//    Tilt      ($^\circ$)                          & 0.014 ($\pm$ 3.73)               & -0.08 ($\pm$ 3.70)   \\ %\hline
-//    Twist      ($^\circ$)                         & 29.58 ($\pm$ 3.85)               & 28.70 ($\pm$ 3.85)   \\ %\hline
-//    Roll     ($^\circ$)                           &  4.35 ($\pm$ 5.46)               &  2.75 ($\pm$ 5.35)   \\ %\hline
-//    \botrule
-//      % decrement major and minor groove by 5.8
-//    \end{tabular*"), biblio)
-//"), biblio){"), biblio)
-//%\vspace{-5mm"), biblio)
-//\end{table"), biblio)
+#figure(
+  tablex(
+    columns: 3, 
+
+    // Header 1
+    [Helical Parameter]                             , [RNA::MNA]                        , [RNA::RNA]  ,
+    //Content 1
+    [Helicity $frac(angstrom,2pi)$       ]  , [35.83 ($plus.minus$ 4.74)]              , [32.50 ($plus.minus$ 3.04)]  ,
+    [Basepairs per turn $frac("bp",2pi)$ ]  , [12                       ]              , [11                       ]  ,
+    [Major Groove  ($angstrom$)          ]  , [15.90 ($plus.minus$ 3.30)]              , [ 9.86 ($plus.minus$ 3.21)]  ,
+    [Minor Groove ($angstrom$)           ]  , [ 6.69 ($plus.minus$ 0.62)]              , [ 9.76 ($plus.minus$ 0.62)]  ,
+    [Diameter ($angstrom$)               ]  , [20.18 ($plus.minus$ 0.50)]              , [19.07 ($plus.minus$ 0.55)]  ,
+    [Tilt      ($degree$)                ]  , [-1.34 ($plus.minus$ 4.73)]              , [-0.05 ($plus.minus$ 4.61)]  ,
+    [Twist     ($degree$)                ]  , [28.06 ($plus.minus$ 3.99)]              , [29.64 ($plus.minus$ 4.18)]  ,
+    [Roll      ($degree$)                ]  , [ 5.51 ($plus.minus$ 6.27)]              , [ 7.37 ($plus.minus$ 6.42)]  ,
+    // Header 2
+    [Helical Parameter]                             , [RNA::RNA $chi_(194)$]           , [RNA::RNA $chi_(194)$]  ,
+    //Content 2
+    [Helicity $frac(angstrom,2pi)$       ]  , [35.54 ($plus.minus$ 2.89]              , [37.92 ($plus.minus$ 3.23)]  ,
+    [Basepairs per turn $frac("bp",2pi)$ ]  , [12               ]              , [12 - 13           ]  ,
+    [Major Groove  ($angstrom$)          ]  , [ 9.98 ($plus.minus$ 3.17]              , [13.27 ($plus.minus$ 2.91)]  ,
+    [Minor Groove ($angstrom$)           ]  , [ 9.64 ($plus.minus$ 0.49]              , [ 9.43 ($plus.minus$ 0.44)]  ,
+    [Diameter ($angstrom$)               ]  , [18.99 ($plus.minus$ 0.55]              , [18.91 ($plus.minus$ 0.60)]  ,
+    [Tilt      ($degree$)                ]  , [0.014 ($plus.minus$ 3.73]              , [-0.08 ($plus.minus$ 3.70)]  ,
+    [Twist     ($degree$)                ]  , [29.58 ($plus.minus$ 3.85]              , [28.70 ($plus.minus$ 3.85)]  ,
+    [Roll      ($degree$)                ]  , [ 4.35 ($plus.minus$ 5.46]              , [ 2.75 ($plus.minus$ 5.35)]  ,
+  ),
+  caption: [
+    Helical parameters of the RNA::MNA heteroduplex in comparison with the RNA::RNA homoduplex (top), and the $chi$-restrained RNA::RNA homoduplexes (bottom. Data extracted from the last 50 ns of the 200 ns simulation. Grooves and helicity as determined in Saenger et al #mcite(("Saenger1984"), biblio). Tilt, twist and roll parameters, determined by the Curves+ software on a 1000 frames that were extracted over the whole length of the trajectory #mcite(("Lavery2009curves"), biblio). See Fig. BasisFrame for details on interbasepair parameters.
+  ]
+) <tbl-HelicalParams>
+//
+//
+//
+//
 Except for the $chi$ dihedral angle with a deviation of 2.39-2.93$degree$, no significant differences in average backbone angles in the RNA backbone could be observed in the RNA::MNA duplex versus the model obtained for dsRNA (Table Backbone).
-However, helical parameters significantly deviate from the A-type duplex (Table HelicalParams) with a deeper major groove, and conversely more narrow minor groove, an increase in basepairs per turn and therefore helical size, along with a larger diameter.
+However, helical parameters significantly deviate from the A-type duplex (@tbl-HelicalParams) with a deeper major groove, and conversely more narrow minor groove, an increase in basepairs per turn and therefore helical size, along with a larger diameter.
 //
 To investigate a possible correlation of the altered $chi$ angle in the RNA strand to the overall shape for nucleic acid duplex, we performed two supplementary RNA::RNA double-DDD simulations (Figure ChiangleTrajPucker, ChiangleCurves). While in the original simulations the $chi$ torsion angle was unrestrained, in the additional simulations restraints are applied on $chi$ torsion angles at 194$degree$ and 189$degree$ respectively to mimic the impact on the overall helix structure by increasing deviation from the 199$degree$ $chi$-angle in standard A-type duplexes, at 5 $degree$ increments.
-The helical parameters of the RNA::RNA duplex with $chi$ torsion angles restraints at 194$degree$ are in line to those of the unrestrained RNA::MNA duplex (Table HelicalParams, ChiBackbone). The observed deviations from the A-type duplex are more pronounced in RNA::RNA duplex with $chi$ torsion angles restraints at 189$degree$.
+The helical parameters of the RNA::RNA duplex with $chi$ torsion angles restraints at 194$degree$ are in line to those of the unrestrained RNA::MNA duplex (@tbl-HelicalParams, ChiBackbone). The observed deviations from the A-type duplex are more pronounced in RNA::RNA duplex with $chi$ torsion angles restraints at 189$degree$.
 
 To compare the orientation of P atoms in the linker in complementary strands, the dot product of the cross product of the OP1-P-OP2 plane of the leading RNA nucleotide and complementary MNA nucleotide was calculated and compared to values obtained for corresponding base pairs in 3 simulations performed on dsRNA (Figure LinkerOrientation). Normalised distribution per duplex type shows a clear peak for the RNA::RNA duplexes around 137$degree$-139$degree$ while for RNA::MNA it peaks at 120$degree$-122$degree$. An overlay of a set of the unrestrained RNA::RNA and RNA::MNA C-G basepairs, shows that not only the oriention of P in the MNA strand is changed but also its position relative to the corresponding P in dsRNA.
-//\begin{figure"), biblio)[hbt!]
-//    \centering
-//    \includegraphics[width=\columnwidth, keepaspectratio]{./99_figures/linker_orient_FINALvert.pdf"), biblio)
-//     \caption{%
-//         \textbf{A."), biblio) Calculated angles, by the dot product of the cross product of the OP1-P-OP2 plane of the leading nucleotide and complementary nucleotide.
-//         Sampled on 1000 frames, extracted from the entire simulation, of the double-DDD of RNA::RNA$_{unrestr."), biblio)$, RNA::MNA, RNA::RNA$_{\chi 189"), biblio)$ and RNA::RNA$_{\chi 194"), biblio)$ respectively, for a total distribution of 23 000 angle values per duplex type. \textbf{B."), biblio) Normalised distribution per duplex type shows a clear peak for the RNA::RNA duplexes around 137$^\circ$-139$^\circ$ degrees, while for RNA::MNA it peaks at 120$^\circ$-122$^\circ$. \textbf{C."), biblio) Overlay of a set of RNA::RNA and RNA::MNA C-G basepairs, to visualize the displacement of P in MNA relative to the corresponding RNA in the homoduplex.
-//    "), biblio)
-//    \label{fig:linker_orientation"), biblio)
-//\end{figure"), biblio)
-//
+
+#figure(
+  image("./figures/linker_orient_FINALvert.svg"),
+  caption : [
+         *A.* Calculated angles, by the dot product of the cross product of the OP1-P-OP2 plane of the leading nucleotide and complementary nucleotide.
+         Sampled on 1000 frames, extracted from the entire simulation, of the double-DDD of RNA::RNA#sub("unrestr."), RNA::MNA, RNA::RNA#sub($chi$ + "189") and RNA::RNA#sub($chi$ + "194") respectively, for a total distribution of 23 000 angle values per duplex type.
+         *B.* Normalised distribution per duplex type shows a clear peak for the RNA::RNA duplexes around 137$degree$-139$degree$ degrees, while for RNA::MNA it peaks at 120$degree$-122$degree$.
+         *C.* Overlay of a set of RNA::RNA and RNA::MNA C-G basepairs, to visualize the displacement of P in MNA relative to the corresponding RNA in the homoduplex.
+  ]
+) <fig-LinkerOrient>

@@ -18,11 +18,11 @@ This corrobates well with the available data that the heteroduplex differs from 
 
 
  === Supplementary information
-#link("academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkn000#supplementary-data")[Supplementary Data] is available at NAR Online.
+#link("https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkae135/7614861#supplementary-data")[Supplementary Data] is available at NAR Online.
 The Ducque GitHub repository contains an extensive and comprehensible manual on how to start with Ducque and broaden the library of chemistries (Ducque/docs/). It also contains a separate guide on how to build a force field (Ducque/ff/). The latter directory contains the Morpholino FF used in this project.
 
 
-Ducque is available on GitHub #link("github.com/jrihon/Ducque")[github.com/jrihon/Ducque] and works on most Linux operating system (tested on Ubuntu 20 and 22 LTS), it runs on MacOS and _Windows Subsystem for Linux_ (WSL).
+Ducque is available on GitHub #link("www.github.com/jrihon/Ducque")[github.com/jrihon/Ducque] and works on most Linux operating system (tested on Ubuntu 20 and 22 LTS), it runs on MacOS and _Windows Subsystem for Linux_ (WSL).
 
 CeNA, $beta$-homo DNA, (d)XyNA. 2_'_-O-Me RNA, 2_'_-Fluoro RNA, HNA and MNA are included. It produces full homoduplexes, heteroduplexes and allows mixed chemistries in the complementary strand. The leading sequence is also allowed to vary in chemistry, though we advise to keep the leading strand within the same XNA type.
 

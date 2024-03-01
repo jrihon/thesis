@@ -21,8 +21,11 @@
 #tableofcontents(colour00)
 
 // Format figure captions for the entire document
-#show figure.caption: set text(size: 8pt, style: "italic")
+#show figure.caption: set text(font: "Liberation Sans", size: 8pt, style: "italic")
 #show figure.caption: set align(left)
+//
+// TODO: I have to fix the numbering scheme of Figures and Equations
+//
 // https://github.com/typst/typst/issues/606
 //#show: set figure(numbering: "1.1.")
 #show: set figure(numbering: num => {
@@ -35,12 +38,26 @@
   })
 })
 
+#let colour01 = colourPalette.fountain
+
+#show link: element => style_href(element, colour01)
+
+// equations numbering
+#show: set math.equation(numbering: num => {
+  locate(loc => {
+    let eq_loc = query(math.equation, loc).at(num - 1).location()
+    let chap = counter(heading.where(level: 1)).at(eq_loc).first()
+    let chap_loc = query(heading.where(level: 1), loc).at(chap - 1).location()
+    let num_before = counter(math.equation).at(chap_loc).first()
+    str(chap) + "-" + str(num - num_before)
+  })
+})
+//#set math.equation(numbering: "(1-1)")
 //!
 //!
 //! CHAPTER 00
 //!
 //!
-#let colour01 = colourPalette.fountain
 #show: document => layout(document, "1", "1.1.1.", colour01)  // Set page counter to arabic numbers
 #counter(page).update(1)                // Reset page counters
 

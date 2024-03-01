@@ -4,6 +4,15 @@
 #import "../../lib/multi-bib.typ": mbibliography
 #import "bib_01_chapter.typ": biblio
 
+//! set up variables
+
+#show "hf3c": "HF-3c"
+#show "mp2q": [MP2#super("Q")]
+#show "mp2t": [MP2#super("T")]
+#show "pbeq": [PBE0#super("Q")]
+#show "pbet": [PBE0#super("T")]
+#show "hfq": [HF#super("Q")]
+#show "hfnorijk": [HF#super("Q-" + strike("RIJK", offset: -0.75em))]
 
 = The _pucke.rs_ toolkit to calculation puckers values of biomolecular monomers.
 #boxed-text(

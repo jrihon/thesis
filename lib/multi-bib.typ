@@ -39,14 +39,12 @@
 
     // the link is make by concatenating the :
     // "key of the publication in yml" + "the name of the bibliography.yml file"
+    text("[")
     link(
       label(name_pub + basename), // string coerced into label
-      text(
-//        weight: "bold",
-//        fill: rgb("#FF4252"),     // red, just for highlights, can be deleted later
-//        super(str(val)))          // the citation-indexing superscripted
-        "[" + str(val) + "]")          // the citation-indexing superscripted
+      text( str(val)) 
     ) 
+    text("]")
 
   // if the type is an array
   } else if type(arr_of_pubs) == "array" {
@@ -61,28 +59,20 @@
         panic("The key: " + name_pub + " was not found in the queried yml.")
       }
 
-      let citation = ""
       if counter == 0 {
 
         // the link is make by concatenating the :
         // "key of the publication in yml" + "the name of the bibliography.yml file"
         link(
           label(name_pub + basename), // string coerced into label
-          text(
-//        weight: "bold",
-//        fill: rgb("#FF4252"),     // red, just for highlights, can be deleted later
-//        super(str(val)))          // the citation-indexing superscripted
-        str(val))          // the citation-indexing superscripted
+          text( str(val) )          
         )
       } else {  // if there are multiple citations
+        text(", ") // add comma in between citations
+
         link(
           label(name_pub + basename), 
-          text(
-//            weight: "bold",
-//            fill: rgb("#FF4252"),
-//            super(",") + super(str(val))  // add comma in between citations
-            ", " + str(val)  // add comma in between citations
-          ) 
+          text( str(val) ) 
         )
       }
       counter += 1
@@ -93,12 +83,12 @@
   }
 }
 
-#let set_authors(publication, fontsize) = {
+#let set_authors(publication) = {
 
   let authors = publication.at("author", default: 404)
 
   if authors == 404 {
-      [#text("NO AUTHORS, ", size: fontsize)]
+      [#text("NO AUTHORS, ")]
   } else {
       if type(authors) == "array" {
         for auth in authors {
@@ -111,10 +101,10 @@
 //            }
             if splitnames.at(1).len() < 3 {
               firstname += splitnames.at(1, default:"Err")
-              [#text(lastname + "." + firstname + ", ", size: fontsize)]
+              [#text(lastname + "." + firstname + ", ")]
             } else  {
               firstname += splitnames.at(1, default:"Err").slice(0,2)
-              [#text(lastname + "." + firstname + "., ", size: fontsize)]
+              [#text(lastname + "." + firstname + "., ")]
             }
         }
       }
@@ -123,100 +113,100 @@
           let splitnames = authors.split(",")
           let lastname = splitnames.at(0)
           let firstname = splitnames.at(1).slice(0,2)
-            [#text(lastname + "." + firstname + ". ", size: fontsize)]
+            [#text(lastname + "." + firstname + ". ")]
         }
     }
   }
 }
 
-#let set_title(publication, fontsize) = { 
+#let set_title(publication) = { 
 
   let title = publication.at("title", default: 404)
 
   if title == 404 {
-    [#text("NO TITLE, ", size: fontsize)]
+    [#text("NO TITLE, ")]
   } else {
-    [#text(" \"" + title + "\" ", size: fontsize)]
+    [#text(" \"" + title + "\" ")]
   }
 }
 
-#let set_date(publication, fontsize) = { 
+#let set_date(publication) = { 
 
   let date = publication.at("date", default: 404)
 
   if date == 404 {
-    [#text("NO DATE, ", style: "italic", size: fontsize)]
+    [#text("NO DATE, ", style: "italic")]
   } else {
-//    [#text("(" + str(date) + ")", size: fontsize)  ]
-    [#text(str(date) + ", ", size: fontsize)  ]
+//    [#text("(" + str(date) + ")")  ]
+    [#text(str(date) + ", ")  ]
   }
 }
 
 
-#let set_journal(publication, fontsize) = {
+#let set_journal(publication) = {
 
   let parent = publication.at("parent", default: 404)
 
   if parent == 404 {
-    [#text("NO PARENT FOUND, ", style: "italic", size: fontsize)]
+    [#text("NO PARENT FOUND, ", style: "italic")]
   } else {
 
     let journal = parent.at("title", default: 404)
     if journal == 404 {
-      [#text(str("NO JOURNAL, "), style: "italic", size: fontsize)  ]
+      [#text(str("NO JOURNAL, "), style: "italic")  ]
     } else {
-      [#text(str(journal) + ", ", style: "italic", size: fontsize)  ]
+      [#text(str(journal) + ", ", style: "italic")  ]
     }
   }
 
 
 }
-#let set_issue(publication, fontsize) = {
+#let set_issue(publication) = {
 
   let parent = publication.at("parent", default: 404)
 
   if parent == 404 {
-    [#text("NO PARENT FOUND, ", style: "italic", size: fontsize)]
+    [#text("NO PARENT FOUND, ", style: "italic")]
   } else {
 
 //    let issue = parent.at("issue", default: 404)
 //    if issue == 404 {
-//      [#text(str("NO ISSUE"), style: "italic", size: fontsize)  ]
+//      [#text(str("NO ISSUE"), style: "italic")  ]
 //    } else {
-//      [#text("vol." + str(issue), style: "italic", size: fontsize)  ]
+//      [#text("vol." + str(issue), style: "italic")  ]
 //    }
 
     let volume = parent.at("volume", default: 404)
     if volume == 404 {
-      [#text("(" + str("NO VOLUME") + "),", size: fontsize)  ]
+      [#text("(" + str("NO VOLUME") + "),")  ]
     } else {
-      [#text("vol. " + str(volume) + ", ", size: fontsize)  ]
+      [#text("vol. " + str(volume) + ", ")  ]
     }
   }
 }
 
-#let set_pages(publication, fontsize) = {
+#let set_pages(publication) = {
   let pagerange = publication.at("page-range", default: 404)
 
   if pagerange == 404 {
-    [#text("NO PAGERANGE", size: fontsize)]
+    [#text("NO PAGERANGE")]
   } else {
-    [#text("pp. " + str(pagerange) + ", ", size: fontsize)  ]
+    [#text("pp. " + str(pagerange) + ", ")  ]
   }
 }
 
-#let set_doi(publication, fontsize) = {
+#let set_doi(publication) = {
   let serial-number = publication.at("serial-number", default: 404)
   let url = publication.at("url", default: 404)
 
   if serial-number == 404 {
-    [#text("NO DOI", size: fontsize)]
+    [#text("NO DOI")]
   } else {
     let doi = serial-number.at("doi", default: 404)
-    [#link(url)[doi: #doi]]
+    [#link(url)[#text("doi:" + doi)]]
   }
 }
-#let set_month(publication, fontsize) = {
+#let set_month(publication) = {
 
   let month = publication.at("month", default: 404)
 
@@ -225,7 +215,7 @@
   } else {
     let Imonth = upper(month.at(0))
     let Emonth = month.slice(1)
-    [#text(Imonth + Emonth + ". ", size: fontsize)]
+    [#text(Imonth + Emonth + ". ")]
   }
 
 }
@@ -234,7 +224,8 @@
   let bibchapter = biblio.bibchapter
   let bibyml = yaml(biblio.bibyml)
 
-  let fontsize = 10pt
+  set par(leading: 0.5em)
+  set text(size: 8pt)
 
   let basename = basename_yml(biblio.bibyml)
 
@@ -248,20 +239,20 @@
     counter += 1
     // unique labels indicate the name of the `author key` and the name of the `yaml bibliography`
 //    [[]#text(str(counter) + ". ", size: fontsize) #label(name_pub + basename)] // labels have to remain in local scope to their appended text
-    [#text("[" + str(counter) + "] ", size: fontsize) #label(name_pub + basename)] // labels have to remain in local scope to their appended text
+    [#text("[" + str(counter) + "] ") #label(name_pub + basename)] // labels have to remain in local scope to their appended text
     h(0.5em) // extra space before citation
     
     // Authors, Date, Title, Journal, volume number(issue number), pages, DOI
 
 
-    set_authors(publication, fontsize)
-    set_title(publication, fontsize)
-    set_journal(publication, fontsize)
-    set_issue(publication, fontsize)
-    set_pages(publication, fontsize)
-    set_month(publication, fontsize)
-    set_date(publication, fontsize)
-    set_doi(publication, fontsize)
+    set_authors(publication)
+    set_title(publication)
+    set_journal(publication)
+    set_issue(publication)
+    set_pages(publication)
+    set_month(publication)
+    set_date(publication)
+    set_doi(publication)
     [ \ ] // set newline
 
 

@@ -130,9 +130,12 @@
 #let layout(document, pagenumbers, headernumbers, colour) = {
   set text(
 //    font: "IBM Plex Serif",
-    font: "Source Serif 4",
+//    font: "Source Serif 4",
+//    font: "Noto Serif CJK JP",
+//    font: "Roboto Slab",
+//    weight: "light",
 //    font: "Cormorant Garamond",
-    weight: "regular",
+    weight: "regular", // standard typst font is probably best font, also smallest font and is well-readable
     size: 11pt,
   )
   set align(left)
@@ -149,7 +152,8 @@
   )
   set par(
     justify: true,
-    leading: 0.85em,
+//    leading: 0.65em, // whitespace between lines
+    leading: 0.8em,
   )
   set heading(
     numbering: headernumbers, // only go three depths before we make inlined headers
@@ -175,7 +179,7 @@
 
 #let headerL1(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 18pt, weight: "medium")
+  set text(font: "Roboto", colour, size: 18pt, weight: "regular")
   set align(left)
 
   // Place title
@@ -190,7 +194,7 @@
 
 #let headerL2(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 14pt, weight: "medium")
+  set text(font: "Roboto", colour, size: 14pt, weight: "regular")
   set align(left)
   let c = counter(heading).display()
   [#c #element.body]
@@ -200,7 +204,7 @@
 #let headerL3(element, colour) = {
 
 
-  set text(font: "Roboto", colour, weight: "medium")
+  set text(font: "Roboto", colour, weight: "regular")
   set align(left)
 
   let c = counter(heading).display()
@@ -211,16 +215,24 @@
 #let headerL4(element, colour) = {
 
 
-  set text(font: "Roboto", colour, size: 11pt, weight: "medium")
+  set text(font: "Roboto", colour, size: 11pt, weight: "light")
   set align(left)
 
-  let original = read("../src/svg/chevron-arrow.svg")
-  let changed = original.replace(
-    black.to-hex(), // blue
-    colour.to-hex(),
-  )
-  let a = box(image.decode(changed), height:0.7em, baseline: 0pt)
-  let c = counter(heading).display()
+//  let original = read("../src/svg/chevron-arrow.svg")
+//  let changed = original.replace(
+//    black.to-hex(), // blue
+//    colour.to-hex(),
+//  )
+//  let a = box(image.decode(changed), height:0.7em, baseline: 0pt)
+//  let a = $tilde.op$
+//  let a = $quote.angle.r.double$
+//  let a = $succ.eq$
+//  let a = $arrow.r.loop$
+//  let a = $harpoon.rt$
+//  let a = $compose$
+//  let a = $succ$
+//  let a = $integral.cont$
+  let a = $arrow.r.hook$
   [#h(1em)#a #element.body]
 
 }
@@ -273,6 +285,11 @@
   v(-6.5mm)
 }
 
+//! 
+//! 
+//! BOX STYLE TEXT
+//! 
+//! 
 #let boxed-text(title: "", authors: "", journal: "", doi: "www.github.com/jrihon", colour: rgb("#000000")) = {
 
   // Start content
@@ -317,3 +334,14 @@
     text(fill: colour, contents)
   )
 }
+
+
+//! 
+//! 
+//! HYPERLINK STYLE
+//! 
+//! 
+
+#let style_href(body, colour) = {
+  text(body, fill: colour)
+} 

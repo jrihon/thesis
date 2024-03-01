@@ -67,12 +67,14 @@
     "Wang2004gaff": 66, 
     "Zhang2015polarizable": 67, 
     "Iupac1983nucleicacids": 68, 
-    "Zhang2019templatemna": 69, 
-    "Langner2020thiophosphoramidate": 70, 
-    "Eschenmoser2011naalternatives": 71, 
-    "Nikolova2011hgindna": 72, 
-    "Vreede2019wcftohg": 73, 
-    "Egli2006hna": 74, 
+    "Saenger1984": 69, 
+    "Lavery2009curvess": 70, 
+    "Zhang2019templatemna": 71, 
+    "Langner2020thiophosphoramidate": 72, 
+    "Eschenmoser2011naalternatives": 73, 
+    "Nikolova2011hgindna": 74, 
+    "Vreede2019wcftohg": 75, 
+    "Egli2006hna": 76, 
 )
 
 #let biblio = (

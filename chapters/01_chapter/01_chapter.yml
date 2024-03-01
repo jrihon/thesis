@@ -1,4 +1,456 @@
-neese2020orca:
+Lescrinier2003difference:
+  type: article
+  title: Difference in conformational diversity between nucleic acids with a six-membered ‘sugar’unit and natural ‘furanose’nucleic acids
+  author:
+  - Lescrinier, Eveline
+  - Froeyen, Matheus
+  - Herdewijn, Piet
+  date: 2003
+  page-range: 2975–2989
+  parent:
+    type: periodical
+    title: Nucleic acids research
+    publisher: Oxford University Press
+    issue: 12
+    volume: 31
+Babin2006umbrella:
+  type: article
+  title: The free energy landscape of small peptides as obtained from metadynamics with umbrella sampling corrections
+  author:
+  - Babin, Volodymyr
+  - Roland, Christopher
+  - Darden, Thomas A.
+  - Sagui, Celeste
+  date: 2006-11
+  url: http://dx.doi.org/10.1063/1.2393236
+  serial-number:
+    doi: 10.1063/1.2393236
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 20
+    volume: 125
+Zgarbova2011rnaol3:
+  type: article
+  title: Refinement of the Cornell et al. Nucleic Acids Force Field Based on Reference Quantum Chemical Calculations of Glycosidic Torsion Profiles
+  author:
+  - Zgarbová, Marie
+  - Otyepka, Michal
+  - Šponer, Jiří
+  - Mládek, Arnošt
+  - Banáš, Pavel
+  - Cheatham, Thomas E.
+  - Jurečka, Petr
+  date: 2011-08
+  page-range: 2886
+  url: http://dx.doi.org/10.1021/ct200162x
+  serial-number:
+    doi: 10.1021/ct200162x
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 9
+    volume: 7
+Zgarbova2015dnaol15:
+  type: article
+  title: Refinement of the Sugar–Phosphate Backbone Torsion Beta for AMBER Force Fields Improves the Description of Z- and B-DNA
+  author:
+  - Zgarbová, Marie
+  - Šponer, Jiří
+  - Otyepka, Michal
+  - Cheatham, Thomas E.
+  - Galindo-Murillo, Rodrigo
+  - Jurečka, Petr
+  date: 2015-11
+  page-range: 5723
+  url: http://dx.doi.org/10.1021/acs.jctc.5b00716
+  serial-number:
+    doi: 10.1021/acs.jctc.5b00716
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 12
+    volume: 11
+Perez2007alphagamma:
+  type: article
+  title: 'Refinement of the AMBER Force Field for Nucleic Acids: Improving the Description of α/γ Conformers'
+  author:
+  - Pérez, Alberto
+  - Marchán, Iván
+  - Svozil, Daniel
+  - Sponer, Jiri
+  - Cheatham, Thomas E.
+  - Laughton, Charles A.
+  - Orozco, Modesto
+  date: 2007-06
+  page-range: 3817
+  url: http://dx.doi.org/10.1529/biophysj.106.097782
+  serial-number:
+    doi: 10.1529/biophysj.106.097782
+    issn: 0006-3495
+  parent:
+    type: periodical
+    title: Biophysical Journal
+    publisher: Elsevier BV
+    issue: 11
+    volume: 92
+Cornell19952ndgenff:
+  type: article
+  title: A Second Generation Force Field for the Simulation of Proteins, Nucleic Acids, and Organic Molecules
+  author:
+  - Cornell, Wendy D.
+  - Cieplak, Piotr
+  - Bayly, Christopher I.
+  - Gould, Ian R.
+  - Merz, Kenneth M.
+  - Ferguson, David M.
+  - Spellmeyer, David C.
+  - Fox, Thomas
+  - Caldwell, James W.
+  - Kollman, Peter A.
+  date: 1995-05
+  page-range: 5179
+  url: http://dx.doi.org/10.1021/ja00124a002
+  serial-number:
+    doi: 10.1021/ja00124a002
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 19
+    volume: 117
+Gait2022historyna:
+  type: chapter
+  title: Introduction and History of the Chemistry of Nucleic Acids Therapeutics
+  author:
+  - Gait, Michael J.
+  - Agrawal, Sudhir
+  date: 2022
+  page-range: 3
+  url: http://dx.doi.org/10.1007/978-1-0716-2010-6_1
+  serial-number:
+    doi: 10.1007/978-1-0716-2010-6_1
+    isbn: '9781071620106'
+    issn: 1940-6029
+  parent:
+    type: book
+    title: Antisense RNA Design, Delivery, and Analysis
+    publisher: Springer US
+Egli2023oligonucs:
+  type: article
+  title: Chemistry, structure and function of approved oligonucleotide therapeutics
+  author:
+  - Egli, Martin
+  - Manoharan, Muthiah
+  date: 2023-03
+  page-range: 2529
+  url: http://dx.doi.org/10.1093/nar/gkad067
+  serial-number:
+    doi: 10.1093/nar/gkad067
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 6
+    volume: 51
+Pinheiro2012geneticpolymer:
+  type: article
+  title: Synthetic Genetic Polymers Capable of Heredity and Evolution
+  author:
+  - Pinheiro, Vitor B.
+  - Taylor, Alexander I.
+  - Cozens, Christopher
+  - Abramov, Mikhail
+  - Renders, Marleen
+  - Zhang, Su
+  - Chaput, John C.
+  - Wengel, Jesper
+  - Peak-Chew, Sew-Yeu
+  - McLaughlin, Stephen H.
+  - Herdewijn, Piet
+  - Holliger, Philipp
+  date: 2012-04
+  page-range: 341
+  url: http://dx.doi.org/10.1126/science.1217622
+  serial-number:
+    doi: 10.1126/science.1217622
+    issn: 1095-9203
+  parent:
+    type: periodical
+    title: Science
+    publisher: American Association for the Advancement of Science (AAAS)
+    issue: 6079
+    volume: 336
+Groaz2023hna:
+  type: chapter
+  title: 'Hexitol Nucleic Acid (HNA): From Chemical Design to Functional Genetic Polymer'
+  author:
+  - Groaz, Elisabetta
+  - Herdewijn, Piet
+  date: 2023
+  page-range: 1
+  url: http://dx.doi.org/10.1007/978-981-16-1313-5_15-1
+  serial-number:
+    doi: 10.1007/978-981-16-1313-5_15-1
+    isbn: '9789811613135'
+  parent:
+    type: book
+    title: Handbook of Chemical Biology of Nucleic Acids
+    publisher: Springer Nature Singapore
+Cremer1975general:
+  type: article
+  title: General definition of ring puckering coordinates
+  author:
+  - Cremer, D.
+  - Pople, J. A.
+  date: 1975-03
+  page-range: 1354
+  url: http://dx.doi.org/10.1021/JA00839A011
+  serial-number:
+    doi: 10.1021/ja00839a011
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 6
+    volume: 97
+Iupac1983nucleicacids:
+  type: article
+  title: Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
+  author: IUPAC-IUB, JCBN
+  date: 1983
+  page-range: 9–15
+  parent:
+    type: periodical
+    title: European Journal of Biochemistry
+    volume: 131
+Strauss1970conformational:
+  type: article
+  title: Conformational structure, energy, and inversion rates of cyclohexane and some related oxanes
+  author:
+  - Strauss, Herbert L.
+  - Pickett, Herbert M.
+  date: 1970-12
+  page-range: 7281
+  url: http://dx.doi.org/10.1021/ja00728a009
+  serial-number:
+    doi: 10.1021/ja00728a009
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 25
+    volume: 92
+Altona1972formalism:
+  type: article
+  title: Conformational analysis of the sugar ring in nucleosides and nucleotides. New description using the concept of pseudorotation
+  author:
+  - Altona, C.
+  - Sundaralingam, M.
+  date: 1972-11
+  page-range: 8205
+  url: http://dx.doi.org/10.1021/ja00778a043
+  serial-number:
+    doi: 10.1021/ja00778a043
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 23
+    volume: 94
+Cremer1990analytical:
+  type: article
+  title: Calculation of puckered rings with analytical gradients
+  author: Cremer, Dieter.
+  date: 1990-07
+  page-range: 5502
+  url: http://dx.doi.org/10.1021/J100377A017
+  serial-number:
+    doi: 10.1021/j100377a017
+    issn: 1541-5740
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry
+    publisher: American Chemical Society (ACS)
+    issue: 14
+    volume: 94
+Huang2014improve:
+  type: article
+  title: Improvement of DNA and RNA Sugar Pucker Profiles from Semiempirical Quantum Methods
+  author:
+  - Huang, Ming
+  - Giese, Timothy J.
+  - Lee, Tai-Sung
+  - York, Darrin M.
+  date: 2014-03
+  page-range: 1538
+  url: http://dx.doi.org/10.1021/ct401013s
+  serial-number:
+    doi: 10.1021/ct401013s
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 4
+    volume: 10
+Mattelaer2021efficient:
+  type: article
+  title: Efficient and Accurate Potential Energy Surfaces of Puckering in Sugar-Modified Nucleosides
+  author:
+  - Mattelaer, Charles-Alexandre
+  - Mattelaer, Henri-Philippe
+  - Rihon, Jérôme
+  - Froeyen, Matheus
+  - Lescrinier, Eveline
+  date: 2021-05
+  page-range: 3814
+  url: http://dx.doi.org/10.1021/acs.jctc.1c00270
+  serial-number:
+    doi: 10.1021/acs.jctc.1c00270
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 6
+    volume: 17
+Yang2023crispbases:
+  type: article
+  title: CRISPR-Cas9 recognition of enzymatically synthesized base-modified nucleic acids
+  author:
+  - Yang, Hui
+  - Eremeeva, Elena
+  - Abramov, Mikhail
+  - Jacquemyn, Maarten
+  - Groaz, Elisabetta
+  - Daelemans, Dirk
+  - Herdewijn, Piet
+  date: 2023-01
+  page-range: 1501
+  url: http://dx.doi.org/10.1093/nar/gkac1147
+  serial-number:
+    doi: 10.1093/nar/gkac1147
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 4
+    volume: 51
+Hellweg2007auxqzvpp:
+  type: article
+  title: Optimized accurate auxiliary basis sets for RI-MP2 and RI-CC2 calculations for the atoms Rb to Rn
+  author:
+  - Hellweg, Arnim
+  - Hättig, Christof
+  - Höfener, Sebastian
+  - Klopper, Wim
+  date: 2007-01
+  page-range: 587
+  url: http://dx.doi.org/10.1007/s00214-007-0250-5
+  serial-number:
+    doi: 10.1007/s00214-007-0250-5
+    issn: 1432-2234
+  parent:
+    type: periodical
+    title: Theoretical Chemistry Accounts
+    publisher: Springer Science, Business Media LLC
+    issue: 4
+    volume: 117
+Kabsch1976rmsd:
+  type: article
+  title: A solution for the best rotation to relate two sets of vectors
+  author: Kabsch, W.
+  date: 1976-09
+  page-range: 922
+  url: http://dx.doi.org/10.1107/s0567739476001873
+  serial-number:
+    doi: 10.1107/s0567739476001873
+    issn: 0567-7394
+  parent:
+    type: periodical
+    title: Acta Crystallographica Section A
+    publisher: International Union of Crystallography (IUCr)
+    issue: 5
+    volume: 32
+Hollingsworth2010ramachandran:
+  type: article
+  title: A fresh look at the Ramachandran plot and the occurrence of standard structures in proteins
+  author:
+  - Hollingsworth, Scott A.
+  - Karplus, P. Andrew
+  date: 2010-10
+  page-range: 271
+  url: http://dx.doi.org/10.1515/bmc.2010.022
+  serial-number:
+    doi: 10.1515/bmc.2010.022
+    issn: 1868-5021
+  parent:
+    type: periodical
+    title: BioMolecular Concepts
+    publisher: Walter de Gruyter GmbH
+    issue: 3–4
+    volume: 1
+Rosenberg2023ramachandran:
+  type: article
+  title: An amino-domino model described by a cross-peptide-bond Ramachandran plot defines amino acid pairs as local structural units
+  author:
+  - Rosenberg, Aviv A.
+  - Yehishalom, Nitsan
+  - Marx, Ailie
+  - Bronstein, Alex M.
+  date: 2023-10
+  url: http://dx.doi.org/10.1073/pnas.2301064120
+  serial-number:
+    doi: 10.1073/pnas.2301064120
+    issn: 1091-6490
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    publisher: Proceedings of the National Academy of Sciences
+    issue: 44
+    volume: 120
+Cramericolourmaps:
+  type: article
+  title: Scientific colour maps (8.0.1)
+  author: Crameri, Fabio
+  date: 2023
+  url: https://zenodo.org/records/8409685
+  serial-number:
+    doi: 10.5281/zenodo.8409685
+  parent:
+    type: periodical
+    title: Zenodo
+    publisher: Zenodo
+Neese2003rijk:
+  type: article
+  title: An improvement of the resolution of the identity approximation for the formation of the Coulomb matrix
+  author: Neese, Frank
+  date: 2003-08
+  page-range: 1740
+  url: http://dx.doi.org/10.1002/jcc.10318
+  serial-number:
+    doi: 10.1002/jcc.10318
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 14
+    volume: 24
+Neese2020orca:
   type: article
   title: The ORCA quantum chemistry program package
   author:
@@ -6,46 +458,282 @@ neese2020orca:
   - Wennmohs, Frank
   - Becker, Ute
   - Riplinger, Christoph
-  date: 2020
-  month: jun
-  page-range: 224108
-  doi: 10.1063/5.0004608
-  url: https://www.doi.org/10.1063/5.0004608
+  date: 2020-06
+  url: http://dx.doi.org/10.1063/5.0004608
+  serial-number:
+    doi: 10.1063/5.0004608
+    issn: 1089-7690
   parent:
     type: periodical
     title: The Journal of Chemical Physics
-    publisher: AIP Publishing LLC
+    publisher: AIP Publishing
     issue: 22
     volume: 152
-iupac1983nucleicacids:
+Caldeweyher2017d4corr:
   type: article
-  title: Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
+  title: Extension of the D3 dispersion coefficient model
   author:
-    - IUPAC-IUB, Joint Commission
-  month: aug
-  date: 1983
-  page-range: 1273-1280
+  - Caldeweyher, Eike
+  - Bannwarth, Christoph
+  - Grimme, Stefan
+  date: 2017-07
+  url: http://dx.doi.org/10.1063/1.4993215
+  serial-number:
+    doi: 10.1063/1.4993215
+    issn: 1089-7690
   parent:
     type: periodical
-    title: Journal of Pure and Applied Chemistry
-    volume: 55
-  doi: 0033—4545/83
-  url: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
-cremer1975general:
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 3
+    volume: 147
+Caldeweyher2019londondisp:
   type: article
-  title: General definition of ring puckering coordinates
+  title: A generally applicable atomic-charge dependent London dispersion correction
   author:
-  - Cremer, DT
-  - Pople, JA
-  month: mar
-  date: 1975
-  page-range: 1354–1358
+  - Caldeweyher, Eike
+  - Ehlert, Sebastian
+  - Hansen, Andreas
+  - Neugebauer, Hagen
+  - Spicher, Sebastian
+  - Bannwarth, Christoph
+  - Grimme, Stefan
+  date: 2019-04
+  url: http://dx.doi.org/10.1063/1.5090222
+  serial-number:
+    doi: 10.1063/1.5090222
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 15
+    volume: 150
+Grimme2010dftcorrection:
+  type: article
+  title: A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu
+  author:
+  - Grimme, Stefan
+  - Antony, Jens
+  - Ehrlich, Stephan
+  - Krieg, Helge
+  date: 2010-04
+  url: http://dx.doi.org/10.1063/1.3382344
+  serial-number:
+    doi: 10.1063/1.3382344
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 15
+    volume: 132
+Krishnan1980molorbital:
+  type: article
+  title: Self-consistent molecular orbital methods. XX. A basis set for correlated wave functions
+  author:
+  - Krishnan, R.
+  - Binkley, J. S.
+  - Seeger, R.
+  - Pople, J. A.
+  date: 1980-01
+  page-range: 650
+  url: http://dx.doi.org/10.1063/1.438955
+  serial-number:
+    doi: 10.1063/1.438955
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 1
+    volume: 72
+Frisch1984diffusemolorbital:
+  type: article
+  title: Self-consistent molecular orbital methods 25. Supplementary functions for Gaussian basis sets
+  author:
+  - Frisch, Michael J.
+  - Pople, John A.
+  - Binkley, J. Stephen
+  date: 1984-04
+  page-range: 3265
+  url: http://dx.doi.org/10.1063/1.447079
+  serial-number:
+    doi: 10.1063/1.447079
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 7
+    volume: 80
+Weigend2006def2j:
+  type: article
+  title: Accurate Coulomb-fitting basis sets for H to Rn
+  author: Weigend, Florian
+  date: 2006
+  page-range: 1057
+  url: http://dx.doi.org/10.1039/b515623h
+  serial-number:
+    doi: 10.1039/b515623h
+    issn: 1463-9084
+  parent:
+    type: periodical
+    title: Physical Chemistry Chemical Physics
+    publisher: Royal Society of Chemistry (RSC)
+    issue: 9
+    volume: 8
+Weigend2007def2jk:
+  type: article
+  title: Hartree–Fock exchange fitting basis sets for H to Rn †
+  author: Weigend, Florian
+  date: 2007-06
+  page-range: 167
+  url: http://dx.doi.org/10.1002/jcc.20702
+  serial-number:
+    doi: 10.1002/jcc.20702
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 2
+    volume: 29
+Cremer2011mppt:
+  type: article
+  title: 'Møller–Plesset perturbation theory: from small molecule methods to methods for thousands of atoms'
+  author: Cremer, Dieter
+  date: 2011-05
+  page-range: 509
+  url: http://dx.doi.org/10.1002/wcms.58
+  serial-number:
+    doi: 10.1002/wcms.58
+    issn: 1759-0884
+  parent:
+    type: periodical
+    title: WIREs Computational Molecular Science
+    publisher: Wiley
+    issue: 4
+    volume: 1
+Adamo1999pbe0:
+  type: article
+  title: 'Toward reliable density functional methods without adjustable parameters: The PBE0 model'
+  author:
+  - Adamo, Carlo
+  - Barone, Vincenzo
+  date: 1999-04
+  page-range: 6158
+  url: http://dx.doi.org/10.1063/1.478522
+  serial-number:
+    doi: 10.1063/1.478522
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 13
+    volume: 110
+Kruse2012hf3c:
+  type: article
+  title: A geometrical correction for the inter- and intra-molecular basis set superposition error in Hartree-Fock and density functional theory calculations for large systems
+  author:
+  - Kruse, Holger
+  - Grimme, Stefan
+  date: 2012-04
+  url: http://dx.doi.org/10.1063/1.3700154
+  serial-number:
+    doi: 10.1063/1.3700154
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 15
+    volume: 136
+Grimme2011dispersion:
+  type: article
+  title: Effect of the damping function in dispersion corrected density functional theory
+  author:
+  - Grimme, Stefan
+  - Ehrlich, Stephan
+  - Goerigk, Lars
+  date: 2011-03
+  page-range: 1456
+  url: http://dx.doi.org/10.1002/jcc.21759
+  serial-number:
+    doi: 10.1002/jcc.21759
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 7
+    volume: 32
+Haasnoot1992conformation:
+  type: article
+  title: The conformation of six-membered rings described by puckering coordinates derived from endocyclic torsion angles
+  author: Haasnoot, C. A. G.
+  date: 1992-01
+  page-range: 882
+  url: http://dx.doi.org/10.1021/ja00029a013
+  serial-number:
+    doi: 10.1021/ja00029a013
+    issn: 1520-5126
   parent:
     type: periodical
     title: Journal of the American Chemical Society
-    publisher: ACS Publications
-    issue: 6
-    volume: 97
-  doi: 10.1021/JA00839A011
-  url: https://doi.org/10.1021/JA00839A011
+    publisher: American Chemical Society (ACS)
+    issue: 3
+    volume: 114
+Sega2011sixring:
+  type: article
+  title: Pickett angles and Cremer–Pople coordinates as collective variables for the enhanced sampling of six-membered ring conformations
+  author:
+  - Sega, M.
+  - Autieri, E.
+  - Pederiva, F.
+  date: 2011-01
+  page-range: 141
+  url: http://dx.doi.org/10.1080/00268976.2010.522208
+  serial-number:
+    doi: 10.1080/00268976.2010.522208
+    issn: 1362-3028
+  parent:
+    type: periodical
+    title: Molecular Physics
+    publisher: Informa UK Limited
+    issue: 1
+    volume: 109
+Deserno2004equiglobe:
+  type: article
+  title: How to generate equidistributed points on the surface of a sphere
+  author: Deserno, Markus
+  date: 2004-09
+  url: https://www.cmu.edu/biolphys/deserno/pdf/sphere_equi.pdf
+  parent:
+    type: periodical
+    title: Max-Planck-Institut für Polymerforschung, Ackermannweg 10, 55128 Mainz, Germany
+Pettersen2004ucsf:
+  type: article
+  title: UCSF Chimera—A visualization system for exploratory research and analysis
+  author:
+  - Pettersen, Eric F.
+  - Goddard, Thomas D.
+  - Huang, Conrad C.
+  - Couch, Gregory S.
+  - Greenblatt, Daniel M.
+  - Meng, Elaine C.
+  - Ferrin, Thomas E.
+  date: 2004-07
+  page-range: 1605
+  url: http://dx.doi.org/10.1002/jcc.20084
+  serial-number:
+    doi: 10.1002/jcc.20084
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 13
+    volume: 25
 

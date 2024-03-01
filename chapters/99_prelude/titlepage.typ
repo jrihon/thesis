@@ -69,7 +69,6 @@ Pharmaceutical Sciences"
 
 
 
-//#pagebreak(to: "odd") // insert blank page after this page
 #pagebreak(to: "even") // insert blank page after this page
 
 
@@ -103,20 +102,14 @@ OP SYNTHETISCHE NUCLEÏNEZUREN")
 #layout-title.set_name("Jérôme RIHON")
 
 
-//"Promotor " + h(2em) + " Eveline Lescrinier
-//Co-Promotor " + h(0.55em) + " Vitor Bernardes Pinheiro
-//Co-Promotor " + h(0.55em) + " Matheus Froeyen
-//Chair " + h(3.9em) + " Jef Rozenski
-//Jury member " + h(0.3em) + " Kalyan Das
-//Jury member " + h(0.3em) + " Joost Schymkowitz"
 #v(7fr)
 #layout-title.set_text_extras(
 "Promotor
 Co-Promotor 
 Co-Promotor
-Chair 
-Jury member
-Jury member"
+Voorzitter 
+Jurylid
+Jurylid"
 ,
 "Eveline Lescrinier
 Vitor Bernardes Pinheiro
