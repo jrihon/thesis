@@ -15,12 +15,11 @@ Produced initial models are highly similar for both model builders and provided 
     The K#super("+")-ion enclosed in the backbone. Notice the mA30's glycosidic bond angle having shifted to a _syn_ configuration. See Figure IonBackbone for an detailed look into the enclosed ion throughout the MD simulation.
   ]
 ) <fig-ion2bbjustfig>
-//\begin{figure"), biblio)[b]
-//    \includegraphics[width=\columnwidth, keepaspectratio]{./99_figures/ion-to-backbone-justfig.pdf"), biblio)
-//    \caption{%
-//        The K$^+$-ion enclosed in the backbone. Notice the mA30's glycosidic bond angle having shifted to a \textit{syn"), biblio) configuration. See Figure \ref{fig:ion_backbone"), biblio) for an detailed look into the enclosed ion throughout the MD simulation."), biblio)
-//    \label{fig:ionbackbone-justfig"), biblio)
-//\end{figure"), biblio)
+//
+//
+//
+//
+//
 As sugar puckering is crucial for the backbone geometry and flexibility, we used Paramfit to optimise dihedral force field parameters on non-ribose nucleosides by fitting QM to MM energies of selected conformations of nucleosides after RESP charges had been calculated through the ORCA implementation. Linker parameters from GAFF2 were validated through QM approaches.
 
 The initial RNA::HNA duplex was built and remained stable during the MD round. Ducque’s model of dXyNA homoduplex with backbone dihedrals for a ladder-like structure converged towards the left-handed helical structure in the MD simulation, confirming what was predicted the dXyNA duplex #mcite(("Maiti2011deoxyxylose", "Ramaswamy2009xylonastruct", "Ramaswamy2017xylonastruct"), biblio) (Figure S13). This result, and that of the DNA::RNA heteroduplex, ensured that dihedral angles used for model building in Ducque did not determine the outcome of the MD simulation.  

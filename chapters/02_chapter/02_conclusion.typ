@@ -27,9 +27,9 @@ Ducque is available on GitHub #link("www.github.com/jrihon/Ducque")[github.com/j
 CeNA, $beta$-homo DNA, (d)XyNA. 2_'_-O-Me RNA, 2_'_-Fluoro RNA, HNA and MNA are included. It produces full homoduplexes, heteroduplexes and allows mixed chemistries in the complementary strand. The leading sequence is also allowed to vary in chemistry, though we advise to keep the leading strand within the same XNA type.
 
 A separate guide is provided on how to build a force field, how AMBER interprets its atoms, terminology, requirements for the creation of force fields, on how to perform parametrisation (resp, equivalence, restraints, paramfit, etc.) on a local machine.
-//The ORCA QM package is accessible from the ORCA forum (\href{https://orcaforum.kofo.mpg.de/app.php/portal"), biblio){ORCA Download Portal"), biblio)). 
-//The MSMS software is made publicly available by the Scripps Research Institute ( \href{https://ccsb.scripps.edu/msms/downloads/"), biblio){MSMS download link"), biblio)).
-//The RESP charge derivation scheme through ORCA is freely available on GitHub and will be pushed to both AMBER and ORCA (\href{https://www.github.com/jrihon/TBD"), biblio){github.com/jrihon/ORCA\_MKsampling"), biblio)).
+//The ORCA QM package is accessible from the ORCA forum (\href{https://orcaforum.kofo.mpg.de/app.php/portal"), biblio){ORCA Download Portal")). 
+//The MSMS software is made publicly available by the Scripps Research Institute ( \href{https://ccsb.scripps.edu/msms/downloads/"){MSMS download link")).
+//The RESP charge derivation scheme through ORCA is freely available on GitHub and will be pushed to both AMBER and ORCA (\href{https://www.github.com/jrihon/TBD"){github.com/jrihon/ORCA\_MKsampling")).
 All figures are generated through python-scripted methods (Libraries : matplotlib, cartopy, NumPy, SciPy, mayavi) and/or concatenated/adapted in InkScape.
 All python libraries used are freely available through conda and/or pip (NumPy, SciPy, Tkinter, Cartopy, Mayavi).
 

@@ -21,18 +21,11 @@ Experimental structures of a range of XNA chemistries in homoduplexes and bound 
   This project workflow has been validated on HNA and dXyNA and has been applied to predict the RNA::MNA heteroduplex.
   ]
 ) <ducque_fig_workflow>
-//    \includegraphics[width=\textwidth, keepaspectratio]{./99_figures/02_workflow.pdf"), biblio)
-//            Proposed workflow. 
-//            \textbf{A."), biblio) QM approach to perform conformational sampling to describe the torsional behaviour.
-//            \textbf{B."), biblio) The Ducque model builder receives input from the computed PES to use curated conformers as building block to generate duplex models.
-//            \textbf{C."), biblio) From the PES, one can derive a force field by virtue of the predicted behaviour. A charge derivation scheme has been implemented for ORCA. Curated conformers are to be used to derive torsional parameters for the force field.
-//            \textbf{D."), biblio) Combining the products of (B., an (X)NA molecular model) and (C., a representative force field), we can predict the molecular structure of an XNA model duplex through the use of an MM package, which can be used for antisense design, (X)NA enzyme engineering and more.\\ 
-//%            \textbf{D."), biblio) Combining the products of (B., \revision{an (X)NA molecular model"), biblio)) and (C., \revision{a representative force field"), biblio)), we can predict the molecular structure of an XNA model duplex \revision{through the use of an MM package"), biblio), which can be used for antisense design, (X)NA enzyme engineering and more.\\ 
-//            This project workflow has been validated on HNA and dXyNA and has been applied to predict the RNA::MNA heteroduplex.
-//    "), biblio)
-//\label{fig:workflow"), biblio)
-//\end{figure*"), biblio)
-
+//
+//
+//
+//
+//
 Molecular modeling of XNA::RNA duplexes can predict possible XNA applications and guide the design of XNA and XNA processing enzymes #mcite(("Vanmeert2019XNAligase"), biblio). Model building nucleic acids has been facilitated in the mid ’90s thanks to the release of the Nucleic Acid Builder (NAB) software and its domain-specific language #mcite(("Macke1996nab"), biblio). This was followed with many implementations of the NAB language in a variety of wrappers and servers to allow model building for DNA and RNA.
 The proto-Nucleic Acid Builder has taken a small step towards XNA building by including a set of modifications known to build into mainly A-type structures #mcite(("Alenaizan2020pnab"), biblio). It uses parameters from experimentally derived structures, using the convention of 3DNA #mcite(("Lu20083DNA"), biblio) of basis reference frames, which differ slightly from the definition of Curves+ #mcite(("Lavery2009CurvesS"), biblio). It also makes a good attempt at minimising duplex models with force fields (FFs) that were developed for small molecule minimisation and evaluation.
 The claimed predictions simply build along a set of given vectors from data gathered from wet lab experiments. Consequently, such building schemes are not applicable for many unsolved and underresearched chemistries structures.

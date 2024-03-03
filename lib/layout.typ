@@ -320,17 +320,22 @@
   contents += journal + ". "
 //  contents += link("https://www.doi.org/" + doi)[(#doi)]
 
-  let lightColour = colour.components()
-  lightColour.at(3) = 30% // set alpha to 30%
+//  let lightColour = colour.components()
+//  lightColour.at(3) = 10% // set alpha to 30%
 
   v(1.5em)
+  let pat = pattern(
+    relative: "parent",
+    image("../src/cover/boxedtext_background-final.svg") // variant of the thesis cover
+  )
+
   block(
     width: 100%,
-    fill: rgb(..lightColour), // unpack array into the rgb() function
-    stroke: 1pt + colour,
+//    fill: rgb(..lightColour), // unpack array into the rgb() function
+    fill: pat,
     radius: 2pt,
     inset: 10pt,
-//    body
+    // body
     text(fill: colour, contents)
   )
 }

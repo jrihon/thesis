@@ -23,7 +23,7 @@ This level of theory (LoT) is accompagnied by the 6-311++G (2df,2p) basis#mcite(
 
 The semi-empirical HF-3c LoT#mcite(("Kruse2012hf3c", "Grimme2010dftcorrection", "Grimme2011dispersion"), biblio) is employed as it is fast and cheap and because it has been used in the accelerated methodology#mcite(("Mattelaer2021efficient"), biblio). The double hybrid functional PBE0 #mcite(("Adamo1999pbe0"), biblio), with the D4 dampening, uses the same basis as mp2q but with the def2/J auxiliary set#mcite(("Weigend2006def2j"), biblio) (pbeq). Their usage is reasoned in that both their quality in GO computations have performed extremely well for the fraction of a cost of the pure  _ab initio_ LoTs. All GOs are performed with the _VeryTightOpt_ keyword.
 
-Other methods are the MP2 def2-TZVP/C (mp2t) #mcite(("Hellweg2007auxqzvpp"), biblio) and the hfq , biblio) without RIJK approximation (hfnorijk). These are used to compare their _consumables_ and quality of results within the LoT with the other variants.
+Other methods are the MP2 def2-TZVP/C (mp2t) #mcite(("Hellweg2007auxqzvpp"), biblio) and the hfq without RIJK approximation (hfnorijk). These are used to compare their _consumables_ and quality of results within the LoT with the other variants.
 
 The DNA Adenosine, which counts 31 atoms in total,  uses 103 basis functions for hf3c and 742 basis functions for the calculations with the pbeq, the hfq and the mp2q LoT respectively.
 The benchmarking consists of comparing different LoTs' resources and assessing their RAM usage, wallclock time and Disk Space usage and the _consumables_ used during computations, and comparing this to the GSQ.
