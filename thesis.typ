@@ -9,6 +9,7 @@
 //!
 // Pages to roman numerals, do not include numbering in headers and ToC
 #let colour00 = colourPalette.fountain
+#let colour01 = colourPalette.fountain
 #show: document => layout(document, "I", none, colour00) 
 
 //Format Headers
@@ -20,39 +21,9 @@
 #show outline.entry: it => format-entries(it)
 #tableofcontents(colour00)
 
-// Format figure captions for the entire document
-#show figure.caption: set text(font: "Liberation Sans", size: 8pt, style: "italic")
-#show figure.caption: set align(left)
-//
-// TODO: I have to fix the numbering scheme of Figures and Equations
-//
-// https://github.com/typst/typst/issues/606
-//#show: set figure(numbering: "1.1.")
-#show: set figure(numbering: num => {
-  locate(loc => {
-    let fig_loc = query(figure, loc).at(num - 1).location()
-    let chap = counter(heading.where(level: 1)).at(fig_loc).first()
-    let chap_loc = query(heading.where(level: 1), loc).at(chap - 1).location()
-    let num_before = counter(figure).at(chap_loc).first()
-    str(chap) + "-" + str(num - num_before)
-  })
-})
-
-#let colour01 = colourPalette.fountain
-
+// style link elements as a different colour
 #show link: element => style_href(element, colour01)
 
-// equations numbering
-#show: set math.equation(numbering: num => {
-  locate(loc => {
-    let eq_loc = query(math.equation, loc).at(num - 1).location()
-    let chap = counter(heading.where(level: 1)).at(eq_loc).first()
-    let chap_loc = query(heading.where(level: 1), loc).at(chap - 1).location()
-    let num_before = counter(math.equation).at(chap_loc).first()
-    str(chap) + "-" + str(num - num_before)
-  })
-})
-//#set math.equation(numbering: "(1-1)")
 //!
 //!
 //! CHAPTER 00
@@ -60,6 +31,20 @@
 //!
 #show: document => layout(document, "1", "1.1.1.", colour01)  // Set page counter to arabic numbers
 #counter(page).update(1)                // Reset page counters
+
+//
+// Since we made a prelude, where `numbering : none` and we reset the `heading` after this,
+// we need to add the figure formatting after the prelude and page counting update
+//
+// Format figure captions for the entire document
+#show figure.caption: set text(font: "Liberation Sans", size: 8pt, style: "italic")
+#show figure.caption: set align(left)
+#show: set figure(numbering: num => figure-numbering(num))
+
+// equations numbering
+#show: set math.equation(numbering: num => equation-numbering(num))
+
+
 
 // Format headers
 #show heading.where(level: 1): element => headerL1(element, colour01)

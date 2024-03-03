@@ -127,26 +127,11 @@ The GO experiment with hfq finished around the 30h mark and showed little hardwa
       To clarify, the diagonal of the table highlights the wallclock time of only the GO method for that level of theory (LoT); an SPE with the same LoT is redundant.
   ]
 ) <tbl-wallclock>
-//\begin{table"), biblio)[!ht]
-//    \centering
-//    \begin{tabular"), biblio){ccccc"), biblio)
-//        \hline
-//        \textit{LoT"), biblio)  & HF3c & PBE0 & HF   & MP2 \\
-//        \hline
-//        HF3c & 0.67    & 58.08    & 30.13    & 548.01    \\
-//        PBE0 & 5.12    & 57.97    & 34.53    & 552.41    \\
-//        HF   & 5.12    & 62.48    & 30.02    & 552.36    \\
-//        MP2  & 6.42    & 63.43    & 35.73    & 547.91    \\
-//        \hline
-//    \end{tabular"), biblio)
-//    \caption{%
-//        \textit{%
-//            Wallclock Time to completion, with reference to the generated PESs from Fig. \ref{fig:PES_ALL"), biblio). All times expressed in hour (h).
-//            To clarify, the diagonal of the table highlights the wallclock time of only the GO method for that level of theory (LoT); an SPE with the same LoT is redundant.
-//        "), biblio)
-//    "), biblio)
-//    \label{tbl:wallclock"), biblio)
-//\end{table"), biblio)
+//
+//
+//
+//
+//
 When looking at the SPE calculations, we see that all the conformers in the landscape can be evaluated in less than 6h, irregardless of the LoT. What we also see is that the hfq (max. 28.9 GiB) and mp2q (max. 28.6 GiB) have similar RAM requirements, while the latter still required a tremendous amount of free disk space to store _tmp_-files. All this in contrast to the _pbeq_ that needs (max. 9 GiB) of additional space on disk to run succesfully. The SPE at the hf3c finished so quickly that only a couple of measurements could have been taken (Suppl. Fig. SIConsumables C.,D.).
 The conclusion remains that the (hf3c - mp2q) combination still is a sturdy contender in approximating the GSQ, as these calculations are perfectly manageable within a single workday, on hardware with 64 GiB of RAM and 32 cores. The SPE calculations at the pbeq level are a strong candidate for cases where hardware systems are limited as the landscapes evaluated at this level resembles the shape of the mp2q SPE the most. Still, the established methodology #mcite(("Mattelaer2021efficient"), biblio) returns a comparatively amazing result for the frugality of its expenditure. To combat the storing of _tmp_-files, one allocates more RAM per thread. In the interest of the research, a concession had to be made towards the cheaper LoTs , by not exaggerating the resources allocated with respect to their computational requirements.\\
 A comparison between (mp2q vs. mp2t) and (hfq vs. hfnorijk) is presented in Suppl. Fig. SIConsumablesExtra.

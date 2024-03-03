@@ -345,3 +345,62 @@
 #let style_href(body, colour) = {
   text(body, fill: colour)
 } 
+
+
+//! 
+//! 
+//! FIGURE STYLE
+//! 
+//! 
+// TODO: I have to fix the numbering scheme of Figures and Equations
+// https://github.com/typst/typst/issues/606
+#let figure-numbering(num) = {
+  // num returns the amount of figures that has thusfar appeared in the manuscript
+
+  locate(loc => {
+    //! Get Chapter Number
+    // get location of current figure, `at()` index starts from 0
+    let fig_loc = query(figure, loc).at(num - 1).location() // 
+    // get current number of chapter 
+    // Chapter 2 : number 2 ; Chapter 3 : number 3
+    let chap = counter(heading.where(level: 1)).at(fig_loc).first()
+
+    //! Get Figure Number in the chapter
+    // get location of current chapter
+    //
+    // We have 5 chapters in our prelude section, which also count as `heading`
+    // Increment an extra by 5 to get chapter_location, starting from the actual Chapter 1
+    // `at()` index starts from 0
+    let chap_loc = query(heading.where(level: 1), loc).at(chap - 1 + 5).location()
+    let num_before = counter(figure).at(chap_loc).first()
+    str(chap) + "-" + str(num - num_before)
+  })
+}
+//})
+
+//! 
+//! 
+//! EQUATION STYLE
+//! 
+//! 
+#let equation-numbering(num) = {
+  locate(loc => {
+    //! Get Chapter Number
+    // get location of current figure, `at()` index starts from 0
+    // WEIRD : For some reason, I am not getting an `out-of-bounds` error here
+    let eq_loc = query(math.equation, loc).at(num).location()
+    // get current number of chapter 
+    // Chapter 2 : number 2 ; Chapter 3 : number 3
+    let chap = counter(heading.where(level: 1)).at(eq_loc).first()
+
+    //! Get Figure Number in the chapter
+    // get location of current chapter
+    //
+    // We have 5 chapters in our prelude section, which also count as `heading`
+    // Increment an extra by 5 to get chapter_location, starting from the actual Chapter 1
+    // `at()` index starts from 0
+    let chap_loc = query(heading.where(level: 1), loc).at(chap - 1 + 5).location()
+    let num_before = counter(math.equation).at(chap_loc).first()
+    str(chap) + "-" + str(num - num_before)
+  })
+}
