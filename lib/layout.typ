@@ -263,7 +263,7 @@
 //    text(element, font: "Roboto", colourPalette.fountain)
 
   if element.element.level == 1 {
-    text(element, font: "Roboto", colourPalette.fountain)
+    text(element, font: "Roboto", colourPalette.lightblueslate)
 //    let string = to-string(element.body).at(0)
 //    if string == "1" {
 //      text(element, font: "Roboto", colourPalette.darkpurple)
@@ -290,7 +290,7 @@
 //! BOX STYLE TEXT
 //! 
 //! 
-#let boxed-text(title: "", authors: "", journal: "", doi: "www.github.com/jrihon", colour: rgb("#000000")) = {
+#let boxed-text(title: "", authors: "", journal: "", doi: "www.github.com/jrihon") = {
 
   // Start content
 
@@ -336,7 +336,7 @@
     radius: 2pt,
     inset: 10pt,
     // body
-    text(fill: colour, contents)
+    text(fill: colourPalette.blueslate, contents)
   )
 }
 
@@ -408,4 +408,40 @@
     let num_before = counter(math.equation).at(chap_loc).first()
     str(chap) + "-" + str(num - num_before)
   })
+}
+
+
+
+//!
+//!
+//! MAKE FANCY QUOTE ENVIRONMENT
+//!
+//!
+#let make-quote(content, author) = {
+
+  set align(center)
+  author = text("~ " + author + " ~", style: "italic", size: 10pt)
+  content = text("\" " + content + " \"", size: 12pt)
+
+  let lightColour = colourPalette.lightblueslate.components()
+  lightColour.at(3) = 50% // set alpha to 30%
+  content += "\n" + author
+  place(
+    bottom + right,
+    box(
+      align(
+        center,
+        content
+      ),
+      radius: 2pt,
+//      stroke: colourPalette.lightblueslate,
+      stroke: (
+        bottom: rgb(..lightColour),
+        right: rgb(..lightColour),
+        ),
+      inset: 0.75em
+    )
+  )
+
+  
 }

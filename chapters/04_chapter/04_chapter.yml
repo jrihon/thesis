@@ -1,0 +1,226 @@
+Lescrinier2003difference:
+  type: article
+  title: Difference in conformational diversity between nucleic acids with a six-membered ‘sugar’unit and natural ‘furanose’nucleic acids
+  author:
+  - Lescrinier, Eveline
+  - Froeyen, Matheus
+  - Herdewijn, Piet
+  date: 2003
+  page-range: 2975–2989
+  parent:
+    type: periodical
+    title: Nucleic acids research
+    publisher: Oxford University Press
+    issue: 12
+    volume: 31
+Cornell19952ndgenff:
+  type: article
+  title: A Second Generation Force Field for the Simulation of Proteins, Nucleic Acids, and Organic Molecules
+  author:
+  - Cornell, Wendy D.
+  - Cieplak, Piotr
+  - Bayly, Christopher I.
+  - Gould, Ian R.
+  - Merz, Kenneth M.
+  - Ferguson, David M.
+  - Spellmeyer, David C.
+  - Fox, Thomas
+  - Caldwell, James W.
+  - Kollman, Peter A.
+  date: 1995-05
+  page-range: 5179
+  url: http://dx.doi.org/10.1021/ja00124a002
+  serial-number:
+    doi: 10.1021/ja00124a002
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 19
+    volume: 117
+Gait2022historyna:
+  type: chapter
+  title: Introduction and History of the Chemistry of Nucleic Acids Therapeutics
+  author:
+  - Gait, Michael J.
+  - Agrawal, Sudhir
+  date: 2022
+  page-range: 3
+  url: http://dx.doi.org/10.1007/978-1-0716-2010-6_1
+  serial-number:
+    doi: 10.1007/978-1-0716-2010-6_1
+    isbn: '9781071620106'
+    issn: 1940-6029
+  parent:
+    type: book
+    title: Antisense RNA Design, Delivery, and Analysis
+    publisher: Springer US
+Egli2023oligonucs:
+  type: article
+  title: Chemistry, structure and function of approved oligonucleotide therapeutics
+  author:
+  - Egli, Martin
+  - Manoharan, Muthiah
+  date: 2023-03
+  page-range: 2529
+  url: http://dx.doi.org/10.1093/nar/gkad067
+  serial-number:
+    doi: 10.1093/nar/gkad067
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 6
+    volume: 51
+Pinheiro2012geneticpolymer:
+  type: article
+  title: Synthetic Genetic Polymers Capable of Heredity and Evolution
+  author:
+  - Pinheiro, Vitor B.
+  - Taylor, Alexander I.
+  - Cozens, Christopher
+  - Abramov, Mikhail
+  - Renders, Marleen
+  - Zhang, Su
+  - Chaput, John C.
+  - Wengel, Jesper
+  - Peak-Chew, Sew-Yeu
+  - McLaughlin, Stephen H.
+  - Herdewijn, Piet
+  - Holliger, Philipp
+  date: 2012-04
+  page-range: 341
+  url: http://dx.doi.org/10.1126/science.1217622
+  serial-number:
+    doi: 10.1126/science.1217622
+    issn: 1095-9203
+  parent:
+    type: periodical
+    title: Science
+    publisher: American Association for the Advancement of Science (AAAS)
+    issue: 6079
+    volume: 336
+Cremer1975general:
+  type: article
+  title: General definition of ring puckering coordinates
+  author:
+  - Cremer, D.
+  - Pople, J. A.
+  date: 1975-03
+  page-range: 1354
+  url: http://dx.doi.org/10.1021/JA00839A011
+  serial-number:
+    doi: 10.1021/ja00839a011
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 6
+    volume: 97
+Iupac1983nucleicacids:
+  type: article
+  title: Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
+  author: IUPAC-IUB, JCBN
+  date: 1983
+  page-range: 9–15
+  parent:
+    type: periodical
+    title: European Journal of Biochemistry
+    volume: 131
+Strauss1970conformational:
+  type: article
+  title: Conformational structure, energy, and inversion rates of cyclohexane and some related oxanes
+  author:
+  - Strauss, Herbert L.
+  - Pickett, Herbert M.
+  date: 1970-12
+  page-range: 7281
+  url: http://dx.doi.org/10.1021/ja00728a009
+  serial-number:
+    doi: 10.1021/ja00728a009
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 25
+    volume: 92
+Altona1972formalism:
+  type: article
+  title: Conformational analysis of the sugar ring in nucleosides and nucleotides. New description using the concept of pseudorotation
+  author:
+  - Altona, C.
+  - Sundaralingam, M.
+  date: 1972-11
+  page-range: 8205
+  url: http://dx.doi.org/10.1021/ja00778a043
+  serial-number:
+    doi: 10.1021/ja00778a043
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 23
+    volume: 94
+Cremer1990analytical:
+  type: article
+  title: Calculation of puckered rings with analytical gradients
+  author: Cremer, Dieter.
+  date: 1990-07
+  page-range: 5502
+  url: http://dx.doi.org/10.1021/J100377A017
+  serial-number:
+    doi: 10.1021/j100377a017
+    issn: 1541-5740
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry
+    publisher: American Chemical Society (ACS)
+    issue: 14
+    volume: 94
+Huang2014improve:
+  type: article
+  title: Improvement of DNA and RNA Sugar Pucker Profiles from Semiempirical Quantum Methods
+  author:
+  - Huang, Ming
+  - Giese, Timothy J.
+  - Lee, Tai-Sung
+  - York, Darrin M.
+  date: 2014-03
+  page-range: 1538
+  url: http://dx.doi.org/10.1021/ct401013s
+  serial-number:
+    doi: 10.1021/ct401013s
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 4
+    volume: 10
+Mattelaer2021efficient:
+  type: article
+  title: Efficient and Accurate Potential Energy Surfaces of Puckering in Sugar-Modified Nucleosides
+  author:
+  - Mattelaer, Charles-Alexandre
+  - Mattelaer, Henri-Philippe
+  - Rihon, Jérôme
+  - Froeyen, Matheus
+  - Lescrinier, Eveline
+  date: 2021-05
+  page-range: 3814
+  url: http://dx.doi.org/10.1021/acs.jctc.1c00270
+  serial-number:
+    doi: 10.1021/acs.jctc.1c00270
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 6
+    volume: 17
+

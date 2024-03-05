@@ -231,6 +231,10 @@
 
   let counter = 0
 
+  // if no citations have been used, early return
+  if bibchapter.len() == 0 {
+    return
+  }
   for name_pub in bibchapter.keys() {
 
     let publication = bibyml.at(name_pub, default: 404)

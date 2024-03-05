@@ -1,6 +1,8 @@
 // Import from the typst package repository: https://typst.app/docs/packages/
 #import "lib/layout.typ" : * 
 #import "lib/colours.typ": *
+#import "@preview/tablex:0.0.8": tablex
+
 
 //!
 //!
@@ -8,11 +10,10 @@
 //!
 //!
 // Pages to roman numerals, do not include numbering in headers and ToC
-#let colour00 = colourPalette.fountain
-#let colour01 = colourPalette.fountain
+#let colour00 = colourPalette.lightblueslate
 #show: document => layout(document, "I", none, colour00) 
 
-//Format Headers
+//Format Headers for prelude
 #show heading.where(level: 1): element => prelude_header(element, colour00)
 
 #include {"./chapters/99_prelude/mod.typ"} 
@@ -22,14 +23,14 @@
 #tableofcontents(colour00)
 
 // style link elements as a different colour
-#show link: element => style_href(element, colour01)
+#show link: element => style_href(element, colour00)
 
 //!
 //!
 //! CHAPTER 00
 //!
 //!
-#show: document => layout(document, "1", "1.1.1.", colour01)  // Set page counter to arabic numbers
+#show: document => layout(document, "1", "1.1.1.", colour00)  // Set page counter to arabic numbers
 #counter(page).update(1)                // Reset page counters
 
 //
@@ -47,10 +48,10 @@
 
 
 // Format headers
-#show heading.where(level: 1): element => headerL1(element, colour01)
-#show heading.where(level: 2): element => headerL2(element, colour01)
-#show heading.where(level: 3): element => headerL3(element, colour01)
-#show heading.where(level: 4): element => headerL4(element, colour01)
+#show heading.where(level: 1): element => headerL1(element, colour00)
+#show heading.where(level: 2): element => headerL2(element, colour00)
+#show heading.where(level: 3): element => headerL3(element, colour00)
+#show heading.where(level: 4): element => headerL4(element, colour00)
 // Include manuscript
 #include {"./chapters/00_chapter/mod.typ"} 
 

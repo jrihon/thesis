@@ -1,5 +1,5 @@
 // Main file of Chapter 2
-#import "../../lib/layout.typ": boxed-text
+#import "../../lib/layout.typ": boxed-text, make-quote
 #import "../../lib/colours.typ": colourPalette
 #import "../../lib/multi-bib.typ": mbibliography
 #import "bib_01_chapter.typ": biblio
@@ -19,13 +19,19 @@
   title: "The pucke.rs toolkit to facilitate sampling the conformational space of biomolecular monomers.",
   authors: ("Rihon J.", "Reynders S.", "Pinheiro V.B.", "Lescrinier E."),
   journal: "Journal of Cheminformatics (J Cheminf)",
-  colour: colourPalette.fountain
 )
 
 #include {"./01_introduction.typ"}
 #include {"./01_methods.typ"}
 #include {"./01_resultdiscussion.typ"}
 #include {"./01_conclusion.typ"}
+
+#make-quote(
+  [Master has given Dobby a sock! \
+  Master has presented Dobby with clothes! \
+  Dobby is free!],
+  [Dobby - Harry Potter and the Chamber of Secrets]
+)
 
 #mbibliography(biblio, "ieee")
 #pagebreak()

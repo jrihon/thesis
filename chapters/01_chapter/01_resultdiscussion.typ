@@ -1,12 +1,13 @@
+#import "../../lib/colours.typ": colourPalette
 #import "../../lib/multi-bib.typ": mcite
 #import "bib_01_chapter.typ": biblio
-
 // https://github.com/PgBiel/typst-tablex/
-#import "@preview/tablex:0.0.8": tablex, rowspanx, colspanx
+#import "@preview/tablex:0.0.8": tablex
+
 == Result & Discussion
 === The _pucke.rs_ toolkit
 ==== Methodology of _pucke.rs_
-A visual accompagniment to the methodology is provided below (Fig. ConfSamplingExplained).
+A visual accompagniment to the methodology is provided below (@fig-ConfSamplingExplained).
 For endocyclic systems, puckering formalisms are exploited, as they neatly abstract the conformation of an N-membered ring system to a set of coordinates. For the fivering system, the methodology has been applied from Huang _et al._'s #mcite(("Huang2014improve"), biblio) way of combining the Altona-Sundaralingam (AS) and Sato formalism, projected on a Cartesian system. 
 $
     nu_1 &= (Z_x cos(frac(4pi,5)) + Z_y sin(frac(4pi,5))) \
@@ -17,10 +18,10 @@ $ <eq-Huang>
 //
 By iterating over a set of $Z_x$ and $Z_y$ values, ranging from [-60. $arrow.r$ 60.], one calculates a set of $(nu_1, nu_3)$ endocyclic torsion angles per gridpoint. 
 @eq-Huang simply rearranges the terms from Huang _et al._ to return the pair of endocyclic torsion angles #mcite(("Huang2014improve"), biblio).
-Both the peptide and fivering methods return a 2D grid, returning sets of proper dihedrals to be used as constraints for GO procedures (Fig. ConfSamplingExplained A,B.). 
+Both the peptide and fivering methods return a 2D grid, returning sets of proper dihedrals to be used as constraints for GO procedures (@fig-ConfSamplingExplained A,B.). 
 
-Sampling the pyranose space exploits two puckering formalisms. Through the use of the Cremer-Pople (CP) formalism, one can calculate a set of local elevations from a spherical coordinate $(Q, theta, phi)$, which is an abstraction of a six-membered ring conformation. It has been theoretically detailed by Haasnoot _et al._ #mcite(("Haasnoot1992conformation", "Cremer1990analytical"), biblio) and applied by Sega _et al._ #mcite(("Sega2011sixring"), biblio), to reverse engineer (or invert) the puckering coordinates to a full conformation. Starting from an equidistributed globe #mcite(("Deserno2004equiglobe"), biblio), the coordinates are passed into the function to calculate the set of local elevations per conformation. Based on assumptions on the magnitude of the bondlengths and -angles, the atoms are assigned a position in $RR^3$. Afterwards, the improper dihedrals ($alpha_1, alpha_2, alpha_3$) (Strauss-Pickett formalism; SP) are computed for and are used as constraints.
-The sphere represents the CP sphere; the six-membered ring's conformational extent (Fig. ConfSamplingExplained C.).
+Sampling the pyranose space exploits two puckering formalisms. Through the use of the Cremer-Pople (CP) formalism, one can calculate a set of local elevations from a spherical coordinate $(Q, theta, phi)$, which is an abstraction of a six-membered ring conformation. It has been theoretically detailed by Cremer #mcite(("Cremer1990analytical"), biblio) and applied by Sega _et al._ #mcite(("Sega2011sixring"), biblio), to reverse engineer (or invert) the puckering coordinates to a full conformation. Starting from an equidistributed globe #mcite(("Deserno2004equiglobe"), biblio), the coordinates are passed into the function to calculate the set of local elevations per conformation. Based on assumptions on the magnitude of the bondlengths and -angles, the atoms are assigned a position in $RR^3$. Afterwards, the improper dihedrals ($alpha_1, alpha_2, alpha_3$) (Strauss-Pickett formalism; SP) are computed for and are used as constraints.
+The sphere represents the CP sphere; the six-membered ring's conformational extent (@fig-ConfSamplingExplained C.).
 The amplitude is kept as a constant at $Q$ = 0.67, as this is the value at which biologically relevant six-membered rings exist #mcite(("Haasnoot1992conformation"), biblio) @eq-GeneralCpEven defines all ringsystems with an even amount of atoms.
 
 $
@@ -36,7 +37,7 @@ $ <eq-GeneralCpSixring>
 //
 By virtue of the fact that @eq-GeneralCpSixring can be assigned as : 
 $
-q_2 = Q sin(theta), q_3 = Q cos(theta), phi = phi_2 
+q_2 = Q sin(theta) #h(1em) | #h(1em) q_3 = Q cos(theta) #h(1em) | #h(1em) phi = phi_2 
 $ <eq-VirtueEquation>
 //
 //
@@ -113,6 +114,8 @@ The GO experiment with hfq finished around the 30h mark and showed little hardwa
 #figure(
   tablex(
     columns: 5,
+    map-cells: cell => (..cell, content: text(cell.content, size: 10pt)),
+    stroke: 0.5pt + colourPalette.lightblueslate,
           // Header
           [_LoT_], [hf3c], [PBE0], [HF], [MP2],
           // Content

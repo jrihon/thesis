@@ -33,9 +33,9 @@
     "Weigend2006def2j": 32, 
     "Kabsch1976rmsd": 33, 
     "Cramericolourmaps": 34, 
-    "Haasnoot1992conformation": 35, 
-    "Sega2011sixring": 36, 
-    "Deserno2004equiglobe": 37, 
+    "Sega2011sixring": 35, 
+    "Deserno2004equiglobe": 36, 
+    "Haasnoot1992conformation": 37, 
     "Pettersen2004ucsf": 38, 
     "Hollingsworth2010ramachandran": 39, 
 )
