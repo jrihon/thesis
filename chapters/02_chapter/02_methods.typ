@@ -11,7 +11,8 @@
 //
 //
 === Characterisation of the nucleosides through Quantum Mechanics
-The conformational sampling method has been previously reported and applied on DNA, RNA, HNA and dXyNA, in Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio). For MNA, the Cremer-Pople (CP) coordinates can be reversed engineered to Strauss-Pickett (SP) improper dihedrals #link("www.github.com/Marcello-Sega/sugar-puckering")[sugarpucker], by generating equidistributed coordinate points on the surface of a sphere #mcite(("Deserno2004generate"), biblio).
+The conformational sampling method has been previously reported and applied on DNA, RNA, HNA and dXyNA, in Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio). For MNA, the Cremer-Pople (CP) coordinates can be reversed engineered to Strauss-Pickett (SP) improper dihedrals (#link("https://github.com/Marcello-Sega/sugar-puckering")[github.com/Marcello-Sega/sugar-puckering]), by generating equidistributed coordinate points on the surface of a sphere 
+#mcite(("Deserno2004generate"), biblio).
 The generated spherical coordinates ($r$, $theta$, $phi$) are converted to local elevation (z#sub("j")) from a mean plane per respective atom #mcite(("Cremer1975general"), biblio), by assuming bond lengths and angles, which positions the atoms in the ring in cartesian space. From the atomic coordinates, the improper dihedrals ($alpha_1$, $alpha_2$, $alpha_3$) can be calculated for #mcite(("Strauss1970conformational"), biblio). Graphical representations of these formalisms have been added (Figure CPMeanplane, SPImproper).
 These improper dihedrals are used as restraints for the ORCA software (v. 5.0.2) #mcite(("Neese2020orca"), biblio). Several backbone torsion angles were restrained as follows : $beta$ (180.1$degree$), $gamma$ (60.1$degree$), $epsilon$ (180.1$degree$), $chi$ (193.9$degree$) #mcite(("Mattelaer2021efficient"), biblio).
 First, a lightweight semiempirical HF-3c (Hartree Fock) geometry optimisation is performed to relax the respective conformations after imposing the restraints. Afterwards, a single point energy (SPE) evaluation, through Møller-Plesset 2nd order perturbation theory (MP2) is performed to evaluate the potential of the respective conformers. The specific accompagnying basis set for MP2 is 6-311++G(2df,2p) with  the def2-qzvpp/C basis as an auxiliary basis set for the RI approximation and the def2/JK auxiliary basis set for the RI approximation of Coulomb and exchange integrals in the HF step #mcite(("Mattelaer2021efficient"), biblio). A total of 630 conformers were sampled for the each morpholino nucleoside.
@@ -34,8 +35,26 @@ Ducque uses a mechanical building method that functions solely on the given nucl
 
 
 Ducque's core functionality is extrapolation of the backbone dihedral by requiring only torsion and angle values. To position an atom in $RR^3$, there is only one location that satisfies both the given angle and dihedral.
-With this process, and an associated fitting of the following linker and nucleoside, the leading strand is built (Figure DihedralExtrapol).
-To build to complementary sequence, a fitting of the complementary strand's nucleobase to the leading strand's nucleobase is performed, by posing the complementary nucleobase onto the plane of its basepair and shifting it into the desired hydrogen bonding position (Figure BuildComp). An added fitting of the backbone with neighbouring residues resolves most, if not all, clashes. Any remaining clashes are easily resolved through minimisation in the next stage of MD, with the correct force field.
+Ducque functions by extrapolating for the fourth atom, in a set of atoms of a dihedral. In two dimensions, one can calculate for a vector when only knowing the direction of one vector and the supposed angle between the two vectors.
+In three dimensions one will be left with an infinite amount of vectors in a conal space. Trying to extrapolate the fourth atom in a dihedral will leave one with infinite vectors in a plane. By exploiting the fact that there exists only a single vector that lives in both the cone and the plane, the last atom can be determined, completing the atom set of the dihedral.
+With this process, and an associated fitting of the following linker and nucleoside, the leading strand is built (@fig-buildmethod A.-C.).
+To build to complementary sequence, a fitting of the complementary strand's nucleobase to the leading strand's nucleobase is performed, by posing the complementary nucleobase onto the plane of its basepair and shifting it into the desired hydrogen bonding pattern (@fig-buildmethod D.). An added fitting of the backbone with neighbouring residues resolves most, if not all, clashes. Any remaining clashes are easily resolved through minimisation in the next stage of MD, with the correct force field. This building method assumes planarity of the input monomer's nucleobases, which is simply achieves by a cheap and restraintive geometry optimisation.
+#figure(
+  image("./figures/build_methods.svg", width: 100%),
+  caption: [
+        Ducque's methodology of extrapolation to atomic position, by angle and dihedral.
+        The unit vectors ($accent(i, hat)$, $accent(j, hat)$, $accent(k, hat)$) are coloured in pink.
+        Dihedral extrapolation of the $beta$ dihedral, of the nucleotide backbone, is visualised by extrapolating to the P atom with  C4$'$, C5$'$ and O5$'$ given.
+        *A.* Generate a cone of equidistributed vectors around $accent(k, hat)$, by a set angle that represents the angle between the 3#super("rd") and the 4#super("th") atom. 
+        *B.* Superpose $accent(k, hat)$ on the middle bond of the supposed dihedral. Calculate all possible dihedral with the three given atoms and the respective vectors (P atoms) in the cone. 
+        *C.* Find the two vectors that lie the closest to the given dihedral and interpolate for vector you require, effectively giving you the position of the 4#super("th") in the set of atoms.
+        *D.* Visualisation of how Ducque builds the complementary strand. First, the plane in which the leading strand's nucleobase (left) lies needs to be defined (#text(fill: rgb("B64848"), $accent(A, arrow.r)$)) .
+          The complementary nucleoside (right) is then rotated so that the cross product (vector orthogonal to the plane) of its nucleobase is oriented exactly opposite to that of the leading strand's nucleobase's cross product (#text(fill: rgb("B64848"), $accent(B, arrow.r)$)).
+          The initial position for the complementary base is determined for (#text(fill: rgb("4A91A6"), $Phi_R$)).
+          The final rotation (#text(fill: rgb("476934"), $accent(J, arrow.r)$)) is effectuated by defining the (#text(fill: rgb("D4AC1A"), $Phi_Q$)) dihedral to position the complementary nucleoside with the correct hydrogen bonding pattern of the respective basepair. This in turn ensures a correct structure of the overall NA duplex. \
+          The basepairing is dependent on correct naming of the atoms in the model building blocks. This is the main reason why nucleobase modifications are not in place yet.
+  ]
+) <fig-buildmethod>
 
 //
 //

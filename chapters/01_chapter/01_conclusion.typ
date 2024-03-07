@@ -11,6 +11,4 @@ The information returned by such methodologies can be used to make informed deci
 
 The free and open-source toolkit allows for a pragmatic approach to these experiments, by simplifying the workflow to what is actually desired; the sampling, defining and documenting of the configurational space of the biomolecular monomer of interest. The _inversion_ method for the Cremer-Pople formalism is particularly useful to recreate conformations from literature, to reproduce and understand puckering behaviour.
 
-
-The #link("https://github.com/jrihon/puckers")[CLI-tool] and the #link("https://github.com/jrihon/puckepy")[Python library] are available on GitHub, where their documentation can be found as well. The user can build the CLI from source by using the Rust toolchain, or install the library directly from pip or conda.
-
+The #link("https://github.com/jrihon/puckers")[CLI-tool] and the #link("https://github.com/jrihon/puckepy")[Python library] are available on GitHub, where their documentation can be found as well. The user can build the CLI from source by using the Rust toolchain, or install the library directly from pip or conda. Physical links to software releases can be found in _Published Works_ section of the thesis.

@@ -1559,4 +1559,74 @@ Saenger1984:
   parent:
     type: book
     issue: 1
+Maier2005rnahna:
+  type: article
+  title: Reinforced HNA Backbone Hydration in the Crystal Structure of a Decameric HNA/RNA Hybrid
+  author:
+  - Maier, Timm
+  - Przylas, Ingo
+  - Strater, Norbert
+  - Herdewijn, Piet
+  - Saenger, Wolfram
+  date: 2005-02
+  page-range: 2937
+  url: http://dx.doi.org/10.1021/ja045843v
+  serial-number:
+    doi: 10.1021/ja045843v
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 9
+    volume: 127
+Perez2007alphagamma:
+  type: article
+  title: 'Refinement of the AMBER Force Field for Nucleic Acids: Improving the Description of α/γ Conformers'
+  author:
+  - Pérez, Alberto
+  - Marchán, Iván
+  - Svozil, Daniel
+  - Sponer, Jiri
+  - Cheatham, Thomas E.
+  - Laughton, Charles A.
+  - Orozco, Modesto
+  date: 2007-06
+  page-range: 3817
+  url: http://dx.doi.org/10.1529/biophysj.106.097782
+  serial-number:
+    doi: 10.1529/biophysj.106.097782
+    issn: 0006-3495
+  parent:
+    type: periodical
+    title: Biophysical Journal
+    publisher: Elsevier BV
+    issue: 11
+    volume: 92
+Cornell1995secondgenff:
+  type: article
+  title: A Second Generation Force Field for the Simulation of Proteins, Nucleic Acids, and Organic Molecules
+  author:
+  - Cornell, Wendy D.
+  - Cieplak, Piotr
+  - Bayly, Christopher I.
+  - Gould, Ian R.
+  - Merz, Kenneth M.
+  - Ferguson, David M.
+  - Spellmeyer, David C.
+  - Fox, Thomas
+  - Caldwell, James W.
+  - Kollman, Peter A.
+  date: 1995-05
+  page-range: 5179
+  url: http://dx.doi.org/10.1021/ja00124a002
+  serial-number:
+    doi: 10.1021/ja00124a002
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 19
+    volume: 117
 

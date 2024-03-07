@@ -41,9 +41,11 @@
 
 
 == Software releases
-+ Ducque : the (X)NA model builder #link("https://github.com/jrihon/Ducque")[www.github.com/jrihon/Ducque]
-+ pucke.rs : the CLI tool for conformational sampling #link("https://github.com/jrihon/puckers")[www.github.com/jrihon/puckers]
-+ pucke.py : the Python module for conformational sampling, puckering formalisms and inversion, and computing standard geometries #link("https://github.com/jrihon/puckepy")[www.github.com/jrihon/puckepy]
++ Ducque : the (X)NA model builder \~ #link("https://github.com/jrihon/Ducque")[https://github.com/jrihon/Ducque] \
+  $arrow.r.hook$ MK population analysis scheme for ORCA \~ #link("https://github.com/jrihon/Ducque/tree/main/ff")[https://github.com/jrihon/Ducque/tree/main/ff]
++ pucke.py : the Python module for conformational sampling, puckering formalisms and inversion, and computing standard geometries \~ #link("https://github.com/jrihon/puckepy")[https://github.com/jrihon/puckepy] \
+  $arrow.r.hook$ pucke.py code examples \~ #link("https://github.com/jrihon/puckepy/blob/main/docs/documentation.rst")[https://github.com/jrihon/puckepy/blob/main/docs/documentation.rst]
++ pucke.rs : the CLI tool for conformational sampling \~ #link("https://github.com/jrihon/puckers")[https://github.com/jrihon/puckers]
 
 == Scientific outreach
 
@@ -53,7 +55,7 @@
 ]
 
 #let figure-embo = [#figure(
-  image("../../src/svg/EMBO-EMBL_poster_design.svg")
+  image("../../src/svg/EMBO-EMBL_poster_design.png")
 )]
 #grid(content-embo, figure-embo, columns: 2, gutter: 1em)
 #pagebreak()
