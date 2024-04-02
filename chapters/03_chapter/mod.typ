@@ -1,4 +1,4 @@
-// Main file of Chapter 5
+// Main file of Chapter 3
 #import "../../lib/layout.typ": boxed-text, make-quote
 #import "../../lib/colours.typ": colourPalette
 #import "../../lib/multi-bib.typ": mbibliography

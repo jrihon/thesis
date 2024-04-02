@@ -223,4 +223,150 @@ Mattelaer2021efficient:
     publisher: American Chemical Society (ACS)
     issue: 6
     volume: 17
+Ellington1990Aptamer:
+  type: article
+  title: In vitro selection of RNA molecules that bind specific ligands
+  author:
+  - Ellington, Andrew D.
+  - Szostak, Jack W.
+  date: 1990-08
+  page-range: 818
+  url: http://dx.doi.org/10.1038/346818a0
+  serial-number:
+    doi: 10.1038/346818a0
+    issn: 1476-4687
+  parent:
+    type: periodical
+    title: Nature
+    publisher: Springer Science, Business Media LLC
+    issue: 6287
+    volume: 346
+Tuerk1990Aptamer:
+  type: article
+  title: 'Systematic Evolution of Ligands by Exponential Enrichment: RNA Ligands to Bacteriophage T4 DNA Polymerase'
+  author:
+  - Tuerk, Craig
+  - Gold, Larry
+  date: 1990-08
+  page-range: 505
+  url: http://dx.doi.org/10.1126/science.2200121
+  serial-number:
+    doi: 10.1126/science.2200121
+    issn: 1095-9203
+  parent:
+    type: periodical
+    title: Science
+    publisher: American Association for the Advancement of Science (AAAS)
+    issue: 4968
+    volume: 249
+Dunn2017AptamerDiscovery:
+  type: article
+  title: Analysis of aptamer discovery and technology
+  author:
+  - Dunn, Matthew R.
+  - Jimenez, Randi M.
+  - Chaput, John C.
+  date: 2017-10
+  url: http://dx.doi.org/10.1038/s41570-017-0076
+  serial-number:
+    doi: 10.1038/s41570-017-0076
+    issn: 2397-3358
+  parent:
+    type: periodical
+    title: Nature Reviews Chemistry
+    publisher: Springer Science, Business Media LLC
+    issue: 10
+    volume: 1
+Raden2018RNAstructures:
+  type: article
+  title: Interactive implementations of thermodynamics-based RNA structure and RNA–RNA interaction prediction approaches for example-driven teaching
+  author:
+  - Raden, Martin
+  - Mohamed, Mostafa Mahmoud
+  - Ali, Syed Mohsin
+  - Backofen, Rolf
+  date: 2018-08
+  editor: Ouellette, Francis
+  page-range: e1006341
+  url: http://dx.doi.org/10.1371/journal.pcbi.1006341
+  serial-number:
+    doi: 10.1371/journal.pcbi.1006341
+    issn: 1553-7358
+  parent:
+    type: periodical
+    title: PLOS Computational Biology
+    publisher: Public Library of Science (PLoS)
+    issue: 8
+    volume: 14
+Mortimer2014RNAstructreview:
+  type: article
+  title: Insights into RNA structure and function from genome-wide studies
+  author:
+  - Mortimer, Stefanie A.
+  - Kidwell, Mary Anne
+  - Doudna, Jennifer A.
+  date: 2014-05
+  page-range: 469
+  url: http://dx.doi.org/10.1038/nrg3681
+  serial-number:
+    doi: 10.1038/nrg3681
+    issn: 1471-0064
+  parent:
+    type: periodical
+    title: Nature Reviews Genetics
+    publisher: Springer Science, Business Media LLC
+    issue: 7
+    volume: 15
+Eddy2004whatisDP:
+  type: article
+  title: What is dynamic programming?
+  author: Eddy, Sean R
+  date: 2004-07
+  page-range: 909
+  url: http://dx.doi.org/10.1038/nbt0704-909
+  serial-number:
+    doi: 10.1038/nbt0704-909
+    issn: 1546-1696
+  parent:
+    type: periodical
+    title: Nature Biotechnology
+    publisher: Springer Science, Business Media LLC
+    issue: 7
+    volume: 22
+Waterman1978Smith:
+  type: article
+  title: 'RNA secondary structure: a complete mathematical analysis'
+  author:
+  - Waterman, M.S.
+  - Smith, T.F.
+  date: 1978-12
+  page-range: 257
+  url: http://dx.doi.org/10.1016/0025-5564(78)90099-8
+  serial-number:
+    doi: 10.1016/0025-5564(78)90099-8
+    issn: 0025-5564
+  parent:
+    type: periodical
+    title: Mathematical Biosciences
+    publisher: Elsevier BV
+    issue: 3–4
+    volume: 42
+Pinheiro2014CST:
+  type: article
+  title: Compartmentalized Self‐Tagging for In Vitro‐Directed Evolution of XNA Polymerases
+  author:
+  - Pinheiro, Vitor B.
+  - Arangundy‐Franklin, Sebastian
+  - Holliger, Philipp
+  date: 2014-06
+  url: http://dx.doi.org/10.1002/0471142700.nc0909s57
+  serial-number:
+    doi: 10.1002/0471142700.nc0909s57
+    issn: 1934-9289
+  parent:
+    type: periodical
+    title: Current Protocols in Nucleic Acid Chemistry
+    publisher: Wiley
+    issue: 1
+    volume: 57
 

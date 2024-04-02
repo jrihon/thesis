@@ -52,6 +52,7 @@
 #show heading.where(level: 2): element => headerL2(element, colour00)
 #show heading.where(level: 3): element => headerL3(element, colour00)
 #show heading.where(level: 4): element => headerL4(element, colour00)
+#show heading.where(level: 5): element => headerL5(element, colour00)
 // Include manuscript
 #include {"./chapters/00_chapter/mod.typ"} 
 
