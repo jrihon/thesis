@@ -369,4 +369,545 @@ Pinheiro2014CST:
     publisher: Wiley
     issue: 1
     volume: 57
+Schofield2023HNAaptamer:
+  type: article
+  title: Characterization of an HNA aptamer suggests a non-canonical G-quadruplex motif
+  author:
+  - Schofield, Peter
+  - Taylor, Alexander I
+  - Rihon, Jérôme
+  - Peña Martinez, Cristian D
+  - Zinn, Sacha
+  - Mattelaer, Charles-Alexandre
+  - Jackson, Jennifer
+  - Dhaliwal, Gurpreet
+  - Schepers, Guy
+  - Herdewijn, Piet
+  - Lescrinier, Eveline
+  - Christ, Daniel
+  - Holliger, Philipp
+  date: 2023-07
+  page-range: 7736
+  url: http://dx.doi.org/10.1093/nar/gkad592
+  serial-number:
+    doi: 10.1093/nar/gkad592
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 15
+    volume: 51
+mattelaer2021PHD:
+  type: thesis
+  title: Structure and folding of XNA aptamers studied by computational and experimental methods
+  author: Mattelaer, Charles-Alexandre
+  date: 2021
+  organization: Laboratory of Medicinal Chemistry, Rega Insitute for Medical Research, KU Leuven
+DeGenst2006camelidHEL:
+  type: article
+  title: Molecular basis for the preferential cleft recognition by dromedary heavy-chain antibodies
+  author:
+  - De Genst, Erwin
+  - Silence, Karen
+  - Decanniere, Klaas
+  - Conrath, Katja
+  - Loris, Remy
+  - Kinne, Jörg
+  - Muyldermans, Serge
+  - Wyns, Lode
+  date: 2006-03
+  page-range: 4586
+  url: http://dx.doi.org/10.1073/pnas.0505379103
+  serial-number:
+    doi: 10.1073/pnas.0505379103
+    issn: 1091-6490
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    publisher: Proceedings of the National Academy of Sciences
+    issue: 12
+    volume: 103
+ChimeraX:
+  type: article
+  title: 'UCSF ChimeraX: Structure visualization for researchers, educators, and developers'
+  author:
+  - Pettersen, Eric F.
+  - Goddard, Thomas D.
+  - Huang, Conrad C.
+  - Meng, Elaine C.
+  - Couch, Gregory S.
+  - Croll, Tristan I.
+  - Morris, John H.
+  - Ferrin, Thomas E.
+  date: 2020-10
+  page-range: 70
+  url: http://dx.doi.org/10.1002/pro.3943
+  serial-number:
+    doi: 10.1002/pro.3943
+    issn: 1469-896X
+  parent:
+    type: periodical
+    title: Protein Science
+    publisher: Wiley
+    issue: 1
+    volume: 30
+Lagoja2003HNAsynthesis:
+  type: article
+  title: Synthesis of 1,5‐Anhydrohexitol Building Blocks for Oligonucleotide Synthesis
+  author:
+  - Lagoja, Irene M.
+  - Marchand, Arnaud
+  - Van Aerschot, Arthur
+  - Herdewijn, Piet
+  date: 2003-09
+  url: http://dx.doi.org/10.1002/0471142700.nc0109s14
+  serial-number:
+    doi: 10.1002/0471142700.nc0109s14
+    issn: 1934-9289
+  parent:
+    type: periodical
+    title: Current Protocols in Nucleic Acid Chemistry
+    publisher: Wiley
+    issue: 1
+    volume: 14
+Rubio2016SPR:
+  type: article
+  title: Surface plasmon resonance imaging (SPRi) for analysis of DNA aptamer:β-conglutin interactions
+  author:
+  - Jauset Rubio, Miriam
+  - Svobodová, Markéta
+  - Mairal, Teresa
+  - O’Sullivan, Ciara K.
+  date: 2016-03
+  page-range: 20
+  url: http://dx.doi.org/10.1016/j.ymeth.2015.10.013
+  serial-number:
+    doi: 10.1016/j.ymeth.2015.10.013
+    issn: 1046-2023
+  parent:
+    type: periodical
+    title: Methods
+    publisher: Elsevier BV
+    volume: 97
+Rouet2015HumanAb:
+  type: article
+  title: Fully Human VH Single Domains That Rival the Stability and Cleft Recognition of Camelid Antibodies
+  author:
+  - Rouet, Romain
+  - Dudgeon, Kip
+  - Christie, Mary
+  - Langley, David
+  - Christ, Daniel
+  date: 2015-05
+  page-range: 11905
+  url: http://dx.doi.org/10.1074/jbc.M114.614842
+  serial-number:
+    doi: 10.1074/jbc.m114.614842
+    issn: 0021-9258
+  parent:
+    type: periodical
+    title: Journal of Biological Chemistry
+    publisher: Elsevier BV
+    issue: 19
+    volume: 290
+Rouet2017HumanAb:
+  type: article
+  title: Structural reconstruction of protein ancestry
+  author:
+  - Rouet, Romain
+  - Langley, David B.
+  - Schofield, Peter
+  - Christie, Mary
+  - Roome, Brendan
+  - Porebski, Benjamin T.
+  - Buckle, Ashley M.
+  - Clifton, Ben E.
+  - Jackson, Colin J.
+  - Stock, Daniela
+  - Christ, Daniel
+  date: 2017-03
+  page-range: 3897
+  url: http://dx.doi.org/10.1073/pnas.1613477114
+  serial-number:
+    doi: 10.1073/pnas.1613477114
+    issn: 1091-6490
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    publisher: Proceedings of the National Academy of Sciences
+    issue: 15
+    volume: 114
+Cohen1996hyhel:
+  type: article
+  title: Refined Structure of the Monoclonal Antibody HyHEL-5 with its Antigen Hen Egg-White Lysozyme
+  author:
+  - Cohen, G. H.
+  - Sheriff, S.
+  - Davies, D. R.
+  date: 1996-03
+  page-range: 315
+  url: http://dx.doi.org/10.1107/S0907444995014855
+  serial-number:
+    doi: 10.1107/s0907444995014855
+    issn: 0907-4449
+  parent:
+    type: periodical
+    title: Acta Crystallographica Section D Biological Crystallography
+    publisher: International Union of Crystallography (IUCr)
+    issue: 2
+    volume: 52
+Biffi2013GqAntibody:
+  type: article
+  title: Quantitative visualization of DNA G-quadruplex structures in human cells
+  author:
+  - Biffi, Giulia
+  - Tannahill, David
+  - McCafferty, John
+  - Balasubramanian, Shankar
+  date: 2013-01
+  page-range: 182
+  url: http://dx.doi.org/10.1038/nchem.1548
+  serial-number:
+    doi: 10.1038/nchem.1548
+    issn: 1755-4349
+  parent:
+    type: periodical
+    title: Nature Chemistry
+    publisher: Springer Science, Business Media LLC
+    issue: 3
+    volume: 5
+Carter1992Herceptin:
+  type: article
+  title: Humanization of an anti-p185HER2 antibody for human cancer therapy.
+  author:
+  - Carter, P
+  - Presta, L
+  - Gorman, C M
+  - Ridgway, J B
+  - Henner, D
+  - Wong, W L
+  - Rowland, A M
+  - Kotts, C
+  - Carver, M E
+  - Shepard, H M
+  date: 1992-05
+  page-range: 4285
+  url: http://dx.doi.org/10.1073/pnas.89.10.4285
+  serial-number:
+    doi: 10.1073/pnas.89.10.4285
+    issn: 1091-6490
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    publisher: Proceedings of the National Academy of Sciences
+    issue: 10
+    volume: 89
+Vanquelef2011RED:
+  type: article
+  title: 'R.E.D. Server: a web service for deriving RESP and ESP charges and building force field libraries for new molecules and molecular fragments'
+  author:
+  - Vanquelef, Enguerran
+  - Simon, Sabrina
+  - Marquant, Gaelle
+  - Garcia, Elodie
+  - Klimerak, Geoffroy
+  - Delepine, Jean Charles
+  - Cieplak, Piotr
+  - Dupradeau, François-Yves
+  date: 2011-05
+  page-range: W511–W517
+  url: http://dx.doi.org/10.1093/nar/gkr288
+  serial-number:
+    doi: 10.1093/nar/gkr288
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: suppl_2
+    volume: 39
+Bayly1993RESP:
+  type: article
+  title: 'A well-behaved electrostatic potential based method using charge restraints for deriving atomic charges: the RESP model'
+  author:
+  - Bayly, Christopher I.
+  - Cieplak, Piotr
+  - Cornell, Wendy
+  - Kollman, Peter A.
+  date: 1993-10
+  page-range: 10269
+  url: http://dx.doi.org/10.1021/j100142a004
+  serial-number:
+    doi: 10.1021/j100142a004
+    issn: 1541-5740
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry
+    publisher: American Chemical Society (ACS)
+    issue: 40
+    volume: 97
+Singh1984MK:
+  type: article
+  title: An approach to computing electrostatic charges for molecules
+  author:
+  - Singh, U. Chandra
+  - Kollman, Peter A.
+  date: 1984-04
+  page-range: 129
+  url: http://dx.doi.org/10.1002/jcc.540050204
+  serial-number:
+    doi: 10.1002/jcc.540050204
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 2
+    volume: 5
+Neese2020ORCA:
+  type: article
+  title: The ORCA quantum chemistry program package
+  author:
+  - Neese, Frank
+  - Wennmohs, Frank
+  - Becker, Ute
+  - Riplinger, Christoph
+  date: 2020-06
+  url: http://dx.doi.org/10.1063/5.0004608
+  serial-number:
+    doi: 10.1063/5.0004608
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 22
+    volume: 152
+Adamo1999PBE0:
+  type: article
+  title: 'Toward reliable density functional methods without adjustable parameters: The PBE0 model'
+  author:
+  - Adamo, Carlo
+  - Barone, Vincenzo
+  date: 1999-04
+  page-range: 6158
+  url: http://dx.doi.org/10.1063/1.478522
+  serial-number:
+    doi: 10.1063/1.478522
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 13
+    volume: 110
+Zheng2010madef2:
+  type: article
+  title: Minimally augmented Karlsruhe basis sets
+  author:
+  - Zheng, Jingjing
+  - Xu, Xuefei
+  - Truhlar, Donald G.
+  date: 2010-12
+  page-range: 295
+  url: http://dx.doi.org/10.1007/s00214-010-0846-z
+  serial-number:
+    doi: 10.1007/s00214-010-0846-z
+    issn: 1432-2234
+  parent:
+    type: periodical
+    title: Theoretical Chemistry Accounts
+    publisher: Springer Science, Business Media LLC
+    issue: 3
+    volume: 128
+Asgeirsson2021NebTS:
+  type: article
+  title: Nudged Elastic Band Method for Molecular Reactions Using Energy-Weighted Springs Combined with Eigenvector Following
+  author:
+  - Ásgeirsson, Vilhjálmur
+  - Birgisson, Benedikt Orri
+  - Bjornsson, Ragnar
+  - Becker, Ute
+  - Neese, Frank
+  - Riplinger, Christoph
+  - Jónsson, Hannes
+  date: 2021-07
+  page-range: 4929
+  url: http://dx.doi.org/10.1021/acs.jctc.1c00462
+  serial-number:
+    doi: 10.1021/acs.jctc.1c00462
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 8
+    volume: 17
+Mayer2009AptamerReview:
+  type: article
+  title: The Chemical Biology of Aptamers
+  author: Mayer, Günter
+  date: 2009-03
+  page-range: 2672
+  url: http://dx.doi.org/10.1002/anie.200804643
+  serial-number:
+    doi: 10.1002/anie.200804643
+    issn: 1521-3773
+  parent:
+    type: periodical
+    title: Angewandte Chemie International Edition
+    publisher: Wiley
+    issue: 15
+    volume: 48
+Adachi2019AptamerReview:
+  type: article
+  title: 'Aptamers: A Review of Their Chemical Properties and Modifications for Therapeutic Application'
+  author:
+  - Adachi, Tatsuo
+  - Nakamura, Yoshikazu
+  date: 2019-11
+  page-range: 4229
+  url: http://dx.doi.org/10.3390/molecules24234229
+  serial-number:
+    doi: 10.3390/molecules24234229
+    issn: 1420-3049
+  parent:
+    type: periodical
+    title: Molecules
+    publisher: MDPI AG
+    issue: 23
+    volume: 24
+Golay2012Abreview:
+  type: article
+  title: 'Mechanism of action of therapeutic monoclonal antibodies: Promises and pitfalls of in vitro and in vivo assays'
+  author:
+  - Golay, Josée
+  - Introna, Martino
+  date: 2012-10
+  page-range: 146
+  url: http://dx.doi.org/10.1016/j.abb.2012.02.011
+  serial-number:
+    doi: 10.1016/j.abb.2012.02.011
+    issn: 0003-9861
+  parent:
+    type: periodical
+    title: Archives of Biochemistry and Biophysics
+    publisher: Elsevier BV
+    issue: 2
+    volume: 526
+Muyldermans2020Nbreview:
+  type: article
+  title: 'A guide to: generation and design of nanobodies'
+  author: Muyldermans, Serge
+  date: 2020-08
+  page-range: 2084
+  url: http://dx.doi.org/10.1111/febs.15515
+  serial-number:
+    doi: 10.1111/febs.15515
+    issn: 1742-4658
+  parent:
+    type: periodical
+    title: The FEBS Journal
+    publisher: Wiley
+    issue: 7
+    volume: 288
+Homola2008SPR:
+  type: article
+  title: Surface Plasmon Resonance Sensors for Detection of Chemical and Biological Species
+  author: Homola, Jiří
+  date: 2008-01
+  page-range: 462
+  url: http://dx.doi.org/10.1021/cr068107d
+  serial-number:
+    doi: 10.1021/cr068107d
+    issn: 1520-6890
+  parent:
+    type: periodical
+    title: Chemical Reviews
+    publisher: American Chemical Society (ACS)
+    issue: 2
+    volume: 108
+Betz2014paramfit:
+  type: article
+  title: 'Paramfit: Automated optimization of force field parameters for molecular dynamics simulations'
+  author:
+  - Betz, Robin M.
+  - Walker, Ross C.
+  date: 2014-11
+  page-range: 79
+  url: http://dx.doi.org/10.1002/jcc.23775
+  serial-number:
+    doi: 10.1002/jcc.23775
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 2
+    volume: 36
+Lee2018Amber18:
+  type: article
+  title: 'GPU-Accelerated Molecular Dynamics and Free Energy Methods in Amber18: Performance Enhancements and New Features'
+  author:
+  - Lee, Tai-Sung
+  - Cerutti, David S.
+  - Mermelstein, Dan
+  - Lin, Charles
+  - LeGrand, Scott
+  - Giese, Timothy J.
+  - Roitberg, Adrian
+  - Case, David A.
+  - Walker, Ross C.
+  - York, Darrin M.
+  date: 2018-09
+  page-range: 2043
+  url: http://dx.doi.org/10.1021/acs.jcim.8b00462
+  serial-number:
+    doi: 10.1021/acs.jcim.8b00462
+    issn: 1549-960X
+  parent:
+    type: periodical
+    title: Journal of Chemical Information and Modeling
+    publisher: American Chemical Society (ACS)
+    issue: 10
+    volume: 58
+Patriksson2008RMED:
+  type: article
+  title: A temperature predictor for parallel tempering simulations
+  author:
+  - Patriksson, Alexandra
+  - name: Spoel
+    given-name: David
+    prefix: van der
+  date: 2008
+  page-range: 2073
+  url: http://dx.doi.org/10.1039/B716554D
+  serial-number:
+    doi: 10.1039/b716554d
+    issn: 1463-9084
+  parent:
+    type: periodical
+    title: Physical Chemistry Chemical Physics
+    publisher: Royal Society of Chemistry (RSC)
+    issue: 15
+    volume: 10
+Ryckaert1977SHAKE:
+  type: article
+  title: 'Numerical integration of the cartesian equations of motion of a system with constraints: molecular dynamics of n-alkanes'
+  author:
+  - Ryckaert, Jean-Paul
+  - Ciccotti, Giovanni
+  - Berendsen, Herman J.C
+  date: 1977-03
+  page-range: 327
+  url: http://dx.doi.org/10.1016/0021-9991(77)90098-5
+  serial-number:
+    doi: 10.1016/0021-9991(77)90098-5
+    issn: 0021-9991
+  parent:
+    type: periodical
+    title: Journal of Computational Physics
+    publisher: Elsevier BV
+    issue: 3
+    volume: 23
 

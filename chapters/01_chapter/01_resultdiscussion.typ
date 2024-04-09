@@ -112,18 +112,26 @@ This figure is to be looked at in synergy with @tbl-wallclock) and the Consumabl
 The mp2q are the heaviest computations of them all, clocking in at roughly 548h or about 22.8 days of calculations. The geometry optimisation capped out at about 48 GiB of RAM, while at most 40 GiB of _tmp_-files were stored on disk by ORCA when ten conformations were optimised concurrently.
 The hf3c was logged for the same parameters and finished in about 0.7h, capping at almost 3GiB of RAM and almost 1 GiB in Disk Space in _tmp_-files.
 The GO experiment with hfq finished around the 30h mark and showed little hardware consumption compared to the GSQ, topping at 10 GiB of RAM with an excess of 6 GiB of _tmp_-files produced by ORCA at most. The pbeq consumes relatively the same as the hfq, but clocks in at 58h or 2.4 days (Suppl. Fig. SIConsumables A.,B.).
+#show table.cell: it => text(it.body, size: 10pt)
+
 #figure(
+  supplement: [Table],
   tablex(
     columns: 5,
     map-cells: cell => (..cell, content: text(cell.content, size: 10pt)),
     stroke: 0.5pt + colourPalette.lightblueslate,
           // Header
+//          [_LoT_], [A], [B], [C], [D],
           [_LoT_], [hf3c], [PBE0], [HF], [MP2],
           // Content
           [hf3c] , [0.67]    , [58.08]    , [30.13]    , [548.01]    ,
           [PBE0] , [5.12]    , [57.97]    , [34.53]    , [552.41]    ,
           [HF]   , [5.12]    , [62.48]    , [30.02]    , [552.36]    ,
           [MP2]  , [6.42]    , [63.43]    , [35.73]    , [547.91]    ,
+//          [A] , [0.67]    , [58.08]    , [30.13]    , [548.01]    ,
+//          [B] , [5.12]    , [57.97]    , [34.53]    , [552.41]    ,
+//          [C]   , [5.12]    , [62.48]    , [30.02]    , [552.36]    ,
+//          [MP2]  , [6.42]    , [63.43]    , [35.73]    , [547.91]    ,
 
   ),
   caption: [

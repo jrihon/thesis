@@ -3,4 +3,4 @@
 
 
 # red purple ish
-typst compile ./thesis.typ ./output/thesis_test.pdf --font-path ./src/fonts/
+typst compile ./thesis.typ ./output/thesis_manuscript.pdf --font-path ./src/fonts/

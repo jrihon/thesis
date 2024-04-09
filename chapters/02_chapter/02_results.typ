@@ -112,7 +112,7 @@ A third experiment was performed with the dXyNA homoduplex. The dXyNA homoduplex
   supplement: [Table],
   tablex(
     columns: 6,
-  //    map-cells: cell => (..cell, content: text(cell.content, size: 10pt)),
+    map-cells: cell => (..cell, content: text(cell.content, size: 10pt)),
     stroke: 0.5pt + colourPalette.lightblueslate,
     // Header
 //    [Conformer]  , [mA#super($diamond.filled$)] , [mG#super($diamond.filled$)] , [mC#super($diamond.filled$)] , [mT#super($diamond.filled$)] , [$(theta, phi_2)$],

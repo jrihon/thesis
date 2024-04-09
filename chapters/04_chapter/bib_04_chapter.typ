@@ -1,4 +1,5 @@
 #let dict_04_chapter = (
+    "Lescrinier2003difference": 1, 
 )
 
 #let biblio = (

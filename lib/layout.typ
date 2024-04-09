@@ -451,3 +451,11 @@
 
   
 }
+
+
+//! 
+//! Make pdb accession code hyperlinked
+//! 
+#let pdb-code(pdbstring) = {
+  link("https://www.rcsb.org/structure/" + pdbstring)[#pdbstring]
+}

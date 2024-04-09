@@ -3,7 +3,7 @@
 #import "../../lib/layout.typ": boxed-text, make-quote
 #import "bib_04_chapter.typ": biblio
 
-= Curvature Torsion on Synthetic Nucleic Acids
+= Nucleobase basepairing and chemistry alterations with Ducque for general purpose needs
 
 #include {"./04_introduction.typ"}
 #include {"./04_methods.typ"}
@@ -17,5 +17,6 @@
     \- '... I fell.'],
   [Little Britain - S02E04],
 )
+
 #mbibliography(biblio, "ieee")
 #pagebreak()

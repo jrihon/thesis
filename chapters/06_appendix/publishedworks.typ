@@ -33,7 +33,7 @@
 //
 + Mattelaer, C-A., Mattelaer, H-P., *Rihon, J.*, Froeyen, M., Lescrinier, E. with Lescrinier, E. (2021). Efficient and Accurate Potential Energy Surfaces of Puckering in Sugar-Modified Nucleosides. _Journal of Chemical Theory and Computation_ , #link("https://doi.org/10.1021/acs.jctc.1c00270")[10.1021/acs.jctc.1c00270] 
 //
-+ Schofield, P., Taylor, A., *Rihon, J. (co-first)*, Pena Martinez, C.D., Zinn, S., Mattelaer, C-A., Jackson, J., Dhaliwal, G., Schepers, G., Herdewijn, P., Lescrinier, E., Christ, D., Holliger, P. (2023). Characterization of an HNA aptamer suggests a non-canonical G-quadruplex motif. _Nucleic Acids Research_ , #link("https://doi.org/10.1093/nar/gkad592")[10.1093/nar/gkad592] 
++ Schofield, P., Taylor, A., *Rihon, J. (co-first)*, Peña Martinez, C.D., Zinn, S., Mattelaer, C-A., Jackson, J., Dhaliwal, G., Schepers, G., Herdewijn, P., Lescrinier, E., Christ, D., Holliger, P. (2023). Characterization of an HNA aptamer suggests a non-canonical G-quadruplex motif. _Nucleic Acids Research_ , #link("https://doi.org/10.1093/nar/gkad592")[10.1093/nar/gkad592] 
 //
 + Xu, Y., Groaz, E., *Rihon, J.*, Herdewyn, P., Lescrinier, E. (2023). Synthesis, antiviral activity, and computational study of β-D-xylofuranosyl nucleoside phosphonates. _European Journal Of Medicinal Chemistry_ #link("https://doi.org/10.1016/j.ejmech.2023.115379")[10.1016/j.ejmech.2023.115379]
 //
