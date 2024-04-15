@@ -32,11 +32,9 @@
 
 #box-env()
 
-#include {"outline.typ"}
-//#include {"./00_introduction.typ"}
-//#include {"./00_methods.typ"}
-//#include {"./00_resultdiscussion.typ"}
-//#include {"./00_conclusion.typ"}
+#include {"00_section_01.typ"}
+#include {"00_section_02.typ"}
+#include {"00_section_03.typ"}
 
 #make-quote(
   [My invasion of \

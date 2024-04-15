@@ -22,10 +22,10 @@
 // name_pub : key of the citation
 // yml_dict : the dict, parsed by python
 // style    : citation style
-#let mcite(arr_of_pubs, bilbio) = {
+#let mcite(arr_of_pubs, biblio) = {
 
-  let basename = basename_yml(bilbio.bibyml)
-  let bibchapter = bilbio.bibchapter
+  let basename = basename_yml(biblio.bibyml)
+  let bibchapter = biblio.bibchapter
 
   // if the array contains one value, Typst coerces it to extract to only value and give it to you
   if type(arr_of_pubs) == "string" {
@@ -279,7 +279,7 @@
   if style == "ieee" {
     ieee_style(biblio)
   } else {
-    panic("Style of the bilbiography " + style + "is not implemented.")
+    panic("Style of the bibliography " + style + "is not implemented.")
   }
 
 }

@@ -1,3 +1,0 @@
-== Methods
-
-#lorem(50)

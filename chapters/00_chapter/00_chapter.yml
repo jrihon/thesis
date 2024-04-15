@@ -223,4 +223,120 @@ Mattelaer2021efficient:
     publisher: American Chemical Society (ACS)
     issue: 6
     volume: 17
+Bachrach1994PopAnal:
+  type: misc
+  title: Population Analysis and Electron Densities from Quantum Mechanics
+  author: Bachrach, Steven M.
+  date: 1994-01
+  publisher: Wiley
+  page-range: 171
+  url: http://dx.doi.org/10.1002/9780470125823.ch3
+  serial-number:
+    doi: 10.1002/9780470125823.ch3
+    isbn: '9780470125823'
+    issn: 1934-5372
+Mulliken1955:
+  type: article
+  title: Electronic Population Analysis on LCAO–MO Molecular Wave Functions. I
+  author: Mulliken, R. S.
+  date: 1955-10
+  page-range: 1833
+  url: http://dx.doi.org/10.1063/1.1740588
+  serial-number:
+    doi: 10.1063/1.1740588
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 10
+    volume: 23
+Lowdin1950:
+  type: article
+  title: On the Non-Orthogonality Problem Connected with the Use of Atomic Wave Functions in the Theory of Molecules and Crystals
+  author: Löwdin, Per-Olov
+  date: 1950-03
+  page-range: 365
+  url: http://dx.doi.org/10.1063/1.1747632
+  serial-number:
+    doi: 10.1063/1.1747632
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 3
+    volume: 18
+Sigfridsson1998ComparePAschemes:
+  type: article
+  title: Comparison of methods for deriving atomic charges from the electrostatic potential and moments
+  author:
+  - Sigfridsson, Emma
+  - Ryde, Ulf
+  date: 1998-03
+  page-range: 377
+  url: http://dx.doi.org/10.1002/(SICI)1096-987X(199803)19:4%3C377::AID-JCC1%3E3.0.CO;2-P
+  serial-number:
+    doi: 10.1002/(sici)1096-987x(199803)19:4<377::aid-jcc1>3.0.co;2-p
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 4
+    volume: 19
+Connolly1983SASA:
+  type: article
+  title: Analytical molecular surface calculation
+  author: Connolly, M. L.
+  date: 1983-10
+  page-range: 548
+  url: http://dx.doi.org/10.1107/S0021889883010985
+  serial-number:
+    doi: 10.1107/s0021889883010985
+    issn: 0021-8898
+  parent:
+    type: periodical
+    title: Journal of Applied Crystallography
+    publisher: International Union of Crystallography (IUCr)
+    issue: 5
+    volume: 16
+Chirlian1987fit:
+  type: article
+  title: 'Atomic charges derived from electrostatic potentials: A detailed study'
+  author:
+  - Chirlian, Lisa Emily
+  - Francl, Michelle Miller
+  date: 1987-09
+  page-range: 894
+  url: http://dx.doi.org/10.1002/jcc.540080616
+  serial-number:
+    doi: 10.1002/jcc.540080616
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 6
+    volume: 8
+Bayly1993resp:
+  type: article
+  title: 'A well-behaved electrostatic potential based method using charge restraints for deriving atomic charges: the RESP model'
+  author:
+  - Bayly, Christopher I.
+  - Cieplak, Piotr
+  - Cornell, Wendy
+  - Kollman, Peter A.
+  date: 1993-10
+  page-range: 10269
+  url: http://dx.doi.org/10.1021/j100142a004
+  serial-number:
+    doi: 10.1021/j100142a004
+    issn: 1541-5740
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry
+    publisher: American Chemical Society (ACS)
+    issue: 40
+    volume: 97
 
