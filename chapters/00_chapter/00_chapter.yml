@@ -339,4 +339,45 @@ Bayly1993resp:
     publisher: American Chemical Society (ACS)
     issue: 40
     volume: 97
+Wang2004GAFF:
+  type: article
+  title: Development and testing of a general amber force field
+  author:
+  - Wang, Junmei
+  - Wolf, Romain M.
+  - Caldwell, James W.
+  - Kollman, Peter A.
+  - Case, David A.
+  date: 2004-04
+  page-range: 1157
+  url: http://dx.doi.org/10.1002/jcc.20035
+  serial-number:
+    doi: 10.1002/jcc.20035
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 9
+    volume: 25
+Kania2021Fouriertorsion:
+  type: article
+  title: Optimal Solution to the Torsional Coefficient Fitting Problem in Force Field Parametrization
+  author:
+  - Kania, Adrian
+  - Sarapata, Krzysztof
+  - Gucwa, Michał
+  - Wójcik-Augustyn, Anna
+  date: 2021-03
+  page-range: 2673
+  url: http://dx.doi.org/10.1021/acs.jpca.0c10845
+  serial-number:
+    doi: 10.1021/acs.jpca.0c10845
+    issn: 1520-5215
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry A
+    publisher: American Chemical Society (ACS)
+    issue: 12
+    volume: 125
 

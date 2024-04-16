@@ -1,10 +1,13 @@
 #let dict_00_chapter = (
-    "Mulliken1955": 1, 
-    "Lowdin1950": 2, 
-    "Sigfridsson1998ComparePAschemes": 3, 
-    "Connolly1983SASA": 4, 
-    "Chirlian1987fit": 5, 
-    "Bayly1993resp": 6, 
+    "Cornell19952ndgenff": 1, 
+    "Wang2004GAFF": 2, 
+    "Kania2021Fouriertorsion": 3, 
+    "Mulliken1955": 4, 
+    "Lowdin1950": 5, 
+    "Sigfridsson1998ComparePAschemes": 6, 
+    "Connolly1983SASA": 7, 
+    "Chirlian1987fit": 8, 
+    "Bayly1993resp": 9, 
 )
 
 #let biblio = (
