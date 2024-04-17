@@ -380,4 +380,128 @@ Kania2021Fouriertorsion:
     publisher: American Chemical Society (ACS)
     issue: 12
     volume: 125
+Olson20013DNA:
+  type: article
+  title: A standard reference frame for the description of nucleic acid base-pair geometry
+  author:
+  - Olson, Wilma K
+  - Bansal, Manju
+  - Burley, Stephen K
+  - Dickerson, Richard E
+  - Gerstein, Mark
+  - Harvey, Stephen C
+  - Heinemann, Udo
+  - Lu, Xiang-Jun
+  - Neidle, Stephen
+  - Shakked, Zippora
+  - Sklenar, Heinz
+  - Suzuki, Masashi
+  - Tung, Chang-Shung
+  - Westhof, Eric
+  - Wolberger, Cynthia
+  - Berman, Helen M
+  date: 2001-10
+  page-range: 229
+  url: http://dx.doi.org/10.1006/jmbi.2001.4987
+  serial-number:
+    doi: 10.1006/jmbi.2001.4987
+    issn: 0022-2836
+  parent:
+    type: periodical
+    title: Journal of Molecular Biology
+    publisher: Elsevier BV
+    issue: 1
+    volume: 313
+Lavery2009Curves:
+  type: article
+  title: 'Conformational analysis of nucleic acids revisited: Curves+'
+  author:
+  - Lavery, R.
+  - Moakher, M.
+  - Maddocks, J. H.
+  - Petkeviciute, D.
+  - Zakrzewska, K.
+  date: 2009-07
+  page-range: 5917
+  url: http://dx.doi.org/10.1093/nar/gkp608
+  serial-number:
+    doi: 10.1093/nar/gkp608
+    issn: 0305-1048
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 17
+    volume: 37
+Lu1999ConfDiscrepancy:
+  type: article
+  title: Resolving the discrepancies among nucleic acid conformational analyses 1 1Edited by I. Tinoco
+  author:
+  - Lu, Xiang-Jun
+  - Olson, Wilma K
+  date: 1999-01
+  page-range: 1563
+  url: http://dx.doi.org/10.1006/jmbi.1998.2390
+  serial-number:
+    doi: 10.1006/jmbi.1998.2390
+    issn: 0022-2836
+  parent:
+    type: periodical
+    title: Journal of Molecular Biology
+    publisher: Elsevier BV
+    issue: 4
+    volume: 285
+Lavery1988Curves:
+  type: article
+  title: The Definition of Generalized Helicoidal Parameters and of Axis Curvature for Irregular Nucleic Acids
+  author:
+  - Lavery, Richard
+  - Sklenar, Heinz
+  date: 1988-08
+  page-range: 63
+  url: http://dx.doi.org/10.1080/07391102.1988.10506483
+  serial-number:
+    doi: 10.1080/07391102.1988.10506483
+    issn: 1538-0254
+  parent:
+    type: periodical
+    title: Journal of Biomolecular Structure and Dynamics
+    publisher: Informa UK Limited
+    issue: 1
+    volume: 6
+Dickerson1989Cambridge:
+  type: article
+  title: Definitions and nomenclature of nucleic acid structure components
+  author: Dickerson, R.E.
+  date: 1989
+  page-range: 1797
+  url: http://dx.doi.org/10.1093/nar/17.5.1797
+  serial-number:
+    doi: 10.1093/nar/17.5.1797
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 5
+    volume: 17
+Babcock19933DNA:
+  type: article
+  title: 'Nucleic Acid Structure Analysis: A Users Guide to a Collection of New Analysis Programs'
+  author:
+  - Babcock, Maria S.
+  - Pednault, Edwin P.D.
+  - Olson, Wilma K.
+  date: 1993-12
+  page-range: 597
+  url: http://dx.doi.org/10.1080/07391102.1993.10508018
+  serial-number:
+    doi: 10.1080/07391102.1993.10508018
+    issn: 1538-0254
+  parent:
+    type: periodical
+    title: Journal of Biomolecular Structure and Dynamics
+    publisher: Informa UK Limited
+    issue: 3
+    volume: 11
 
