@@ -5,11 +5,23 @@
 
 // Xenobiotic Nucleic Acids
 == Synthetic Nucleic Acids
+//
+//
+//=== What are nucleic acids
+//! -> Three moieties: sugar, phosphate and nucleobase
+//! -> Driving force to form nucleic acid helices: basepairing and stacking
+//==== central dogma shizzle
+//
 #lorem(100)
 
 //
 //
 === The evolution of chemical biology
+//=== Modifications to nucleic acids
+//! -> nucleobase
+//! -> sugar
+//! -> linker
+//!
 #lorem(50)
 
 === Current affairs on the _in silico_ side of things 
@@ -24,18 +36,6 @@
 //
 //==== _Dry lab_ approaches
 //#lorem(20)
-
-//
-//
-
-//==== Current affairs
-//#lorem(20)
 //
 //==== The need for innovation
 //#lorem(20)
-
-//
-//
-//
-//
-

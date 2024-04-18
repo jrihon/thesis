@@ -504,4 +504,38 @@ Babcock19933DNA:
     publisher: Informa UK Limited
     issue: 3
     volume: 11
+Lu20033DNA:
+  type: article
+  title: '3DNA: a software package for the analysis, rebuilding and visualization of three-dimensional nucleic acid structures'
+  author: Lu, X.-J.
+  date: 2003-09
+  page-range: 5108
+  url: http://dx.doi.org/10.1093/nar/gkg680
+  serial-number:
+    doi: 10.1093/nar/gkg680
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 17
+    volume: 31
+ElHassan1995Calc3DNA:
+  type: article
+  title: The Assessment of the Geometry of Dinucleotide Steps in Double-Helical DNA; a New Local Calculation Scheme
+  author:
+  - El Hassan, M.A.
+  - Calladine, C.R.
+  date: 1995-08
+  page-range: 648
+  url: http://dx.doi.org/10.1006/jmbi.1995.0462
+  serial-number:
+    doi: 10.1006/jmbi.1995.0462
+    issn: 0022-2836
+  parent:
+    type: periodical
+    title: Journal of Molecular Biology
+    publisher: Elsevier BV
+    issue: 5
+    volume: 251
 

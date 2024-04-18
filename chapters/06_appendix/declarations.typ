@@ -1,4 +1,4 @@
-= Declarations
+= DECLARATIONS
 
 == Scientific acknowledgements
 

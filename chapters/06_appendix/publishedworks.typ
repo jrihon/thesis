@@ -1,5 +1,5 @@
 #import "../../lib/colours.typ": colourPalette
-= Published works 
+= PUBLISHED WORKS 
 
 #let box-env() = {
   let pat = pattern(
