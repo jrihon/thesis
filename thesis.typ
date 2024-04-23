@@ -105,7 +105,14 @@
 //! APPENDIX
 //!
 //!
+#show heading.where(level: 1): element => prelude_header(element, colour00)
+#include {"./chapters/06_appendix/mod.typ"} 
+//!
+//!
+//! SUPPLEMENT OF THE THESIS
+//!
+//!
 #show: document => layout(document, "1", none, colour00) 
 #show heading.where(level: 1): element => prelude_header(element, colour00)
 #show heading.where(level: 2): element => prelude_subheader(element, colour00)
-#include {"./chapters/06_appendix/mod.typ"} 
+#include {"./chapters/07_suppl/mod.typ"} 

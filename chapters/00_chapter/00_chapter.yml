@@ -166,22 +166,6 @@ Altona1972formalism:
     publisher: American Chemical Society (ACS)
     issue: 23
     volume: 94
-Cremer1990analytical:
-  type: article
-  title: Calculation of puckered rings with analytical gradients
-  author: Cremer, Dieter.
-  date: 1990-07
-  page-range: 5502
-  url: http://dx.doi.org/10.1021/J100377A017
-  serial-number:
-    doi: 10.1021/j100377a017
-    issn: 1541-5740
-  parent:
-    type: periodical
-    title: The Journal of Physical Chemistry
-    publisher: American Chemical Society (ACS)
-    issue: 14
-    volume: 94
 Huang2014improve:
   type: article
   title: Improvement of DNA and RNA Sugar Pucker Profiles from Semiempirical Quantum Methods
@@ -538,4 +522,165 @@ ElHassan1995Calc3DNA:
     publisher: Elsevier BV
     issue: 5
     volume: 251
+Jumper2021Alphafold:
+  type: article
+  title: Highly accurate protein structure prediction with AlphaFold
+  author:
+  - Jumper, John
+  - Evans, Richard
+  - Pritzel, Alexander
+  - Green, Tim
+  - Figurnov, Michael
+  - Ronneberger, Olaf
+  - Tunyasuvunakool, Kathryn
+  - Bates, Russ
+  - Žídek, Augustin
+  - Potapenko, Anna
+  - Bridgland, Alex
+  - Meyer, Clemens
+  - Kohl, Simon A. A.
+  - Ballard, Andrew J.
+  - Cowie, Andrew
+  - Romera-Paredes, Bernardino
+  - Nikolov, Stanislav
+  - Jain, Rishub
+  - Adler, Jonas
+  - Back, Trevor
+  - Petersen, Stig
+  - Reiman, David
+  - Clancy, Ellen
+  - Zielinski, Michal
+  - Steinegger, Martin
+  - Pacholska, Michalina
+  - Berghammer, Tamas
+  - Bodenstein, Sebastian
+  - Silver, David
+  - Vinyals, Oriol
+  - Senior, Andrew W.
+  - Kavukcuoglu, Koray
+  - Kohli, Pushmeet
+  - Hassabis, Demis
+  date: 2021-07
+  page-range: 583
+  url: http://dx.doi.org/10.1038/s41586-021-03819-2
+  serial-number:
+    doi: 10.1038/s41586-021-03819-2
+    issn: 1476-4687
+  parent:
+    type: periodical
+    title: Nature
+    publisher: Springer Science, Business Media LLC
+    issue: 7873
+    volume: 596
+Vabulas2010proteinfolding:
+  type: article
+  title: Protein Folding in the Cytoplasm and the Heat Shock Response
+  author:
+  - Vabulas, R. M.
+  - Raychaudhuri, S.
+  - Hayer-Hartl, M.
+  - Hartl, F. U.
+  date: 2010-12
+  page-range: a004390–a004390
+  url: http://dx.doi.org/10.1101/cshperspect.a004390
+  serial-number:
+    doi: 10.1101/cshperspect.a004390
+    issn: 1943-0264
+  parent:
+    type: periodical
+    title: Cold Spring Harbor Perspectives in Biology
+    publisher: Cold Spring Harbor Laboratory
+    issue: 12
+    volume: 2
+Hollingsworth2010Ramachandran:
+  type: article
+  title: A fresh look at the Ramachandran plot and the occurrence of standard structures in proteins
+  author:
+  - Hollingsworth, Scott A.
+  - Karplus, P. Andrew
+  date: 2010-10
+  page-range: 271
+  url: http://dx.doi.org/10.1515/BMC.2010.022
+  serial-number:
+    doi: 10.1515/bmc.2010.022
+    issn: 1868-5021
+  parent:
+    type: periodical
+    title: BioMolecular Concepts
+    publisher: Walter de Gruyter GmbH
+    issue: 3–4
+    volume: 1
+Kilpatrick1947pseudorotation:
+  type: article
+  title: The Thermodynamics and Molecular Structure of Cyclopentane1
+  author:
+  - Kilpatrick, John E.
+  - Pitzer, Kenneth S.
+  - Spitzer, Ralph
+  date: 1947-10
+  page-range: 2483
+  url: http://dx.doi.org/10.1021/JA01202A069
+  serial-number:
+    doi: 10.1021/ja01202a069
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 10
+    volume: 69
+Altona1968pseudorot:
+  type: article
+  title: Conformation of non-aromatic ring Compounds—XXV
+  author:
+  - Altona, C.
+  - Geise, H.J.
+  - Romers, C.
+  date: 1968-01
+  page-range: 13
+  url: http://dx.doi.org/10.1016/0040-4020(68)89003-9
+  serial-number:
+    doi: 10.1016/0040-4020(68)89003-9
+    issn: 0040-4020
+  parent:
+    type: periodical
+    title: Tetrahedron
+    publisher: Elsevier BV
+    issue: 1
+    volume: 24
+Rao1981asvscp:
+  type: article
+  title: Exact method for the calculation of pseudorotation parametersP, τmand their errors. A comparison of the Altona–Sundaralingam and Cremer–Pople treatment of puckering of five-membered rings
+  author:
+  - Rao, S. T.
+  - Westhof, E.
+  - Sundaralingam, M.
+  date: 1981-05
+  page-range: 421
+  url: http://dx.doi.org/10.1107/S0567739481000892
+  serial-number:
+    doi: 10.1107/s0567739481000892
+    issn: 0567-7394
+  parent:
+    type: periodical
+    title: Acta Crystallographica Section A
+    publisher: International Union of Crystallography (IUCr)
+    issue: 3
+    volume: 37
+Cremer1990analytical:
+  type: article
+  title: Calculation of puckered rings with analytical gradients
+  author: Cremer, Dieter
+  date: 1990-07
+  page-range: 5502
+  url: http://dx.doi.org/10.1021/J100377A017
+  serial-number:
+    doi: 10.1021/j100377a017
+    issn: 1541-5740
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry
+    publisher: American Chemical Society (ACS)
+    issue: 14
+    volume: 94
 

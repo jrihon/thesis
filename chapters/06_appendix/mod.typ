@@ -1,6 +1,4 @@
-//! Appendix section
+//! Appendix to the thesis data - section
 
 
-#include {"publishedworks.typ"}
-#include {"declarations.typ"}
-#include {"supplementaryinformation.typ"}
+#include {"appendix.typ"}

@@ -459,3 +459,26 @@
 #let pdb-code(pdbstring) = {
   link("https://www.rcsb.org/structure/" + pdbstring)[#pdbstring]
 }
+
+//! 
+//! Make pdb accession code hyperlinked
+//! 
+#let intermezzo(content) = {
+
+
+
+  let content = [#text(style: "italic", weight: "bold" , "Intermezzo")] + align(right)[#content]
+  set text(fill: colourPalette.blueslate, style: "italic")
+
+  let lightColour = colourPalette.lightblueslate.components()
+  lightColour.at(3) = 10% // set alpha to 30%
+  block(
+    width: 100%,
+    fill: rgb(..lightColour), // unpack array into the rgb() function
+    radius: 2pt,
+    inset: 10pt,
+    content
+  )
+}
+
+
