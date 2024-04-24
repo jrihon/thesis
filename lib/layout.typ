@@ -397,9 +397,9 @@
 #let equation-numbering(num) = {
   locate(loc => {
     //! Get Chapter Number
-    // get location of current figure, `at()` index starts from 0
-    // WEIRD : For some reason, I am not getting an `out-of-bounds` error here
-    let eq_loc = query(math.equation, loc).at(num).location()
+    // get location of current figure, `at()`. Indexing starts from 0
+    //  but the numbers returned from the counters start at 1
+    let eq_loc = query(math.equation.where(block: true), loc).at(num - 1).location()
     // get current number of chapter 
     // Chapter 2 : number 2 ; Chapter 3 : number 3
     let chap = counter(heading.where(level: 1)).at(eq_loc).first()
@@ -463,11 +463,9 @@
 //! 
 //! Make pdb accession code hyperlinked
 //! 
-#let intermezzo(content) = {
+#let intermezzo(header, content) = {
 
-
-
-  let content = [#text(style: "italic", weight: "bold" , "Intermezzo")] + align(right)[#content]
+  let content = [#text(style: "italic", weight: "bold" , header) #v(-0.5em)] + align(right)[#content]
   set text(fill: colourPalette.blueslate, style: "italic")
 
   let lightColour = colourPalette.lightblueslate.components()

@@ -683,4 +683,20 @@ Cremer1990analytical:
     publisher: American Chemical Society (ACS)
     issue: 14
     volume: 94
+Haasnoot1992sixrings:
+  type: article
+  title: The conformation of six-membered rings described by puckering coordinates derived from endocyclic torsion angles
+  author: Haasnoot, C. A. G.
+  date: 1992-01
+  page-range: 882
+  url: http://dx.doi.org/10.1021/ja00029a013
+  serial-number:
+    doi: 10.1021/ja00029a013
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 3
+    volume: 114
 

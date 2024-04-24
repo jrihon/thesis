@@ -53,21 +53,27 @@ These motifs, consisting of linked amino acids, can be abstracted to the phi-psi
 While the description of proteins is not limited to just these definitions, they do form the basis of decade-long research on structural properties of proteins. 
 
 
+// Figure needs :
+// Twist and Envelope conformation 
+// Pseudorotational wheel 
+// Mean plane stuff, show that with the conformation. 
+//
 ==== five-membered rings
-When talking about abstracting the conformation of a five-membered ring, such as a ribose sugar moiety in nucleic acids, the concept of pseudorotation or _puckering_ is the first thing in need of clarification. A cyclic molecule can vary in its endocyclic torsion angles ($nu_(0 arrow.r 4)$), meaning atoms in the molecule will move out-of-plane (figure). For five-membered rings, we recognise two distinct puckering modes: the Envelope (_E#super("x")_) and the Twist conformation (_#super("x")T_#sub("y")).
-In 1947, Kilpatrick _et al._ devised a relation the potential energy of the molecule and the fact a simple molecule like cyclopentane does not appear as planar, but actually favours atoms to deviate out-of-plane #mcite(("Kilpatrick1947pseudorotation"), biblio). To calculate the energy of the various conformers of the ring, @eq-kilpatrick was produced in order to define out-of-plane deviations. The parameter $q$ is the magnitude of the deviation and $phi$ the phase that assigns the atoms to deviate. The integer $j$ represents iterating over the amounts of atoms (0-based indexing). Seeing as their data consists of vibrational spectra, the deviations proved favourable as they calculated that bondangles were strained in a planar position when keeping bondlengths constant.
+When talking about abstracting the conformation of a five-membered ring, such as a ribose sugar moiety in nucleic acids, the concept of pseudorotation or _puckering_ is the first thing in need of clarification. A cyclic molecule can vary in its endocyclic torsion angles ($nu_(0 arrow.r 4)$), meaning atoms in the molecule will move out-of-plane (figure). For five-membered rings, we recognise two distinct puckering modes: the Envelope (E#super("x")) and the Twist conformation (#super("x")T#sub("y")). Most notable five-membered rings we find in nature are sugar molecules, the ribose sugar in particular as it constitutes the backbone of our genetic material. Thanks to years of structural determination of DNA and RNA fibers, we know that the DNA chemistry favours the (#super("2")T#sub("3")) conformation, while RNA adopts (#super("3")T#sub("2")) under normal conditions. This proclivity for a specific conformer makes it so that we were able to assign typical structures of NA helices as B-DNA and A-RNA respectively. These structures are recognised by processing enzymes, like ligases and polymerases, by the structural features of the helix itself. 
+
+In 1947, Kilpatrick _et al._ devised a relation to the potential energy of the molecule and the fact a simple cyclopentane does not favour a planar conformation, but actually favours atoms to deviate out-of-plane #mcite(("Kilpatrick1947pseudorotation"), biblio). To calculate the energy of the various conformers of the ring, @eq-kilpatrick was produced in order to define out-of-plane deviations. The parameter $q$ is the magnitude of the deviation and $phi$ the phase that assigns the atoms to deviate. The integer $j$ represents iterating over the amounts of atoms (0-based indexing). Seeing as their data consists of vibrational spectra, the deviations proved favourable as they calculated that bondangles were strained in a planar position when keeping bondlengths constant.
 $
 z_j = sqrt(frac(2,5)) q · cos(2(frac(2 pi j,5) + phi))
 $<eq-kilpatrick>
 
 This particular research broadened the concept of puckering to a wider public. In the following decades, scientists efforted to improve the definitions and produced different formalisms to define the conformation of a five-membered ring.\
 // intermezzo paragraph -> formalise this
-#intermezzo()[
+#intermezzo("Symbols and semantics")[
 As a sidenote, many of the formulas in this section come from various sources that each employ a set of symbols to define the same parameters. As some papers were released prior to the IUPAC convention #mcite(("Iupac1983nucleicacids"), biblio), I took it upon myself to formalise all semantically equivalent symbols and employ IUPAC nomeclature.
 ]
 
-===== Altona-Sundaralingham (AS)
 // AS formalism
+===== Altona-Sundaralingam (AS)
 A relationship was described between the values of the endocyclic torsion angles ($nu_(0 arrow.r 4)$) and the puckering itself #mcite(("Altona1968pseudorot"), biblio). The AS formalism was also the first to popularise the usage of puckering behaviour on the nucleic acid ribose sugar and introduces the pseudorotational wheel. The latter makes it possible to, when a nucleic acid crystal structure is determined, to graph occurences of the various puckers of the ribose sugars on a polar coordinate system #mcite(("Altona1972formalism"), biblio).\
 @eq-as-phaseangle details on a formula where all endocyclic angles are passed to a function to return the phase angle. This parameters allows the calculation @eq-as-amplitude to complete, given when $j=0$ and a trivial rearrangement left to the reader.
 
@@ -77,20 +83,97 @@ $ <eq-as-phaseangle>
 $ 
 nu_j = q cos(phi + frac(4pi,5)j)
 $ <eq-as-amplitude>
-===== Cremer-Pople (CP) 
-// CP formalism
-Two computational chemists build further on the concepts of quantifying the magnitude of the out-of-plane deviation of atoms in a cyclic molecule, as a basis for what constitutes puckering behaviour #mcite(("Cremer1975general"), biblio).
 
-===== Relations between CP and AS
-They are pretty much interchangeable #mcite(("Rao1981asvscp"), biblio), but vary slightly in amplitude and their phase angle differ by roughly $frac(pi,2)$.
-What is really cool about the CP formalism is that, unlike the AS, the formalism is generalised for any $n$-membered ring system ($n$ ≥ 4). Additionally, one can reconstruct the entire ring based on the given CP coordinates #mcite(("Cremer1990analytical"), biblio)!
-==== six-membered rings
 // CP formalism
+===== Cremer-Pople (CP) 
+Two computational chemists built further on the concepts of quantifying the magnitude of the out-of-plane deviation of atoms in a cyclic molecule, as a basis for what constitutes puckering behaviour #mcite(("Cremer1975general"), biblio). 
+To define the local elevation $z_j$ requires defining a plane going through the molecule itself. This plane is set as going through the geometrical center of the molecule, meaning that the plane should satisfy the sum of all the displacements be equal to zero ($sum z_j = 0$). 
+From this follows another conditions (@eq-cp-cossinplane) to satisfy that the condition that every mean plane constitutes a unique puckering mode.
+$
+sum^(N-1)_(j=0) z_j cos((2 pi j)/N) = 0 #h(2em) ; #h(2em) sum^(N-1)_(j=0) z_j sin((2 pi j)/N) = 0
+$<eq-cp-cossinplane>
+
+Computing for the set of displacements, by virtue of @eq-cp-cossinplane, we can define the mean plane by taking the cross product of $n = R' times R''$ (@eq-cp-crossplane). The $R_j$ parameter is the coordinate of the atom in cartesian ($x,y,z$) space.
+$
+R' = sum^(N-1)_(j=0) R_j sin((2 pi j)/N) #h(2em) ; #h(2em) R'' = sum^(N-1)_(j=0) R_j cos((2 pi j)/N)
+$<eq-cp-crossplane>
+ Setting the geometrical center of the ring to the origin of the cartesian coordinate system, we can apply the dot product of the normalised $n$ to every atom to get the displacements per atom ($z_j = R_j · n$).
+
+Being able to calculate the displacements allows to then use them to calculate the actual puckering coordinates that define the CP formalism.
+This leads to the generalisation of @eq-kilpatrick for any type of _odd_-membered cyclic molecule, where $N$ is equal to the amount of atoms in the ring and $m = (N-1)/2$ :  
+$
+q_m cos phi_m = sqrt(frac(2,N)) sum^(N-1)_(j=0) z_j cos(frac(2 pi m j, N)) #h(2em) ; #h(2em)
+q_m sin phi_m = - sqrt(frac(2,N)) sum^(N-1)_(j=0) z_j sin(frac(2 pi m j, N))
+$<eq-odd-membered>
+By applying @eq-odd-membered for rings with $N=5$, we can simplify : 
+$
+q_2 cos phi_2 = sqrt(frac(2,5)) sum^4_(j=0) z_j cos(frac(4 pi j, 5)) #h(2em) ; #h(2em)
+q_2 sin phi_2 = - sqrt(frac(2,5)) sum^4_(j=0) z_j sin(frac(4 pi j, 5))
+$<eq-cp-five-membered>
+@eq-cp-five-membered gives us the puckering coordinates we can use to represented the abstracted conformation of a five-membered ring. The keen observer might have noticed the recurrence of the parameters $q$ and $phi$. It is because these values, or coordinate as we tend to denote them by, relate to the same semantics as with the AS formalism.
+However, because the CP formalism is able to generalise the way it calculates the puckering of a cyclic molecule for any $n$-membered ring - as we will see later -, we denote the multitude of puckering parameters by an integer $m$. 
+//
+//
+//
+//
+//
+//
+==== six-membered rings
+The concept of pseudorotation is also ascribed to six-membered rings, and any $n$-membered ring for that matter where $n$ ≥ 4. The definition of puckering here is particularly important to us in the field of synthetic nucleic acids, as we are able to substitute the ribose moiety for another type of moiety. This modification can bring about improved properties for pharmaceutical applications, as stated in Section 1.1 .
+//Six-membered sugars, like glucose and derivatives, are conventionally considered in topics like glycosylation of protein residues and the Krebs cycle. As it stands, these molecules are often studied for their biochemical properties, like the former often being involved in interactions of antibodies with proteins on the surface of the cell.
+//In our research, we desire to quantify the degree of puckering in order to measure differences in behaviour of the molecule.
+A common modification is that of the Hexitol NA, an XNA with a backbone modification where a methylene (-CH#sub("2")-) is added between the oxygen and the anomeric carbon in DNA. This results in a sturdy modification that is able to pair well with RNA oligonucleotides and has the potential to function as a genetic biopolymer.
+
+Like five-membered rings, these six-membered rings are categorised into different conformations. As an extra atom was added to the molecule, the dimensionality of the puckering has increased, resulting in five distinct puckering modes. The Chair (#super("Z")C#sub("W")) and Boat (B#sub("Z,W")) are most well known. Adjacent to the latter, we encounter the _Skew_ configuration (#super("Z")S#sub("X")), also labeled a _half-boat_. As with the five-membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire. While the T-conformer is more commonly referred to as a _half-chair_, it makes much more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
+
+#intermezzo("Spherical conventions")[
+The following definitions employ the physics convention for spherical coordinates ($r, theta, phi$), with $theta [0 arrow.r pi]$ and $phi [0 arrow.r 2pi]$. These differ from the mathematical convention as these swapped the meaning of $theta$ and $phi$. This information is relevant as projections onto a sphere, coming from a geographical perspective, use the latter convention.
+]
+//
 // SP formalism
-#lorem(10)
+===== Strauss-Pickett (SP)
+Considering the period at which this formalism was devised, in the 1970's, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical. This formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: the set of improper dihedrals [ɑ#sub("1"), ɑ#sub("2"), ɑ#sub("3")] and the set of angles [β#sub("1"), β#sub("2"), β#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself.
+As with Kilpatrick _et al._, this research made us of vibrational spectra involving angle bending and torsional parameters that influence the potential energy of the molecule itself. Through pseudorotational movement, the endocyclic angles vary and so will the potential energy. 
+
+One key component to this formalism is the first usage of the spherical coordinates system ($r, theta, phi$) to represent a six-membered ring configuration. The three improper torsions can be solved for $j = 1, 2, 3$, in @eq-sp-sixring.
+$
+alpha_j = r [ cos theta + 2 [ cos(frac(4 pi j, 3) - frac(2pi,3) + phi )] sin theta]
+$<eq-sp-sixring>
+Here, a coordinate on a globe can reflect the puckering of a six-membered ring. This is a particularly convenient observation, as we recall that five-membered rings can be reflected by a set of polar coordinates. 
+The rest of the research papers makes use of calculating the potential energy of a variety of conformations, by relating ring-bending parameters derived from vibrational spectra. The result is a Potential Energy Surface (PES) where we can observe transition states and energy difference in between the puckering modes in a single figure. 
+
+//
+// CP formalism
+===== Cremer-Pople (CP)
+Since the CP formalism is generalised to any $n$-membered ring, an extra coordinate is added to the set to formalise a _3-tuple_ ($q_2, phi_2, q_3$). As a sidenote, the relation for the amount of coordinates for a given ring system is $N-3$ in the CP domain. For _even_ ring systems, @eq-odd-membered applies up to $m = N/2$.
+$
+q_m = sqrt(frac(1,N)) sum^(N-1)_(j=0) z_j (-1)^j #h(2em) arrow.r #h(2em) q_3 = sqrt(frac(1,6)) sum^5_(j=0) z_j (-1)^j
+$<eq-even-membered>
+Fortunately for us, the authors understood the pragmatic implementation of the spherical coordinates. In a later chapter of the thesis, the CP formalism is implemented in the methodology of Conformation Sampling #mcite(("Mattelaer2021efficient"), biblio) and we refer to @eq-VirtueEquation and @eq-SoftwareEquation for converting the _3-tuple_ to the spherical system #mcite(("Cremer1975general", "Haasnoot1992sixrings"), biblio).
+
 ==== n-membered rings
+_Not sure I am going to write anything here. Placehold for now, might delete OR add to this section later_
 // CP formalism goes beyond, but let us just describe 4-membered and 7-membered rings.
-#lorem(10)
+
+==== Relations between CP and other formalisms
+The fact that the CP formalism is applicable to all ring systems of a type $n$ ≥ 4, it makes it algorithmically interesting to write a program that calculate the puckering coordinates of those molecules. Instead, the usage of AS for five-membered rings has been far more popularised in literature. There is semantically little difference in their outcome, as they are semantically interchangeable #mcite(("Rao1981asvscp"), biblio). They differ little in amplitude, but the phase angle is shifted by roughly $frac(pi,2)$.
+
+Additionally, one can reconstruct the entire ring based on the given CP coordinates #mcite(("Cremer1990analytical"), biblio) for all ring systems. We can rearrange @eq-odd-membered and @eq-even-membered to return the local elevation per atom $z_j$ : 
+$
+z_j = sqrt(frac(2,N)) sum^((N-1)/2)_(m=2) q_m cos(phi_m frac(2 pi m j, N)) #h(2em) arrow.r #h(2em) z_j = sqrt(frac(2,5)) sum^2_(m=2) q_2 cos(phi_2 frac(4 pi j, 5))
+$<eq-odd-locelevation>
+
+$
+z_j = sqrt(frac(2,N)) sum^((N-1)/2)_(m=2) q_m cos(phi_m frac(2 pi m j, N)) + frac(q_(N/2),N)  (-1)^j #h(1em) arrow.r #h(1em) z_j = sqrt(frac(1,3)) sum^3_(m=2) q_2 cos(phi_2 frac(4 pi j, 6)) + frac(q_3,6) (-1)^j
+$<eq-even-locelevation>
+
+@fig-cp-inversionprotocol below gives a simplified representation on how to invert CP coordinates to their original structure, which was analytically described by Cremer _et al._ #mcite(("Cremer1990analytical"), biblio).
+#figure(
+  image("./figures/cp_inversion.svg", width: 100%),
+  caption: [
+    blabla
+  ]
+)<fig-cp-inversionprotocol>
 
 //
 //
