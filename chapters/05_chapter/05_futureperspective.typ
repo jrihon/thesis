@@ -2,5 +2,8 @@
 == Future perspectives
 
 #lorem(50)
-==== An addition to the text 
+==== Considering a programming language for research 
+#lorem(50)
+
+==== Better documentation on fitting torsions
 #lorem(50)

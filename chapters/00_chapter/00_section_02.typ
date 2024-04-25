@@ -3,11 +3,11 @@
 #import "../../lib/colours.typ": colourPalette
 #import "bib_00_chapter.typ": biblio
 
-#let svg-icon-put(filename) = {
-  let original = read(filename)
-  let a = box(image.decode(original), height:0.8em, baseline: 0em)
-  [#a]
-}
+//#let svg-icon-put(filename) = {
+//  let original = read(filename)
+//  let a = box(image.decode(original), height:0.8em, baseline: 0em)
+//  [#a]
+//}
 
 == Characterisation of nucleic acid structures
 === IUPAC nomenclature of polynucleotide chains
@@ -45,12 +45,19 @@ Being able to unambiguously define conformations allows us to also define when a
 // Maak kleine svg bestanden, ipv een volledige figuur, en insert deze in de tekst om de conformatie te duiden
 Similarly to nucleic acid duplexes, proteins are composed of chains of amino acid monomers. The degree of freedom these peptide chains have is immense, one of the reason the protein folding problem is currently one of the biggest and most competitive research domains for structural bioinformaticians and AI engineers #mcite(("Jumper2021Alphafold"), biblio). Luckily for us, all cells contain machinery that assembles the structure of the amino acid polymers, synthesised by the ribosomes, to form constructs with a specific three dimensional shape with an even more specific function within the cell #mcite(("Vabulas2010proteinfolding"), biblio).\
 The amino acid is simple compared to nucleic acids. The backbone consists of (-NH-C#sub("ɑ")-CO-) repeats that are linked through amide bonds, with a specific sidechain appended to the C#sub("ɑ") that defines the type of amino acid 
-//(#svg-icon-put("./figures/conformers/amino-acid.svg")).
 There are a total of twenty natural amino acids that make up human proteins; valine, histidine and glutamic acid to name a few. Because of the structural and sidechain diversity in proteins, they underpin almost cellular functioning. They propagate biochemical signals, recognise and act upon changes in the environment, support the structural integrity of cells and many other functions far beyond the scope of this explanation. 
 
-The structure of a protein can be divided into three typical motifs: _alpha-helices_ (ɑ, #svg-icon-put("./figures/conformers/alphahelics.svg")) and _beta-strands_ (β, #svg-icon-put("./figures/conformers/betasheets.svg")), which are connected through _loop_ regions.
+The structure of a protein can be divided into three typical motifs: _alpha-helices_ and _beta-strands_, which are connected through _loop_ regions.
 These motifs, consisting of linked amino acids, can be abstracted to the phi-psi (φ-ψ) dyad. This dyad is the resulted of calculating two consecutive dihedrals of a backbone chain of residues in the backbone. Each dyad pertains to a specific amino acid residue on the structure, which quantifies its conformation. These dyads can then be plotted on a Ramachandran plot, which makes it easy to assess the conformations of all the amino acids and more importantly to assess the prevalent motifs of the protein in the blink of an eye #mcite(("Hollingsworth2010Ramachandran"), biblio).\
 While the description of proteins is not limited to just these definitions, they do form the basis of decade-long research on structural properties of proteins. 
+#figure(
+  image("./figures/conformers/proteinstructure.svg", width: 100%),
+  caption: [
+    *A.* Representation of a standard amino acid, with the addition of the $phi$ (-C#super("-1")-NH-C#sub("ɑ")-CO-) and $psi$ (-NH-C#sub("ɑ")-CO-N#super("+1")) dihedral respectively.
+    *B.* A $beta$-sheet and $alpha$-helices.
+    *C.* Ramachandran plot with assigned location on where to find $phi-psi$ dyads for a given tertiary structure.
+  ]
+  )<figure-proteins>
 
 
 // Figure needs :
@@ -59,7 +66,22 @@ While the description of proteins is not limited to just these definitions, they
 // Mean plane stuff, show that with the conformation. 
 //
 ==== five-membered rings
-When talking about abstracting the conformation of a five-membered ring, such as a ribose sugar moiety in nucleic acids, the concept of pseudorotation or _puckering_ is the first thing in need of clarification. A cyclic molecule can vary in its endocyclic torsion angles ($nu_(0 arrow.r 4)$), meaning atoms in the molecule will move out-of-plane (figure). For five-membered rings, we recognise two distinct puckering modes: the Envelope (E#super("x")) and the Twist conformation (#super("x")T#sub("y")). Most notable five-membered rings we find in nature are sugar molecules, the ribose sugar in particular as it constitutes the backbone of our genetic material. Thanks to years of structural determination of DNA and RNA fibers, we know that the DNA chemistry favours the (#super("2")T#sub("3")) conformation, while RNA adopts (#super("3")T#sub("2")) under normal conditions. This proclivity for a specific conformer makes it so that we were able to assign typical structures of NA helices as B-DNA and A-RNA respectively. These structures are recognised by processing enzymes, like ligases and polymerases, by the structural features of the helix itself. 
+When talking about abstracting the conformation of a five-membered ring, such as a ribose sugar moiety in nucleic acids, the concept of pseudorotation or _puckering_ is the first thing in need of clarification. A cyclic #v(-0.5em)
+#let content-fivering= [
+molecule can vary in its endocyclic torsion angles ($nu_(0 arrow.r 4)$), meaning atoms in the molecule will move out-of-plane (figure). For five-membered rings, we recognise two distinct puckering modes: the Envelope (E#super("x")) and the Twist conformation (#super("x")T#sub("y")). Most notable five-membered rings we find in nature are sugar molecules, the ribose sugar in particular as it constitutes the backbone of our genetic material. Thanks to years of structural determination of  
+//know that the DNA chemistry favours the (#super("2")T#sub("3")) conformation, while RNA adopts (#super("3")T#sub("2")) under normal conditions. This proclivity for a specific conformer makes it so that we were able to assign typical structures of NA helices as B-DNA and A-RNA respectively. These structures are recognised by processing enzymes, like ligases and polymerases, by the structural features of the helix itself. 
+]
+#let figure-fivering = [
+  #figure(
+    image("./figures/conformers/five-memberedring-conformation.svg", width: 100%),
+    caption: [
+      *A.* Envelope and Twist conformations.
+      *B.* Pseudorotational wheel according to the AS formalism.
+    ]
+  )<figure-fivering>
+]
+#grid(content-fivering, figure-fivering, columns: (1fr, 1.5fr), gutter: 1em) #v(-0.5em)
+DNA and RNA fibers, we know that the DNA chemistry favours the (#super("2")T#sub("3")) conformation, while RNA adopts (#super("3")T#sub("2")) under normal conditions. This proclivity for a specific conformer makes it so that we were able to assign typical structures of NA helices as B-DNA and A-RNA respectively. These structures are recognised by processing enzymes, like ligases and polymerases, by the structural features of the helix itself. 
 
 In 1947, Kilpatrick _et al._ devised a relation to the potential energy of the molecule and the fact a simple cyclopentane does not favour a planar conformation, but actually favours atoms to deviate out-of-plane #mcite(("Kilpatrick1947pseudorotation"), biblio). To calculate the energy of the various conformers of the ring, @eq-kilpatrick was produced in order to define out-of-plane deviations. The parameter $q$ is the magnitude of the deviation and $phi$ the phase that assigns the atoms to deviate. The integer $j$ represents iterating over the amounts of atoms (0-based indexing). Seeing as their data consists of vibrational spectra, the deviations proved favourable as they calculated that bondangles were strained in a planar position when keeping bondlengths constant.
 $
@@ -164,14 +186,13 @@ z_j = sqrt(frac(2,N)) sum^((N-1)/2)_(m=2) q_m cos(phi_m frac(2 pi m j, N)) #h(2e
 $<eq-odd-locelevation>
 
 $
-z_j = sqrt(frac(2,N)) sum^((N-1)/2)_(m=2) q_m cos(phi_m frac(2 pi m j, N)) + frac(q_(N/2),N)  (-1)^j #h(1em) arrow.r #h(1em) z_j = sqrt(frac(1,3)) sum^3_(m=2) q_2 cos(phi_2 frac(4 pi j, 6)) + frac(q_3,6) (-1)^j
+z_j = sqrt(frac(2,N)) sum^((N)/2-1)_(m=2) q_m cos(phi_m frac(2 pi m j, N)) + frac(q_(N/2),N)  (-1)^j #h(1em) arrow.r #h(1em) z_j = sqrt(frac(1,3)) sum^2_(m=2) q_2 cos(phi_2 frac(4 pi j, 6)) + frac(q_3,6) (-1)^j
 $<eq-even-locelevation>
 
 @fig-cp-inversionprotocol below gives a simplified representation on how to invert CP coordinates to their original structure, which was analytically described by Cremer _et al._ #mcite(("Cremer1990analytical"), biblio).
 #figure(
   image("./figures/cp_inversion.svg", width: 100%),
   caption: [
-    blabla
   ]
 )<fig-cp-inversionprotocol>
 
