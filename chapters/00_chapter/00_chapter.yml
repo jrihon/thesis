@@ -699,4 +699,74 @@ Haasnoot1992sixrings:
     publisher: American Chemical Society (ACS)
     issue: 3
     volume: 114
+Saenger1984:
+  type: chapter
+  title: Principles of Nucleic Acid Structure
+  author: Saenger, Wolfram
+  date: 1984
+  page-range: XX-556
+  url: https://doi.org/10.1007/978-1-4612-5190-3
+  serial-number:
+    doi: 10.1007/978-1-4612-5190-3
+  parent:
+    type: book
+    issue: 1
+Groaz2023hna:
+  type: chapter
+  title: 'Hexitol Nucleic Acid (HNA): From Chemical Design to Functional Genetic Polymer'
+  author:
+  - Groaz, Elisabetta
+  - Herdewijn, Piet
+  date: 2023
+  page-range: 1
+  url: http://dx.doi.org/10.1007/978-981-16-1313-5_15-1
+  serial-number:
+    doi: 10.1007/978-981-16-1313-5_15-1
+    isbn: '9789811613135'
+  parent:
+    type: book
+    title: Handbook of Chemical Biology of Nucleic Acids
+    publisher: Springer Nature Singapore
+Lescrinier2000rnahna:
+  type: article
+  title: Solution structure of a HNA–RNA hybrid
+  author:
+  - Lescrinier, E
+  - Esnouf, R
+  - Schraml, J
+  - Busson, R
+  - Heus, HA
+  - Hilbers, CW
+  - Herdewijn, P
+  date: 2000-09
+  page-range: 719
+  url: http://dx.doi.org/10.1016/S1074-5521(00)00017-X
+  serial-number:
+    doi: 10.1016/s1074-5521(00)00017-x
+    issn: 1074-5521
+  parent:
+    type: periodical
+    title: Chemistry &amp; Biology
+    publisher: Elsevier BV
+    issue: 9
+    volume: 7
+Sega2011inversion:
+  type: article
+  title: Pickett angles and Cremer–Pople coordinates as collective variables for the enhanced sampling of six-membered ring conformations
+  author:
+  - Sega, M.
+  - Autieri, E.
+  - Pederiva, F.
+  date: 2011-01
+  page-range: 141
+  url: http://dx.doi.org/10.1080/00268976.2010.522208
+  serial-number:
+    doi: 10.1080/00268976.2010.522208
+    issn: 1362-3028
+  parent:
+    type: periodical
+    title: Molecular Physics
+    publisher: Informa UK Limited
+    issue: 1
+    volume: 109
 
