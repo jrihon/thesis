@@ -10,28 +10,9 @@
 //}
 
 == Characterisation of nucleic acid structures
-=== IUPAC nomenclature of polynucleotide chains
-//! Abbreviations and Symbols for the Description of Conformations of Polynucleotide Chains
-//-> IUPAC_Abbreviations and symbols for the description of conformations of polynucleotide chains.pdf
-//! Reference 1983 IUPAC
-//! Reference Saenger 1984 book
-//! 
-//! -> Backbone chain (alpha, beta ...)
-//! -> endocyclic angles (v0, v1 ...)
-//! -> endocyclic angles (v0, v1 ...)
-//! 
 Before any technical section, like the upcoming part, it is always a good idea to exactly define the terms used to remove ambiguity from the proverbial equations. 
 As it stands, this is the vision statement of the _International Union for Pure and Applied Chemistry_ (IUPAC) #mcite(("Iupac1983nucleicacids"), biblio).
 
-The nucleic acids were assigned names by letters of the greek alphabet. The dihedrals of the backbone trace the consecutive chain, which follow the direction 5_'_ $arrow.r$ 3_'_ and thusly follow the alphabet's lexicographical order,  and are named from $alpha arrow.r zeta$, with the glycosidic torsion angle denoted as $chi$. The endocyclic torsions of the sugar ribose consist of five dihedrals $nu_(0 arrow.r 4)$ that start at the O4_'_-C1_'_ bond and circle about the sugar clockwise.
-The atomnames in the nucleotides belonging to the backbone are always highlighted by a tick, to distinguish them from the atoms of the nucleobase. As nomenclature is extremely sensitive on the modifications applied to molecules, a robust naming convention is worth its weight in gold to avoid confusion #mcite(("Iupac1983nucleicacids", "Saenger1984"), biblio).   
-
-Standard nucleobases are composed of the set Adenine (A), Guanine (G), Cytidine (C) and Thymine (T)/Uracil (U), with the last two belonging to the DNA and RNA chemistry respectively. Standard basepairing patterns are established by the Watson-Crick-Franklin (WCF) basepairing between a purine:pyrimdine pair. Hydrogen bond patterns are the dominant force (A:T/U, C:G) for keeping associating strands together. In the way that nucleotides are stacked above one another contributes further to solid nucleic acid helices, which finds its principle in the efficient stacking of aromatised orbitals in the rings of the nucleobases.
-
-Speaking of helices, or more commonly duplexes, in biology we find two typical structures of nucleic acid duplexes. The B-type DNA structure is innately recognised by DNA processing enzymes to transcribe DNA to RNA in human cells (the central dogma), while the A-type RNA structure helices are more commonly found in most bacterial genomes where it analogously functions as their genetic system. 
-They are characterised by differences in major and minor grooves, helical length and bp per turn ($frac("bp", 2pi)$).
-// Dit mag eigenlijk in het hoofdstuk over nucleobase modifications komen
-//However, as we will come to understand in this thesis, different types of basepairing are possible not only with doublets but also triplets and tetrads of basepairing patterns.
 //
 //
 //

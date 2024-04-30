@@ -6,5 +6,12 @@
 
 #lorem(50)
 Testing this and that #mcite(("Lescrinier2003difference"), biblio).
-==== An addition to the text
+// Talk about different nucleobase modifications
+//
+// talk about different basepairing patterns
+//
+// there is no tool atm that handles nucleobase modifications
+//
+// this would complete Ducque as the first tool to handle all types of modifications to nucleic acids
+//
 #lorem(50)

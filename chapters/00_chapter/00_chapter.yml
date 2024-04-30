@@ -769,4 +769,136 @@ Sega2011inversion:
     publisher: Informa UK Limited
     issue: 1
     volume: 109
+Dahm2007discoverDNA:
+  type: article
+  title: 'Discovering DNA: Friedrich Miescher and the early years of nucleic acid research'
+  author: Dahm, Ralf
+  date: 2007-09
+  page-range: 565
+  url: http://dx.doi.org/10.1007/s00439-007-0433-0
+  serial-number:
+    doi: 10.1007/s00439-007-0433-0
+    issn: 1432-1203
+  parent:
+    type: periodical
+    title: Human Genetics
+    publisher: Springer Science, Business Media LLC
+    issue: 6
+    volume: 122
+Avery1944macleodmccarty:
+  type: article
+  title: STUDIES ON THE CHEMICAL NATURE OF THE SUBSTANCE INDUCING TRANSFORMATION OF PNEUMOCOCCAL TYPES
+  author:
+  - Avery, Oswald T.
+  - MacLeod, Colin M.
+  - McCarty, Maclyn
+  date: 1944-02
+  page-range: 137
+  url: http://dx.doi.org/10.1084/jem.79.2.137
+  serial-number:
+    doi: 10.1084/jem.79.2.137
+    issn: 0022-1007
+  parent:
+    type: periodical
+    title: Journal of Experimental Medicine
+    publisher: Rockefeller University Press
+    issue: 2
+    volume: 79
+Griffith1928bacteria:
+  type: article
+  title: The Significance of Pneumococcal Types
+  author: Griffith, Fred
+  date: 1928-01
+  page-range: 113
+  url: http://dx.doi.org/10.1017/s0022172400031879
+  serial-number:
+    doi: 10.1017/s0022172400031879
+    issn: 0022-1724
+  parent:
+    type: periodical
+    title: Journal of Hygiene
+    publisher: Cambridge University Press (CUP)
+    issue: 2
+    volume: 27
+WATSON1953CrickFranklin:
+  type: article
+  title: 'Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid'
+  author:
+  - WATSON, J. D.
+  - CRICK, F. H. C.
+  date: 1953-04
+  page-range: 737
+  url: http://dx.doi.org/10.1038/171737a0
+  serial-number:
+    doi: 10.1038/171737a0
+    issn: 1476-4687
+  parent:
+    type: periodical
+    title: Nature
+    publisher: Springer Science, Business Media LLC
+    issue: 4356
+    volume: 171
+Ghildiyal2009rnainterference:
+  type: article
+  title: 'Small silencing RNAs: an expanding universe'
+  author:
+  - Ghildiyal, Megha
+  - Zamore, Phillip D.
+  date: 2009-02
+  page-range: 94
+  url: http://dx.doi.org/10.1038/nrg2504
+  serial-number:
+    doi: 10.1038/nrg2504
+    issn: 1471-0064
+  parent:
+    type: periodical
+    title: Nature Reviews Genetics
+    publisher: Springer Science, Business Media LLC
+    issue: 2
+    volume: 10
+Zhang2023sirna:
+  type: article
+  title: 'A Comprehensive Review of Small Interfering RNAs (siRNAs): Mechanism, Therapeutic Targets, and Delivery Strategies for Cancer Therapy'
+  author:
+  - Zhang, Jiaying
+  - Chen, Bo
+  - Gan, Chunyuan
+  - Sun, Hongyan
+  - Zhang, Jiaxin
+  - Feng, Lin
+  date: 2023-12
+  page-range: 7605
+  url: http://dx.doi.org/10.2147/IJN.S436038
+  serial-number:
+    doi: 10.2147/ijn.s436038
+    issn: 1178-2013
+  parent:
+    type: periodical
+    title: International Journal of Nanomedicine
+    publisher: Informa UK Limited
+McRae2024ribozyme:
+  type: article
+  title: Cryo-EM structure and functional landscape of an RNA polymerase ribozyme
+  author:
+  - McRae, Ewan K. S.
+  - Wan, Christopher J. K.
+  - Kristoffersen, Emil L.
+  - Hansen, Kalinka
+  - Gianni, Edoardo
+  - Gallego, Isaac
+  - Curran, Joseph F.
+  - Attwater, James
+  - Holliger, Philipp
+  - Andersen, Ebbe S.
+  date: 2024-01
+  url: http://dx.doi.org/10.1073/pnas.2313332121
+  serial-number:
+    doi: 10.1073/pnas.2313332121
+    issn: 1091-6490
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences
+    publisher: Proceedings of the National Academy of Sciences
+    issue: 3
+    volume: 121
 
