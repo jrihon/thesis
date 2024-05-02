@@ -83,7 +83,7 @@ These parameters are originally derived from spectroscopy data and normal mode a
 //
 //
 //
-===== Fitting torsional parameters
+===== Fitting torsional parameters <sec-intro-dihedrals>
 //https://en.wikipedia.org/wiki/Fourier_series
 Describing the dihedral or torsion angle in a set of four atoms is perhaps the most complicated aspect of creating a force field that approximates molecular realism.  
 A dihedral is defined as the angle ($phi$) by which two planes intersect (@fig-torsionexplain A.). As a trigonometric axiom states that three points define a plane, two planes can be defined from a set of four (in)directly bonded atoms. 

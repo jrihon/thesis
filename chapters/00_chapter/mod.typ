@@ -35,7 +35,7 @@
 #include {"00_section_01.typ"}
 #include {"00_section_02.typ"}
 #include {"00_section_03.typ"}
-#include {"00_objectives.typ"}
+#include {"00_section_objectives.typ"}
 
 #make-quote(
   [My invasion of \

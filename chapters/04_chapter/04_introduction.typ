@@ -14,4 +14,5 @@ Testing this and that #mcite(("Lescrinier2003difference"), biblio).
 //
 // this would complete Ducque as the first tool to handle all types of modifications to nucleic acids
 //
+// However, as we will come to understand in this thesis, different types of basepairing are possible not only with doublets but also triplets and tetrads of basepairing patterns.
 #lorem(50)

@@ -901,4 +901,194 @@ McRae2024ribozyme:
     publisher: Proceedings of the National Academy of Sciences
     issue: 3
     volume: 121
+Chen2016mods:
+  type: article
+  title: Nucleic Acid Modifications in Regulation of Gene Expression
+  author:
+  - Chen, Kai
+  - Zhao, Boxuan Simen
+  - He, Chuan
+  date: 2016-01
+  page-range: 74
+  url: http://dx.doi.org/10.1016/j.chembiol.2015.11.007
+  serial-number:
+    doi: 10.1016/j.chembiol.2015.11.007
+    issn: 2451-9456
+  parent:
+    type: periodical
+    title: Cell Chemical Biology
+    publisher: Elsevier BV
+    issue: 1
+    volume: 23
+Aduri2007mods:
+  type: article
+  title: AMBER Force Field Parameters for the Naturally Occurring Modified Nucleosides in RNA
+  author:
+  - Aduri, Raviprasad
+  - Psciuk, Brian T.
+  - Saro, Pirro
+  - Taniga, Hariprakash
+  - Schlegel, H. Bernhard
+  - SantaLucia, John
+  date: 2007-06
+  page-range: 1464
+  url: http://dx.doi.org/10.1021/ct600329w
+  serial-number:
+    doi: 10.1021/ct600329w
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 4
+    volume: 3
+Helm2006postmods:
+  type: article
+  title: Post-transcriptional nucleotide modification and alternative folding of RNA
+  author: Helm, M.
+  date: 2006-01
+  page-range: 721
+  url: http://dx.doi.org/10.1093/nar/gkj471
+  serial-number:
+    doi: 10.1093/nar/gkj471
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 2
+    volume: 34
+MozoVillaras2021hydrophobicgroove:
+  type: article
+  title: The importance of hydrophobic interactions in the structure of transcription systems
+  author:
+  - Mozo-Villarías, Angel
+  - Cedano, Juan
+  - Querol, Enrique
+  date: 2021-06
+  page-range: 951
+  url: http://dx.doi.org/10.1007/s00249-021-01557-x
+  serial-number:
+    doi: 10.1007/s00249-021-01557-x
+    issn: 1432-1017
+  parent:
+    type: periodical
+    title: European Biophysics Journal
+    publisher: Springer Science, Business Media LLC
+    issue: 7
+    volume: 50
+Bentley2014mods:
+  type: article
+  title: Coupling mRNA processing with transcription in time and space
+  author: Bentley, David L.
+  date: 2014-02
+  page-range: 163
+  url: http://dx.doi.org/10.1038/nrg3662
+  serial-number:
+    doi: 10.1038/nrg3662
+    issn: 1471-0064
+  parent:
+    type: periodical
+    title: Nature Reviews Genetics
+    publisher: Springer Science, Business Media LLC
+    issue: 3
+    volume: 15
+Chelliserrykattil2008kool:
+  type: article
+  title: Polymerase Amplification, Cloning, and Gene Expression of Benzo‐Homologous “yDNA” Base Pairs
+  author:
+  - Chelliserrykattil, Jijumon
+  - Lu, Haige
+  - Lee, Alex H. F.
+  - Kool, Eric T.
+  date: 2008-12
+  page-range: 2976
+  url: http://dx.doi.org/10.1002/cbic.200800339
+  serial-number:
+    doi: 10.1002/cbic.200800339
+    issn: 1439-7633
+  parent:
+    type: periodical
+    title: ChemBioChem
+    publisher: Wiley
+    issue: 18
+    volume: 9
+Gao2005kool:
+  type: article
+  title: Assembly of the Complete Eight‐Base Artificial Genetic Helix, xDNA, and Its Interaction with the Natural Genetic System
+  author:
+  - Gao, Jianmin
+  - Liu, Haibo
+  - Kool, Eric T.
+  date: 2005-05
+  page-range: 3118
+  url: http://dx.doi.org/10.1002/anie.200500069
+  serial-number:
+    doi: 10.1002/anie.200500069
+    issn: 1521-3773
+  parent:
+    type: periodical
+    title: Angewandte Chemie International Edition
+    publisher: Wiley
+    issue: 20
+    volume: 44
+Yang2011benner:
+  type: article
+  title: Amplification, Mutation, and Sequencing of a Six-Letter Synthetic Genetic System
+  author:
+  - Yang, Zunyi
+  - Chen, Fei
+  - Alvarado, J. Brian
+  - Benner, Steven A.
+  date: 2011-09
+  page-range: 15105
+  url: http://dx.doi.org/10.1021/ja204910n
+  serial-number:
+    doi: 10.1021/ja204910n
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 38
+    volume: 133
+Piccirilli1990benner:
+  type: article
+  title: Enzymatic incorporation of a new base pair into DNA and RNA extends the genetic alphabet
+  author:
+  - Piccirilli, Joseph A.
+  - Benner, Steven A.
+  - Krauch, Tilman
+  - Moroney, Simon E.
+  - Benner, Steven A.
+  date: 1990-01
+  page-range: 33
+  url: http://dx.doi.org/10.1038/343033a0
+  serial-number:
+    doi: 10.1038/343033a0
+    issn: 1476-4687
+  parent:
+    type: periodical
+    title: Nature
+    publisher: Springer Science, Business Media LLC
+    issue: 6253
+    volume: 343
+Morales1998kool:
+  type: article
+  title: Efficient replication between non-hydrogen-bonded nucleoside shape analogs
+  author:
+  - Morales, Juan C.
+  - Kool, Eric T.
+  date: 1998-11
+  page-range: 950
+  url: http://dx.doi.org/10.1038/2925
+  serial-number:
+    doi: 10.1038/2925
+    issn: 1072-8368
+  parent:
+    type: periodical
+    title: Nature Structural Biology
+    publisher: Springer Science, Business Media LLC
+    issue: 11
+    volume: 5
 
