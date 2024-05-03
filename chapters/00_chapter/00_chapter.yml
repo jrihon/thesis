@@ -1091,4 +1091,252 @@ Morales1998kool:
     publisher: Springer Science, Business Media LLC
     issue: 11
     volume: 5
+Roundtree2017rnamods:
+  type: article
+  title: Dynamic RNA Modifications in Gene Expression Regulation
+  author:
+  - Roundtree, Ian A.
+  - Evans, Molly E.
+  - Pan, Tao
+  - He, Chuan
+  date: 2017-06
+  page-range: 1187
+  url: http://dx.doi.org/10.1016/j.cell.2017.05.045
+  serial-number:
+    doi: 10.1016/j.cell.2017.05.045
+    issn: 0092-8674
+  parent:
+    type: periodical
+    title: Cell
+    publisher: Elsevier BV
+    issue: 7
+    volume: 169
+Gilbert1986rnaworld:
+  type: article
+  title: 'Origin of life: The RNA world'
+  author: Gilbert, Walter
+  date: 1986-02
+  page-range: 618
+  url: http://dx.doi.org/10.1038/319618a0
+  serial-number:
+    doi: 10.1038/319618a0
+    issn: 1476-4687
+  parent:
+    type: periodical
+    title: Nature
+    publisher: Springer Science, Business Media LLC
+    issue: 6055
+    volume: 319
+Higgs2014rnaworld:
+  type: article
+  title: 'The RNA World: molecular cooperation at the origins of life'
+  author:
+  - Higgs, Paul G.
+  - Lehman, Niles
+  date: 2014-11
+  page-range: 7
+  url: http://dx.doi.org/10.1038/nrg3841
+  serial-number:
+    doi: 10.1038/nrg3841
+    issn: 1471-0064
+  parent:
+    type: periodical
+    title: Nature Reviews Genetics
+    publisher: Springer Science, Business Media LLC
+    issue: 1
+    volume: 16
+Egli2000rnamimetics:
+  type: article
+  title: 'Synthetic oligonucleotides as RNA mimetics: 2′-modified RNAs and N3′→P5′ phosphoramidates'
+  author:
+  - Egli, M.
+  - Gryaznov, S. M.
+  date: 2000-09
+  page-range: 1440
+  url: http://dx.doi.org/10.1007/PL00000628
+  serial-number:
+    doi: 10.1007/pl00000628
+    issn: 1420-682X
+  parent:
+    type: periodical
+    title: Cellular and Molecular Life Sciences
+    publisher: Springer Science, Business Media LLC
+    issue: 10
+    volume: 57
+Swayze2006lnatoxic:
+  type: article
+  title: Antisense oligonucleotides containing locked nucleic acid improve potency but cause significant hepatotoxicity in animals
+  author:
+  - Swayze, Eric E.
+  - Siwkowski, Andrew M.
+  - Wancewicz, Edward V.
+  - Migawa, Michael T.
+  - Wyrzykiewicz, Tadeusz K.
+  - Hung, Gene
+  - Monia, Brett P.
+  - Bennett, C. Frank
+  date: 2006-12
+  page-range: 687
+  url: http://dx.doi.org/10.1093/nar/gkl1071
+  serial-number:
+    doi: 10.1093/nar/gkl1071
+    issn: 0305-1048
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 2
+    volume: 35
+Yi2022threoseformation:
+  type: article
+  title: 'Erythrose and Threose: Carbonyl Migrations, Epimerizations, Aldol, and Oxidative Fragmentation Reactions under Plausible Prebiotic Conditions'
+  author:
+  - Yi, Ruiqin
+  - Kern, Ryan
+  - Pollet, Pamela
+  - Lin, Huacan
+  - Krishnamurthy, Ramanarayanan
+  - Liotta, Charles L.
+  date: 2022-12
+  url: http://dx.doi.org/10.1002/chem.202202816
+  serial-number:
+    doi: 10.1002/chem.202202816
+    issn: 1521-3765
+  parent:
+    type: periodical
+    title: Chemistry – A European Journal
+    publisher: Wiley
+    issue: 8
+    volume: 29
+Ebert2008tna:
+  type: article
+  title: 'The Structure of a TNA−TNA Complex in Solution: NMR Study of the Octamer Duplex Derived from α-(l)-Threofuranosyl-(3′-2′)-CGAATTCG'
+  author:
+  - Ebert, Marc-Olivier
+  - Mang, Christian
+  - Krishnamurthy, Ramanarayanan
+  - Eschenmoser, Albert
+  - Jaun, Bernhard
+  date: 2008-10
+  page-range: 15105
+  url: http://dx.doi.org/10.1021/ja8041959
+  serial-number:
+    doi: 10.1021/ja8041959
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 45
+    volume: 130
+MartnPintado2012ANA:
+  type: article
+  title: 'The solution structure of double helical arabino nucleic acids (ANA and 2′F-ANA): effect of arabinoses in duplex-hairpin interconversion'
+  author:
+  - Martín-Pintado, Nerea
+  - Yahyaee-Anzahaee, Maryam
+  - Campos-Olivas, Ramón
+  - Noronha, Anne M.
+  - Wilds, Christopher J.
+  - Damha, Masad J.
+  - González, Carlos
+  date: 2012-07
+  page-range: 9329
+  url: http://dx.doi.org/10.1093/nar/gks672
+  serial-number:
+    doi: 10.1093/nar/gks672
+    issn: 0305-1048
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 18
+    volume: 40
+Mattelaer2021xylose:
+  type: article
+  title: Stable Hairpin Structures Formed by Xylose‐Based Nucleic Acids
+  author:
+  - Mattelaer, Charles‐Alexandre
+  - Maiti, Mohitosh
+  - Smets, Laurent
+  - Maiti, Munmun
+  - Schepers, Guy
+  - Mattelaer, Henri‐Philippe
+  - Rosemeyer, Helmut
+  - Herdewijn, Piet
+  - Lescrinier, Eveline
+  date: 2021-02
+  page-range: 1638
+  url: http://dx.doi.org/10.1002/cbic.202000803
+  serial-number:
+    doi: 10.1002/cbic.202000803
+    issn: 1439-7633
+  parent:
+    type: periodical
+    title: ChemBioChem
+    publisher: Wiley
+    issue: 9
+    volume: 22
+Roche2022prebiotic:
+  type: article
+  title: 'A Plausible Prebiotic Path to Nucleosides: Ribosides and Related Aldosides Generated from Ribulose, Fructose, and Similar Abiotic Precursors'
+  author:
+  - Roche, Tyler P.
+  - Fialho, David M.
+  - Menor‐Salván, Cesar
+  - Krishnamurthy, Ramanarayanan
+  - Schuster, Gary B.
+  - Hud, Nicholas V.
+  date: 2022-12
+  url: http://dx.doi.org/10.1002/chem.202203036
+  serial-number:
+    doi: 10.1002/chem.202203036
+    issn: 1521-3765
+  parent:
+    type: periodical
+    title: Chemistry – A European Journal
+    publisher: Wiley
+    issue: 6
+    volume: 29
+Moulton2017morpho:
+  type: article
+  title: Using Morpholinos to Control Gene Expression
+  author: Moulton, Jon D.
+  date: 2017-03
+  url: http://dx.doi.org/10.1002/cpnc.21
+  serial-number:
+    doi: 10.1002/cpnc.21
+    issn: 1934-9289
+  parent:
+    type: periodical
+    title: Current Protocols in Nucleic Acid Chemistry
+    publisher: Wiley
+    issue: 1
+    volume: 68
+Luo2019zna:
+  type: article
+  title: Invading Escherichia coli Genetics with a Xenobiotic Nucleic Acid Carrying an Acyclic Phosphonate Backbone (ZNA)
+  author:
+  - Luo, Min
+  - Groaz, Elisabetta
+  - Froeyen, Mathy
+  - Pezo, Valérie
+  - Jaziri, Faten
+  - Leonczak, Piotr
+  - Schepers, Guy
+  - Rozenski, Jef
+  - Marlière, Philippe
+  - Herdewijn, Piet
+  date: 2019-06
+  page-range: 10844
+  url: http://dx.doi.org/10.1021/jacs.9b04714
+  serial-number:
+    doi: 10.1021/jacs.9b04714
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 27
+    volume: 141
 

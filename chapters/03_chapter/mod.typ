@@ -5,7 +5,7 @@
 #import "bib_03_chapter.typ": biblio
 
 
-= Structure prediction of an HNA aptamer with a G-quadruplex motif
+= Structure prediction of an HNA aptamer with a G-quadruplex motif <chap-chapterAptamer>
 
 #boxed-text(
   title: "Characterization of an HNA aptamer suggests a non-canonical G-quadruplex motif.",
