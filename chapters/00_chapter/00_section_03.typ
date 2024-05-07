@@ -27,12 +27,12 @@ The research carried out during this thesis has always employed the AMBER MD sof
 
 Fundamentally speaking, the potential energy of a molecule (or a system in general) is defined by the relative positioning of the orbitals in a molecule. Because these computations already require heavy consumption of resources on systems larger than 25 atoms, performing simulations at this level is inconceivable. However, by abstracting atomic properties to classical mechanics concepts, we are able to reduce the expensiveness of the calculations.   
 
-To encapsulate the essence of a standard Molecular Dynamics simulations, a set of molecules are spawned inside a virtually limitless box. The properties of the molecules are defined in several files located on the machine, denoted as the _force field_. These files supply the simulation engine with information on how the molecules are allowed to behave, and most important, restrict unfavoured behaviour. The engine itself is the program that lets the molecules move about, logs and corrects the motion of molecules.
+To encapsulate the essence of a standard Molecular Dynamics simulations, a set of molecules are spawned inside a virtually limitless box. The properties of the molecules are defined in several files located on the machine - the _force field_. These files supply the simulation engine with information on how the molecules are allowed to behave, and most important, restrict unfavoured behaviour. The engine itself is the program that lets the molecules move about, logs and corrects the motion of molecules.
 $
 E#sub("amber") = E#sub("bondstretch") + E#sub("anglebend")  + E#sub("torsion") + E#sub("electrostatic") + E#sub("VdW")
 $ <eq-AMBER>
 @eq-AMBER gives a brief overview of how AMBER's simulation engine derives the potential energy of a system.
-The first three terms are defined as the bonded term interactions. All bonded interactions can be condensed to bonds (two), angles (three) and dihedrals (four), which are respectively composed of atoms (in)directly linked together.
+The first three terms are defined as the bonded term interactions. All bonded interactions can be condensed to bonds (two), angles (three) and dihedrals (four), which are respectively composed of atoms linked together.
 The final two are the non-bonded term interactions, concerned with attractive and repulsive effects within and around the molecule.
 While the simulation runs, the atoms move within their bounds. Every shift in movement, all atoms in the system take a slightly different position within the box. Bad movements get penalized, while good movements are left as is. Deciding on the alignment of a movement depends on the results of @eq-AMBER.
 //
@@ -72,7 +72,7 @@ $
 E#sub("bondstretch") = sum_("bonds") K#sub("r") (r - r#sub("eq"))^2 #h(1em) ; #h(1em) E#sub("anglebend") = sum_("angles") K#sub(math.theta) (theta - theta#sub("eq"))^2
 $ <eq-ballspring>
 Angle bending is little different from bond stretching, but involves a semantic spring between two atoms, b#sub("1") and b#sub("3"), being indirectly linked through b#sub("2"). The _K#sub(math.theta)_ parameter defines the rigidity of this particular spring, which hovers around the equilbrium angle _θ#sub("eq")_.
-These parameters are originally derived from spectroscopy data and normal mode analysis, but can also be retrieved from NMR, crystal structures (X-ray and neutron diffraction data) and pure _ab initio_ computations, and have remained relatively stable since they were established #mcite(("Cornell19952ndgenff", "Wang2004GAFF"), biblio). This especially holds true for ground-state organic molecules. 
+These parameters are originally derived from spectroscopy data and normal mode analysis, but can also be retrieved from NMR and _ab initio_ computations, and have remained relatively stable since they were established #mcite(("Cornell19952ndgenff", "Wang2004GAFF"), biblio). This especially holds true for ground-state organic molecules. 
  
 //
 //
@@ -86,7 +86,7 @@ These parameters are originally derived from spectroscopy data and normal mode a
 ===== Fitting torsional parameters <sec-intro-dihedrals>
 //https://en.wikipedia.org/wiki/Fourier_series
 Describing the dihedral or torsion angle in a set of four atoms is perhaps the most complicated aspect of creating a force field that approximates molecular realism.  
-A dihedral is defined as the angle ($phi$) by which two planes intersect (@fig-torsionexplain A.). As a trigonometric axiom states that three points define a plane, two planes can be defined from a set of four (in)directly bonded atoms. 
+A dihedral is defined as the angle ($phi$) by which two planes intersect (@fig-torsionexplain A.). As a trigonometric axiom states that three points define a plane, two planes can be defined from a set of four directly bonded atoms. 
 A dihedral's importance lies in the 1-4 interaction it makes. In other words, the atoms d#sub("1") and d#sub("4") in the dihedral set are directly correlated with establishing a part of the potential energy. This is mainly asserted through their steric hindrance, which is the result of a combination of the effects of (i) the radii of the various atoms, (ii) types of hybridisation in the set (which define bondlength and angles) and eventually (iii) the dihedral angle $phi$.
 //
 #figure(
@@ -102,7 +102,7 @@ E#sub("torsion") = sum_("dihedrals") frac(V#sub("n"), 2) [1 + cos(n phi - gamma)
 $ <eq-torsions>
 //
 @fig-torsionexplain B. is to be understood alongside @eq-torsions. The change of potential as a result of torsional rotation is defined through Fourier series #mcite(("Kania2021Fouriertorsion"), biblio). Fourier series are composed of multiple periodical functions and our torsion terms are no different.
-@eq-torsions describes the _force constant_ ($V_n$) which defines the height of the amplitude, the _multiplicity_ ($n$) defines the amount of minima in the continuous function and ($gamma$) is the _phase_ of the function.
+@eq-torsions describes the _force constant_ ($V_n$) which defines the height of the amplitude, the _multiplicity_ ($n$) defines the amount of minima in the continuous function and ($gamma$) is the _phase_ of the function. The $phi$ angle here is the empirical dihedral angle.
  For example, the resultant periodic in @fig-torsionexplain B. is the summation of the following periods :
 $
 #text(fill: rgb("#CD827B"))[$E#sub("dihedral")$] #h(1em)= #h(1em)
@@ -113,7 +113,7 @@ $
 This is the typical profile of a (-CH#sub("2")-CH#sub("2")-CH#sub("2")-CH#sub("2")-) dihedral #mcite(("Wang2004GAFF"), biblio).
 The figure tells us that when the atom d#sub("4") eclipses d#sub("1"), synonymous with a _cis configuration_, the potential rests at a local minimum. By increasing $phi$, we give a slight rise to the potential because d#sub("4")'s hydrogen atoms are hindering vicinal atoms, causing an unfavourable predicament ($plus.minus frac(2pi,3)$). The system will want to strive for a minimum, which can be achieved by visiting the _trans configuration_, at $phi = pi$. Since the molecule is symmetrical in nature, increasing the torsion angle to $2pi$ will see the potential go through the same changes, ending at a full rotation of the angle $phi$.
 
-By implementing a force field with a variety of parameters ($V_n$, $n$ and $gamma$), we can evaluate any rotation of the torsional angle occurring during a Molecular Dynamics simulation.
+By populating a force field with suitable parameters for $V_n$, $n$ and $gamma$ pertaining the specific dihedrals, we can evaluate any rotation of the torsional angle occurring during a Molecular Dynamics simulation.
 //
 //
 //
@@ -149,9 +149,9 @@ The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mksch
 The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule. By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
 From the QM side, a calculation is carried out at the HF/6-31G\* level. The information on the orbital density from this calculation is mapped onto the grid, assigning a potential energy to every grid point (@fig-mkscheme C.). This energy will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
 By fitting the ESP, using the _Chirlian-Francl_ least-squared fitting procedure, we derived ESP-based partial charges #mcite(("Chirlian1987fit"), biblio) (@fig-mkscheme D.). 
-An additional procedure to these derived charges is the application of the Restraintive ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate semantically similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Also restraints to account for buried atoms. Due to the grid being defined by the surface, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with discrete values for all the atoms in the system.
+An additional procedure to these derived charges is the application of the Restraintive ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate semantically similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Also restraints to account for buried atoms. Due to the grid being defined by the surface, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
 
-Other charge derivation schemes, like CHELPG and CHELMO differ grid generation (like cubic grids) and the applied basissets and functionals used #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
+Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like grid generation (like cubic grids) and the applied basissets and functionals used #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
 
 //
 //

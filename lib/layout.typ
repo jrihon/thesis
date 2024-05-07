@@ -153,7 +153,7 @@
   set par(
     justify: true,
 //    leading: 0.65em, // whitespace between lines
-    leading: 0.8em,
+//    leading: 0.8em,
   )
   set heading(
     numbering: headernumbers, // only go three depths before we make inlined headers
@@ -194,7 +194,7 @@
 
 #let headerL2(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 14pt, weight: "regular")
+  set text(font: "Roboto", colour, size: 16pt, weight: "regular")
   set align(left)
   let c = counter(heading).display()
   [#c #element.body]
@@ -204,7 +204,7 @@
 #let headerL3(element, colour) = {
 
 
-  set text(font: "Roboto", colour, weight: "regular")
+  set text(font: "Roboto", colour, size: 12pt, weight: "regular")
   set align(left)
 
   let c = counter(heading).display()
@@ -215,7 +215,8 @@
 #let headerL4(element, colour) = {
 
 
-  set text(font: "Roboto", colour, size: 11pt, weight: "light")
+//  set text(font: "Roboto", colour, size: 11pt, weight: "light")
+  set text(font: "Roboto", colour, size: 12pt, weight: "regular")
   set align(left)
 
 //  let original = read("../src/svg/chevron-arrow.svg")
@@ -239,7 +240,8 @@
 
 #let headerL5(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 11pt, weight: "light")
+//  set text(font: "Roboto", colour, size: 11pt, weight: "light")
+  set text(font: "Roboto", colour, size: 11pt, weight: "regular")
   [#element.body]
 }
 
@@ -460,6 +462,11 @@
   link("https://www.rcsb.org/structure/" + pdbstring)[#pdbstring]
 }
 
+#let get-page-by-query(tag) = {
+  // some magic mumbo jumbo, this `context keyword`
+  let pagenumber = context counter(page).at(locate(tag)).at(0)
+  [p. #pagenumber]
+}
 //! 
 //! Make pdb accession code hyperlinked
 //! 
@@ -475,6 +482,7 @@
     fill: rgb(..lightColour), // unpack array into the rgb() function
     radius: 2pt,
     inset: 10pt,
+    breakable: false,
     content
   )
 }

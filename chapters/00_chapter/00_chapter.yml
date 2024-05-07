@@ -1298,21 +1298,6 @@ Roche2022prebiotic:
     publisher: Wiley
     issue: 6
     volume: 29
-Moulton2017morpho:
-  type: article
-  title: Using Morpholinos to Control Gene Expression
-  author: Moulton, Jon D.
-  date: 2017-03
-  url: http://dx.doi.org/10.1002/cpnc.21
-  serial-number:
-    doi: 10.1002/cpnc.21
-    issn: 1934-9289
-  parent:
-    type: periodical
-    title: Current Protocols in Nucleic Acid Chemistry
-    publisher: Wiley
-    issue: 1
-    volume: 68
 Luo2019zna:
   type: article
   title: Invading Escherichia coli Genetics with a Xenobiotic Nucleic Acid Carrying an Acyclic Phosphonate Backbone (ZNA)
@@ -1339,4 +1324,180 @@ Luo2019zna:
     publisher: American Chemical Society (ACS)
     issue: 27
     volume: 141
+Kataev2021antivirals:
+  type: article
+  title: Antiviral nucleoside analogs
+  author:
+  - Kataev, Vladimir E.
+  - Garifullin, Bulat F.
+  date: 2021-04
+  page-range: 326
+  url: http://dx.doi.org/10.1007/s10593-021-02912-8
+  serial-number:
+    doi: 10.1007/s10593-021-02912-8
+    issn: 1573-8353
+  parent:
+    type: periodical
+    title: Chemistry of Heterocyclic Compounds
+    publisher: Springer Science, Business Media LLC
+    issue: 4
+    volume: 57
+SeleyRadtke2018antiviral:
+  type: article
+  title: 'The evolution of nucleoside analogue antivirals: A review for chemists and non-chemists. Part 1: Early structural modifications to the nucleoside scaffold'
+  author:
+  - Seley-Radtke, Katherine L.
+  - Yates, Mary K.
+  date: 2018-06
+  page-range: 66
+  url: http://dx.doi.org/10.1016/j.antiviral.2018.04.004
+  serial-number:
+    doi: 10.1016/j.antiviral.2018.04.004
+    issn: 0166-3542
+  parent:
+    type: periodical
+    title: Antiviral Research
+    publisher: Elsevier BV
+    volume: 154
+Wood1992acyclovir:
+  type: article
+  title: 'Acyclovir: A Decade Later'
+  author:
+  - Wood, Alastair J.J.
+  - Whitley, Richard J.
+  - Gnann, John W.
+  date: 1992-09
+  page-range: 782
+  url: http://dx.doi.org/10.1056/NEJM199209103271108
+  serial-number:
+    doi: 10.1056/nejm199209103271108
+    issn: 1533-4406
+  parent:
+    type: periodical
+    title: New England Journal of Medicine
+    publisher: Massachusetts Medical Society
+    issue: 11
+    volume: 327
+Zarrouk2017herpesdnavirus:
+  type: article
+  title: 'Herpesvirus DNA polymerases: Structures, functions and inhibitors'
+  author:
+  - Zarrouk, Karima
+  - Piret, Jocelyne
+  - Boivin, Guy
+  date: 2017-04
+  page-range: 177
+  url: http://dx.doi.org/10.1016/j.virusres.2017.01.019
+  serial-number:
+    doi: 10.1016/j.virusres.2017.01.019
+    issn: 0168-1702
+  parent:
+    type: periodical
+    title: Virus Research
+    publisher: Elsevier BV
+    volume: 234
+DeClercq2016TAF:
+  type: article
+  title: Tenofovir alafenamide (TAF) as the successor of tenofovir disoproxil fumarate (TDF)
+  author: De Clercq, Erik
+  date: 2016-11
+  page-range: 1
+  url: http://dx.doi.org/10.1016/j.bcp.2016.04.015
+  serial-number:
+    doi: 10.1016/j.bcp.2016.04.015
+    issn: 0006-2952
+  parent:
+    type: periodical
+    title: Biochemical Pharmacology
+    publisher: Elsevier BV
+    volume: 119
+Kearney2004:
+  type: article
+  title: 'Tenofovir Disoproxil Fumarate: Clinical Pharmacology and Pharmacokinetics'
+  author:
+  - Kearney, Brian P
+  - Flaherty, John F
+  - Shah, Jaymin
+  date: 2004
+  page-range: 595
+  url: http://dx.doi.org/10.2165/00003088-200443090-00003
+  serial-number:
+    doi: 10.2165/00003088-200443090-00003
+    issn: 0312-5963
+  parent:
+    type: periodical
+    title: Clinical Pharmacokinetics
+    publisher: Springer Science, Business Media LLC
+    issue: 9
+    volume: 43
+Moulton2017PMO:
+  type: article
+  title: Using Morpholinos to Control Gene Expression
+  author: Moulton, Jon D.
+  date: 2017-03
+  url: http://dx.doi.org/10.1002/cpnc.21
+  serial-number:
+    doi: 10.1002/cpnc.21
+    issn: 1934-9289
+  parent:
+    type: periodical
+    title: Current Protocols in Nucleic Acid Chemistry
+    publisher: Wiley
+    issue: 1
+    volume: 68
+Roshmi2019viltolarsen:
+  type: article
+  title: Viltolarsen for the treatment of Duchenne muscular dystrophy
+  author:
+  - Roshmi, R.
+  - Yokota, T.
+  date: 2019
+  page-range: 627
+  url: http://dx.doi.org/10.1358/dot.2019.55.10.3045038
+  serial-number:
+    doi: 10.1358/dot.2019.55.10.3045038
+    issn: 1699-4019
+  parent:
+    type: periodical
+    title: Drugs of Today
+    publisher: Portico
+    issue: 10
+    volume: 55
+Mayer2009aptamer:
+  type: article
+  title: The Chemical Biology of Aptamers
+  author: Mayer, Günter
+  date: 2009-03
+  page-range: 2672
+  url: http://dx.doi.org/10.1002/anie.200804643
+  serial-number:
+    doi: 10.1002/anie.200804643
+    issn: 1521-3773
+  parent:
+    type: periodical
+    title: Angewandte Chemie International Edition
+    publisher: Wiley
+    issue: 15
+    volume: 48
+Dunn2020tnaaptamer:
+  type: article
+  title: Generating Biologically Stable TNA Aptamers that Function with High Affinity and Thermal Stability
+  author:
+  - Dunn, Matthew R.
+  - McCloskey, Cailen M.
+  - Buckley, Patricia
+  - Rhea, Katherine
+  - Chaput, John C.
+  date: 2020-04
+  page-range: 7721
+  url: http://dx.doi.org/10.1021/jacs.0c00641
+  serial-number:
+    doi: 10.1021/jacs.0c00641
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 17
+    volume: 142
 

@@ -27,7 +27,7 @@
 
 //!
 //!
-//! CHAPTER 00
+//! CHAPTER 00 : Introduction
 //!
 //!
 #show: document => layout(document, "1", "1.1.1.", colour00)  // Set page counter to arabic numbers
@@ -58,7 +58,7 @@
 
 //!
 //!
-//! CHAPTER 01
+//! CHAPTER 01: PUCKERS
 //!
 //!
 // Format headers
@@ -67,7 +67,7 @@
 
 //!
 //!
-//! CHAPTER 02
+//! CHAPTER 02: DUCQUE
 //!
 //!
 // Include manuscript
@@ -75,7 +75,7 @@
 
 //!
 //!
-//! CHAPTER 03
+//! CHAPTER 03: APTAMER
 //!
 //!
 // Format headers
@@ -84,16 +84,16 @@
 
 //!
 //!
-//! CHAPTER 04
+//! CHAPTER 04: NUCLEOBASE MODS
 //!
 //!
 // Format headers
 // Include manuscript
-#include {"./chapters/04_chapter/mod.typ"} 
+//#include {"./chapters/04_chapter/mod.typ"} 
 
 //!
 //!
-//! CHAPTER 05
+//! CHAPTER 05: CONCLUSION
 //!
 //!
 // Include manuscript

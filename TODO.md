@@ -1,11 +1,13 @@
 
 
 # CHAPTER 1
-- Applications of nucleic acids [ ]
+- Applications of nucleic acids [X]
+
+- The peaking part -> locate the query and find the page it is on, give the page [X]
+
+- Rework IUPAC figure to clearly depict the phosphate, sugar and nucleobase [X]
 
 - subtext on Figure about curves+ vs 3dna  [ ]
-
-- Parametrisation of the helical trace (CT)  [ ]
 
 - Quantum Mechanics [ ]
 
@@ -16,7 +18,7 @@
 
 - Applying MD on Nucleic Acid analogues [ ]
 
-- Objectives
+- Objectives [ ]
 
 # CHAPTER 4
 - Conclusion [ ]
