@@ -69,6 +69,7 @@
     "Connolly1983SASA": 68, 
     "Chirlian1987fit": 69, 
     "Bayly1993resp": 70, 
+    "mattelaer2021PHD": 71, 
 )
 
 #let biblio = (

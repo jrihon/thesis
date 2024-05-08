@@ -1500,4 +1500,10 @@ Dunn2020tnaaptamer:
     publisher: American Chemical Society (ACS)
     issue: 17
     volume: 142
+mattelaer2021PHD:
+  type: thesis
+  title: Structure and folding of XNA aptamers studied by computational and experimental methods
+  author: Mattelaer, Charles-Alexandre
+  date: 2021
+  organization: Laboratory of Medicinal Chemistry, Rega Insitute for Medical Research, KU Leuven
 

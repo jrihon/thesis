@@ -7,18 +7,18 @@
 
 - Rework IUPAC figure to clearly depict the phosphate, sugar and nucleobase [X]
 
-- subtext on Figure about curves+ vs 3dna  [ ]
+- subtext on Figure about curves+ vs 3dna  [X]
 
 - Quantum Mechanics [ ]
 
 - Lennard Jones Potential [ ]
     -> uitleggen adhv ion parametrisation
 
-- Molecular Mechanics [ ]
+- Molecular Mechanics (PMEMD) [ ]
 
 - Applying MD on Nucleic Acid analogues [ ]
 
-- Objectives [ ]
+- Objectives [X]
 
 # CHAPTER 4
 - Conclusion [ ]
