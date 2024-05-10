@@ -22,3 +22,9 @@
     Figure adapted from EMBO - Cambridge convention.
   ]
 ) <fig-appendix-basepairorient>
+
+
+
+#pagebreak()
+
+Adding some content here to make the headers work

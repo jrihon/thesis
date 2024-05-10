@@ -1,4 +1,23 @@
+#import "../../lib/multi-bib.typ": mcite
+#import "bib_03_chapter.typ": biblio
+
+#show "HAPT": [_hApt#super("50")_]
+#show "Core13" : [_Core-13_]
+#show "Core14" : [_Core-14_]
+#show "Gq" : [_Gq_]
+
 == Conclusion
 
-#lorem(50)
-// I am the fucking best guy there is
+//#lorem(50)
+// Our model is also largely consistent with mutational anal- ysis of core13 HEL and antiG4 Gmab binding with muta- tions of key residues forming the G4 structure (hG1, hG20, G23), the non-canonical hT-hA-hC-hT quadruplet (hT3, hA11) or the non-canonical hT:hT (hT29) pair abolishing binding activity (Supplementary Tables S3, S4). Surpris- ingly, mutation of hG13 (G13A) as part of the G4 struc- ture abolished binding to the anti-G4 antibody, but re- tained some reduced HEL binding affinity, suggesting that the core13 structure in the absence of the G4 retains suffi- cient stability to form the anti-HEL paratope. Furthermore, we serendipitously discovered a mutation (G27A) that en- hances the affinity of the HNA aptamer for HEL by ca. 7- fold, possibly by displacing a Na+ ion in the putative HEL paratope (Supplementary Figure S4). The formation and unusual stability of the discussed non-canonical structures including non-canonical base- pairs may be related to the greater conformational rigidity of the HNA backbone that also greatly increases base-pairing stability. Indeed, core14 aptamer sequence synthesized in DNA showed no HEL binding suggesting that the formation of the non-canonical structures is es- sential to fold the HNA aptamer into its HEL-binding paratope. Indeed, loss of function by conversion of nucleic acid sequences into even very closely related chemistries is commonly observed (DNA > RNA; DNA > ANA; 2 OMe- RNA > MOE-RNA)(4,16,55), although in the case of a DNA anti-thrombin aptamer binding activity has been reported to be preserved upon conversion to PNA(56). In conclusion, while there is a growing number of XNA aptamers and also XNAzymes, the XNA structure database currently remains limited to short duplexes(19). These in- clude a wide range of XNAs such as deoxy(xylose) nu- cleic acids (XyNA), 2 -F RNA, FANA, TNA as well as pyranosyl RNA known to form non-canonical duplex structures(57–59) as well as short duplex structures for HNA oligonucleotides determined by both crystallogra- phy(37,48) and NMR (45,47). However, a description of structural configurations, folds or motifs underlying XNA function has been lacking. Our characterization and model building of the core13 HNA aptamer provides a first at- tempt at elucidating how a single-stranded XNA aptamer structure with fully modified backbone may fold into a three-dimensional motif to form its paratope binding both HEL and anti-G4 antibodies. While G4 structures formed from assembly of short HNA, PNA or mixed PNA-DNA oligomers have been described (60–62), this is the first G4 quadruplex structure observed in a functional motif (ap- tamer) formed by folding of an unbroken XNA strand. Finally, we note the striking similarities between epitopes, hotspots and biophysical binding properties between the anti-HEL HNA aptamer and naturally occurring anti-HEL antibodies underlining the conformational and structural versatility of nucleic acids and the power of in vitro evolu- tion to access convergent function in chemically unrelated polymers. A better understanding of the structural diversity and functional potential of XNAs should aid further devel- opment of XNA aptamers and enzymes.
+//
+//
+//
+
+There has been a tremendous effort to rationalise the three-dimensional structure of the HNA aptamer #mcite(("Pinheiro2012geneticpolymer"), biblio).
+Truncating the ssHNA sequence made it possible to lower the degrees of freedom, while retaining and even improving on the activity of the molecule against the HEL target.
+Had this not been the case and would this have required for the modeling of the original HAPT, this would have increased the time complexity of the search exponentially.
+Identifyig the Gq motif and the correct hG residues of the complex aided to the cause.
+In NA structures that contain such Gq motifs tend to consists mainly of them and little else. The fact that this motif was discovered, meant it needeed to be supported by motifs that also form planar constructs, like the hG15:hC19 basepair keeping the K#super("+") ion in check, the hT2:hT12:hT24 triplet and the hT3:HA11:hT31+hC26 quadruplex that support the Gq motif. 
+
+The structure corrobates the empirically determined data and was attained through mixing and matching of the different modes of interactions possible. We end with a plausible model to describe the elusive HNA aptamer.

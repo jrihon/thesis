@@ -67,12 +67,20 @@
     } else { // if page is uneven
 
       let next_subsection = query(selector(heading.where(level: 2)).after(loc), loc)
+      let next_section = query(selector(heading.where(level: 1)).before(loc), loc)
+
+      
       let ref_text = ""
-      if next_subsection.len() == 0 {
+      if to-string(next_section.at(-1).body) == "APPENDIX" {
         ref_text += "Appendix"
       } else {
         ref_text += to-string(next_subsection.at(0).body)
       }
+//      if next_subsection.len() == 0 {
+//        ref_text += "Appendix"
+//      } else {
+//        ref_text += to-string(next_subsection.at(0).body)
+//      }
 
       if ref_text == "References" {
         // Get section number
@@ -101,6 +109,31 @@
           align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
 
         }
+      } else if ref_text == "Appendix" {
+        // Get section number
+        let map_bibs = next_subsection.map(x => {
+            let refsubsections = to-string(x.body)
+            if refsubsections == "Appendix" {
+              x.location().page()
+            }
+        })
+        let filtered_set = map_bibs.filter(x => x != none)
+        let current_page = loc.page()
+        // if the current page is in the set of pages that contains the references heading L2, then
+        if current_page in filtered_set {
+          let secnum = counter(heading).at(loc)
+          secnum.at(1) += 1
+          align(right, [ #secnum.at(0) : Appendix])
+        } else {
+          let name_subsection = {
+            query( 
+              selector(heading.where(level: 1)).before(loc), loc,
+            ).last()
+          }
+          // Get section number
+          let secnum = counter(heading).at(loc)
+          align(right, [ #secnum.at(0) : #name_subsection.body])
+        }
       } else {
         let name_subsection = {
           query( 
@@ -110,7 +143,11 @@
 
         // Get section number
         let secnum = counter(heading).at(loc)
-        align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+        if secnum.len() == 1 {
+          align(right, [ #secnum.at(0) : #name_subsection.body])
+        } else {
+          align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+        }
       }
     }
 

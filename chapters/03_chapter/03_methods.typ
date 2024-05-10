@@ -13,8 +13,8 @@
   [#super(upper)#conf#sub(lower)]
 }
 
-== Methods
-=== Wet lab
+== Experimental studies
+=== Laboratory experiments
 The following laboratory experiments have been extensively detailed in Schofield _et al_. #mcite(("Schofield2023HNAaptamer"), biblio).
 ==== Truncation experiments
 //! een klein beetje vertellen over de manier hoe dat ze SPR en BLI gebruiken.
@@ -64,6 +64,7 @@ Truncated HNA aptamers were subjected to a Surface Plasmon Resonance (SPR) study
 //This involves HNA synthesis #mcite(("Hendrix1997HNAsynthetic"), biblio), truncating  measuring binding capability through SPR surface plasmon resonance, BLI biolyaer interferometry.
 //! Hier een figuur komen over de truncation experimenten en welke sequent uiteindelijk te beste was (core 13 ; 14)
 
+\
 ==== Functional characterisation of the HNA aptamer
 ===== Competition assays
 The whereabouts of the epitope of the Core14 aptamer was assessed to understand structural binding motifs. Several antibodies, like the camelid V#sub("H")H (nanobody) D2-L24 [#pdb-code("1ZVH")], D3-L11 [#pdb-code("1ZVY")] and D2-L19 #mcite(("DeGenst2006camelidHEL"), biblio), the human V#sub("H") H04 and D05 #mcite(("Rouet2015HumanAb"), biblio) [#pdb-code("4PGJ"), #pdb-code("4U3X")] and the V#sub("L") VL5 and VL12 #mcite(("Rouet2017HumanAb"), biblio) [#pdb-code("4N1E"), #pdb-code("4N1C")], and the HyHEL5 [#pdb-code("3HFL")] and HyHEL10 antibodies #mcite(("Cohen1996hyhel"), biblio). It is noted is that D2-L24 Nb and the HyHEL Ab do not bind in the active site cleft, but on the opposite site, which is in contrast with the other mentioned Abs.
@@ -95,6 +96,8 @@ One possibility of assessing structural characteristics of the Core14 aptamer, i
 //
 === Molecular Modeling
 Molecular graphics and analyses performed with UCSF ChimeraX, developed by the Resource for Biocomputing, Visualization, and Informatics at the University of California, San Francisco #mcite(("ChimeraX"), biblio). This part has been fully detailed, and contains more experiments, in the Ph.D. thesis of dr. Charles-Alexandre Mattelaer #mcite(("mattelaer2021PHD"), biblio). The following section will paraphrase its method's section and the search for the initial structure.
+\
+\
 ==== Parametrisation
 //Orca and conformational sampling
 //Paramfit
@@ -140,11 +143,13 @@ The REMD protocol is similar to the SA protocol, but includes multiple replicas 
 
 ===== Molecular Dynamics
 All simulations were performed using AMBER18 #mcite(("Lee2018Amber18"), biblio). The exploratory replica exchange molecular dynamics (REMD) simulation was performed for 1µs with an exchange attempt frequency of 0.1 ps#super("−1") (timestep 0.002 fs). A total of 20 replicas were spaced between a simulation temperature of 300 and 506 K #mcite(("Patriksson2008RMED"), biblio). Langevin dynamics with a collision frequency of 1 ps#super("−1") was employed while applying SHAKE #mcite(("Ryckaert1977SHAKE"), biblio) to restrain bonds involving hydrogen atoms. Implicit solvation with a theoretical salt concentration of 0.2 M was included.
-The proposed model itself was generated using an iterative (SA) approach where additional restraints were included in each step. Each SA step consisted of an equilibration step at 300 K (5 ps), short heating to 500 K (5 ps), a longer cool down period to 300 K (170 ps) and finally another equilibration at 300 K (20 ps). The timestep was set to 0.002 ps per MD step. Langevin dynamics with a collision frequency of 1 ps#super("-1") was employed while applying SHAKE #mcite(("Ryckaert1977SHAKE"), biblio) to restrain bonds involving hydrogen atoms. The initial model was generated after eight rounds of SA (Supplementary Table APPENDIX) where interatomic distance restraints together with dihedral restraints were arbitrarily chosen to prevent the formation of steric clashes due to restraints. The first six rounds added restraints cumulatively. In the eight rounds of SA, planarity restraints were additionally applied on residues 1–13-20–23. A force constant of 5 $frac("kcal · Å"#super("2"), "mol")$ was employed for the restraints on interatomic distances and 20 $frac("kcal · rad"#super("2"), "mol")$ for the dihedral restraints. \
-//
-The initial model was relaxed within the conformational space governed by the set restraints in a REMD experiment for 400 ns. The restrained REMD was setup identically as previously described, only adjusting the number of replicas (16) and reducing the exchange attempts to reduce the simulation time. After cluster analysis, the structure with the lowest energy in the implicit solvent was chosen for the prolonged MD simulation in explicit solvent.\
- A K#super("+") ion was placed at the center of the Gq structure in the initial model , four Na+ and 26 K+ ions were added to represent experimental conditions and neutralize the molecule. 5646 TIP3P water molecules were added in a truncated octahedron that extends 12 Å from the molecule. After iterative rounds of MD, it was decided that a Mg#super("2+") ion was to be placed between phosphate moieties of hG20 and hT12.  Prior to the 1 µs unrestrained MD, a 50ns restrained MD was performed with restraints on the residues of the Gq, the TAT triplet and the two stabilising ions. For all simulations, a cutoff value of 10 Å was used for long range and electrostatic interactions.\
-//
+The proposed model itself was generated using an iterative (SA) approach where additional restraints were included in each step. Each SA step consisted of an equilibration step at 300 K (5 ps), short heating to 500 K (5 ps), a longer cool down period to 300 K (170 ps) and finally another equilibration at 300 K (20 ps). The timestep was set to 0.002 ps per MD step. Langevin dynamics with a collision frequency of 1 ps#super("-1") was employed while applying SHAKE #mcite(("Ryckaert1977SHAKE"), biblio) to restrain bonds involving hydrogen atoms. The initial model was generated after eight rounds of SA (Supplementary Table APPENDIX) where interatomic distance restraints together with dihedral restraints were arbitrarily chosen to prevent the formation of steric clashes due to restraints. The first six rounds added restraints cumulatively. In the eight rounds of SA, planarity restraints were additionally applied on residues 1–13-20–23. A force constant of 5 $frac("kcal · Å"#super("2"), "mol")$ was employed for the restraints on interatomic distances and 20 $frac("kcal · rad"#super("2"), "mol")$ for the dihedral restraints. 
+
+
+The initial model was relaxed within the conformational space governed by the set restraints in a REMD experiment for 400 ns. The restrained REMD was setup identically as previously described, only adjusting the number of replicas (16) and reducing the exchange attempts to reduce the simulation time. After cluster analysis, the structure with the lowest energy in the implicit solvent was chosen for the prolonged MD simulation in explicit solvent.
+
+A K#super("+") ion was placed at the center of the Gq structure in the initial model , four Na+ and 26 K+ ions were added to represent experimental conditions and neutralize the molecule. 5646 TIP3P water molecules were added in a truncated octahedron that extends 12 Å from the molecule. After iterative rounds of MD, it was decided that a Mg#super("2+") ion was to be placed between phosphate moieties of hG20 and hT12.  Prior to the 1 µs unrestrained MD, a 50ns restrained MD was performed with restraints on the residues of the Gq, the TAT triplet and the two stabilising ions. For all simulations, a cutoff value of 10 Å was used for long range and electrostatic interactions.
+
 The solvated molecule was minimized using 10 000 steps of steepest descent followed by 40 000 steps of conjugate gradient minimization. Langevin dynamics with a collision frequency of 1 ps#super("−1") was employed for all subsequent MD simulations while applying SHAKE to restrain bonds involving hydrogen atoms. After the minimization, the system was heated to 300 K in 50 ps (timestep 0.002 ps) while keeping the volume constant. The density was equilibrated afterwards in 1 ns (timestep 0.002 ps) while keeping the pressure constant. The restraints were subsequently reduced over the course of 50 ns (timestep 0.002 ps). Finally, a 1 µs production MD (timestep 0.002 ps) without any restraint was performed to check the stability of the proposed model. A mutant was run under the same condition in explicit solvent, the G27A variant, after the final HNA aptamer model was conceived, to discuss its biological implication.
 
 

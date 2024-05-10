@@ -5,8 +5,8 @@
 
 = Concluding remarks and future perspective
 
-#include {"./05_concludingremarks.typ"}
 #include {"./05_futureperspective.typ"}
+#include {"./05_concludingremarks.typ"}
 
 #make-quote(
   [Never tell me the odds.],

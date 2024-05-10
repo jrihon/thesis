@@ -1506,4 +1506,100 @@ mattelaer2021PHD:
   author: Mattelaer, Charles-Alexandre
   date: 2021
   organization: Laboratory of Medicinal Chemistry, Rega Insitute for Medical Research, KU Leuven
+Li2015ljpotential:
+  type: article
+  title: Systematic Parameterization of Monovalent Ions Employing the Nonbonded Model
+  author:
+  - Li, Pengfei
+  - Song, Lin Frank
+  - Merz, Kenneth M.
+  date: 2015-03
+  page-range: 1645
+  url: http://dx.doi.org/10.1021/ct500918t
+  serial-number:
+    doi: 10.1021/ct500918t
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 4
+    volume: 11
+Sengupta2021ljpotential:
+  type: article
+  title: Parameterization of Monovalent Ions for the OPC3, OPC, TIP3P-FB, and TIP4P-FB Water Models
+  author:
+  - Sengupta, Arkajyoti
+  - Li, Zhen
+  - Song, Lin Frank
+  - Li, Pengfei
+  - Merz, Kenneth M.
+  date: 2021-02
+  page-range: 869
+  url: http://dx.doi.org/10.1021/acs.jcim.0c01390
+  serial-number:
+    doi: 10.1021/acs.jcim.0c01390
+    issn: 1549-960X
+  parent:
+    type: periodical
+    title: Journal of Chemical Information and Modeling
+    publisher: American Chemical Society (ACS)
+    issue: 2
+    volume: 61
+Gonzalez2011ffandmd:
+  type: article
+  title: Force fields and molecular dynamics simulations
+  author: González, M.A.
+  date: 2011
+  page-range: 169
+  url: http://dx.doi.org/10.1051/sfn/201112009
+  serial-number:
+    doi: 10.1051/sfn/201112009
+    issn: 2107-7231
+  parent:
+    type: periodical
+    title: École thématique de la Société Française de la Neutronique
+    publisher: EDP Sciences
+    volume: 12
+Darden1993pmemd:
+  type: article
+  title: 'Particle mesh Ewald: An N⋅log(N) method for Ewald sums in large systems'
+  author:
+  - Darden, Tom
+  - York, Darrin
+  - Pedersen, Lee
+  date: 1993-06
+  page-range: 10089
+  url: http://dx.doi.org/10.1063/1.464397
+  serial-number:
+    doi: 10.1063/1.464397
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 12
+    volume: 98
+Essmann1995spme:
+  type: article
+  title: A smooth particle mesh Ewald method
+  author:
+  - Essmann, Ulrich
+  - Perera, Lalith
+  - Berkowitz, Max L.
+  - Darden, Tom
+  - Lee, Hsing
+  - Pedersen, Lee G.
+  date: 1995-11
+  page-range: 8577
+  url: http://dx.doi.org/10.1063/1.470117
+  serial-number:
+    doi: 10.1063/1.470117
+    issn: 1089-7690
+  parent:
+    type: periodical
+    title: The Journal of Chemical Physics
+    publisher: AIP Publishing
+    issue: 19
+    volume: 103
 

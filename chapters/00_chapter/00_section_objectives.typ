@@ -1,6 +1,12 @@
+#import "../../lib/colours.typ": *
 #import "../../lib/multi-bib.typ": mcite
 #import "bib_00_chapter.typ": biblio
 
+#let custom-header(content) = {
+  v(0.25em)
+  h(1em)
+  text(font: "Roboto", colourPalette.lightblueslate, size: 12pt, weight: "regular")[#content \ ]
+}
 //
 #pagebreak()
 //
@@ -8,7 +14,7 @@
 //
 == Objectives
 
-=== Current state of affairs 
+#custom-header()[Current state of affairs]
 Recent advances in the field of computational research on XNA #mcite(("mattelaer2021PHD"), biblio) made it possible to robustly characterise modified nucleosides in a short timeframe with a modest workstation.
 This methodology could be further popularised with the aid of computational tools that relieve other researchers from the mathematics of abstracting conformations and gives them the power to access the formalisms through simple scripting.
 
@@ -25,7 +31,7 @@ A number of issues are at the cause, where the first one
 (i) The lack of structural models for XNA in the database makes it difficult to
 (ii) generate a force field that correctly models the properties of the modifications. 
 
-=== The resolve 
+#custom-header()[The resolve]
 What we want to do is to concatenate and streamline several methodologies to establish a protocol in which we can predict the influence of a synthetic modification on the helical structure. There is integral part missing, which is procuring a suitable XNA model to run simulations with.  
 
 //We want to be able to predict a structure of particular modifications we have a vested interest in to understand their behaviour. 
@@ -38,5 +44,4 @@ The protocol should contain the following flow :
 
 + Perform Molecular Dynamics studies and work towards predicting new XNA helical models.
 
-#v(2em)
 The key belief for this doctoral thesis is that the field of computational research on XNA requires the leap forward to flourish. While the possibility to do so has been made available to the public already, it requires the combination of molecular modeling, cheminformatics and a strong theoretical background in chemical biology.   

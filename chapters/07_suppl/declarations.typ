@@ -1,5 +1,6 @@
 = DECLARATIONS
 
+
 == Scientific acknowledgements
 
 #lorem(100)

@@ -69,7 +69,12 @@
     "Connolly1983SASA": 68, 
     "Chirlian1987fit": 69, 
     "Bayly1993resp": 70, 
-    "mattelaer2021PHD": 71, 
+    "Li2015ljpotential": 71, 
+    "Sengupta2021ljpotential": 72, 
+    "Gonzalez2011ffandmd": 73, 
+    "Darden1993pmemd": 74, 
+    "Essmann1995spme": 75, 
+    "mattelaer2021PHD": 76, 
 )
 
 #let biblio = (
