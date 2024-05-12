@@ -15,6 +15,11 @@
   }
 }
 
+//! 
+//! 
+//! HEADERNOTE AT TOP OF PAGES
+//! 
+//! 
 #let place-current-subsection(location) = {
 
     let current-subsection = query(selector(heading.where(level: 2)).before(location)).last()
@@ -41,11 +46,7 @@
       align(right, [ #section-number.at(0).#increment-number : #next-subsection.body])
     }
 }
-//! 
-//! 
-//! HEADERNOTE AT TOP OF PAGES
-//! 
-//! 
+
 #let make-headernotes(colour) = {
 
   locate(loc => {
@@ -82,21 +83,24 @@
     }
 
     //! If we get to this part, we need to implement a particular header
-    //!
-    let pagenumber = counter(page).at(loc).at(0) // get page number
+    // Get page number
+    let pagenumber = counter(page).at(loc).at(0) 
 
-    if calc.rem-euclid(pagenumber, 2) == 0 { // IF PAGE IS EVEN
-      let name_chapter = { 
+    // IF PAGE IS EVEN
+    if calc.rem-euclid(pagenumber, 2) == 0 {
+      let section = { 
         query( 
           selector(heading.where(level: 1)).before(loc), loc,
         ).last()
       }
 
       // Get chapter number
-      let chapternum = counter(heading).at(loc)
-      align(left, [Chapter #chapternum.at(0) : #name_chapter.body])
+      let section-number = counter(heading).at(loc)
+      // Place the number and the body of the current section in the header
+      align(left, [Chapter #section-number.at(0) : #section.body])
 
-    } else { // IF PAGE IS UNEVEN
+    // IF PAGE IS UNEVEN
+    } else { 
 
       // What I want is that for every even page, we let the subsection appear in the header
       // The subsection contains the section X and subsection Y --> X.Y HEADERINFO
@@ -120,7 +124,7 @@
       // header does not call for its information.
       //
       // => We need to figure out where the subsection is located on the page, queried by the (x,y) coordinates of the subsection heading.
-      //  We then define a cut-off value to include the current or the next subsection when instantiating the header.
+      //  We then define a cut-off value (y : 100pt) to include the current or the next subsection when instantiating the header.
       //
       //
 
