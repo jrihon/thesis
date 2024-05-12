@@ -15,6 +15,32 @@
   }
 }
 
+#let place-current-subsection(location) = {
+
+    let current-subsection = query(selector(heading.where(level: 2)).before(location)).last()
+
+    // Get section numbers and body and paste it in the header
+    let section-number = counter(heading).at(location)
+    if section-number.len() == 1 {
+      align(right, [ #section-number.at(0) : #current-subsection.body])
+    } else {
+      align(right, [ #section-number.at(0).#section-number.at(1) : #current-subsection.body])
+    }
+}
+
+#let place-next-subsection(location) = {
+
+    let next-subsection = query(selector(heading.where(level: 2)).after(location)).first()
+
+    // Get section numbers and body and paste it in the header
+    let section-number = counter(heading).at(location)
+    if section-number.len() == 1 {
+      align(right, [ #section-number.at(0) : #next-subsection.body])
+    } else {
+      let increment-number = section-number.at(1) + 1
+      align(right, [ #section-number.at(0).#increment-number : #next-subsection.body])
+    }
+}
 //! 
 //! 
 //! HEADERNOTE AT TOP OF PAGES
@@ -26,34 +52,40 @@
 
     // query elements at the current heading
     let headings_at_page = {
-      query(
-        selector(heading).before(loc),
-        loc,
-    )}
-    // if there are no elements, return.
-    if headings_at_page.len() == 0 { return }
+      query(selector(heading).before(loc))
+    }
 
-    let currenthead = headings_at_page.last()
+    //! Return early if there we have no elements 
+    //! or if the pages contain Roman Numerals (prelude section)
+    // if there are no elements, return empty and do nothing
+    if headings_at_page.len() == 0 {
+      return 
+    }
 
+    let current-heading = headings_at_page.last()
     // if page has roman numerals, return. These pages are part of the prelude
-    if currenthead.numbering == none { return } 
+    if current-heading.numbering == none {
+      return 
+    } 
 
     // get current page
     let currentpage = loc.page()
 
     // get the pages containing all the `level: 1` headings and find their pages
-    let nextheading-l1 = query(heading.where(level: 1), loc)
-    let all-l1-pages = nextheading-l1.map(x => x.location().page())
+    let nextheading-L1 = query(heading.where(level: 1), loc)
+    let all-L1-pages = nextheading-L1.map(x => x.location().page())
 
-    // if the current page contains a `level: 1` heading, skip this page
-    if currentpage in all-l1-pages {
+    // if the current page contains a `level: 1` heading, skip this page because that is a main header
+    // that does not need to contain a heading part
+    if currentpage in all-L1-pages {
       return
     }
 
-    // get page number
-    let pagenumber = counter(page).at(loc).at(0) 
+    //! If we get to this part, we need to implement a particular header
+    //!
+    let pagenumber = counter(page).at(loc).at(0) // get page number
 
-    if calc.rem-euclid(pagenumber, 2) == 0 { // if page is even
+    if calc.rem-euclid(pagenumber, 2) == 0 { // IF PAGE IS EVEN
       let name_chapter = { 
         query( 
           selector(heading.where(level: 1)).before(loc), loc,
@@ -64,89 +96,62 @@
       let chapternum = counter(heading).at(loc)
       align(left, [Chapter #chapternum.at(0) : #name_chapter.body])
 
-    } else { // if page is uneven
+    } else { // IF PAGE IS UNEVEN
 
-      let next_subsection = query(selector(heading.where(level: 2)).after(loc), loc)
-      let next_section = query(selector(heading.where(level: 1)).before(loc), loc)
+      // What I want is that for every even page, we let the subsection appear in the header
+      // The subsection contains the section X and subsection Y --> X.Y HEADERINFO
+      //
+      // There are a two cases where we need to account for
+      //
+      // So generally speaking, when we query a location to fill out a header, we want to include the subsection
+      // where we are still in. Let's say on p.20 we have section 2.3 , so this means we want to include 2.3 : BLABLA
+      // for the header of the next page.
+      //
+      // > == 2.3 BLABLABLA (p.20)
+      // > lorem ipsum
+      // > lorem ipsum
+      // > lorem ipsum
+      // 
+      //
+      // There are cases were a new subsection is instanced right after the header of the next page though, like the References.
+      // References are always started on after a #pagebreak(). In cases like this, we actually want the header to be 
+      // >                X.Y References.
+      // Because that makes intuitive sense. We are starting a new subsection on a new page, the previous subsection is finished and the 
+      // header does not call for its information.
+      //
+      // => We need to figure out where the subsection is located on the page, queried by the (x,y) coordinates of the subsection heading.
+      //  We then define a cut-off value to include the current or the next subsection when instantiating the header.
+      //
+      //
 
-      
-      let ref_text = ""
-      if to-string(next_section.at(-1).body) == "APPENDIX" {
-        ref_text += "Appendix"
+      // Get the position of the current subsection
+      let current-subsection-pos = query(heading.where(level: 2).before(loc)) // get a query of all the subsections after this location
+                                    .at(-1)         // get the first subsection of this query
+                                    .location()     // get its `location` tag. This `location()`-method only works on returned queries()
+                                    .position()     // define position of the location (page, x, y)
+      // Get the position of the following subsection
+      let next-subsection-pos = query(heading.where(level: 2).after(loc)) // get a query of all the subsections after this location
+                                  .at(0)          // get the first subsection of this query
+                                  .location()     // get its `location` tag. This `location()`-method only works on returned queries()
+                                  .position()     // define position of the location (page, x, y)
+
+      // get the current page's number 
+      let current-page-pos = loc.position()
+
+      //! check if the next heading is on the current page
+      //!
+      // If it is not on the current page, just get the data from the current header and paste it here
+      if current-page-pos.page != next-subsection-pos.page {
+        place-current-subsection(loc)
+      //
+      // If it is not on the current page, just get the data from the current header and paste it here
       } else {
-        ref_text += to-string(next_subsection.at(0).body)
-      }
-//      if next_subsection.len() == 0 {
-//        ref_text += "Appendix"
-//      } else {
-//        ref_text += to-string(next_subsection.at(0).body)
-//      }
-
-      if ref_text == "References" {
-        // Get section number
-        let map_bibs = next_subsection.map(x => {
-            let refsubsections = to-string(x.body)
-            if refsubsections == "References" {
-              x.location().page()
-            }
-        })
-        let filtered_set = map_bibs.filter(x => x != none)
-        let current_page = loc.page()
-        // if the current page is in the set of pages that contains the references heading L2, then
-        if current_page in filtered_set {
-          let secnum = counter(heading).at(loc)
-          secnum.at(1) += 1
-          align(right, [ #secnum.at(0).#secnum.at(1) : References])
-        } else {
-          let name_subsection = {
-            query( 
-              selector(heading.where(level: 2)).before(loc), loc,
-            ).last()
-          }
-
-          // Get section number
-          let secnum = counter(heading).at(loc)
-          align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
-
-        }
-      } else if ref_text == "Appendix" {
-        // Get section number
-        let map_bibs = next_subsection.map(x => {
-            let refsubsections = to-string(x.body)
-            if refsubsections == "Appendix" {
-              x.location().page()
-            }
-        })
-        let filtered_set = map_bibs.filter(x => x != none)
-        let current_page = loc.page()
-        // if the current page is in the set of pages that contains the references heading L2, then
-        if current_page in filtered_set {
-          let secnum = counter(heading).at(loc)
-          secnum.at(1) += 1
-          align(right, [ #secnum.at(0) : Appendix])
-        } else {
-          let name_subsection = {
-            query( 
-              selector(heading.where(level: 1)).before(loc), loc,
-            ).last()
-          }
-          // Get section number
-          let secnum = counter(heading).at(loc)
-          align(right, [ #secnum.at(0) : #name_subsection.body])
-        }
-      } else {
-        let name_subsection = {
-          query( 
-            selector(heading.where(level: 2)).before(loc), loc,
-          ).last()
-        }
-
-        // Get section number
-        let secnum = counter(heading).at(loc)
-        if secnum.len() == 1 {
-          align(right, [ #secnum.at(0) : #name_subsection.body])
-        } else {
-          align(right, [ #secnum.at(0).#secnum.at(1) : #name_subsection.body])
+        // check the position of the next-subsection-pos on the page.
+        // If its y-position is further away than about ` y : 100pt `, we call on the next subsection to be filled in
+        if next-subsection-pos.y < 100pt {
+           place-next-subsection(loc)
+        } else { 
+          place-current-subsection(loc)
         }
       }
     }
@@ -164,7 +169,7 @@
 //! 
 //! 
 
-#let layout(document, pagenumbers, headernumbers, colour) = {
+#let layout(document, pagenumbers, headingnumbers, colour) = {
   set text(
 //    font: "IBM Plex Serif",
 //    font: "Source Serif 4",
@@ -193,7 +198,7 @@
 //    leading: 0.8em,
   )
   set heading(
-    numbering: headernumbers, // only go three depths before we make inlined headers
+    numbering: headingnumbers, // only go three depths before we make inlined headers
   )
 
   document
@@ -205,16 +210,16 @@
 //! HEADERS
 //! 
 //! 
-#let headingstate = state("headercount", 1)
+#let headingstate = state("headingcount", 1)
 
-#let prelude_header(body, colour) = {
+#let prelude_heading(body, colour) = {
     text(body.body, size: 18pt, font: "Roboto", colour, weight: "medium")
 }
-#let prelude_subheader(body, colour) = {
+#let prelude_subheading(body, colour) = {
     text(body.body, size: 14pt, font: "Roboto", colour, weight: "light")
 }
 
-#let headerL1(element, colour) = {
+#let headingL1(element, colour) = {
 
   set text(font: "Roboto", colour, size: 18pt, weight: "regular")
   set align(left)
@@ -229,7 +234,7 @@
 
 }
 
-#let headerL2(element, colour) = {
+#let headingL2(element, colour) = {
 
   set text(font: "Roboto", colour, size: 16pt, weight: "regular")
   set align(left)
@@ -238,7 +243,7 @@
 
 }
 
-#let headerL3(element, colour) = {
+#let headingL3(element, colour) = {
 
 
   set text(font: "Roboto", colour, size: 12pt, weight: "regular")
@@ -249,7 +254,7 @@
 
 }
 
-#let headerL4(element, colour) = {
+#let headingL4(element, colour) = {
 
 
 //  set text(font: "Roboto", colour, size: 11pt, weight: "light")
@@ -261,21 +266,12 @@
 //    black.to-hex(), // blue
 //    colour.to-hex(),
 //  )
-//  let a = box(image.decode(changed), height:0.7em, baseline: 0pt)
-//  let a = $tilde.op$
-//  let a = $quote.angle.r.double$
-//  let a = $succ.eq$
-//  let a = $arrow.r.loop$
-//  let a = $harpoon.rt$
-//  let a = $compose$
-//  let a = $succ$
-//  let a = $integral.cont$
   let a = $arrow.r.hook$
   [#h(1em)#a #element.body]
 
 }
 
-#let headerL5(element, colour) = {
+#let headingL5(element, colour) = {
 
 //  set text(font: "Roboto", colour, size: 11pt, weight: "light")
   set text(font: "Roboto", colour, size: 11pt, weight: "regular")

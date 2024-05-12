@@ -14,7 +14,7 @@
 #show: document => layout(document, "I", none, colour00) 
 
 //Format Headers for prelude
-#show heading.where(level: 1): element => prelude_header(element, colour00)
+#show heading.where(level: 1): element => prelude_heading(element, colour00)
 
 #include {"./chapters/99_prelude/mod.typ"} 
 
@@ -48,11 +48,11 @@
 
 
 // Format headers
-#show heading.where(level: 1): element => headerL1(element, colour00)
-#show heading.where(level: 2): element => headerL2(element, colour00)
-#show heading.where(level: 3): element => headerL3(element, colour00)
-#show heading.where(level: 4): element => headerL4(element, colour00)
-#show heading.where(level: 5): element => headerL5(element, colour00)
+#show heading.where(level: 1): element => headingL1(element, colour00)
+#show heading.where(level: 2): element => headingL2(element, colour00)
+#show heading.where(level: 3): element => headingL3(element, colour00)
+#show heading.where(level: 4): element => headingL4(element, colour00)
+#show heading.where(level: 5): element => headingL5(element, colour00)
 // Include manuscript
 #include {"./chapters/00_chapter/mod.typ"} 
 
@@ -105,7 +105,7 @@
 //! APPENDIX
 //!
 //!
-#show heading.where(level: 1): element => prelude_header(element, colour00)
+#show heading.where(level: 1): element => prelude_heading(element, colour00)
 #include {"./chapters/06_appendix/mod.typ"} 
 //!
 //!
@@ -113,6 +113,6 @@
 //!
 //!
 #show: document => layout(document, "1", none, colour00) 
-#show heading.where(level: 1): element => prelude_header(element, colour00)
-#show heading.where(level: 2): element => prelude_subheader(element, colour00)
+#show heading.where(level: 1): element => prelude_heading(element, colour00)
+#show heading.where(level: 2): element => prelude_subheading(element, colour00)
 #include {"./chapters/07_suppl/mod.typ"} 

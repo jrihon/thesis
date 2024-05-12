@@ -45,3 +45,4 @@ The protocol should contain the following flow :
 + Perform Molecular Dynamics studies and work towards predicting new XNA helical models.
 
 The key belief for this doctoral thesis is that the field of computational research on XNA requires the leap forward to flourish. While the possibility to do so has been made available to the public already, it requires the combination of molecular modeling, cheminformatics and a strong theoretical background in chemical biology.   
+

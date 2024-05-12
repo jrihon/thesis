@@ -4,9 +4,10 @@
 
 = APPENDIX
 
+== Chapter I
 #figure(
   supplement: [Appendix],
-  image( "../00_chapter/figures/refframe/vert-basepair-orientations.svg", height: 90%),
+  image( "../00_chapter/figures/refframe/vert-basepair-orientations.svg", height: 85%),
   caption: [
     Modes of basepair orientation. 
     *A.1* Translation intrabasepair

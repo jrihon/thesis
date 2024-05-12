@@ -1,4 +1,4 @@
-#import "../../lib/layout.typ": headerL5, pdb-code
+#import "../../lib/layout.typ": headingL5, pdb-code
 #import "../../lib/multi-bib.typ": mcite
 #import "../../lib/colours.typ": colourPalette
 #import "bib_03_chapter.typ": biblio
