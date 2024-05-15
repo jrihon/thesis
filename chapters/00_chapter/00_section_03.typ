@@ -3,26 +3,77 @@
 #import "../../lib/colours.typ": colourPalette
 #import "bib_00_chapter.typ": biblio
 
+#show "compchem": [Comp. Chem.]
 
 == Fundamentals on the behaviour of molecules
-//== Computational Chemistry
+#let content-nucleielectron = [
+Now that we've touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, it is time to dig even deeper.
+A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. When we magnify our view on atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons.  
+The field of Computional Chemistry (compchem) concerns itself with describing atoms and molecules by the positioning of the electrons around their nuclei. Asserting their probable whereabouts lets us calculate the energy of the molecular system. In other words, by looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
+]
 
+#let figure-nucleielectron = [
+  #figure(
+    image("./figures/nucleus-electron.svg", width: 100%),
+    caption: [
+      The nucleus contains protons (red) and neutrons (blue), with electrons 'flying' about the nucleus.
+    ]
+  ) <fig-nucleielectron>
+]
+#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.35fr), gutter: 1em)
+One of the pillars of Computational Chemistry is that of Quantum Mechanics (QM). This scientific field's main mission is to work with the Schrödinger equation in order to assess the properties of a molecule at their fundamental level. Since these calculations are extremely heavy on computational resources, we will also discuss the field of Molecular Mechanics (MM). The main difference is the timescale at which we study the molecules of interest. While QM studies an atomic system at an extreme depth by the positional snapshot, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty we incur in favour of the information we receive. In order for the simulated molecules to virtually move according to their behaviour observed in nature , we design _force fields_ to abstract and compact the information from QM and bring it over to MM.   
+//Briefly, a force field makes it possible to compact the information from a molecule and use it for Molecular Mechanics (MM)studies. When employed, MM methodologies make it possible to move the molecules are efficiently and accurately, thereby allowing us to study interactions of i.e. small molecule drugs with their target protein. 
+//==Computational Chemistry
+//https://scipython.com/blog/visualizing-the-real-forms-of-the-spherical-harmonics/
+//https://irhum.github.io/blog/spherical-harmonics/index.html
+//
+//https://www.youtube.com/@TMPChem/videos
+//
+// Find the essence of QM -> What is the Schrodinger equation, what does it describe?
+// ==> describe what orbitals are -> spherical harmonics
+// ==> show these orbitals
+//
+//
+// => We need to simplify in order to approximate
+// ==> Approximate independently through theorems (variational theorem e.g.)
+// ==> functional approximation, like HF, DFT, MP2
 //
 //
 === Quantum Mechanics
-
-==== Mathematical lore
-#lorem(20)
 // Discuss some formal objects and notations for people to understand and interpret concepts in QM
+==== Schrödinger's equation
+This function gives us the $ℋ$ operator, which describes the kinetic ($accent(T, "^")$) and potential ($accent(V, "^")$) energy of the system. We can further divide all this in blablabla
+$
+ℋ Psi = E Psi
+$
+The $Psi$ is the wave function of system. Squaring the wave function gives us the probability density of finding an electron within a normalised space ($Psi^2$).
+This is for one-dimensional and this is for three-dimensional. This represents an orbital, a volumetric space in which we are very likely to find the electron we are computing for.
 
-==== Semi-empirical methods
+===== Born-Oppenheimer approximation
+Because electrons are comparitively smaller than the nuclei, they have a much higher speed $m dot Delta v = Delta p$, while their momentum is relatively the same. This allows us to discard to assign the kinetic energy of the nuclei as zero since we consider them to be frozen in time and therefor do not move, while we search from the optimal potential for a given set of electrons. Also, the nuclei-repulsive term is becomes a constant value. This dramatically simplifies the equation already to mainly account for moving electrons and their potential in relations to the nuclei fixed in space.
+
+==== The uncertainty principle of Heisenberg
+Two electron terms are unsolvable because momentum equals joe. You either get velocity, but no position or get position but miss velocity. Either way we done - or are we?
+
+===== Variational theorem
+Because we approximate, we may never state that we can find the true ground state of a function
+
+==== Hartree-Fock (HF)
+Solve one-electron operators $accent(f, "^")$ orbital $accent(phi.alt, "^")$ and make them not aware of each other. Problem is that we cannot guarantee that when we optimise the positions, that we are comparing against averaged positions of other electrons, meaning that we cannot exclude from two electrons existing in the same position. This would be impossible.
+
+
+===== Slater Determinants 
+A way to account for the HF method to account for the exchange functionals. Not coulombic, coulombic is better accounted for.
+
+===== Basis sets
+When searching for an optimal solution for a given molecular system, we require a numerical approach to solve
+
+==== Density Functional Theory (DFT)
+
+==== Møller-Plesset Perturbation Theory
+
 #lorem(20)
 
-==== _Ab Initio_ methods
-#lorem(20)
-
-==== Applications of QM in Medicinal Chemistry
-#lorem(20)
 //
 //
 === Forcefields : the ultimate interface
@@ -31,7 +82,7 @@ The research carried out during this thesis has always employed the AMBER MD sof
 Fundamentally speaking, the potential energy of a molecule (or a system in general) is defined by the relative positioning of the orbitals in a molecule. Because these computations already require heavy consumption of resources on systems larger than 25 atoms, performing simulations at this level is inconceivable. However, by abstracting atomic properties to classical mechanics concepts, we are able to reduce the expensiveness of the calculations.   
 
 To encapsulate the essence of a standard Molecular Dynamics simulations, a set of molecules are spawned inside a virtually limitless box. The properties of the molecules are defined in several files located on the machine - the _force field_. These files supply the simulation engine with information on how the molecules are allowed to behave, and most important, restrict unfavoured behaviour. The engine itself is the program that lets the molecules move about, logs and corrects the motion of molecules.
-The following expression (@eq-AMBER) describes how the position - or coordinates ($x,y,z$) - of the atoms in a system of relates to the potential energy of this system.   
+The following expression (@eq-AMBER) describes how the position - or coordinates ($x,y,z$) - of the atoms in a system relates to the potential energy of this system.   
 $
 E#sub("amber") = E#sub("bondstretch") + E#sub("anglebend")  + E#sub("torsion") + E#sub("electrostatic") + E#sub("LJ")
 $ <eq-AMBER>
