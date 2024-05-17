@@ -4,7 +4,9 @@
 #import "bib_00_chapter.typ": biblio
 
 #show "compchem": [Comp. Chem.]
-
+#show "HamilSym": [$ℋ$]
+#show "HamilOp": $accent(ℋ, "^")$
+#show "FockOp": $accent(f, "^")$
 == Fundamentals on the behaviour of molecules
 #let content-nucleielectron = [
 Now that we've touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, it is time to dig even deeper.
@@ -24,9 +26,6 @@ The field of Computional Chemistry (compchem) concerns itself with describing at
 One of the pillars of Computational Chemistry is that of Quantum Mechanics (QM). This scientific field's main mission is to work with the Schrödinger equation in order to assess the properties of a molecule at their fundamental level. Since these calculations are extremely heavy on computational resources, we will also discuss the field of Molecular Mechanics (MM). The main difference is the timescale at which we study the molecules of interest. While QM studies an atomic system at an extreme depth by the positional snapshot, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty we incur in favour of the information we receive. In order for the simulated molecules to virtually move according to their behaviour observed in nature , we design _force fields_ to abstract and compact the information from QM and bring it over to MM.   
 //Briefly, a force field makes it possible to compact the information from a molecule and use it for Molecular Mechanics (MM)studies. When employed, MM methodologies make it possible to move the molecules are efficiently and accurately, thereby allowing us to study interactions of i.e. small molecule drugs with their target protein. 
 //==Computational Chemistry
-//https://scipython.com/blog/visualizing-the-real-forms-of-the-spherical-harmonics/
-//https://irhum.github.io/blog/spherical-harmonics/index.html
-//
 //https://www.youtube.com/@TMPChem/videos
 //
 // Find the essence of QM -> What is the Schrodinger equation, what does it describe?
@@ -41,39 +40,193 @@ One of the pillars of Computational Chemistry is that of Quantum Mechanics (QM).
 //
 === Quantum Mechanics
 // Discuss some formal objects and notations for people to understand and interpret concepts in QM
+The field of QM studies the principle that every particle, like electrons, has a _quantized_ amount of energy it carries. The goal is to be describe the total energy of a system by the energy of all the individual particles that compose the system itself.
+
 ==== Schrödinger's equation
-This function gives us the $ℋ$ operator, which describes the kinetic ($accent(T, "^")$) and potential ($accent(V, "^")$) energy of the system. We can further divide all this in blablabla
+This equation forms the foundation of all of compchem 
+In @eq-base-schrodinger, we encounter Hamiltonian (HamilSym) which acts an operator over the wave function ($Psi$). This wave function describes the movement of the electrons in a system. In order to use this equation, it had to be accepted that at the _"quantum"_ level of such particles - like photons - they also behave themselves like waves.
+On the righthand side of the equation, we find the energy $E$ which is the eigenvalue of the eigenfunction $Psi$. This just means that $E Psi$ can be evaluated to the most elementary form of the position of the electrons and this is associated with a discrete amount of energy, while $ℋ Psi$ allows us to express and calculate for the former. 
 $
 ℋ Psi = E Psi
+$ <eq-base-schrodinger>
+//This function gives us the $accent(ℋ, "^")$ operator, which describes the kinetic ($accent(T, "^")$) and potential ($accent(V, "^")$) energy of the system. We can further divide all this in blablabla
+//The $Psi$ is the wave function of system. Squaring the wave function gives us the probability density of finding an electron within a normalised space ($Psi^2$).
+//This is for one-dimensional and this is for three-dimensional. This represents an orbital, a volumetric space in which we are very likely to find the electron we are computing for.
+
+#intermezzo("Operator")[ An operator is just a mathematical entity that takes in a group of values or a function and modifies it. For example, the _summation_ operator '+' is the transformation of adding N amount of values together to output a single value. Here, the HamilOp operator influences the outcome of the wave function $Psi$ by mapping a transformation over all the described electrons of the wave function to return the energy of the electrons.
+]
+When we expand on the HamilSym, we understand that it defines the kinetic ($T$) and the potential ($V$) energy of the system. 
 $
-The $Psi$ is the wave function of system. Squaring the wave function gives us the probability density of finding an electron within a normalised space ($Psi^2$).
-This is for one-dimensional and this is for three-dimensional. This represents an orbital, a volumetric space in which we are very likely to find the electron we are computing for.
+accent("HamilSym", "^") = accent(T, "^") + accent(V, "^")
+$ <eq-hamiltonian-simple>
+The individual terms can be further expanded to the Schrödinger equation for a many-body system - meaning more than two electrons and more than two nuclei : 
+$
+accent("HamilSym", "^") = 
+underbrace(
+sum^(N_K)_(I=1) - frac(gradient^2_I , 2 M_I) 
++ sum^(n_e)_(i=1) - frac(gradient^2_i , 2) 
+, "Kinetic Operator" accent(T, "^")
+)
++
+overbrace(
+ sum^(N_K)_(I=1) sum^(n_e)_(i=1) frac(-Z_I, r_(i I)) 
++ sum^(n_e)_(i=1) sum^(n_e)_(j>i) frac(1, r_(i j)) 
++ sum^(N_K)_(I=1) sum^(N_K)_(J>I) frac(Z_I Z_J, R_(I J))
+, "Potential Operator" accent(V, "^")
+)
+$ <eq-hamiltonian-full>
+All uppercase parameters and subscripts pertain to the nuclei, the lowercase ones to the electrons.
+The first term describe the kinetic energy of the movement of the nuclei, the second that of the electrons.
+The latter three terms describe the potential energy of the atomic system. The first term describes the potential experiences between each nucleus and each respective electron. In other words, the interaction potential between the $I^(t h)$ nucleus and the $i^(t h)$ electron is evaluated. Since electrons are negatively charged and the nuclei are positively charged, this can be considered the attraction term.
+The fourth term considers the pairwise evaluation of each electron with all the other electrons in the system. The fifth term does the same, but with nuclei instead. That is why we consider them the _electronic repulsion_ term and the _nucleic repulsion_ term respectively.
+//
+//
+
+===== Zeeman effect
+We have mentioned already that in the field of QM, we study the positioning of the electrons in the vinicity of other electrons and nuclei and try to calculate the energy ($E$) of the system. To be accurate, we must understand that the quantity of energy an electron can hold lies in a discrete spectrum. This means that electrons only emit photons after absorbing a set amount of energy, be that through heating or light, before releasing it into their environment.
+#figure(
+  image("./figures/orbitals/spectrum.svg", width: 100%),
+  caption: [
+    Illustrative example of a spectrum where an electron can absorb energy within most of the visible light spectrum, but can only emit packets of energy in at certain, discrete wavelengths. Furthermore, this behaviour changes when induced by a magnetic field.
+  ]
+) <fig-zeeman>
+When subjecting electrons to a magnetic field however, we see that the discrete spectrum becomes split. As it turns out, the emitted spectra are what we consider to be degenerate and consist of multiple hidden layers that are observable under select conditions.
+
+==== Orbital theory
+===== Probability density
+The wave function $Psi$ has the particular property that when taking its square $Psi^2$, we receive the probability distribution of the whereabouts of an electron within the x-direction ($x + d x$), under normalised conditions. This is formally done taking the complex conjugate ($Psi ^*$) of the wave function and apply the dot product to the wave function ($Psi$) itself. 
+$
+angle.l Psi bar.v Psi angle.r = integral^(+ infinity)_(- infinity) Psi^* (x) Psi (x) d x = 1
+$
+We can extend this to three dimensions and generalise for a set of electrons : 
+$
+angle.l Psi bar.v Psi angle.r = integral ... integral integral integral^(+ infinity)_(- infinity) Psi^* (x_1, y_1, z_1, x_2, y_2 ... z_N) Psi (x_1, y_1, z_1, x_2, y_2 ... z_N) d v_1 ... d v_N = 1
+$ <eq-probability-allelectrons>
+Where we integrate over the volume $v_N$ that describes the location ($x_N, y_N, z_N$) of an electron $e_N$.
+Indeed, with this equation we can describe the chance of encountering an electron within a specific volume in space.
+//One thing to keep in mind is that @eq-probability-allelectrons tells us that Vx 
+
+
+//https://scipython.com/blog/visualizing-the-real-forms-of-the-spherical-harmonics/
+//https://irhum.github.io/blog/spherical-harmonics/index.html
+//
+//https://en.wikipedia.org/wiki/Quantum_number
+//https://en.wikipedia.org/wiki/Spherical_harmonics
+===== Spherical harmonics
+This specific volume in space in which the electron will likely appear in is tightly linked with the amount of energy the electron holds. As mentioned and illustrated through @fig-zeeman, the quantity of energy they carry lies in a discrete spectrum. While we've mainly regarded electrons in a Cartesian system ($x, y, z$), it will simplify the calculations tremendously if we were to represent the position of the electrons through a spherical coordinate system ($r, theta, phi$).
+
+To represent the probable volume in which these electrons can appear in, we make use of a concept called _spherical harmonics_. These comprise of a set of orthonormal functions in with which we can represent the probability of finding an electron. Through a transformation of the coordinate system, we get : 
+$
+Psi (x, y ,z) => Psi (r, theta, phi) = 
+overbrace(
+R_(n, l) (r), "Radial component" 
+)
++ 
+underbrace(
+Y_(l, m_l) (theta, phi), "Angular component" 
+)
+$
+Only the angular component describes the spherical harmonics, while the radial component describes a dependence of the nucleic charge of the atom. This dependence describes why electrons of a Carbon will not visit the same discrete energy states as those of the Oxygen atom, even though spherical harmonics expand into the same orthonormal function for a given state ($n, l, m_l$). In other words, this radial component will differentiate into why an emission spectrum of the two atoms of a different element won't hold the same amounts of energy, at least not at the ground state.
+
+//MAAK FIGUUR MET ENERGIE NIVEAUS AND SPHERICAL COMPONENTS
+// Leg uit wat de quantum getallen zijn (n, l, m_l). Spin komt later pas aan bod bij de slater determinant
+//
+
+==== Solving the wave function $Psi$
+Because the full equation @eq-hamiltonian-full can be so incredibly complex to numerically compute, researchers are always searching for ways to downsize an equation analytically in order to make the computational cost of solving it cheaper. The introduction of the _Born-Oppenheimer approximation_ is one paradigm that has faciliated research on atomic systems.
 
 ===== Born-Oppenheimer approximation
-Because electrons are comparitively smaller than the nuclei, they have a much higher speed $m dot Delta v = Delta p$, while their momentum is relatively the same. This allows us to discard to assign the kinetic energy of the nuclei as zero since we consider them to be frozen in time and therefor do not move, while we search from the optimal potential for a given set of electrons. Also, the nuclei-repulsive term is becomes a constant value. This dramatically simplifies the equation already to mainly account for moving electrons and their potential in relations to the nuclei fixed in space.
+This simplification of the Schrödinger equation stems from the fact that the nucleus moves at a much slower pace than electrons do. This is because the mass of protons is roughly two thousand times larger than that of electrons. We can consider that in the timeframe in which the electrons travel a particular distance, the protons would remain stationary. Applying this principle of _frozen nuclei_ - frozen in space, mind you - we can analytically derive the _electronic Schrödinger equation_. 
+$
+accent("HamilSym", "^")_e = 
+underbrace(
+  0
++ sum^(n_e)_(i=1) - frac(gradient^2_i , 2) 
+, "Kinetic Operator" accent(T, "^")
+)
++
+overbrace(
+ sum^(N_K)_(I=1) sum^(n_e)_(i=1) frac(-Z_I, r_(i I)) 
++ sum^(n_e)_(i=1) sum^(n_e)_(j>i) frac(1, r_(i j)) 
++ C
+, "Potential Operator" accent(V, "^")
+)
+$<eq-electron-schrodinger>
+If we consider the nuclei at a standstill, this means their kinetic energy goes to zero as they portray no velocity. Since they do not move, we do not need to account for a change in positions of the nuclei with respect to their repulsion. In other words, we can safely assume that the nucleic repulsion term will not vary, therefor becoming a constant value. What we end up with is an analytical equation where we consider (i) the kinetic energy of the individual electrons (ii) the attraction of the electrons to the stationary nuclei (iii) the repulsion of the electrons with one another and lastly (iv) the repulsion of stationary nuclei - a constant value.
 
-==== The uncertainty principle of Heisenberg
-Two electron terms are unsolvable because momentum equals joe. You either get velocity, but no position or get position but miss velocity. Either way we done - or are we?
+//
+//
+===== Many-body problem for electrons
+Continuing this subsection, we need to highlight the fact that for a system with more than two electrons it is impossible to analytically solve the @eq-electron-schrodinger, even with the Born-Oppenheimer approximation. The main reason lies in the _electronic repulsion term_. 
 
-===== Variational theorem
-Because we approximate, we may never state that we can find the true ground state of a function
+Consider a set of electrons $S(e_1, e_2, e_3, e_4, ... e_N)$. While they move about freely, they experience repulsion from other electrons. This means that the momentum and position of $e_1$ depends on the movement and positions of ($e_2, e_3, e_4, ... e_N$), which goes for $e_2$ depending on ($e_1, e_3, e_4, ... e_N$) and so on. The problem becomes too convoluted, as there arise too many factors and variables to account for, for which we know no analytical solution to. This particular problem is generalisable to _classical mechanics_, where it even occupied the likes of Sir Newton with respect to the movement of celestial bodies.
+
+If we cannot figure out the most probable position of an electron, it becomes to derive a good estimate of the electronic repulsion term.
+Luckily, we can further approximate in order the equation so that we may nonetheless derive a value of $E$ that closely resembles the true state of $Psi$.
+//https://newton.ex.ac.uk/research/qsystems/people/jenkins/mbody/mbody3.html
+//impossible to solve because the behaviour of e1 depends on e2, e3... eN ; that of e2 on e1, e3 ... eN and so on. The equation knows no analytical solution, but can be numerically approximated, which is good enough.
+//===== Variational theorem
+//Because we approximate, we may never state that we can find the true ground state of a function
+//
+//Exchange symmetry : https://www.youtube.com/watch?v=aoL5SikmPz8
+//
+//
 
 ==== Hartree-Fock (HF)
-Solve one-electron operators $accent(f, "^")$ orbital $accent(phi.alt, "^")$ and make them not aware of each other. Problem is that we cannot guarantee that when we optimise the positions, that we are comparing against averaged positions of other electrons, meaning that we cannot exclude from two electrons existing in the same position. This would be impossible.
-
-
-===== Slater Determinants 
-A way to account for the HF method to account for the exchange functionals. Not coulombic, coulombic is better accounted for.
+One way to approximate this repulsion is by considering the idea that the electrons do move independently from one another. While in reality we know this to be false, this assumption makes for new equations that are easily solved numerically and approach the experimentally determined values of the $E$ rather well.
 
 ===== Basis sets
-When searching for an optimal solution for a given molecular system, we require a numerical approach to solve
+Before we touch on the actual HF method, we need to clarify what a basis set is. In compchem, it is necessary to define the atomic orbitals ($phi.alt_i$) to calculate for the potential energy of an electron, as the orbital defines its energy level. However, this would make it calculating for the position of the electron wildly more difficult than it has to be. Instead, we predefine a basis function ($chi_i$) that closely resembles the atomic orbital ($phi.alt_i$) already. These basis functions are described through an adaptation of the spherical harmonics and are finetuned for every element that the basis set comprises. This means that whenever we start a new computation, we can query the desired basis functions for a set of electrons and get already rather close to the most favourable shape of the atomic orbitals.
+$
+phi.alt_i = sum^b_(i=1) c_(i s) chi_i
+$<eq-basisset>
+@eq-basisset denotes that a linear combination of basis sets $chi_i$, with their respective coefficient $c_(i s)$, can define an atomic orbital. 
+
+===== LCAO
+Because we approximate to independent positioning of the electrons, we ultimately approximate the idea of what a molecular orbital ($psi_i$) is. By defining a hybridised orbital as a _Linear Combination of Atomic Orbital_ (LCAO) and add the contribution of their possible _overlap_ in atomic orbitals to the energy of the system. These _overlap integrals_ simulate as though the $phi.alt_i$ were actually hybridised into a $psi_i$.
+
+$
+psi_i = sum^(n_e)_(i=1) phi.alt_i
+$<eq-LCAO>
+
+===== HF equation
+
+In @eq-basisset, we encounter the $c_(i s)$ coefficient to the basis sets. 
+In the Hartree approach we need to optimise
+
+The _Fock operator_ FockOp (@eq-h-fock) can be expanded to return us the 
+$
+accent(f, "^") phi.alt_i = epsilon.alt_i phi.alt_i
+$<eq-h-fock>
+//===== Roothaan-HF 
+As such, the Roothaan basis set gave way for one of the first "commercialised" ways to robustly compute for molecular energy ($E$) of a system ($Psi$).
+//When searching for an optimal solution for a given molecular system, we require a numerical approach to solve
+//
+//
+//Solve one-electron operators $accent(f, "^")$ orbital $accent(phi.alt, "^")$ and make them not aware of each other. Problem is that we cannot guarantee that when we optimise the positions, that we are comparing against averaged positions of other electrons, meaning that we cannot exclude from two electrons existing in the same position. This would be impossible.
+//
+
+The one big caveat to the HF method is that it still do not explicitly concern itself with the positional relation amongst the electrons - the many-body problem -  but more about their average whereabouts in the orbitals. Remember, the orbitals are now linear combinations of optimised basis sets. The _two-electron integrals_ do account for a simulated electronic repulsion and exchange, but as these are with respect to an averaged position it comes with a philosophical problem. Since orbitals can overlap and the two-electron integrals deal with the averaged position, it cannot be excluded that at a certain timeframe some electrons would occupy the same point in space. This of course would negatively impact the energy of the system, as the repulsion term would contribute heavily as the distance between the two particles is _zero_, exploding the value of the coulombic term and negatively impacting the $E$. Nonetheless, the RHF has made a serious impact on the field of compchem for decades to come after its conception.
+
+//===== Slater Determinants 
+//A way to account for the HF method to account for the exchange functionals. Not coulombic, coulombic is better accounted for. This is a contribution, not an approximation.
+//
+//
 
 ==== Density Functional Theory (DFT)
+//
+//
 
-==== Møller-Plesset Perturbation Theory
-
-#lorem(20)
-
+==== Møller-Plesset Perturbation Theory (MPn)
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 === Forcefields : the ultimate interface
