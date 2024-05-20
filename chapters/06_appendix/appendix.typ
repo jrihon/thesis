@@ -28,4 +28,11 @@
 
 #pagebreak()
 
-Adding some content here to make the headers work
+#figure(
+  supplement: [Appendix],
+  image("../00_chapter/figures/orbitals/vert-all-orbitals-appendix.svg", height: 90%),
+  caption: [
+    Representative $s$- ,$p$-, $d$- and $f$-type orbitals. Solution to the orbitals courtesy of 'christian' :  
+    #link("https://scipython.com/blog/visualizing-the-real-forms-of-the-spherical-harmonics/#rating-149")[https://scipython.com/blog/visualizing-the-real-forms-of-the-spherical-harmonics/#rating-149]. 
+  ]
+) <fig-all-type-orbitals>

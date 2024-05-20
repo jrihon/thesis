@@ -72,9 +72,10 @@
     "Li2015ljpotential": 71, 
     "Sengupta2021ljpotential": 72, 
     "Gonzalez2011ffandmd": 73, 
-    "Darden1993pmemd": 74, 
-    "Essmann1995spme": 75, 
-    "mattelaer2021PHD": 76, 
+    "Chialvo1990verlet": 74, 
+    "Darden1993pmemd": 75, 
+    "Essmann1995spme": 76, 
+    "mattelaer2021PHD": 77, 
 )
 
 #let biblio = (

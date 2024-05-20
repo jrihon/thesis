@@ -1602,4 +1602,22 @@ Essmann1995spme:
     publisher: AIP Publishing
     issue: 19
     volume: 103
+Chialvo1990verlet:
+  type: article
+  title: On the use of the Verlet neighbor list in molecular dynamics
+  author:
+  - Chialvo, Ariel A.
+  - Debenedetti, Pablo G.
+  date: 1990-09
+  page-range: 215
+  url: http://dx.doi.org/10.1016/0010-4655(90)90007-N
+  serial-number:
+    doi: 10.1016/0010-4655(90)90007-n
+    issn: 0010-4655
+  parent:
+    type: periodical
+    title: Computer Physics Communications
+    publisher: Elsevier BV
+    issue: 2
+    volume: 60
 

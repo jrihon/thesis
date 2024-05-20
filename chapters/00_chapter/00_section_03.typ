@@ -9,7 +9,7 @@
 #show "FockOp": $accent(f, "^")$
 == Fundamentals on the behaviour of molecules
 #let content-nucleielectron = [
-Now that we've touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, it is time to dig even deeper.
+Now that we've touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, we will delve into what constitutes a molecule and how we can accurately describe them fundamentally.
 A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. When we magnify our view on atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons.  
 The field of Computional Chemistry (compchem) concerns itself with describing atoms and molecules by the positioning of the electrons around their nuclei. Asserting their probable whereabouts lets us calculate the energy of the molecular system. In other words, by looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
 ]
@@ -23,7 +23,7 @@ The field of Computional Chemistry (compchem) concerns itself with describing at
   ) <fig-nucleielectron>
 ]
 #grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.35fr), gutter: 1em)
-One of the pillars of Computational Chemistry is that of Quantum Mechanics (QM). This scientific field's main mission is to work with the Schrödinger equation in order to assess the properties of a molecule at their fundamental level. Since these calculations are extremely heavy on computational resources, we will also discuss the field of Molecular Mechanics (MM). The main difference is the timescale at which we study the molecules of interest. While QM studies an atomic system at an extreme depth by the positional snapshot, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty we incur in favour of the information we receive. In order for the simulated molecules to virtually move according to their behaviour observed in nature , we design _force fields_ to abstract and compact the information from QM and bring it over to MM.   
+One of the pillars of Computational Chemistry is Quantum Mechanics (QM). This scientific field's main mission is to work with the Schrödinger equation in order to assess the properties of a molecule at their fundamental level. Since these calculations are extremely heavy on computational resources, we will also discuss the field of Molecular Mechanics (MM). We can differentiate either field by the timescale at which we study the molecules of interest. While QM studies an atomic system at by the positional snapshot of a molecule, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty we incur in favour of the information we receive. In order for the simulated molecules to virtually move according to their behaviour observed in nature, we design _force fields_ to abstract and compact the information gathered from QM and bring it over to MM.   
 //Briefly, a force field makes it possible to compact the information from a molecule and use it for Molecular Mechanics (MM)studies. When employed, MM methodologies make it possible to move the molecules are efficiently and accurately, thereby allowing us to study interactions of i.e. small molecule drugs with their target protein. 
 //==Computational Chemistry
 //https://www.youtube.com/@TMPChem/videos
@@ -40,11 +40,12 @@ One of the pillars of Computational Chemistry is that of Quantum Mechanics (QM).
 //
 === Quantum Mechanics
 // Discuss some formal objects and notations for people to understand and interpret concepts in QM
-The field of QM studies the principle that every particle, like electrons, has a _quantized_ amount of energy it carries. The goal is to be describe the total energy of a system by the energy of all the individual particles that compose the system itself.
+The field of QM studies the principle that every particle, like electrons, has a _quantized_ amount of energy it carries. The goal is to be describe the total energy of a system, meaning a collection of atoms and molecules, by the energy of all the individual particles that compose the system itself.
 
-==== Schrödinger's equation
-This equation forms the foundation of all of compchem 
-In @eq-base-schrodinger, we encounter Hamiltonian (HamilSym) which acts an operator over the wave function ($Psi$). This wave function describes the movement of the electrons in a system. In order to use this equation, it had to be accepted that at the _"quantum"_ level of such particles - like photons - they also behave themselves like waves.
+==== The Schrödinger equation
+The Schrödinger equation forms the foundation of all of compchem In the early 20#super("th") century, many physistics and mathematicians attempted to understand the nature of atoms and how the electron particles behave. At first, photons - the massless particle that carry energy in light waves - were eventually determined to portray as both particles and as a wave, which was postulated by Albert Einstein. Two decades later, de Broglie postulated, through analogy with photons, that electrons could also be characterised by the property. This was then confirmed through the _double slit_ experiment, ran by Davisson and Germer. Because the _wave-particle duality_ could be attributed to these particles, it would then be conceivable to analytically describe their behaviour. 
+
+In @eq-base-schrodinger we encounter the wave function ($Psi$) that describes the position of the electrons in a system. The Hamiltonian (HamilSym) acts an operator over the wave function and describes best how we can calculate for the energy of a system based on the position of these electrons.
 On the righthand side of the equation, we find the energy $E$ which is the eigenvalue of the eigenfunction $Psi$. This just means that $E Psi$ can be evaluated to the most elementary form of the position of the electrons and this is associated with a discrete amount of energy, while $ℋ Psi$ allows us to express and calculate for the former. 
 $
 ℋ Psi = E Psi
@@ -76,34 +77,65 @@ overbrace(
 )
 $ <eq-hamiltonian-full>
 All uppercase parameters and subscripts pertain to the nuclei, the lowercase ones to the electrons.
-The first term describe the kinetic energy of the movement of the nuclei, the second that of the electrons.
-The latter three terms describe the potential energy of the atomic system. The first term describes the potential experiences between each nucleus and each respective electron. In other words, the interaction potential between the $I^(t h)$ nucleus and the $i^(t h)$ electron is evaluated. Since electrons are negatively charged and the nuclei are positively charged, this can be considered the attraction term.
+The first term describe the kinetic energy by the movement of the nuclei, the second that of the electrons.
+The latter three terms describe the potential energy of the system. The third term describes the potential energy experienced between each nucleus and each respective electron. In other words, the interaction potential between the $I^(t h)$ nucleus and the $i^(t h)$ electron is evaluated. Since electrons are negatively charged and the nuclei are positively charged, this can be considered the attraction term.
 The fourth term considers the pairwise evaluation of each electron with all the other electrons in the system. The fifth term does the same, but with nuclei instead. That is why we consider them the _electronic repulsion_ term and the _nucleic repulsion_ term respectively.
 //
 //
 
-===== Zeeman effect
-We have mentioned already that in the field of QM, we study the positioning of the electrons in the vinicity of other electrons and nuclei and try to calculate the energy ($E$) of the system. To be accurate, we must understand that the quantity of energy an electron can hold lies in a discrete spectrum. This means that electrons only emit photons after absorbing a set amount of energy, be that through heating or light, before releasing it into their environment.
+==== Zeeman effect and the quantum numbers
+
 #figure(
-  image("./figures/orbitals/spectrum.svg", width: 100%),
+//  image("./figures/orbitals/spectrum.svg", width: 100%),
+  image("./figures/orbitals/vert-spectrum.svg", width: 100%),
   caption: [
-    Illustrative example of a spectrum where an electron can absorb energy within most of the visible light spectrum, but can only emit packets of energy in at certain, discrete wavelengths. Furthermore, this behaviour changes when induced by a magnetic field.
+    *A.* Illustrative example of the spectrum of an element of the periodic system, where electrons of this atom can absorb energy within most of the visible light spectrum, but can only emit packets of energy at certain, discrete wavelengths. Furthermore, this behaviour changes when induced by a magnetic field where 'hidden layers' become revealed.
+    *B.* The principal quantum number $n$ divides the 'shells' of the system, where the 'hidden layers' can be defined through $l$ and $m_l$ which we use describe the energy of the various electrons.
   ]
 ) <fig-zeeman>
-When subjecting electrons to a magnetic field however, we see that the discrete spectrum becomes split. As it turns out, the emitted spectra are what we consider to be degenerate and consist of multiple hidden layers that are observable under select conditions.
+One of the reasons why Quantum Mechanics holds its name is due to the nature of the electrons. As we have discussed, this field of study attempts to determine the position of the electron in a system of atoms in order to calculate for its energy. What we need to clarify here is that the amount - or quantity - an electron can hold and emit back to the world lies in a discrete spectrum. In other words, we can say that an electron can absorb energy until it is 'full' and then expels that energy to the environment  in the form of photons. Energy transfer is often done through heating or by light emission.
+
+//We have mentioned already that in the field of QM, we study the positioning of the electrons in the vinicity of other electrons and nuclei and try to calculate the energy ($E$) of the system. To be accurate, we must understand that the quantity of energy an electron can hold lies in a discrete spectrum.
+//This means that electrons only emit photons after absorbing a set amount of energy, be that through heating or light, before releasing it into their environment.
+//
+//Before the effects of the magnetic field were published, the spectra of several elements had already been studied (@fig-zeeman A.). However, this was thought to be a property of the atoms themselves.
+The absorption- and emissionspectra of several elements had already been studied (@fig-zeeman A.) but this discrete distribution was initially thought to be a property of the atoms themselves. A scientist by the name of Zeeman considered an experiment where a magnetic field would be brought into play when documenting the spectra of particular elements.
+The Zeeman effect showed us that this emission would become split to reveal a discrete subspectrum at certain levels of energy. It wasn't understood until later that when the magnetic field was applied to the molecules, it influences the angular momentum of the electron with respect to the nucleus.
+
+The discrete energy levels were finally categorised into distinct levels that can be computed for using the _quantum numbers_ ($n$, $l$, $m_l$) and formalised into the theory of orbitals we nowadays use to assign the various electrons to discrete levels of energy of a system.  
+//We differentiate between three numbers that are to be used to calculate for the energy of a specific electron.
+The principal _n_, the orbital angular momentum _l_ and the magnetic _m#sub("l")_. To keep it as simple as possible, the principal quantum numbers determines the level in which the electrons reside in. It can be thought of as the atomic model that Niels Bohr proposed, where the electrons circle around in different _shells_ around the nucleus in a fixed orbit. 
+The two latter quantum numbers are used to differentiate into sublevels (@fig-zeeman B.) using concepts from spherical harmonics.
+//however, we see that the discrete spectrum becomes split. As it turns out, the emitted spectra are what we consider to be degenerate and consist of multiple hidden layers that are observable under select conditions.
 
 ==== Orbital theory
-===== Probability density
-The wave function $Psi$ has the particular property that when taking its square $Psi^2$, we receive the probability distribution of the whereabouts of an electron within the x-direction ($x + d x$), under normalised conditions. This is formally done taking the complex conjugate ($Psi ^*$) of the wave function and apply the dot product to the wave function ($Psi$) itself. 
+#let content-1d-distr = [
+===== Probability density distribution
+The _Heisenberg's uncertainty principle_ tells us we cannot determine both the position and the momentum of an electron at a given time. This stems from either variable to depend on the other one, something we refer to as _conjugate variables_. Because of this uncertainty, we will always need to approximate both parameters to the best of our ability. 
+
+The wave function $Psi$ has the particular property that when taking its square $Psi^2$, we get returned with the probability distribution of the whereabouts of an electron (@fig-1d-phisquared). 
+This is applied by taking the //complex conjugate ($Psi ^*$) of the wave function and apply the dot product to the wave function ($Psi$). 
+]
+#let figure-1d-distr = [
+  #figure(
+    image("./figures/orbitals/1d-distribution.svg", width: 100%),
+    caption: [
+      Illustrative example of squaring the wave function in the x-direction ($x + d x$). This distribution is normalised to give the probability.
+    ]
+  ) <fig-1d-phisquared>
+]
+#grid(content-1d-distr, figure-1d-distr, columns: (2fr, 1fr), gutter: 1em) #v(-0.5em)
+complex conjugate ($Psi ^*$) of the wave function and apply the dot product to the wave function ($Psi$) (@eq-1d-phisquared).
 $
 angle.l Psi bar.v Psi angle.r = integral^(+ infinity)_(- infinity) Psi^* (x) Psi (x) d x = 1
-$
-We can extend this to three dimensions and generalise for a set of electrons : 
+$<eq-1d-phisquared>
+We can extend this to three dimensions and generalise for a set of $N$ electrons. In order to get the probability, we normalise the wave function before applying this transformation : 
 $
 angle.l Psi bar.v Psi angle.r = integral ... integral integral integral^(+ infinity)_(- infinity) Psi^* (x_1, y_1, z_1, x_2, y_2 ... z_N) Psi (x_1, y_1, z_1, x_2, y_2 ... z_N) d v_1 ... d v_N = 1
 $ <eq-probability-allelectrons>
-Where we integrate over the volume $v_N$ that describes the location ($x_N, y_N, z_N$) of an electron $e_N$.
-Indeed, with this equation we can describe the chance of encountering an electron within a specific volume in space.
+We integrate over the volume $v_N$ that describes the location ($x_N, y_N, z_N$) of an electron $e_N$.
+To summarise, we can describe the probability of finding an electron within a certain space near a proton, which holds a specific amount of energy, by utilising @eq-probability-allelectrons.
+//we can describe the chance of encountering an electron within a specific volume in space.
 //One thing to keep in mind is that @eq-probability-allelectrons tells us that Vx 
 
 
@@ -113,9 +145,9 @@ Indeed, with this equation we can describe the chance of encountering an electro
 //https://en.wikipedia.org/wiki/Quantum_number
 //https://en.wikipedia.org/wiki/Spherical_harmonics
 ===== Spherical harmonics
-This specific volume in space in which the electron will likely appear in is tightly linked with the amount of energy the electron holds. As mentioned and illustrated through @fig-zeeman, the quantity of energy they carry lies in a discrete spectrum. While we've mainly regarded electrons in a Cartesian system ($x, y, z$), it will simplify the calculations tremendously if we were to represent the position of the electrons through a spherical coordinate system ($r, theta, phi$).
+This specific volume in space in which the electron will likely appear in, is tightly linked with the amount of energy the electron holds. As mentioned and illustrated through @fig-zeeman, the quantity of energy they carry lies in a discrete spectrum. For convenience sake, we convert the current equations from a Cartesian system ($x, y, z$) to a spherical system ($r, theta, phi$) to simplify the calculations the following equations.
 
-To represent the probable volume in which these electrons can appear in, we make use of a concept called _spherical harmonics_. These comprise of a set of orthonormal functions in with which we can represent the probability of finding an electron. Through a transformation of the coordinate system, we get : 
+To represent the probable volume in which these electrons can appear in, we make use of a concept called _spherical harmonics_. This comprise a set of orthonormal functions in with which we can represent the probability of finding an electron. Through a transformation of the coordinate system, we get @eq-spherharmonics.  
 $
 Psi (x, y ,z) => Psi (r, theta, phi) = 
 overbrace(
@@ -125,15 +157,26 @@ R_(n, l) (r), "Radial component"
 underbrace(
 Y_(l, m_l) (theta, phi), "Angular component" 
 )
-$
-Only the angular component describes the spherical harmonics, while the radial component describes a dependence of the nucleic charge of the atom. This dependence describes why electrons of a Carbon will not visit the same discrete energy states as those of the Oxygen atom, even though spherical harmonics expand into the same orthonormal function for a given state ($n, l, m_l$). In other words, this radial component will differentiate into why an emission spectrum of the two atoms of a different element won't hold the same amounts of energy, at least not at the ground state.
+$<eq-spherharmonics>
+//Only the angular component describes the spherical harmonics, while 
+The radial component is also described by dependence of the nucleic charge of the atom. This means that we can explain why the electrons behave slightly different for particular element we want to describe. The radial component influences the spectra - like those in @fig-zeeman - by shifting the wavelength at which absorption and emission happens.
+The angular component actually describes the spherical harmonics part (see @fig-all-type-orbitals for differentation of orbitals up to $f$-type orbitals.)
+#figure(
+  image("./figures/orbitals/orbitals-3d.svg", width: 100%), 
+  caption: [
+    Probability distributions of electrons that are described through spherical harmonics. Three electron distributions are depicted, which are described by the state $Y(l, m_l)$. In order, we see $Y(0, 0)$ associated with $s$-type orbitals, $Y(1, 0)$ associated with $p_0$-type orbitals and $Y(2, 0)$ associated with $d_0$-type orbitals. See @fig-zeeman B. for the associated energy levels of the orbitals
+  ]
+)<fig-orbitals>
+@fig-orbitals shows us the three dimensional probability distribution of finding an electron for a given energy level. 
+//This dependence describes why electrons of a Carbon will not visit the same discrete energy states as those of the Oxygen atom, even though spherical harmonics expand into the same orthonormal function for a given state ($n, l, m_l$). In other words, this radial component will differentiate into why an emission spectrum of the two atoms of a different element won't hold the same amounts of energy, at least not at the ground state.
+//Only the angular component describes the spherical harmonics, while the radial component describes a dependence of the nucleic charge of the atom. This dependence describes why electrons of a Carbon will not visit the same discrete energy states as those of the Oxygen atom, even though spherical harmonics expand into the same orthonormal function for a given state ($n, l, m_l$). In other words, this radial component will differentiate into why an emission spectrum of the two atoms of a different element won't hold the same amounts of energy, at least not at the ground state.
 
 //MAAK FIGUUR MET ENERGIE NIVEAUS AND SPHERICAL COMPONENTS
 // Leg uit wat de quantum getallen zijn (n, l, m_l). Spin komt later pas aan bod bij de slater determinant
 //
 
 ==== Solving the wave function $Psi$
-Because the full equation @eq-hamiltonian-full can be so incredibly complex to numerically compute, researchers are always searching for ways to downsize an equation analytically in order to make the computational cost of solving it cheaper. The introduction of the _Born-Oppenheimer approximation_ is one paradigm that has faciliated research on atomic systems.
+Because the full equation @eq-hamiltonian-full can be so incredibly complex to compute for, researchers are always searching for ways to downsize an equation analytically in order to make the computational cost of solving it cheaper. The introduction of the _Born-Oppenheimer approximation_ is one paradigm that has faciliated research on atomic systems.
 
 ===== Born-Oppenheimer approximation
 This simplification of the Schrödinger equation stems from the fact that the nucleus moves at a much slower pace than electrons do. This is because the mass of protons is roughly two thousand times larger than that of electrons. We can consider that in the timeframe in which the electrons travel a particular distance, the protons would remain stationary. Applying this principle of _frozen nuclei_ - frozen in space, mind you - we can analytically derive the _electronic Schrödinger equation_. 
@@ -161,8 +204,8 @@ Continuing this subsection, we need to highlight the fact that for a system with
 
 Consider a set of electrons $S(e_1, e_2, e_3, e_4, ... e_N)$. While they move about freely, they experience repulsion from other electrons. This means that the momentum and position of $e_1$ depends on the movement and positions of ($e_2, e_3, e_4, ... e_N$), which goes for $e_2$ depending on ($e_1, e_3, e_4, ... e_N$) and so on. The problem becomes too convoluted, as there arise too many factors and variables to account for, for which we know no analytical solution to. This particular problem is generalisable to _classical mechanics_, where it even occupied the likes of Sir Newton with respect to the movement of celestial bodies.
 
-If we cannot figure out the most probable position of an electron, it becomes to derive a good estimate of the electronic repulsion term.
-Luckily, we can further approximate in order the equation so that we may nonetheless derive a value of $E$ that closely resembles the true state of $Psi$.
+Handling the electrons in this way would make it impossible to derive a good estimate of the electronic repulsion term.
+Luckily, we can further simplify the equation so that we may nonetheless derive a value close to the true $E$ that accompagnies the state of its eigenfunction $Psi$.
 //https://newton.ex.ac.uk/research/qsystems/people/jenkins/mbody/mbody3.html
 //impossible to solve because the behaviour of e1 depends on e2, e3... eN ; that of e2 on e1, e3 ... eN and so on. The equation knows no analytical solution, but can be numerically approximated, which is good enough.
 //===== Variational theorem
@@ -426,7 +469,7 @@ To correctly represent the movement of the atoms, MM makes use of classical mech
 $
 f_i = m_i a_i #h(1em) arrow.r #h(1em) f_i = m_i frac(d^2 r_i, d t^2) = - frac(diff, diff r_i) U(r_1, r_2, ... r_N)
 $ <eq-classnewtion>
-The $r_i$ represent the $i#super("th")$ atom's position in cartesian space. The potential energy function $U(r_1, r_2, ..., r_N)$  calculates the potential based on those positions, for a total of $N$ particles #mcite(("Gonzalez2011ffandmd"), biblio).
+The $r_i$ represent the $i#super("th")$ atom's position in cartesian space. The potential energy function $U(r_1, r_2, ..., r_N)$ is determined by the force field (@eq-AMBER) and calculates the potential based on those positions, for a total of $N$ particles #mcite(("Gonzalez2011ffandmd"), biblio).
 
 @eq-classnewtion is a non linear second order differential equation that cannot be solved exactly. This is the reason why we need a numerical integrator that partitions the trajectory into small, discrete segments. Every segment is what is called a timestep, an amount of time spanning before and after the movement of the atoms. Because these particles are almost infathomably tiny, they move around quickly and therefor the timestep to observe their movement needs to be small as well; usually around 1 femtosecond ($10^(-12)$ s). 
 When we discretise this equation, we essentially want to know the position of the atoms ($r_i$) as a function over the elapsed time ($t_0 + Delta t$) (@eq-discrete-numerical) (@fig-periodic A.).
@@ -495,7 +538,7 @@ Being efficient with storing data in memory and downsizing the amount of calcula
 // https://computecanada.github.io/molmodsim-md-theory-lesson-novice/02-Fast_Methods_to_Evaluate_Forces/index.html
 ===== Verlet list
 Computing the bonded-term interactions is a given, but having to calculate the pairwise interaction potential (@eq-charges-in-amber, @eq-lenardjones) between atom#sub("i") and all other atoms in the system would be a gargantuan task and beyond a certain distance this would garner negligible additions to the potential.
-To remedy this, a simulation employs a cut-off distance at which the non bonded-terms are not evaluated anymore. This is formalised by the _Verlet list_.
+To remedy this, a simulation employs a cut-off distance at which the non bonded-terms are not evaluated anymore. This is formalised by the _Verlet list_ #mcite(("Chialvo1990verlet"), biblio).
 
 Suppose we set the cut-off distance $d_c$ at 10 Å from atom#sub("i") and a buffer distance $d_b$ at an additional half of $d_c$. Every iteration, a distance check is in place before evaluating the terms. If an atom#sub("j") strays further than 15 Å, the Verlet list for that atom#sub("i") is re-evaluated to include a new set of atoms within 10 Å.
 While this requires some additional RAM to store the lists in, a table lookup is much faster than evaluating all the atoms in the system on every iteration considering the euclidian distance is just $d = sqrt((x_i - x_j) + (y_i - y_j) +(z_i - z_j))$.
@@ -512,7 +555,7 @@ The $E_("direct")$ just employs the regular charge calculation (@eq-charges-in-a
 //https://www.quora.com/What-is-Ewald-summation-and-why-is-the-Particle-mesh-Ewald-approach-a-good-one
 
 To give some insight into the problem, the PBC require us to evaluate the charges in a pairwise fashion for atoms in neighbouring "boxes" to properly account for long-range interactions. This would cause an immense amount of time to iterate over every atom and over every pair of the respective atoms. 
-With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves. These functions are then used by the Ewald Summation Formula (EWF) to return the potential energy for longe-range electrostatics.
+With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves. These functions are then used by the Ewald Summation Formula (EWF) to return the potential energy for longe-range electrostatics .
 
 #figure(
   image("./figures/particlemesh.svg", width: 100%),
@@ -524,8 +567,7 @@ With the Particle Mesh method, we can discretise the point charges of the molecu
 The explanation might seem unclear as to why this methodology is more efficient, but this is because the FFT is so incredibly powerful. For some background, the FFT algorithm is used in all fields of engineering due its proven efficiency. A previous application of the PME method (the particle-particle particle mesh algorithm, P#super("3")M) scaled at an exponential time complexity $O(N^2)$, meaning it slowed down when introducing more atoms to the system. The PME method scales at a linear rate $O(N log(N))$ per increasing amount of particles. 
 
 The Ewald method is a way to compute for the potential in a periodic system using the charge distribution, derived from the _Poisson summation formula_, and was specifically derived to calculate the potential energy of an ionic crystal lattice system.
-The inners of the EWF and by extension the Poisson Summation Formula involve complex mathematics are beyond the scope of this thesis.
-#mcite(("Darden1993pmemd", "Essmann1995spme"), biblio)
+The inners of the EWF and by extension the Poisson Summation Formula involve complex mathematics are beyond the scope of this thesis #mcite(("Darden1993pmemd", "Essmann1995spme"), biblio).
 
 #intermezzo("Fast Fourier Transform (FFT)")[
 The FFT is the algorithm that supports calculating the Discrete Fourier Transform.

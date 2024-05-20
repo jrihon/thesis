@@ -1,4 +1,3 @@
-#https://scipython.com/blog/visualizing-the-real-forms-of-the-spherical-harmonics/#rating-149
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
@@ -57,13 +56,22 @@ def plot_Y(ax, el, m):
     ax.set_zlim(-ax_lim, ax_lim)
     ax.axis('off')
 
-fig = plt.figure(figsize=plt.figaspect(1.))
-ax = fig.add_subplot(projection='3d')
-l, m = 2, 0
-#l, m = 1, 0
-#l, m = 0, 0
-plot_Y(ax, l, m)
-plt.tight_layout()
-plt.savefig('Y{}_{}.png'.format(l, m), dpi=300)
+
+el_max = 3
+#figsize_px, DPI = 800, 200
+#figsize_in = figsize_px / DPI
+#fig = plt.figure(figsize=(figsize_in, figsize_in), dpi=DPI)
+#spec = gridspec.GridSpec(ncols=2*el_max+1, nrows=el_max+1, figure=fig)
+for el in range(el_max+1):
+    for m_el in range(-el, el+1):
+        fig = plt.figure(figsize=plt.figaspect(1.))
+        ax = fig.add_subplot(projection='3d')
+
+        plot_Y(ax, el, m_el)
+        plt.tight_layout()
+        plt.savefig('Y{}_{}.png'.format(el, m_el), dpi=200)
+
+#plt.tight_layout()
+#plt.savefig('sph_harm.png')
 #plt.show()
 
