@@ -75,7 +75,14 @@
     "Chialvo1990verlet": 74, 
     "Darden1993pmemd": 75, 
     "Essmann1995spme": 76, 
-    "mattelaer2021PHD": 77, 
+    "Perez2007alphagamma": 77, 
+    "Zgarbova2011rnaol3": 78, 
+    "Zgarbova2015dnaol15": 79, 
+    "Berman2000rcsb": 80, 
+    "Condon2014LNA": 81, 
+    "PabonMartinez2017LNA": 82, 
+    "Xu2017LNA": 83, 
+    "mattelaer2021PHD": 84, 
 )
 
 #let biblio = (

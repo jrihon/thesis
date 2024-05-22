@@ -16,7 +16,8 @@
 
   let contents = [ 
     Welcome to the first chapter of this doctoral thesis! \
-    The contents of this chapter are, in parts, adaptations of the original manuscripts and supplementary materials of *Chapter 2* and *Chapter 3*.
+    This introduction will guide you through the world of nucleic acids and how we describe and interpret molecules through means of computational modeling.
+    The first part details on the nucleic acids in nature and how we can modify them for particular applications. Afterwards we describe how we can mathematically approach their molecular structures and finalise with their fundamental characterising and how to study them from a computer's point of view.
   ]
 
   block(

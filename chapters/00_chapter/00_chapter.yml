@@ -1620,4 +1620,156 @@ Chialvo1990verlet:
     publisher: Elsevier BV
     issue: 2
     volume: 60
+Perez2007alphagamma:
+  type: article
+  title: 'Refinement of the AMBER Force Field for Nucleic Acids: Improving the Description of α/γ Conformers'
+  author:
+  - Pérez, Alberto
+  - Marchán, Iván
+  - Svozil, Daniel
+  - Sponer, Jiri
+  - Cheatham, Thomas E.
+  - Laughton, Charles A.
+  - Orozco, Modesto
+  date: 2007-06
+  page-range: 3817
+  url: http://dx.doi.org/10.1529/biophysj.106.097782
+  serial-number:
+    doi: 10.1529/biophysj.106.097782
+    issn: 0006-3495
+  parent:
+    type: periodical
+    title: Biophysical Journal
+    publisher: Elsevier BV
+    issue: 11
+    volume: 92
+Zgarbova2015dnaol15:
+  type: article
+  title: Refinement of the Sugar–Phosphate Backbone Torsion Beta for AMBER Force Fields Improves the Description of Z- and B-DNA
+  author:
+  - Zgarbová, Marie
+  - Šponer, Jiří
+  - Otyepka, Michal
+  - Cheatham, Thomas E.
+  - Galindo-Murillo, Rodrigo
+  - Jurečka, Petr
+  date: 2015-11
+  page-range: 5723
+  url: http://dx.doi.org/10.1021/acs.jctc.5b00716
+  serial-number:
+    doi: 10.1021/acs.jctc.5b00716
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 12
+    volume: 11
+Zgarbova2011rnaol3:
+  type: article
+  title: Refinement of the Cornell et al. Nucleic Acids Force Field Based on Reference Quantum Chemical Calculations of Glycosidic Torsion Profiles
+  author:
+  - Zgarbová, Marie
+  - Otyepka, Michal
+  - Šponer, Jiří
+  - Mládek, Arnošt
+  - Banáš, Pavel
+  - Cheatham, Thomas E.
+  - Jurečka, Petr
+  date: 2011-08
+  page-range: 2886
+  url: http://dx.doi.org/10.1021/ct200162x
+  serial-number:
+    doi: 10.1021/ct200162x
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 9
+    volume: 7
+Berman2000rcsb:
+  type: article
+  title: The Protein Data Bank
+  author: Berman, H. M.
+  date: 2000-01
+  page-range: 235
+  url: http://dx.doi.org/10.1093/nar/28.1.235
+  serial-number:
+    doi: 10.1093/nar/28.1.235
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 1
+    volume: 28
+Condon2014LNA:
+  type: article
+  title: Optimization of an AMBER Force Field for the Artificial Nucleic Acid, LNA, and Benchmarking with NMR of L(CAAU)
+  author:
+  - Condon, David E.
+  - Yildirim, Ilyas
+  - Kennedy, Scott D.
+  - Mort, Brendan C.
+  - Kierzek, Ryszard
+  - Turner, Douglas H.
+  date: 2014-01
+  page-range: 1216
+  url: http://dx.doi.org/10.1021/jp408909t
+  serial-number:
+    doi: 10.1021/jp408909t
+    issn: 1520-5207
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry B
+    publisher: American Chemical Society (ACS)
+    issue: 5
+    volume: 118
+PabonMartinez2017LNA:
+  type: article
+  title: 'LNA effects on DNA binding and conformation: from single strand to duplex and triplex structures'
+  author:
+  - Pabon-Martinez, Y. Vladimir
+  - Xu, You
+  - Villa, Alessandra
+  - Lundin, Karin E.
+  - Geny, Sylvain
+  - Nguyen, Chi-Hung
+  - Pedersen, Erik B.
+  - Jørgensen, Per T.
+  - Wengel, Jesper
+  - Nilsson, Lennart
+  - Smith, C. I. Edvard
+  - Zain, Rula
+  date: 2017-09
+  url: http://dx.doi.org/10.1038/s41598-017-09147-8
+  serial-number:
+    doi: 10.1038/s41598-017-09147-8
+    issn: 2045-2322
+  parent:
+    type: periodical
+    title: Scientific Reports
+    publisher: Springer Science, Business Media LLC
+    issue: 1
+    volume: 7
+Xu2017LNA:
+  type: article
+  title: 'The free energy of locking a ring: Changing a deoxyribonucleoside to a locked nucleic acid'
+  author:
+  - Xu, You
+  - Villa, Alessandra
+  - Nilsson, Lennart
+  date: 2017-01
+  page-range: 1147
+  url: http://dx.doi.org/10.1002/jcc.24692
+  serial-number:
+    doi: 10.1002/jcc.24692
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 15
+    volume: 38
 

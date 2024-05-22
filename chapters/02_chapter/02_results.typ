@@ -94,7 +94,6 @@ A third experiment was performed with the dXyNA homoduplex. The dXyNA homoduplex
 //experimental RNA::HNA structure. RMSD equals to 0.814 \text{\r{A}} across all pairs of the entire first half and RMSD equals to 0.769 \text{\r{A}} across all pairs for the second half.
 //We see that the structure coincides perfectly with the available crystallographic data for HNA \cite{maier2005HNARNA}. The puckering scatterplot (Figure \ref{fig:HNAduplex}A) for RNA shows clustering in the space of $^{3'}E$ conformers, while HNA conformers occupy the north pole conformational space $^{4'}C_{1'}$. This matches perfectly with the available structural data \cite{lescrinier2000RnaHna}.
 //To emphasise, the HNA parameters were derived entirely from QM \cite{mattelaer2021PHD, Schofield2023HnaAptamer}. \textit{Nota bene}, so have the DNA and RNA torsion angle parameters, who've later on been tweaked based on additional QM studies and a collaborative effort with NMR \cite{cornell1995secondGenFF,zgarbova2011RNAOL3,zgarbova2015DNAOL15, Perez2007AlphaGamma}.
-//The difference is that the fitted conformations, used to derive the force field, were already known from literature, therefore conformational sampling was not necessary.
 //
 //
 //
