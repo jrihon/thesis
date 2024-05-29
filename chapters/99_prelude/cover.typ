@@ -8,8 +8,19 @@
   margin: 0%
 )
 
-// testing
+// black on gold cover
 #image("../../src/cover/cover_final.svg",
   width: 100%,
   height: 100%
 )
+#set page(
+    paper: "a4",
+    margin: (
+      left: 2.0cm,
+      right: 2.0cm,
+      top: 2.0cm,
+      bottom: 2.0cm,
+    ),
+  )
+
+#pagebreak() // insert blank page after this page

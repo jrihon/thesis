@@ -3,8 +3,10 @@
 
 
 == Conclusion
-
-The _pucke.rs_ toolkit proves useful to generate the set of constraints and axes required for performing Conformational Sampling experiments. 
+//
+//When researching puckering formalisms and working on characterising biomolecular monomers computationally, this library will prove immensely valuable.
+//The _pucke.rs_ toolkit proves useful to generate the set of constraints and axes required for performing Conformational Sampling experiments. 
+When researching puckering formalisms and working on characterising biomolecular monomers computationally, the _pucke.rs_ CLI and _pucke.py_ library will prove immensely valuable.
 
 We were able to visualise how different levels of theory in computational chemistry perform, both in terms of qualitative output and by logging their _consumables_, allowing the user to make informed decisions for their own experiments and what their hardware allows them to do. Accurate characterisation of molecules should not be impaired by the specifications of one's machine. While this work based itself on the accelerated methodology of Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio), the goal was to explore and expand the possibilities a researcher can use for this type of experiments.
 The information returned by such methodologies can be used to make informed decisions on constraintive procedures in Molecular Dynamics simulations, to firmly decide on restraintive measures in NMR-related deterministic structure elucidation studies and even derive a suitable forcefield for the XNA in question. This can all be achieved from purely _in silico_-based research.

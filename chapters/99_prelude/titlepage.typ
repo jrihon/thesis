@@ -15,8 +15,6 @@
 
 #counter(page).update(1)                // Reset page counters
 
-#pagebreak(to: "odd") // insert blank page after this page
-
 ///////////////
 ///
 /// ENGLISH
@@ -70,6 +68,7 @@ Pharmaceutical Sciences"
 
 
 
+//#pagebreak(to: "even") // insert blank page after this page
 #pagebreak(to: "odd") // insert blank page after this page
 
 
@@ -132,4 +131,5 @@ Farmaceutische Wetenschappen"
 
 
 
-#pagebreak(to: "odd") // insert blank page after this page
+//#pagebreak(to: "odd") // insert blank page after this page
+#pagebreak(to: "even") // insert blank page after this page

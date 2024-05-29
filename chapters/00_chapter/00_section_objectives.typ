@@ -27,7 +27,7 @@ Added to this, using organic synthesis to make the XNA building blocks is resour
 
 The field currently lacks a streamlined way to carry out computational studies on synthetic nucleic acids by a set protocol.
 A number of issues are at the cause, where the first one 
-(i) The lack of structural models for XNA in the database makes it difficult to
+(i) the lack of structural models for XNA in the database makes it difficult to
 (ii) generate a force field that correctly models the properties of the modifications. 
 
 #custom-header()[The resolve]

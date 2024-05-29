@@ -614,7 +614,7 @@ The $E_("direct")$ just employs the regular charge calculation (@eq-charges-in-a
 //https://www.quora.com/What-is-Ewald-summation-and-why-is-the-Particle-mesh-Ewald-approach-a-good-one
 
 To give some insight into the problem, the PBC require us to evaluate the charges in a pairwise fashion for atoms in neighbouring "boxes" to properly account for long-range interactions. This would cause an immense amount of time to iterate over every atom and over every pair of the respective atoms. 
-With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves. This means that we form a function that describes the field of 'infinite' charges very well. This function is then used by the Ewald Summation Formula (EWF) to return the potential energy for longe-range electrostatics .
+With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves. This means that we form a function that describes the field of 'infinite' charges very well. This function is then used by the Ewald Summation Formula to return the potential energy for longe-range electrostatics .
 
 #figure(
   image("./figures/particlemesh.svg", width: 100%),
