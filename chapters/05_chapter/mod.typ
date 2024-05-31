@@ -3,7 +3,7 @@
 #import "../../lib/colours.typ": colourPalette
 
 
-= Concluding remarks and future perspective
+= Future perspective and concluding remarks 
 
 #include {"./05_futureperspective.typ"}
 #include {"./05_concludingremarks.typ"}

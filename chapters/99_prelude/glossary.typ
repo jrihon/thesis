@@ -92,18 +92,23 @@
 )
 
 #glossary-layout(
+  "DG",
+  "Differential Geometry"
+)
+
+#glossary-layout(
   "DNA",
   "Deoxyribose Nucleic Acid"
 )
 
 #glossary-layout(
-  "dXyNA",
-  "Deoxylose Nucleic Acid"
+  "ds",
+  "double stranded"
 )
 
 #glossary-layout(
-  "ds",
-  "double stranded"
+  "dXyNA",
+  "Deoxylose Nucleic Acid"
 )
 
 // EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
@@ -292,13 +297,13 @@
 )
 
 #glossary-layout(
-  "ss",
-  "single stranded"
+  "SP",
+  "Strauss-Pickett"
 )
 
 #glossary-layout(
-  "SP",
-  "Strauss-Pickett"
+  "ss",
+  "single stranded"
 )
 
 // TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT

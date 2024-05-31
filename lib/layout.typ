@@ -243,7 +243,10 @@
   set text(font: "Roboto", colour, size: 16pt, weight: "regular")
   set align(left)
   let c = counter(heading).display()
-  [#c #element.body]
+//  [#c #element.body]
+  let chap = c.at(0)
+  let subchap = c.at(2)
+  [#chap.#subchap#h(1em)#element.body]
 
 }
 
@@ -254,7 +257,12 @@
   set align(left)
 
   let c = counter(heading).display()
-  [#c #element.body]
+//  [#c #element.body]
+
+  let chap = c.at(0)
+  let subchap = c.at(2)
+  let subsubchap = c.at(4)
+  [#chap.#subchap.#subsubchap#h(1em)#element.body]
 
 }
 

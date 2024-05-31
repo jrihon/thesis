@@ -44,7 +44,7 @@
 + Ducque : the (X)NA model builder \~ #link("https://github.com/jrihon/Ducque")[https://github.com/jrihon/Ducque] \
   $arrow.r.hook$ MK population analysis scheme for ORCA \~ #link("https://github.com/jrihon/Ducque/tree/main/ff")[https://github.com/jrihon/Ducque/tree/main/ff]
 + pucke.py : the Python module for conformational sampling, puckering formalisms and inversion, and computing standard geometries \~ #link("https://github.com/jrihon/puckepy")[https://github.com/jrihon/puckepy] \
-  $arrow.r.hook$ pucke.py code examples \~ #link("https://github.com/jrihon/puckepy/blob/main/docs/documentation.rst")[https://github.com/jrihon/puckepy/blob/main/docs/documentation.rst]
+  $arrow.r.hook$ pucke.py code examples \~ #link("https://github.com/jrihon/puckepy/blob/main/docs/documentation.md")[https://github.com/jrihon/puckepy/blob/main/docs/documentation.md]
 + pucke.rs : the CLI tool for conformational sampling \~ #link("https://github.com/jrihon/puckers")[https://github.com/jrihon/puckers]
 
 == Scientific outreach

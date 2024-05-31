@@ -30,7 +30,7 @@
 //! CHAPTER 00 : Introduction
 //!
 //!
-#show: document => layout(document, "1", "1.1.1.", colour00)  // Set page counter to arabic numbers
+#show: document => layout(document, "1", "1.1.1", colour00)  // Set page counter to arabic numbers
 #counter(page).update(1)                // Reset page counters
 
 //
