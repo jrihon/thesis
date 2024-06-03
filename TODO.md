@@ -1,4 +1,10 @@
 
+# Chapter 0
+- Acknowledgements [X]
+
+- Samenvatting / Abstract [X/...]
+
+- Glossary [...]
 
 # CHAPTER 1
 - Applications of nucleic acids [X]
@@ -9,16 +15,16 @@
 
 - subtext on Figure about curves+ vs 3dna  [X]
 
-- Quantum Mechanics [ ]
+- Quantum Mechanics [X]
 
-- Lennard Jones Potential [ ]
+- Lennard Jones Potential [X]
     -> uitleggen adhv ion parametrisation
 
-- Molecular Mechanics (PMEMD) [ ]
+- Molecular Mechanics (PMEMD) [X]
 
-- Applying MD on Nucleic Acid analogues [ ]
+- Applying MD on Nucleic Acid analogues [X]
 
 - Objectives [X]
 
 # CHAPTER 4
-- Conclusion [ ]
+- Conclusion [-]
