@@ -736,4 +736,26 @@ Pettersen2004ucsf:
     publisher: Wiley
     issue: 13
     volume: 25
+Rihon2024Ducque:
+  type: article
+  title: Structural insights into the morpholino nucleic acid/RNA duplex using the new XNA builder Ducque in a molecular modeling pipeline
+  author:
+  - Rihon, Jérôme
+  - Mattelaer, Charles-Alexandre
+  - Montalvão, Rinaldo Wander
+  - Froeyen, Mathy
+  - Pinheiro, Vitor Bernardes
+  - Lescrinier, Eveline
+  date: 2024-02
+  page-range: 2836
+  url: http://dx.doi.org/10.1093/nar/gkae135
+  serial-number:
+    doi: 10.1093/nar/gkae135
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 6
+    volume: 52
 

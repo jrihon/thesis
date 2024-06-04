@@ -19,12 +19,12 @@ Ducque produced models of RNA and DNA duplexes as fast as the NAB tool.
 ]
 #let ionbbcontent = [
 The latter is part of the AMBER toolkit and requires other AMBER programs (like tLEaP) to run, whereas Ducque functions as a standalone software. Syntactically, Ducque reads in simple text files to directly generate a model, as opposed to NAB's DSL which writes like C code and requires compilation of and executing the produced binary.
-Produced initial models are highly similar for both model builders and provided the same results in a subsequent MD simulation in standard force fields of AMBER. In contrast to NAB, Ducque is not limited to ribose based nucleic acids. Low energy conformations for non-ribose based nucleosides with hexitol and xylose sugars were included in the Ducque library, among others, and served to build nucleic acid duplexes for which //MD simulations could be performed using a parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
+Produced initial models are highly similar for both model builders and provided the same results in a subsequent MD simulation in standard force fields of AMBER. In contrast to NAB, Ducque is not limited to ribose based nucleic acids. Low energy conformations for non-ribose based nucleosides with hexitol and xylose sugars were included in the Ducque library, among others, and served to build nucleic acid duplexes for which MD simulations could be performed using a parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
 ]
 //#wrap-content(ion-bb-fig, ionbbcontent)
 #wrap-content(ion-bb-fig, ionbbcontent, align: right)
-#v(-0.5em)
-MD simulations could be performed parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
+//#v(-0.5em)
+//MD simulations could be performed parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
 
 //
 //
