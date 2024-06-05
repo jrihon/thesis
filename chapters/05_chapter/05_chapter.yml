@@ -1,0 +1,83 @@
+Pallan2007incl:
+  type: article
+  title: Backbone-base inclination as a fundamental determinant of nucleic acid self- and cross-pairing
+  author:
+  - Pallan, Pradeep S.
+  - Lubini, Paolo
+  - Bolli, Martin
+  - Egli, Martin
+  date: 2007-09
+  page-range: 6611
+  url: http://dx.doi.org/10.1093/nar/gkm612
+  serial-number:
+    doi: 10.1093/nar/gkm612
+    issn: 0305-1048
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 19
+    volume: 35
+Montalvao2005choral:
+  type: article
+  title: 'CHORAL: a differential geometry approach to the prediction of the cores of protein structures'
+  author:
+  - Montalvao, R. W.
+  - Smith, R. E.
+  - Lovell, S. C.
+  - Blundell, T. L.
+  date: 2005-07
+  page-range: 3719
+  url: http://dx.doi.org/10.1093/bioinformatics/bti595
+  serial-number:
+    doi: 10.1093/bioinformatics/bti595
+    issn: 1460-2059
+  parent:
+    type: periodical
+    title: Bioinformatics
+    publisher: Oxford University Press (OUP)
+    issue: 19
+    volume: 21
+daSilvaNeto2019DG:
+  type: article
+  title: A superposition free method for protein conformational ensemble analyses and local clustering based on a differential geometry representation of backbone
+  author:
+  - name: Silva Neto
+    given-name: Antonio Marinho
+    prefix: da
+  - Silva, Samuel Reghim
+  - Vendruscolo, Michele
+  - Camilloni, Carlo
+  - Montalvão, Rinaldo Wander
+  date: 2019-02
+  page-range: 302
+  url: http://dx.doi.org/10.1002/prot.25652
+  serial-number:
+    doi: 10.1002/prot.25652
+    issn: 1097-0134
+  parent:
+    type: periodical
+    title: 'Proteins: Structure, Function, and Bioinformatics'
+    publisher: Wiley
+    issue: 4
+    volume: 87
+Xu2017lnafit:
+  type: article
+  title: 'The free energy of locking a ring: Changing a deoxyribonucleoside to a locked nucleic acid'
+  author:
+  - Xu, You
+  - Villa, Alessandra
+  - Nilsson, Lennart
+  date: 2017-01
+  page-range: 1147
+  url: http://dx.doi.org/10.1002/jcc.24692
+  serial-number:
+    doi: 10.1002/jcc.24692
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 15
+    volume: 38
+

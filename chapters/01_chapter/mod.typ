@@ -27,10 +27,10 @@
 #include {"./01_conclusion.typ"}
 
 #make-quote(
-  [Master has given Dobby a sock! \
-  Master has presented Dobby with clothes! \
-  Dobby is free!],
-  [Dobby - Harry Potter and the Chamber of Secrets]
+  ["You miss 100% of the shots you don't take. \
+    \- Wayne Gretzky " \ 
+      \- Michael Scott ],
+  [Jérôme Rihon]
 )
 
 #mbibliography(biblio, "ieee")
