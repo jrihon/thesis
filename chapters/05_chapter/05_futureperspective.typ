@@ -116,5 +116,5 @@ That being said, Egli and colleagues have used the concept of a tangent vector t
 If two chemistries should have equivalent values for this metric, it is reasonable to presume they pair with eachother.
 While this observation might not have been obvious before this study, it rationalises the idea that the backbone is only there to hold the nucleobase at a certain position and orientation, for it to make basepairing possible with its complement. A nucleobase that is angled differently, directly stems from a backbone that does not follow it's complement's helical properties. This would then be reflected in this metric and orthogonality could be concluded. 
 
-I am certain we can stil unearth some mathematical concepts and apply them for the objective classification of nucleic acid structures. I could consider researching this a future hobby instead of taking up golf, when I retire.  
+I am certain we can stil unearth some mathematical concepts and apply them for the objective classification of nucleic acid structures. I could consider researching this as a future hobby instead of taking up golf, when I retire.  
 

@@ -29,6 +29,11 @@
 )
 
 #glossary-layout(
+  "Ab",
+  "Antibody"
+)
+
+#glossary-layout(
   "AGOx",
   "Argonaute protein family"
 )
@@ -64,10 +69,30 @@
   "basepair"
 )
 
+#glossary-layout(
+  $beta$ + "homo-DNA",
+  $beta$ + "-D-glucopyranosyl NA"
+)
+
+#glossary-layout(
+  "BLI",
+  "Biolayer Interferometry"
+)
+
 // CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 #glossary-layout(
   "C",
   "Cytidine/Cytosine"
+)
+
+#glossary-layout(
+  "CeNA",
+  "Cyclohexenyl NA"
+)
+
+#glossary-layout(
+  "CLI",
+  "Commandline Interface"
 )
 
 #glossary-layout(
@@ -85,7 +110,22 @@
   "Conformational Sampling"
 )
 
+#glossary-layout(
+  "CST",
+  "Compartmentalized Self-Tagging"
+)
+
 // DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+#glossary-layout(
+  "DDD",
+  "Drew Dickerson Dodecamer"
+)
+
+#glossary-layout(
+  "DE",
+  "Directed Evolution"
+)
+
 #glossary-layout(
   "DFT",
   "Density Functional Theory"
@@ -102,8 +142,23 @@
 )
 
 #glossary-layout(
+  "d(A,C,G,T)",
+  "DNA (Adenosine, Cytidine, Guanosine, Thymidine)"
+)
+
+#glossary-layout(
+  "DP",
+  "Dynamic Programming"
+)
+
+#glossary-layout(
   "ds",
   "double stranded"
+)
+
+#glossary-layout(
+  "DSL",
+  "Domain Specific Language"
 )
 
 #glossary-layout(
@@ -124,8 +179,18 @@
 
 // FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 #glossary-layout(
+  "FF",
+  "Force field"
+)
+
+#glossary-layout(
   "FFT",
   "Fast Fourier Transform"
+)
+
+#glossary-layout(
+  "FNA",
+  "2'-Fluoro NA"
 )
 
 // GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
@@ -134,7 +199,47 @@
   "Guanine/Guanosine"
 )
 
+#glossary-layout(
+  "GAFF",
+  "General Amber Force Field"
+)
+
+#glossary-layout(
+  "GO",
+  "Geometry Optimisation"
+)
+
+#glossary-layout(
+  "Gq",
+  "G-quartet/G-quadruplex"
+)
+
+#glossary-layout(
+  "GSQ",
+  "Gold Standard Quality"
+)
+
+#glossary-layout(
+  "GUI",
+  "Graphic User Interface"
+)
+
 // HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+#glossary-layout(
+  "HEL",
+  "Hen Egg Lyzosyme"
+)
+
+#glossary-layout(
+  "HF",
+  "Hartree-Fock"
+)
+
+#glossary-layout(
+  "HG",
+  "Hoogsteen"
+)
+
 #glossary-layout(
   "HIV",
   "Human Immunodeficiency Virus"
@@ -143,6 +248,11 @@
 #glossary-layout(
   "HNA",
   "Hexitol Nucleic Acid or 2',3'-dideoxy-1',5'-anhydro-D-arabino-hexitol"
+)
+
+#glossary-layout(
+  "h(A,C,G,T)",
+  "HNA (Adenosine, Cytidine, Guanosine, Thymidine)"
 )
 
 // IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
@@ -157,6 +267,11 @@
 #glossary-layout(
   "LNA",
   "Locked Nucleic Acid"
+)
+
+#glossary-layout(
+  "LoT",
+  "Level of Theory"
 )
 
 // MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -186,6 +301,11 @@
 )
 
 #glossary-layout(
+  "m(A,C,G,T)",
+  "MNA (Adenosine, Cytidine, Guanosine, Thymidine)"
+)
+
+#glossary-layout(
   "MPn",
   "Møller–Plesset n" + sub("th") + " order perturbation theory"
 )
@@ -195,6 +315,11 @@
   "messenger RNA"
 )
 
+#glossary-layout(
+  "MSA",
+  "Multiple Sequence Alignment"
+)
+
 // NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 #glossary-layout(
   "NA",
@@ -202,8 +327,33 @@
 )
 
 #glossary-layout(
+  "NAB",
+  "Nucleic Acid Builder"
+)
+
+#glossary-layout(
+  "Nb",
+  "Nanobody"
+)
+
+#glossary-layout(
+  "NGS",
+  "Next-Generation Sequencing"
+)
+
+#glossary-layout(
+  "NMR",
+  "Nuclear Magnetic Resonance"
+)
+
+#glossary-layout(
   "nt",
   "nucleotides"
+)
+
+#glossary-layout(
+  "NTP",
+  "nucleotide triphosphate"
 )
 
 // OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
@@ -225,7 +375,7 @@
 
 #glossary-layout(
   "PCR",
-  "Polynucleotide Chain Reaction"
+  "Polymerase Chain Reaction"
 )
 
 #glossary-layout(
@@ -261,6 +411,16 @@
 )
 
 #glossary-layout(
+  "RBS",
+  "Ribosome Binding Site"
+)
+
+#glossary-layout(
+  "REMD",
+  "Replica Exchange MD"
+)
+
+#glossary-layout(
   "RESP",
   "Restraint ESP"
 )
@@ -271,11 +431,26 @@
 )
 
 #glossary-layout(
+  "RMSD",
+  "Root-Mean-Square Deviation"
+)
+
+#glossary-layout(
   "RNA",
   "Ribose Nucleic Acid"
 )
 
+#glossary-layout(
+  "r(A,C,G,U)",
+  "RNA (Adenosine, Cytidine, Guanosine, Uridine)"
+)
+
 // SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+#glossary-layout(
+  "SA",
+  "Simulated Annealing"
+)
+
 #glossary-layout(
   "SAS(A)",
   "Solvent Accessible Surface (Area)"
@@ -299,6 +474,16 @@
 #glossary-layout(
   "SP",
   "Strauss-Pickett"
+)
+
+#glossary-layout(
+  "SPE",
+  "Single Point Evaluation"
+)
+
+#glossary-layout(
+  "SPR",
+  "Surface Plasmon Resonance"
 )
 
 #glossary-layout(

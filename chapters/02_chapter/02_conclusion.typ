@@ -19,7 +19,7 @@ This corrobates well with the available data that the heteroduplex differs from 
 
  === Supplementary information
 #link("https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkae135/7614861#supplementary-data")[Supplementary Data] is available at NAR Online.
-The Ducque GitHub repository contains an extensive and comprehensible manual on how to start with Ducque and broaden the library of chemistries (Ducque/docs/). It also contains a separate guide on how to build a force field (Ducque/ff/). The latter directory contains the Morpholino FF used in this project.
+The Ducque GitHub repository contains an extensive and comprehensible manual on how to start with Ducque and broaden the library of chemistries (#link("https://github.com/jrihon/Ducque/tree/main/docs")[Ducque/docs/]). It also contains a separate guide on how to build a force field (#link("https://github.com/jrihon/Ducque/tree/main/ff")[Ducque/ff/]). The latter directory contains the Morpholino FF used in this project.
 
 Ducque is available on GitHub #link("www.github.com/jrihon/Ducque")[github.com/jrihon/Ducque] and works on standard Linux operating system (tested on Ubuntu 20 and 22 LTS), it runs on MacOS and _Windows Subsystem for Linux_ (WSL). Physical links to software releases can be found in _Published Works_ section of the thesis.
 
