@@ -18,7 +18,7 @@
 #boxed-text(
   title: "The pucke.rs toolkit to facilitate sampling the conformational space of biomolecular monomers.",
   authors: ("Rihon J.", "Reynders S.", "Pinheiro V.B.", "Lescrinier E."),
-  journal: "Journal of Cheminformatics (J Cheminf)",
+  journal: "Submitted to Journal of Cheminformatics (J Cheminf)",
 )
 
 #include {"./01_introduction.typ"}

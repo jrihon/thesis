@@ -13,7 +13,7 @@ Now that we've touched upon the application potential of XNAs and discussed how 
 A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. When we magnify our view on atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons.  
 //The field of Computional Chemistry (compchem) concerns itself with describing atoms and molecules by the positioning of the electrons around their nuclei. Asserting their probable whereabouts lets us calculate the energy of the molecular system. 
 //In other words, by looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
-By looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment. This lets us simulate their behaviour through rigorous computations, so we can look at the interactions a drug makes with the active site of an enzyme at the atomic scale, to give an example.
+By looking at how the electrons behave in the vicinity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment. This lets us simulate their behaviour through rigorous computations, so we can look at the interactions a drug makes with the active site of an enzyme at the atomic scale, to give an example.
 ]
 
 #let figure-nucleielectron = [
@@ -84,9 +84,9 @@ overbrace(
 )
 $ <eq-hamiltonian-full>
 All uppercase parameters and subscripts pertain to the nuclei, the lowercase ones to the electrons.
-The first term describe the kinetic energy by the movement of the nuclei, the second that of the electrons.
+The first two terms describe the kinetic energy by the movement of the nuclei, the second that of the electrons.
 The latter three terms describe the potential energy of the system. The third term describes the potential energy experienced between each nucleus and each respective electron. In other words, the interaction potential between the $I^(t h)$ nucleus and the $i^(t h)$ electron is evaluated. Since electrons are negatively charged and the nuclei are positively charged, this can be considered the attraction term.
-The fourth term considers the pairwise evaluation of each electron with all the other electrons in the system. The fifth term does the same, but with nuclei instead. That is why we consider them the _electronic repulsion_ term and the _nucleic repulsion_ term respectively.
+The fourth term considers the pairwise evaluation of each electron with all the other electrons in the system. The fifth term does the same, but with nuclei instead. That is why we denote them the _electronic repulsion_ term and the _nucleic repulsion_ term respectively.
 //
 //
 
@@ -179,7 +179,7 @@ The angular component actually describes the spherical harmonics part.
 Three different orbitals are depicted, which are described by the component $Y(l, m_l)$. From left to right, we see $Y(0, 0)$ associated with $s$-type orbitals, $Y(1, 0)$ associated with $p_0$-type orbitals and $Y(2, 0)$ associated with $d_0$-type orbitals.
 
 Only two electrons can be found at most per populated orbital. A fourth quantum number, the spin $m_s$, is introduced where electrons are characterised by either a _spin up_ ($alpha$, $frac(1,2)$) or _spin down_ ($beta$,$-frac(1,2)$) and allows us to distinguish either particle within the same orbital. This intrinsic property resulted in the _Pauli exclusion principle_, which will become important with respect to the antisymmetry property that electrons exert onto the wave function. This property is inherent to particles with a half spin and therefore the wave function should be corrected to satisfy this property.
-The spin itself does not influence the energy the HamilSym.   
+The spin itself does not contribute to the HamilOp.   
 
 //
 //
@@ -207,7 +207,7 @@ overbrace(
 , "Potential Operator" accent(V, "^")
 )
 $<eq-electron-schrodinger>
-If we consider the nuclei at a standstill, this means their kinetic energy goes to zero as they portray no velocity. Since they do not move, we do not need to account for a change in positions of the nuclei with respect to their repulsion. In other words, we can safely assume that the nucleic repulsion term will not vary, therefore becoming a constant value. What we end up with is an analytical equation where we consider (i) the kinetic energy of the individual electrons (ii) the attraction of the electrons to the stationary nuclei (iii) the repulsion of the electrons with one another and lastly (iv) the repulsion of stationary nuclei - a constant value.
+If we consider the nuclei at a standstill, this means their kinetic energy goes to zero as they portray no velocity. Since they do not move, we do not need to account for a change in positions of the nuclei with respect to their repulsion. In other words, we can safely assume that the nucleic repulsion term will not vary, therefore becoming a constant value. What we end up with is an analytical equation where we consider (i) the kinetic energy of the individual electrons (ii) the attraction of the electrons to the stationary nuclei (iii) the repulsion of the electrons with one another and lastly (iv) the repulsion of stationary nuclei - a constant value (@eq-electron-schrodinger).
 
 //
 //
@@ -239,9 +239,9 @@ $
 phi.alt_i = sum^b_(i=1) c_(s,i) chi_i
 $<eq-basisset>
 @eq-basisset denotes that a linear combination of basis sets $chi_i$, with their respective coefficient $c_(s,i)$, can define an atomic orbital. 
-The coefficient $c_(s,i)$ itself acts as a weighted factor to the $chi_i$ itself. Since we start from predefined orbitals, we still need to optimise the $phi.alt_i$ for the specific system we want to research. This is achieved by doing an iterative search for the optimal values of the coefficients. The optimised set of $c_(s,i)$ should yield the lowest energy possible for a given molecular system. This numerical approach is the most time-consuming step in the HF method, as convergence of a value for $E$ needs to be reached. This method is called the _Self Consistent Field_ (SCF). The more atoms present, the larger the amount of basis functions and the more coefficients in need of optimisation.
+The coefficient $c_(s,i)$ itself acts as a weighting factor to the $chi_i$ itself. Since we start from predefined orbitals, we still need to optimise the $phi.alt_i$ for the specific system we want to study. This is achieved by doing an iterative search for the optimal values of the coefficients. The optimised set of $c_(s,i)$ should yield the lowest energy possible for a given molecular system. This numerical approach is the most time-consuming step in the HF method, as convergence of a value for $E$ needs to be reached. This method is called the _Self Consistent Field_ (SCF). The more atoms present, the larger the amount of basis functions and the more coefficients in need of optimisation.
 
-One thing to mention as well is that we can define the $chi_i$ out of thin air. If we can predict how the orbital should look like, we can optimise basis functions for it. This is what we call _ab initio_ QM. This is as opposed to _semi-empirical_ QM that reaches for data from wet lab experiments.
+One thing to mention is that we can define the $chi_i$ from established principles of Quantum Mechanics without extrinsic information needed. If we can predict how the orbital should look like, we can optimise basis functions for it. This is what we call _ab initio_ QM. This is as opposed to _semi-empirical_ QM that reaches for data from wet lab experiments.
 //===== LCAO
 //Because we simplify to the independent positioning of the electrons, we ultimately simplify the idea of what a molecular orbital ($psi_i$) is. By defining a hybridised orbital as a _Linear Combination of Atomic Orbital_ (LCAO) and add the contribution of their possible _overlap_ in atomic orbitals to the energy of the system. These _overlap integrals_ simulate as though the $phi.alt_i$ were actually hybridised into a $psi_i$.
 
@@ -306,7 +306,7 @@ When starting a computation - analogous to the HF method - an initial guess is m
 //==== Møller-Plesset Perturbation Theory (MPn)
 ==== Correlated Wave Function Theory (WFT)
 Up to now, we've always discussed the Schrödinger equation in terms of populated orbitals for a set amount of electrons. For Wave Function Theory, we are able to explicitly correlate the interactions between the electrons by adding a correlation term $Phi_(c o r r)$ and to make use of an additional set of unoccupied - or virtual - orbitals.
-How this correlation works is that electrons are moved to these virtual orbitals, leaving behind a unoccupied orbital themselves. This impacts the exchange operator $accent(K, "^") $ and thus the Slater Determinant $Phi_(S D)$. Depending on how many electrons are exchanged to virtual orbitals at a time - one, two, three or more - we obtain a new SD for _single_ ($Phi_S$), _double_ ($Phi_D$), _triple_ ($Phi_T$) or more excitation states. Every determinant now contains information on the effects of the absence of electrons in the system, which gives us the correlation between electrons. We can think of this as the difference in exchange contribution before and after one or more electrons 'leaves' the system. A linear combination of the various $Phi_(S D, i)$ gives us the $Phi_(c o r r)$.
+How this correlation works is that electrons are moved to these virtual orbitals, leaving behind a unoccupied orbital themselves. This impacts the exchange operator $accent(K, "^") $ and thus the Slater Determinant (SD) $Phi_(S D)$. Depending on how many electrons are exchanged to virtual orbitals at a time - one, two, three or more - we obtain a new SD for _single_ ($Phi_S$), _double_ ($Phi_D$), _triple_ ($Phi_T$) or more excitation states. Every determinant now contains information on the effects of the absence of electrons in the system, which gives us the correlation between electrons. We can think of this as the difference in exchange contribution before and after one or more electrons 'leaves' the system. A linear combination of the various $Phi_(S D, i)$ gives us the $Phi_(c o r r)$.
 To clarify, these are not orbitals in higher energetic states - as the _excitation_ could suggests - but simply fictive orbitals that have a functional purpose for the methodology. 
 
 This can be further expanded by several methods, of which the Møller-Plesset Perturbation Theory (MPPT) is used often throughout this thesis.
@@ -352,7 +352,7 @@ While the simulation runs, the atoms move within their bounds. Every shift in mo
 //
 ==== Bonded-term parameters
 ===== Bond stretching and angle bending
-As Molecular Mechanics rests on principle of classical mechanics, a bo-
+As Molecular Mechanics rests on principle of classical mechanics, a
 #v(-0.4em)
 #let fig-bondangle = [#figure(
   image("./figures/bondlength-and-bondangle.svg", width: 100%),
@@ -364,7 +364,7 @@ As Molecular Mechanics rests on principle of classical mechanics, a bo-
 ) <fig-bondsangleparams>
 ]
 #let content-bondangle = [
-nd between two atoms can be represented through an adapted newtonian potential energy equation (@eq-ballspring), commonly referred to as the _ball-spring_ model. Here, the _K#sub("r")_ refers to the _stifness_ of the spring that connects the atoms. Like a spring, the bond between two atoms, here a#sub("1") and a#sub("2"), can compress and stretch ever so slightly.
+bond between two atoms can be represented through an adapted Newtonian potential energy equation (@eq-ballspring), commonly referred to as the _ball-spring_ model. Here, the _K#sub("r")_ refers to the _stifness_ of the spring that connects the atoms. Like a spring, the bond between two atoms, here a#sub("1") and a#sub("2"), can compress and stretch ever so slightly.
 They are allowed to vary around
 their equilbrium value (_r#sub("eq")_), meaning they constantly dance around a set distance, a length defined by the force field (@fig-bondsangleparams A.). //Angle bending is little different from bond stretching, but involves a semantic spring between two atoms, b#sub("1") and b#sub("3"), being indirectly linked 
 
@@ -473,9 +473,9 @@ Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like 
 ===== Lennard-Jones potential
 #let content-lj = [
 Atoms are not only interacting through attraction and repulsion based on fixed charges, but also experience these forces through instantaneous dipole moment. These are fleeting moment in which atoms can induce a dipole in other atoms, creating an momentary shift in repulsive force. This phenomenom is known as the _London dispersion_. Due to the 'cloud' of electrons cloaking the core of an atom, they portray an _atomic radius_ that sterically hinders other atoms from getting too close as these clouds repulse each other (@fig-lennardjones).
-We often refer to @eq-lenardjones as the 12-6 potential.
+We often refer to @eq-lenardjones as the 12-6 potential or Lennard-Jones potential.
 
-Keeping consistent with the symbols, the $r_("ij")$ parameter represents the distance between the //two atoms $i$ and $j$.
+Keeping consistent with the symbols, the $r_("ij")$ //parameter represents the distance between the //two atoms $i$ and $j$.
 ]
 #let fig-lj = [
   #figure(
@@ -486,7 +486,7 @@ Keeping consistent with the symbols, the $r_("ij")$ parameter represents the dis
   ) <fig-lennardjones>
 ]
 #grid(content-lj, fig-lj, columns: (1fr, 1.25fr), column-gutter: 1em) #v(-0.5em)
-the two atoms $i$ and $j$.
+parameter represents the distance between the two atoms $i$ and $j$.
 The $R_("min,ij")$ is the optimal distance between two atoms where the Lennard-Jones potential is at its minimum at a well depth $epsilon_("ij")$.
 To give a physical representation, we think of the $R_("min,ij")$  and $epsilon_("ij")$ parameters as a link to Van der Waals radii of the atoms #mcite(("Li2015ljpotential", "Sengupta2021ljpotential"), biblio). 
 
@@ -574,7 +574,7 @@ As it turns out, summing both equations in @eq-verlet-sum and analytically solvi
 The neat part is that when we actually calculate for the next position (@eq-verlet-integration), we can already fill in $r_i (t - Delta t)$ as this has just been computed in the previous timestep.
 This means that whenever we need to calculate the next position of the atoms, we only need to current position $r_i$ - found by a simple lookup, the precomputed previous position $r_i (t_0 - Delta t)$ and the current acceleration $a_i$ (@eq-verlet-integration-simp).
 
-Whenever we start a MD simulation, we have to account for the fact that $r_i (t - Delta t)$ and $a_i$ cannot be solved as no time has elapsed just yet. To accomodate, these parameters are filled in by the _random seed_ of the computer's system. As such, an estimate is given to start off the actual simulation.
+At the start of an MD simulation, we have to account for the fact that $r_i (t - Delta t)$ and $a_i$ cannot be solved as no time has elapsed just yet. To accomodate, these parameters are filled in by the _random seed_ of the computer's system. As such, an estimate is given to start off the actual simulation.
 
 ==== Periodic boundaries
 When an MD experiment starts, the atoms of the system are spawned inside a virtual box. An enclosed box with boundaries that atoms would collide with will impact the course of motion of all atoms in the system. To circumvent this problem, periodic boundaries are implemented. This benefits the engine as it does not need to account for atoms wandering off into infinity - this would cause a simulation to crash anyway - and this simplifies keeping the modelled pressure and temperature constant during the experiment. To clarify this last part, we account for environmental factors to properly model the kinetic energy of a system, which impacts the total energy.  
@@ -657,5 +657,5 @@ One major advantage they have is that DNA and RNA are extremely well described t
 Unfortunately, researchers in the field sometimes employ force fields meant for small molecules to represent their XNAs _in silico_. If for example a torsion angle is poorly evaluated in one monomer, this means that every monomer in a duplex will carry this error and this fault is then propagated throughout the entire model. A force field that was designed to represent small molecules ligands for drug design purposes does not have the capacity to accurately represent the global minimum and transition states a nucleoside can go through.
 One of the reasonings behind this is that setting up such a force field is incredibly labour intensive. Additionally, since XNAs are scarcely distributed in the databank of experimentally determined structure #mcite(("Berman2000rcsb"), biblio), it makes it sometimes impossible to know how it behaves and to validate the given force field against known structures.
 
-Although research groups have been succesful in parametrising the Locked NA #mcite(("Condon2014LNA", "PabonMartinez2017LNA", "Xu2017LNA"), biblio), but modification results in a single puckering mode that prevails as the structures is chemically incapable of adopting any other configuration. The trick for nearly all chemical modifications to the backbone would be to be able to represent the different conformers it can visit during the MD simulation. In order to do that, we can realise the behaviour of the modification through a _Conformational Sampling_ #mcite(("Mattelaer2021efficient"), biblio). This methodology manages to map all the different conformations a molecule can adopt and evaluates them all, which is representable on a Ramachandran Plot (@fig-proteins C.), the Pseudorotational wheel (@fig-fivering B.) or the CP sphere (@fig-sixring).
+Although research groups have been successful in parametrising the Locked NA #mcite(("Condon2014LNA", "PabonMartinez2017LNA", "Xu2017LNA"), biblio), this modification results in a single puckering mode that prevails as the structures is chemically incapable of adopting any other configuration. The trick for nearly all chemical modifications to the backbone would be to be able to represent the different conformers it can visit during the MD simulation. In order to do that, we can realise the behaviour of the modification through a _Conformational Sampling_ #mcite(("Mattelaer2021efficient"), biblio). This methodology manages to map all the different conformations a molecule can adopt and evaluates them all, for amino acids, five-membered rings and six-membered rings respectively, which are representable on either the Ramachandran Plot (@fig-proteins C.), the Pseudorotational wheel (@fig-fivering B.) or the CP sphere (@fig-sixring).
 This can be used to our advantage to computationally describe XNAs through pure _in silico_ methods.

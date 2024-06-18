@@ -104,7 +104,7 @@ The main criticism was on the way basepairing parametrisation was handled and ho
 
 ==== Differential Geometry 
 Differential Geometry (DG) is the field of mathematics that concerns itself with quantifying the way a curve bends. We can represent nucleic acid and protein chains as a curve through their chain trace along the backbone.
-The field of DG has already been applied to proteins, where local structural patterns between a variety of protein families were succesfully matched. 
+The field of DG has already been applied to proteins, where local structural patterns between a variety of protein families were successfully matched. 
 With this information, it was then possible to superpose protein structures on top of eachother by their best match in local structure and not the global structure. This made it evident to find conserved substructures in a wide variety of protein families #mcite(("Montalvao2005choral", "daSilvaNeto2019DG"), biblio).
 
 The way a curve is parametrised is by the tangent to the curve at distinct points of the trace. The tangent is a vector that touches the curve only in one point - the knot - and points in the direction of the continuous curve. Its size determines the magnitude of the bend at the specified knot.

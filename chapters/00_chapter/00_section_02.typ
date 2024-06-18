@@ -9,7 +9,7 @@
 //  [#a]
 //}
 
-== Characterisation of nucleic acid structures
+== Characterisation of biomolecular structures
 Before any technical section, it is always a good idea to exactly define the terms used to remove ambiguity from the proverbial equations. 
 As it stands, this is the vision statement of the _International Union for Pure and Applied Chemistry_ (IUPAC) #mcite(("Iupac1983nucleicacids"), biblio).
 
@@ -21,12 +21,12 @@ As it stands, this is the vision statement of the _International Union for Pure 
 //! CONFORMATIONAL NOMENCLATURE FOR FIVE- AND SIX-MEMBERED RING FORMS OF MONOSACCHARIDES AND THEIR DERIVATIVES
 //-> IUPAC_conformational_nomenclature_on_five and sixrings.pdf
 
-A lengthy title to a paragraph like this one signifies a mathematical section is coming ahead.
+//A lengthy title to a paragraph like this one signifies a mathematical section is coming ahead.
 The purpose of abstracting conformers is to denote a simple description of an otherwise complex structural positioning of the molecule that is numerically verifiable and unambiguous with respect to other conformations. To simplify, the quantitative abstraction _measures_ the conformations and returns a set of values that can be used to distinguish it from other conformations.
 
 A common analogy to highlight the importance of describing the conformation - or the shape - of a molecule can be done by referring to the _Lock and Key_ analogy. For a drug to act upon a receptor or enzyme, it must fit in the active or allosteric site of that protein. This fit is defined by dipole interactions between drug and protein and by the conformation the molecule favours to adopt. This shape-specificity is crucial for all physiological processes in the biochemical world.
 
-Being able to unambiguously define conformations allows us to also define when a conformation deviates from the norm. Large molecules like proteins and nucleic acid duplexes are respectively composed of a single type of monomer. Understanding changes in their behaviour and being able to quantify these changes allows us to comfortably study biological processes at a fundamental level. These parameters are meaningful because they are directly related to the behaviour of the molecules we research. 
+Being able to unambiguously define conformations allows us to also define when a conformation deviates from the norm. Large molecules like proteins and nucleic acid duplexes are respectively composed of a single type of monomer. Understanding changes in their behaviour and being able to quantify these changes allows us to comfortably study biological processes at a fundamental level. These parameters are meaningful because they are directly related to the behaviour of the molecules we study. 
 //
 //
 //
@@ -35,7 +35,8 @@ Being able to unambiguously define conformations allows us to also define when a
 ==== peptides
 // Ramachandran plots
 // Maak kleine svg bestanden, ipv een volledige figuur, en insert deze in de tekst om de conformatie te duiden
-Similarly to nucleic acid duplexes, proteins are composed of chains of amino acid monomers. The degree of freedom these peptide chains have is immense, which explains why the _protein folding problem_ is currently one of the biggest and most competitive research domains for structural bioinformaticians and AI engineers #mcite(("Jumper2021Alphafold"), biblio). Luckily for us, all cells contain machinery that assembles the structure of the amino acid polymers, synthesised by the ribosomes, to form constructs with a specific three dimensional shape with an even more specific function within the cell #mcite(("Vabulas2010proteinfolding"), biblio).
+Proteins are composed of chains of amino acid monomers that are interconnected by peptide bonds.
+The degree of freedom these peptide chains have is immense, which explains why the _protein folding problem_ is currently one of the biggest and most competitive research domains for structural bioinformaticians and AI engineers #mcite(("Jumper2021Alphafold"), biblio). Luckily for us, all cells contain machinery that assembles the structure of the amino acid polymers, synthesised by the ribosomes, to form constructs with a specific three dimensional shape with an even more specific function within the cell #mcite(("Vabulas2010proteinfolding"), biblio).
 #figure(
   image("./figures/conformers/proteinstructure.svg", width: 100%),
   caption: [
@@ -58,7 +59,7 @@ While the description of proteins is not limited to just these definitions, they
 // Mean plane stuff, show that with the conformation. 
 //
 ==== five-membered rings
-When talking about abstracting the conformation of a five-membered ring, such as a ribose sugar moiety in nucleic acids, the concept of pseudorotation or _puckering_ is the first thing in need of clarification. While a linear molecule is able to move the whole 360° range, the torsion angles of a ring are constrained and cannot achieve this feat - hence the term _pseudorotation_. 
+When talking about abstracting the conformation of a five-membered ring, such as a ribose sugar moiety in nucleic acids, the concept of pseudorotation or _puckering_ is the first thing in need of clarification. While dihedral angles in a linear fragment are able to move the whole 360° range, the torsion angles of a ring are constrained and cannot achieve this feat - hence the term _pseudorotation_. 
 #let content-fivering= [
 The ribose sugar can vary in its endocyclic torsion angles ($nu_(0 arrow.r 4)$), meaning atoms in the molecule will move out-of-plane (@fig-fivering A.). For five-membered rings, we recognise two distinct puckering modes: the Envelope (E#super("x")) and the Twist (#super("x")T#sub("y")).
 
@@ -77,10 +78,11 @@ The ribose sugar is the most notable five-membered ring we find in nature as it 
 #grid(content-fivering, figure-fivering, columns: (1fr, 1.5fr), gutter: 1em) #v(-0.5em)
 //chemistry favours the #super("2")T#sub("3") conformation,
 while RNA adopts #super("3")T#sub("2") under normal conditions.
-This proclivity for a specific conformer ultimately defines the form of NA helices - the B-DNA and A-RNA structures. These duplexes are recognised by processing enzymes, whose interactions are driven by the fact that these enzymes only accepts specific shapes of duplexes. If the biopolymers do not fit the required shape, they cannot be processed.
+This proclivity for a specific conformer of the sugar ring ultimately defines the form of NA helices - the B-DNA and A-RNA structures. These duplexes are recognised by processing enzymes, whose interactions are driven by the fact that these enzymes only accept specific shapes of duplexes. The 2_'_-OH in RNA supplements the interactions with the enzyme further.
+If the biopolymers do not fit the required shape, they cannot be processed.
 //This has implications in i.e. ASO research, where this can be exploited to halt physiological processes.
 
-In 1947, Kilpatrick _et al._ devised a relation to the potential energy of the molecule and the out-of-plane displacement of the atoms of a five-membered ring, specifically on the cyclopentane molecule #mcite(("Kilpatrick1947pseudorotation"), biblio). To calculate the energy of the various conformers of the ring, @eq-kilpatrick was produced in order to define deviations per atom. The parameter $q$ is the magnitude of the deviation and $phi$ is the phase that assigns the atoms to deviate. The integer $j$ represents iterating over the amounts of atoms (0-based indexing). Seeing as their data consists of vibrational spectra, the deviations proved favourable as they calculated that bondangles were strained in a planar position when keeping bondlengths constant.
+In 1947, Kilpatrick _et al._ devised a relation to the potential energy of the molecule and the out-of-plane displacement of the atoms of a five-membered ring, specifically on the cyclopentane molecule #mcite(("Kilpatrick1947pseudorotation"), biblio). To calculate the energy of the various conformers of the ring, @eq-kilpatrick was produced in order to define deviations per atom. The parameter $q$ is the magnitude of the deviation and $phi$ is the phase that assigns the atoms to deviate. The integer $j$ represents iterating over the amounts of atoms (0-based indexing). Seeing as their data consists of vibrational spectra, the deviations proved favourable as they calculated that bond angles were strained in a planar position when keeping bondlengths constant.
 $
 z_j = sqrt(frac(2,5)) q · cos(2(frac(2 pi j,5) + phi))
 $<eq-kilpatrick>
@@ -94,7 +96,7 @@ Many of the formulas in this section come from various sources that each employ 
 
 // AS formalism
 ===== Altona-Sundaralingam (AS)
-A relationship was described between the values of the endocyclic torsion angles ($nu_(0 arrow.r 4)$) and the puckering itself #mcite(("Altona1968pseudorot"), biblio). The AS formalism was also the first to popularise the usage of puckering behaviour on the nucleic acid ribose sugar and introduces the pseudorotational wheel. The latter makes it possible to graph occurences of the various puckers of the ribose sugars on a polar coordinate system when a nucleic acid crystal structure is determined (@fig-fivering B.) #mcite(("Altona1972formalism"), biblio).
+A relationship was described between the values of the endocyclic torsion angles ($nu_(0 arrow.r 4)$) and the puckering itself #mcite(("Altona1968pseudorot"), biblio). The AS formalism was also the first to popularise the usage of puckering behaviour on the nucleic acid ribose sugar and introduces the pseudorotational wheel. The latter graphically depicts occurrences of the various puckers of the ribose sugars on a polar coordinate system when a nucleic acid crystal structure is determined (@fig-fivering B.) #mcite(("Altona1972formalism"), biblio).
 
 @eq-as-phaseangle details on a formula where all endocyclic angles are passed to a function to return the phase angle. This parameters allows @eq-as-amplitude to complete, given $j=0$ and a trivial rearrangement left to the reader.
 
@@ -148,12 +150,12 @@ The following definitions employ the physics convention for spherical coordinate
 ==== six-membered rings
 
 #let content-sixring = [
-The concept of pseudorotation is also ascribed to six-membered rings, and any $n$-membered ring for that matter where $n$ ≥ 4. The definition of puckering here is particularly important to us in the field of synthetic nucleic acids, as we are able to substitute the ribose moiety for another type of small molecule. This modification can bring about improved properties for pharmaceutical applications.
+The concept of pseudorotation is also ascribed to six-membered rings, and any $n$-membered ring for that matter where $n$ ≥ 4. The definition of puckering here is particularly important to us in the field of synthetic nucleic acids, as we are able to substitute the ribose moiety for another ring system in the field of XNA. This modification can bring about improved properties for pharmaceutical applications.
 
 //Six-membered sugars, like glucose and derivatives, are conventionally considered in topics like glycosylation of protein residues and the Krebs cycle. As it stands, these molecules are often studied for their biochemical properties, like the former often being involved in interactions of antibodies with proteins on the surface of the cell.
 //In our research, we desire to quantify the degree of puckering in order to measure differences in behaviour of the molecule.
-A common modification is that of the Hexitol NA, an XNA with a backbone modification where a methylene (-CH#sub("2")-) is added between the oxygen and the anomeric carbon in DNA. This results in a sturdy modification that is able to pair well with RNA oligonucleotides and has the potential to function as a genetic biopolymer #mcite(("Groaz2023hna", "Lescrinier2000rnahna"), biblio).
-Like five-membered rings, these six-membered rings are categorised into different conformations. As an extra atom was added to the molecule, the dimensionality of the puckering has increased, resulting in five distinct puckering modes. The Chair (#super("Z")C#sub("W")) and Boat (B#sub("Z,W")) are most well known. Adjacent to the latter, we encounter the _Skew_ (#super("Z")S#sub("X")), also labeled a _half-boat_. Equivalent to the five-//membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire. While the T-conformer is more commonly referred to as a _half-chair_, it makes much more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
+A common modification is that of the Hexitol NA (@fig-sugarmods D), a sturdy modification that is able to pair well with RNA oligonucleotides and has the potential to function as a genetic biopolymer #mcite(("Groaz2023hna", "Lescrinier2000rnahna"), biblio).
+Like five-membered rings, these six-membered rings are categorised into different conformations. As an extra atom was added to the molecule, the dimensionality of the puckering has increased, resulting in five distinct puckering modes. The Chair (#super("Z")C#sub("W")) and Boat (B#sub("Z,W")) are most well known. Adjacent to the latter, we encounter the _Skew_ (#super("Z")S#sub("X")), also labeled a _half-boat_. Equivalent to the five-membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire. While the T-conformer is more// commonly referred to as a _half-chair_, it makes much more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
 ]
 #let figure-sixring = [
 #figure(
@@ -166,15 +168,16 @@ Like five-membered rings, these six-membered rings are categorised into differen
 ]
 
 #grid(content-sixring, figure-sixring, columns: (1fr, 1fr), gutter: 1em) #v(-0.5em)
-//encounter the _Skew_ configuration (#super("Z")S#sub("X")), also labeled a _half-boat_. As to the five-
-membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire (@fig-sixring A.). While the T-conformer is more commonly referred to as a _half-chair_, it makes much more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
+//encounter the _Skew_ configuration (#super("Z")S#sub("X")), also labeled a _half-boat_. As to the five- membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire (@fig-sixring A.). While the T-conformer is more
+commonly referred to as a _half-chair_, it makes much more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
 
 //
 //
 //
 // SP formalism
 ===== Strauss-Pickett (SP)
-Considering the was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical. This formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: the set of improper dihedrals [$alpha$#sub("1"), $alpha$#sub("2"), $alpha$#sub("3")] and the set of angles [$beta$#sub("1"), $beta$#sub("2"), $beta$#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself. From @fig-spimpropers, we clearly see the six-membered ring partioned in a central triangle and three individual _flaps_ that will be able to fold in and out.
+Consdering it was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical
+This formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: the set of improper dihedrals [$alpha$#sub("1"), $alpha$#sub("2"), $alpha$#sub("3")] and the set of angles [$beta$#sub("1"), $beta$#sub("2"), $beta$#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself. From @fig-spimpropers, we clearly see the six-membered ring partioned in a central triangle and three individual _flaps_ that will be able to fold in and out.
 As with Kilpatrick _et al._, this research made us of vibrational spectra involving angle bending and torsional parameters that are used to compute for the potential energy of the molecule itself. Through pseudorotational movement, the endocyclic angles vary and so will the potential energy. One important result of this formalism is the first usage of the spherical coordinates system ($r, theta, phi$) to represent a six-membered ring configuration.
 #let figure-sp = [
 #figure(

@@ -29,7 +29,7 @@
 
 + *Rihon, J.*, Mattelaer, C.-A., Montalvão, R.W., Froeyen, M., Pinheiro, V.B., Lescrinier, E. (2024). Structural insights into the morpholino nucleic acid/RNA duplex using the new XNA builder Ducque in a molecular modeling pipeline. _Nucleic Acids Research_ , #link("https://doi.org/10.1093/nar/gkae135")[10.1093/nar/gkae135]
 //
-+ *Rihon, J.*, Reynders, S., Pinheiro, V.B., Lescrinier, E. (2024). The pucke.rs toolkit to facilitate sampling the conformational space of biomolecular monomers. _Journal of Cheminformatics_ , #link("https://github.com/jrihon")[placeholder]
++ *Rihon, J.*, Reynders, S., Pinheiro, V.B., Lescrinier, E. (2024). The pucke.rs toolkit to facilitate sampling the conformational space of biomolecular monomers. Submitted to _Journal of Cheminformatics_ 
 //
 + Mattelaer, C.-A., Mattelaer, H.-P., *Rihon, J.*, Froeyen, M., Lescrinier, E. with Lescrinier, E. (2021). Efficient and Accurate Potential Energy Surfaces of Puckering in Sugar-Modified Nucleosides. _Journal of Chemical Theory and Computation_ , #link("https://doi.org/10.1021/acs.jctc.1c00270")[10.1021/acs.jctc.1c00270] 
 //

@@ -343,17 +343,17 @@
 //! BOX STYLE TEXT
 //! 
 //! 
-#let boxed-text(title: "", authors: "", journal: "", doi: "www.github.com/jrihon") = {
+#let boxed-text(title: "", authors: "", journal: "", doi: "") = {
 
   // Start content
 
   let contents = ""
-  if doi != "www.github.com/jrihon" {
+  if doi != "" {
     let doilink = link("https://www.doi.org/" + doi)[#emph(doi)]
     contents += "Adapted from the following manuscript " + doilink + " : \n"
   } else {
-    let doilink = link(doi)[#emph("xxx/aaa/xxxxx")]
-    contents += "Adapted from the following manuscript " + doilink + " : \n"
+//    let doilink = link(doi)[#emph("xxx/aaa/xxxxx")]
+//    contents += "Adapted from the following manuscript " + doilink + " : \n"
   }
 
   // Add authors

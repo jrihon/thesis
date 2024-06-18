@@ -27,10 +27,11 @@ The helical structure of this deoxyribose nucleic acid (DNA) later unveiled by W
 //The previous section gave us a brief overview into how important nucleic acid molecules are to all living organisms. Though we've discussed their biological potential, our invested interest is in the fundamental characterisation of DNA and RNA, and especially chemically modified variants thereof. Continuing into this chapter, we need to formalise the definitions we conventionally use when discussing nucleic acid molecules.
 Continuing into this chapter, we need to formalise the definitions we conventionally use when discussing nucleic acid molecules. These become important to us later on because our vested interest is in the fundamental characterisation of these molecular building blocks, and especially variants thereof.
 
-The native nucleic acids, DNA and RNA, are composed of three core moieties: the ribose ring (sugar), the nucleobase and a phosphate (linker) (@fig-iupacnames A.). The two chemistries differ only by an appended hydroxyl on the C2_'_ in RNA. The sugar moiety is the central part of the molecule, with the phosphate linking two subsequent nucleosides together, hence their combination being referred to as the backbone of the nucleic acid helix. 
+The native nucleic acids, DNA and RNA, are composed of three core moieties: the ribose ring (sugar), the nucleobase and a phosphate (linker) (@fig-iupacnames A.). The two chemistries differ only by an hydroxyl on the C2_'_ in RNA. The sugar moiety is the central part of the molecule, with the phosphate linking two subsequent nucleosides together, hence their combination being referred to as the backbone of the nucleic acid helix. 
 Chaining multiple nucleotides together through phosphate linkage forms an oligonucleotide strand. A duplex is formed when two strands interact by their nucleobases to form a helical structure (@fig-iupacnames E.).
 
-The backbone of a helix is assigned letters of the greek alphabet as a shorthand to categorise key elements. The dihedrals of the backbone follow the consecutive chain, which follow the 5_'_ $arrow.r$ 3_'_ direction and thusly follow the alphabet's lexicographical order,  and are named from $alpha arrow.r zeta$ (@fig-iupacnames C.). 
+//The backbone of a helix is assigned letters of the greek alphabet as a shorthand to categorise key elements.
+The dihedrals of the backbone follow the consecutive chain, which follow the 5_'_ $arrow.r$ 3_'_ direction and thusly follow the Greek alphabet's lexicographical order,  and are named from $alpha arrow.r zeta$ (@fig-iupacnames C.). 
 The sugar and nucleobase are bonded together through the glycosidic bond (torsion angle $chi$), specifically the C1_'_ of the ribose covalently binds the N9/N1 of the purine/pyrmidine nucleobase (@fig-iupacnames A., D.). The endocyclic torsions of the sugar ribose consist of five dihedrals $nu_(0 arrow.r 4)$ that start at the O4_'_-C1_'_ bond and circle about the sugar clockwise (@fig-iupacnames B.) #mcite(("Iupac1983nucleicacids", "Saenger1984"), biblio).
 As a sidenote, the reader is invited to peak ahead to #get-page-by-query(<sec-intro-dihedrals>) to understand what a dihedral is.
 #figure(
@@ -49,7 +50,7 @@ Standard nucleobases are composed of the set Adenine (A), Guanine (G), Cytosine 
 //The atomnames in the nucleotides belonging to the backbone are always highlighted by a tick, to distinguish them from the atoms of the nucleobase. 
 //
 //As stated, the nucleobases are what keeps the helical shape intact and is driven by the interactions between them.
-The canonical basepairing patterns are established by the Watson-Crick-Franklin (WCF) basepairing, between a purine:pyrimdine couple. Hydrogen bonds are the dominant force (A:T/U, C:G) for keeping associating strands together. In the way that nucleotides are stacked above one another contributes further to solid nucleic acid helices, which finds its principle in the efficient stacking of the aromatised rings of the nucleobases.
+The canonical basepairing patterns are established by the Watson-Crick-Franklin (WCF) basepairing, between a purine:pyrimdine couple. Hydrogen bonds are the dominant force (A:T/U, C:G) for associating strands together. In the way that nucleotides are stacked above one another contributes further to solid nucleic acid helices, which finds its principle in the efficient stacking of the aromatic rings of the nucleobases.
 
 The B-DNA and A-RNA are two types of righthanded helices associated with biological processes. The B-type DNA structure is innately recognised by DNA processing enzymes for replication or to transcribe DNA to RNA in human cells (@fig-centraldogma B.), while the A-type RNA structure helices are more commonly found in bacterial and many viral genomes where it analogously functions as their genetic system (@fig-iupacnames E.). 
 They are characterised by differences in major and minor grooves (Å), and helical size ($frac(Å, 2pi)$). 
@@ -66,10 +67,10 @@ They are characterised by differences in major and minor grooves (Å), and helic
 ==== ... as genetic biopolymers
 
 DNA monomers (@fig-centraldogma A.) are chained together to form the biopolymer that contain our genetic information.
-These DNA strands are neatly stored in the nucleus of the cell and only specific enzymes are allowed access to read and process them.
+These DNA strands are neatly stored in the nucleus of our cells and only specific enzymes are allowed access to read and process them.
 Processing and using this information has been formalised as the _Central Dogma of Biology_ (@fig-centraldogma B.).  
 
-Cells have a way of stably transferring the genetic code to their offspring. When a cell is at the end of its lifetime, it readies itself to divide into two equal parts (_mitosis_). To make sure that the genetic information is not lost, it makes copies (_replication_) of the DNA strands so that both daughter cells receive a copy of this data upon cell division.
+Cells have a way of stably transferring the genetic code to their offspring. When a cell is signalled to multiply, it readies itself to divide into two equal parts (_mitosis_). To make sure that the genetic information is not lost, it makes copies (_replication_) of the DNA strands so that both daughter cells receive a copy of this data upon cell division.
 Important to note is the 5_'_ $arrow.r$ 3_'_ direction of the backbone here. When enzymes synthesise a new strand, nucleotide molecules are appended in this direction. Often, this direction is referred to as the _leading_ strand, while the _complementary_ strand follows the 3_'_ $arrow.r$ 5_'_ direction.
 //This is done by DNA processing enzymes that retrieve the stored helices and expose the genetic information for replication.
 #let content-dogma = [
@@ -90,6 +91,7 @@ The DNA strands are transcribed then (_transcription_) to single stranded (ss) R
 #grid(content-dogma, figure-dogma, columns: (1fr, 1.5fr), gutter: 1em) //#v(-0.5em)
 //stranded (ss) RNA.
 Important to clarify is that not the entire genome is fit for translation, but is divided into _introns_ and _exons_. These exons are the DNA sequences that are transcribed to become messenger RNA (mRNA). When transcribed, this mRNA is escorted outside of the nucleus and accepted by a protein complex, the ribosomes. These read the nucleic acid sequence by the codon - a triplet of nucleobases - and form a growing strand of amino acids, whose composition is determined by the codons read from mRNA sequence itself (_translation_). This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
+A third division can be made for RNA molecules who provide a necessary functioning to the cell.
 
 
 ==== ... as regulators of cellular functioning
@@ -97,12 +99,21 @@ Important to clarify is that not the entire genome is fit for translation, but i
 A natural process in which mRNA translation is inhibited by other small RNA oligomers is through RNAi. Depending on the pathway, we encounter silencing RNA (siRNA) and microRNA (miRNA). 
 Though many enzymes exist that coordinate these pathways, the most known are guided by the family of _Argonaute_ (AGO) proteins.
 
-The siRNA typically originates from doublestranded (ds) RNA, which was produced and released into the cells by exogenous sources like virusses. Here we need to understand that virusses sometimes depend on human cells for their protein synthesis. These dsRNA will be recognised by the RNA-induced silencing complex (RISC) in the cytoplasm in order to be processed down to the correct size of about 20 nucleotides (nt). As this constitutes dsRNA, one strand is assigned to be the guide, while its complement functions as the passenger. After manipulation by RISC, the pre-siRNA is managed by the AGO2 complex that will discard the passenger strand. This complex of enzyme:guide-siRNA will be able to bind to free floating ssRNA from viral origin and - given a matching complement - cleave those sequences, by having the guide strand bind to the target ssRNA and the enzyme exerting its catalytic activity. Cleaved, viral RNA cannot function as a template for the ribosomes anymore, thereby prohibiting protein synthesis of the viral RNA. This mechanism is typically associated with the cell's innate, protective measures against foreign invasion.
+The siRNA typically originates from double stranded (ds) RNA, which was produced and released into the cells by exogenous sources like virusses. Here we need to understand that virusses sometimes depend on human cells for their protein synthesis. These dsRNA will be recognised by the RNA-induced silencing complex (RISC) in the cytoplasm in order to be processed down to the correct size of about 20 nucleotides (nt). As this constitutes dsRNA, one strand is assigned to be the guide, while its complement functions as the passenger. After manipulation by RISC, the pre-siRNA is managed by the AGO2 complex that will discard the passenger strand. This complex of enzyme:guide-siRNA will be able to bind to free floating ssRNA from viral origin and - given a matching complement - cleave those sequences, by having the guide strand bind to the target ssRNA and the enzyme exerting its catalytic activity (@fig-silencingRNA). Cleaved, viral RNA cannot function as a template for the ribosomes anymore, thereby prohibiting protein synthesis of the viral RNA. This mechanism is typically associated with the cell's innate, protective measures against foreign invasion.
+#figure(
+  image("./figures/siRNA-complex.svg", width: 100%),
+  caption: [
+    Silencing RNA pathway - simplified (adapted from #mcite(("Ghildiyal2009rnainterference"), biblio)).
+    *A.* double stranded RNA enters the cytoplasm from exogenous sources.
+    *B.* The RISC-AGO complex is mobilised, binds to the dsRNA and degrades the passenger strand.
+    *C.* The enzyme:guide-siRNA binds to matching mRNA and cleaves it into non-functional strands. The complex can then be recycled.
+  ]
+) <fig-silencingRNA>
 
-The functioning of miRNA starts from an endogenous path and needs to be induced first by an endogenous signal. DNA will be transcribed to primary miRNA that will be processed accordingly and then translocated from the nucleus to the cytoplasm. It will undergo a similar treatment as with the siRNA in terms of RISC and the AGO family, but will eventually bind the target endogenous mRNA to repress translation of the sequence to a protein #mcite(("Ghildiyal2009rnainterference", "Zhang2023sirna"), biblio). This can be in response to an overabundance of proteins in the cytoplasm that the cell is producing.
+The functioning of miRNA starts from an endogenous path and needs to be induced first by an endogenous signal. DNA will be transcribed to primary miRNA that will be processed accordingly and then translocated from the nucleus to the cytoplasm. It will undergo a similar treatment as with the siRNA in terms of RISC and the AGO family, but will eventually bind the target endogenous mRNA to repress translation of the sequence to a protein #mcite(("Ghildiyal2009rnainterference", "Zhang2023sirna"), biblio). This can be in response to an overabundance of proteins in the cytoplasm that the cell is producing or as a response to clean up the mRNA when its use has been fulfilled.
 
 ===== Tertiary RNA structures
-NA structures are not constrained to just helical structures, but can fold into three dimensional structures capable of playing various roles in enzymatic activity. The first example is that of the transfer RNA (tRNA), which is involved in matching codons of mRNA in the ribosome complex and appending to the growing amino acid chain. For every codon - e.g. AUG or GUC - there exists a specific tRNA molecule that encodes for one of the twenty amino acids used in human proteins. Matching the tRNA to the codon means the correct peptide sequence will be generated by the ribosomes and thus ensuring the production of a sound protein.
+NA structures are not constrained to just double stranded helical structures, but can fold into three dimensional structures capable of playing various roles in enzymatic activity. The first example is that of the transfer RNA (tRNA), which is involved in matching codons of mRNA in the ribosome complex and appending to the growing amino acid chain. For every codon - e.g. AUG or GUC - there exists a specific tRNA molecule that encodes for one of the twenty amino acids used in human proteins. Matching the tRNA to the codon means the correct peptide sequence will be generated by the ribosomes and thus ensuring the production of a sound protein.
 
 Another example is that of _ribozymes_, capable of catalytic activity. These include folded RNA strands that can splice ssRNA, and recently an _in vitro_ RNA polymerase ribozyme was designed that is capable of extending the complementary strand of an RNA template #mcite(("McRae2024ribozyme"), biblio).
 //
@@ -116,10 +127,10 @@ Another example is that of _ribozymes_, capable of catalytic activity. These inc
 === Synthetic Nucleic Acids
 //
 Chemically altering the composition of native NAs can be done by appending or modifying (groups of) atoms in one of the three moieties. These modifications are prevalent in both nature's perpetual development and in the chemistry labs lit by fluorescent tubes.
-The former's purpose is for a collective of enzymes to alter the composition of the NAs to meet cellular needs, whereas researchers have designed methodologies to succesfully harness the utility that comes from changing the defining characteristics of DNA and RNA.
+The former's purpose is for a collective of enzymes to alter the composition of the NAs to meet cellular needs, whereas researchers have designed methodologies to successfully harness the utility that comes from changing the defining characteristics of DNA and RNA.
 //Modifying NA molecules is not a task exclusively carried out by scientists though. 
 
-The main reason to change the molecule from a pharmaceutical perspective, and thusly to change the application potential of native nucleotides, is because oligonucleotides are quickly degraded in the human bloodstream. Its cause lies in the evolutionary defense mechanism our body has developed against all foreign invasion. This includes nuclease enzymes that break down NA strands. Another culprit is the high renal clearance of these molecules, which works synergetically with the breakdown into small oligomers.
+The initial reason to change the molecule from a pharmaceutical perspective, and thusly to change the application potential of native nucleotides, is because oligonucleotides are quickly degraded in the human bloodstream. Its cause lies in the evolutionary defense mechanism our body has developed against all foreign invasion. This includes nuclease enzymes that break down NA strands. Another culprit is the high renal clearance of these molecules, which works synergetically with the breakdown into small oligomers.
 To circumvent this, scientists have applied synthetic modifications resulting in Xenobiotic Nucleic Acids (XNAs) in order to increase the lifespan of the drug and to diversify the interaction potential to their target. 
 
 There is an abundance of modifications the field of XNA has provided us, which would require a second thesis to even iterate over most of them. The aim is to give some examples into popular synthetic nucleotides to give the reader an inkling of what viable possibilities exist and how they are applied in science.  
@@ -135,7 +146,7 @@ There is an abundance of modifications the field of XNA has provided us, which w
 //
 //
 ===== Natural modifications
-Common modifications undergone by canonical NAs are modifications to the C5 in pyrimidines and N7 in purines. These modifications are oriented towards the major groove and aid in the favourable hydrophobicity that trademarks this part of the helix, which is important for its recognition by NA processing enzymes #mcite(("Helm2006postmods", "MozoVillaras2021hydrophobicgroove"), biblio). During (co-) and after (post-) transcription, nucleobases are modified along a cellular need, which will determine signalling of pathways and folding of the RNA constructs #mcite(("Bentley2014mods"), biblio). A popular modification is that of the pseudouridine (Ψ) nucleoside, which contains an isomerisation of the uracil nucleobase (@fig-nucleomods A.). The Ψ nucleotide is involved in the tRNA structure, where it has been mutated on key positions of the 76mer ssRNA. Its effects are involved in the sensitive role the tRNA plays in recognising codon triplets at its Anticodon-Stem-Loop (ASL). Matching the correct codon to the correct tRNA variant consequently appends the correct amino acid to the growing peptide chain in the ribosomes. Even more so, modifications applied by enzymes to tRNA molecules contain the bulk of the known analogues documented in the field with respect to nucleobase modifications #mcite(("Helm2006postmods"), biblio).
+Common modifications undergone by canonical NAs are modifications to the C5 in pyrimidines and N7 in purines. These modifications are oriented towards the major groove of the double stranded helix and aid in the favourable hydrophobicity that trademarks this part of the helix, which is important for its recognition by NA processing enzymes #mcite(("Helm2006postmods", "MozoVillaras2021hydrophobicgroove"), biblio). During (co-) and after (post-) transcription, nucleobases are modified along a cellular need, which will determine signalling of pathways and folding of the RNA constructs #mcite(("Bentley2014mods"), biblio). A popular modification is that of the pseudouridine (Ψ) nucleoside, which contains an isomerisation of the uracil nucleobase (@fig-nucleomods A.). The Ψ nucleotide is involved in the tRNA structure, where it has been mutated on key positions of the ssRNA structure. Its effects are involved in the sensitive role the tRNA plays in recognising codon triplets at its Anticodon-Stem-Loop (ASL). Matching the correct codon to the correct tRNA variant consequently appends the correct amino acid to the growing peptide chain in the ribosomes. Even more so, modifications applied by enzymes to tRNA molecules contain the bulk of the known analogues documented in the field with respect to nucleobase modifications #mcite(("Helm2006postmods"), biblio).
 
 ===== Synthetic modifications
 Most remarkable alterations are brought forth from Kool's and Benner's group respectively. One is that of (non-)canonical hydrogen bonding patterns. This is effectuated by altering the purine:pyrimdine dyad.
@@ -163,7 +174,7 @@ The most well-known appendage to native nucleosides in cellular mechanisms is th
 
 It must be mentioned that nucleic acids have had an incredibly well-preserved backbone since the dawn of time. While there exist a great diversity in amino acids in any organism on earth, far more than the canonical twenty variants we boast, nucleic acids have not evolved in this way. A theory on _The origin of life_ suggests that it all started with the RNA chemistry to catalyse elementary reactions. When cells began emerging, this building block allowed cellular organism to progress a lineage #mcite(("Gilbert1986rnaworld", "Higgs2014rnaworld"), biblio). The theory suggests that this chemistry has evolved early into an optimal molecule, which has been conserved in all lifeforms on earth, and has consequently been involved in all primordial pathways.
 
-Nearly all modifications to the backbone originate from the creativity of the scientists that apply them.
+Most modifications to the backbone originate from the creativity of the scientists that apply them.
 //
 //
 
@@ -173,18 +184,18 @@ Nearly all modifications to the backbone originate from the creativity of the sc
 // Hexitol
 // Morpholino -> linker en sugar
 // ZNA R/S -> glycol linkers
-The 2_'_-modifications are amongst the most common and least structure-altering changes one can apply to nucleic acids. As mentioned, 2_'_-O-Methyl RNA (2'-O-MeRNA) plays a crucial role in cell function and portrays a good resistance against nuclease activity. This substituent can be bulked up to the  2_'_-Methoxyethyl RNA (2_'_-MOE) #mcite(("Egli2000rnamimetics"), biblio). Both portray a typical A-RNA form in a duplex, due to the bulkiness of the appendage. The Locked NA (LNA) is modified with a constraint that keeps the molecule from exploring forms other than the A-RNA (@fig-sugarmods A.). These synthetic analogues exhibit the trait that they pair well with RNA and DNA strands.
+The 2_'_-modifications are amongst the most common and least structure-altering changes one can apply to nucleic acids. As mentioned, 2_'_-O-Methyl RNA (2'-O-MeRNA) plays a crucial role in cell function and portrays a good resistance against nuclease activity. This substituent can be bulked up to the  2_'_-Methoxyethyl RNA (2_'_-MOE) #mcite(("Egli2000rnamimetics"), biblio). Both portray a typical A-RNA form in a duplex, due to the bulkiness of the added moiety. The Locked NA (LNA) is modified with a constraint that keeps the molecule from exploring other configurations (@fig-sugarmods A.). There exist two variants, one that resolves into an A-RNA structure and one that more adjacent to the shape of B-DNA. These synthetic analogues exhibit the trait that they pair well with RNA and DNA strands.
 
 By mentioning _The RNA world_ - the origin of life -, we note that simulated studies have been done under conditions close to when the first molecules were formed. This brought forth the Arabinose NA (ANA), Xylose NA (XyNA) and Threose NA (TNA) chemistries that would supposedly have competed against RNA in the evolutionary drag race #mcite(("Roche2022prebiotic", "Yi2022threoseformation"), biblio). While ANA is identical to RNA in atomic composition, the 2'-OH is epimerised and causes the chemistry to favour a B-DNA type structure. It is able to communicate well with DNA as it supports transcription from and to DNA #mcite(("MartnPintado2012ANA"), biblio).
-The others differ wildly from RNA in the way the backbone of the strands are formed. Even though XyNA follows the 5_'_ $arrow.r$ 3_'_ backbone, the 3_'_-OH is epimerised to an equatorial positioning to the ring, returning us with a ladderlike righthanded helix #mcite(("Mattelaer2021xylose"), biblio). The Xylose chemistry is unable to form a complement to either of the native nucleic acids, a property known as _orthogonality_. The TNA nucleosides lack the 4_'_ substituents that play a crucial part of the standard nucleic acid backbone. Instead they form a 3_'_ $arrow.r$ 2_'_ chain, meaning their set of backbone angles is decremented by one and reaches up to $epsilon$-angle. Because they miss one atomic bond, the TNA::TNA homoduplex forms a righthanded and very elongated duplex #mcite(("Ebert2008tna"), biblio), showing little similarity to the native structures (@fig-sugarmods C.).
+The others differ wildly from RNA in the way the backbone of the strands are formed. Even though XyNA follows the 5_'_ $arrow.r$ 3_'_ backbone, the 3_'_-OH is epimerised to an equatorial positioning to the ring, returning us with a ladderlike righthanded helix for double stranded XyNA #mcite(("Mattelaer2021xylose"), biblio). The Xylose chemistry is unable to form a complement to either of the native nucleic acids, a property known as _orthogonality_. The TNA nucleosides lack the 4_'_ substituents that play a crucial part of the standard nucleic acid backbone. Instead they form a 3_'_ $arrow.r$ 2_'_ chain, meaning their set of backbone angles is decremented by one and reaches only up to $epsilon$-angle. Because they miss one atomic bond, the TNA::TNA homoduplex forms a righthanded and very elongated duplex #mcite(("Ebert2008tna"), biblio), showing little similarity to the native structures (@fig-sugarmods C.).
 
-Not just furanose (five-membered rings) sugars, but pyranoses (six-membered rings) too have proven succesful in mimicking the capabilities of their natural congeners. The most notable example is that of the 1_'_,5_'_-anhydrohexitol NA (HNA), where a methylene fragment has been inserted between the C1_'_ and O4_'_ of regular DNA. This XNA pairs perfectly with RNA and DNA molecules and allows cross-talking, meaning RNA or DNA can be used as a template for building HNA strands and vice versa #mcite(("Lescrinier2003difference","Pinheiro2012geneticpolymer"), biblio) . This insertion does imply an increment of the atom numbering (6_'_ $arrow.r$ 4_'_), but this changes little to the backbone.
+Not just furanose (five-membered rings) sugars, but pyranoses (six-membered rings) too have proven successful in mimicking the capabilities of their natural congeners. The most notable example is that of the 1_'_,5_'_-anhydrohexitol NA (HNA), where a methylene fragment has been inserted between the C1_'_ and O4_'_ of regular DNA. This XNA pairs perfectly with RNA and DNA molecules and allows cross-talking, meaning RNA or DNA can be used as a template for building HNA strands and vice versa #mcite(("Lescrinier2003difference","Pinheiro2012geneticpolymer"), biblio) . This insertion does imply an increment of the atom numbering (6_'_ $arrow.r$ 4_'_), but this changes little to the backbone.
 One particular pyranose that presents as an orthogonal chemistry, which dictates it is not able to cross-talk with the natural nucleosides, is β-homo-DNA. Building it into a duplex structure tells us it prefers to adopt a lefthanded ladderlike model #mcite(("Lescrinier2003difference"), biblio) (@fig-sugarmods D.). 
 
 #figure(
   image("./figures/nucleicacids/mods-backbone.svg", width: 100%),
   caption: [
-    *A.* 2'-modifications to the RNA chemistry: 2'-O-MeRNA, 2'-MOE RNA and LNA.
+    *A.* 2'-modifications to the RNA chemistry: 2'-O-MeRNA, 2'-MOE RNA and LNA (here, the A-RNA type is depicted).
     *B.* DNA and RNA to reference the native congeners.
     *C.* Five-membered rings modifications to the sugar moiety: ANA, XyNA and TNA.
     *D.* Six-membered ring modifications to the sugar moiety: HNA and β-homo-DNA.
@@ -206,9 +217,32 @@ In our line of research, we are interested specifically in how these chemical mo
 //These type of modifications are attributed to changes in the backbone itself.
 As we will come to learn, the backbone characterises how the helix bends and twists and the nucleobase modifications will determine the interactions with its target. 
 
-This has numerous applications in the pharmaceutical field. While small molecule drugs and antibody therapeutics have reigned supreme, NA therapeutics have been able to provide long-standing solutions to problems that weren't attainable by their rivaling compounds. More so, XNA research has provided the field of synthetic biology with means to tinker towards goals that were previously thought of as science fiction. 
+This has numerous applications in the pharmaceutical field. While small molecule drugs and antibody therapeutics have reigned supreme, NA therapeutics have been able to provide long-standing solutions to problems that weren't attainable by other compounds. More so, XNA research has provided the field of synthetic biology with means to tinker towards goals that were previously thought of as science fiction. 
 
 The research carried out for this thesis means to expose the inner workings of these synthetic nucleotides to understand their potential applicability. 
+//
+==== Antiviral therapy
+The application of nucleoside analogs as a therapeutic intervention to viral infection exists in hampering the replicative cycle of the virus or to completely neutralise it, the latter being extremely difficult to achieve with drugs alone.
+Perhaps the most famous example are that of Acyclovir, against herpetic virusses (Herpes Simplex 1 and 2, Varicella Zoster and Cytomegalovirus) #mcite(("Wood1992acyclovir"), biblio) and Tenofovir, against hepatitis B and most famously in the prevention and treatment of HIV-infections #mcite(("DeClercq2016TAF", "SeleyRadtke2018antiviral"), biblio). 
+During the life cycle of any cellular organism, it is important to store and replicate its genetic material in order to ensure the survival of the colony. The more copies and colonies, the better the survival for the species. As mentioned before in the _Central Dogma of Biology_, additional copies of the genome are created through polymerase enzymes. This is where these compounds come in.  
+
+Both are considered chain terminators, which entails that creating a copy of the genome is prematurely disrupted by the enzymes mistakenly incorporating the therapeutic drug instead of a natural nucleotide. They mentioned drugs differ from the natural furanose sugar in that they are acyclic in nature.
+//They also come with a single phosphate group appended at their 5'-end, ready to become a triphosphate molecule
+While they are covalently linked at their 5'-end to the previous nucleotide through a phosphate link, they miss a stable 3'-end that would otherwise allow a subsequent building block to append to, resulting in a chain that fails to grow further. Acyclovir acts on the virus' life cycle by inhibiting the functioning the DNA polymerase of the mentioned herpetic virusses #mcite(("Zarrouk2017herpesdnavirus"), biblio).
+
+Tenofovir follows the same mode of action, but shifts its target towards HIV. This virus inserts its genome into the human cell's genetic code through _reverse transcription_. This continues the virion's life cycle by delegating its protein synthesis to the human cell it is invading.
+By acting as a chain terminator, Tenofovir is able to dismantle this process. An unfinished chain is discarded and degraded by circulating enzymes. Most importantly is that this blocks HIV from incorporating its material into our genome, thereby failing to successfully establish itself into our cells and continue its lifecycle. This makes it possible to keep the virus at bay and provide patients with a quality of life improvement to the point the virus is nearly undetectable #mcite(("Kearney2004"), biblio).
+//
+//
+==== Antisense Oligonucleotides
+The Antisense Oligonucleotides (ASO) are a particular class of drugs that are administered in order to emulate the effects of the endogenous RNAi pathways. Essentially, a ssNA chain is designed to complement a specific mRNA sequence; a sequence that would translate for a protein that is therapeutically interesting to interfere with. The most successful chemistry to date is that of the dimethylamino-phosphorodiamidate MNA (PMO, @fig-sugarmods E.) chemistry and has been applied to resolve a genetic defect in a particular variant of the Duchenne's musculodystrophy #mcite(("Roshmi2019viltolarsen"), biblio). 
+A protein is translated from mRNA, which is transcribed from multiple exon-sequences of the genomic DNA. In some of variants of this pathology, there exists a mutation in exon n°51 of the chain, causing instability of the distrophin protein - a functional protein that is key to the stability of the muscle fibers. By prohibiting transcription of this exon, the protein becomes truncated but functional, which ultimately improves the quality of life of the patients suffering from this disease.
+
+Another application of ASOs is in the usage in preclinical research, mainly on zebrafish. These animals are interesting because they are cheap to maintain, easy to manipulate and have a short lifecycle, lowering the time between experiments dramatically. 
+By adminstering these short oligomers to the zebrafish, researchers can study the effects the zebrafish's development when a gene has been knocked-out. The ASO is there to prohibit expression of a particular protein in order to study the effects of its absence #mcite(("Moulton2017PMO"), biblio). 
+//The goal is to truncate the protein, in charge of structural stability of muscles, as the mutation causes instability of the muscle fibers. A specific exon sequence is targetted by the PMO strand, where hybridisation with the target sequence will prohibit the genome from being transcribed. This resulting in a smaller but functional protein and provide a increase in quality of life for the patients #mcite(("Moulton2017PMO"), biblio). 
+//
+//
 //
 //
 //
@@ -223,48 +257,16 @@ Because the SELEX methodology requires NA processing enzymes, using chemistries 
 //
 //
 //
-==== Antisense Oligonucleotides
-The Antisense Oligonucleotides (ASO) are a particular class of drugs that are administered in order to emulate the effects of the endogenous RNAi pathways. Essentially, a ssNA chain is designed to complement a specific mRNA sequence; a sequence that would translate for a protein that is therapeutically interesting to interfere with. The most popular chemistry is that of the dimethylamino-phosphorodiamidate MNA (PMO, @fig-sugarmods E.) chemistry and has been applied to resolve a genetic defect in a particular variant of the Duchenne's musculodystrophy #mcite(("Roshmi2019viltolarsen"), biblio). 
-A protein is translated from mRNA, which is transcribed from multiple exon-sequences of the genomic DNA. In some of variants of this pathology, there exists a mutation in exon n°51 of the chain, causing instability of the distrophin protein - a functional protein that is key to the stability of the muscle fibers. By prohibiting transcription of this exon, the protein becomes truncated but functional, which ultimately improves the quality of life of the patients suffering from this disease.
-
-Another application of ASOs is in the usage in preclinical research, mainly on zebrafish. These animals are interesting because they are cheap to maintain, easy to manipulate and have a short lifecycle, lowering the time between experiments dramatically. 
-By adminstering these short oligomers to the zebrafish, researchers can study the effects the zebrafish's development when a gene has been knocked-out. The ASO is there to prohibit expression of a particular protein in order to study the effects of its absence #mcite(("Moulton2017PMO"), biblio). 
-//The goal is to truncate the protein, in charge of structural stability of muscles, as the mutation causes instability of the muscle fibers. A specific exon sequence is targetted by the PMO strand, where hybridisation with the target sequence will prohibit the genome from being transcribed. This resulting in a smaller but functional protein and provide a increase in quality of life for the patients #mcite(("Moulton2017PMO"), biblio). 
-//
-//
-//
 ==== Biocontainment
-The field of Synthetic Biology is driven by the philosophy of _Directed Evolution_. The key idea is to accelerate the evolutionary process by pushing environmental conditions onto a protein and steer it to lose or gain particular properties. For example, a DNA polymerase has been succesfully evolved into an HNA polymerase and was used to conceive the first HNA aptamer #mcite(("Pinheiro2012geneticpolymer"), biblio).
+The field of Synthetic Biology is driven by the philosophy of _Directed Evolution_. The key idea is to accelerate the evolutionary process by pushing environmental conditions onto a protein and steer it to lose or gain particular properties. For example, a DNA polymerase has been successfully evolved into an HNA polymerase and was used to conceive the first HNA aptamer #mcite(("Pinheiro2012geneticpolymer"), biblio).
 
 It is common practice in biotechnological research and production to invest resources in the management of bacterial cultures and extraction of the target molecule(s), i.e. upstream and downstream processing respectively. A good product should be void of impurities and external invasion of pathogens can disrupt and destroy manufactured batches of proteins, such as vaccin development.
 
 In the realm of _Directed Evolution_, there exists a paradigm to create an alternative genetic system, orthogonal to the natural DNA and RNA biopolymers. This encompasses all types of modifications, of which the HNA chemistry has shown success in its application. Its implications are that a bacterial system could only survive, replicate and produce in artificial conditions in micromanaged incubators. This would imply that the invasion of pathogens like virusses and other bacteria from an external source have no way of interfering and mutating the genome of the synthetic growth cultures, ensuring the purity the colonies and their product.
 In biotechnological industries, purifying products and maintaining purity of the colonies is one of the most expensive aspects #mcite(("Groaz2023hna"), biblio) and this system would tremendously cut its costs.
+There are, however, studies that have shown it is possible for DNA/HNA oligomers to be successfully ligated into a plasmid and serve as a template for DNA synthesis under select conditions #mcite(("Pezo2013hnatemplate"), biblio).
 //
 //
 //
-==== Antiviral therapy
-The application of nucleoside analogs as a therapeutic intervention to viral infection exists in hampering the replicative cycle of the virus or to completely neutralise it, the latter being extremely difficult to achieve with drugs alone.
-Perhaps the most famous example are that of Acyclovir, against herpetic virusses (Herpes Simplex 1 and 2, Varicella Zoster and Cytomegalovirus) #mcite(("Wood1992acyclovir"), biblio) and Tenofovir, against hepatitis B and most famously in the prevention and treatment of HIV-infections #mcite(("DeClercq2016TAF", "SeleyRadtke2018antiviral"), biblio). 
-During the life cycle of any cellular organism, it is important to store and replicate its genetic material in order to ensure the survival of the colony. The more copies and colonies, the better the survival for the species. As mentioned before in the _Central Dogma of Biology_, additional copies of the genome are created through polymerase enzymes. This is where these compounds come in.  
-
-Both are considered chain terminators, which entails that creating a copy of the genome is prematurely disrupted by the enzymes mistakenly incorporating the therapeutic drug instead of a natural nucleotide. They mentioned drugs differ from the natural furanose sugar in that they are acyclic in nature.
-//They also come with a single phosphate group appended at their 5'-end, ready to become a triphosphate molecule
-While they are covalently linked at their 5'-end to the previous nucleotide through a phosphate link, they miss a stable 3'-end that would otherwise allow a subsequent building block to append to, resulting in a chain that fails to grow further. Acyclovir acts on the virus' life cycle by inhibiting the functioning the DNA polymerase of the mentioned herpetic virusses #mcite(("Zarrouk2017herpesdnavirus"), biblio).
-
-Tenofovir follows the same mode of action, but shifts its target towards HIV. This virus inserts its genome into the human cell's genetic code through _reverse transcription_. This continues the virion's life cycle by delegating its protein synthesis to the human cell it is invading.
-By acting as a chain terminator, Tenofovir is able to dismantle this process. An unfinished chain is discarded and degraded by circulating enzymes. Most importantly is that this blocks HIV from incorporating its material into our genome, thereby failing to succesfully establish itself into our cells and continue its lifecycle. This makes it possible to keep the virus at bay and provide patients with a quality of life improvement to the point the virus is nearly undetectable #mcite(("Kearney2004"), biblio).
-
-
-//#mcite(("SeleyRadtke2018antiviral", "Kataev2021antivirals"), biblio).
-//#mcite(("SeleyRadtke2018antiviral", "Kataev2021antivirals"), biblio).
-//
-//
-//
-//
-//
-//
-//==== The need for innovation
-//#lorem(20)
 
 #pagebreak()

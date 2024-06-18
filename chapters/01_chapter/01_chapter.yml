@@ -758,4 +758,33 @@ Rihon2024Ducque:
     publisher: Oxford University Press (OUP)
     issue: 6
     volume: 52
+Schofield2023hnaaptamer:
+  type: article
+  title: Characterization of an HNA aptamer suggests a non-canonical G-quadruplex motif
+  author:
+  - Schofield, Peter
+  - Taylor, Alexander I
+  - Rihon, Jérôme
+  - Peña Martinez, Cristian D
+  - Zinn, Sacha
+  - Mattelaer, Charles-Alexandre
+  - Jackson, Jennifer
+  - Dhaliwal, Gurpreet
+  - Schepers, Guy
+  - Herdewijn, Piet
+  - Lescrinier, Eveline
+  - Christ, Daniel
+  - Holliger, Philipp
+  date: 2023-07
+  page-range: 7736
+  url: http://dx.doi.org/10.1093/nar/gkad592
+  serial-number:
+    doi: 10.1093/nar/gkad592
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 15
+    volume: 51
 

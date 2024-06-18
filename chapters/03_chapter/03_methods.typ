@@ -14,7 +14,7 @@
 }
 
 == Experimental studies
-=== Laboratory experiments
+=== Laboratory experiments (Collaborators's work)
 The following laboratory experiments have been extensively detailed in Schofield _et al_. #mcite(("Schofield2023HNAaptamer"), biblio).
 ==== Truncation experiments
 //! een klein beetje vertellen over de manier hoe dat ze SPR en BLI gebruiken.
@@ -71,7 +71,7 @@ The whereabouts of the epitope of the Core14 aptamer was assessed to understand 
 The assay revealed that HyHEL10 and especially D2-L24 resulted in the most competition with the Core14 aptamer (@fig-hel-heatmap). From previous research on the D2-L24, we know exactly where it binds and can run mutational scans on its surface to understand which key residues are required for binding.
 
 ===== Epitope mapping
-An alanine scan, meaning select residues are mutated from amino acid _X_ to an _A_, was carried out on the HEL enzyme to deduce which amino acids are crucial to the binding interaction between the nanobody and the aptamer respectively. This study reveals the nanobody's binding is mainly directed by the Y53, D66 and R84 surface residues (@fig-hel-heatmap B.), while the aptamer is more affected by mutations on the neighbouring residues R61 and 73R (@fig-hel-heatmap C.).
+An alanine scan, meaning select residues are mutated from amino acid _X_ to an _alanine_, was carried out on the HEL enzyme to deduce which amino acids are crucial to the binding interaction between the nanobody and the aptamer respectively. This study reveals the nanobody's binding is mainly directed by the Y53, D66 and R84 surface residues (@fig-hel-heatmap B.), while the aptamer is more affected by mutations on the neighbouring residues R61 and 73R (@fig-hel-heatmap C.).
 //! hier een figuur over het HEL enzyme, toon de cleft waar de activiteit gebeurt en vertel dat er veel antilichamen zijn tegen dit enzyme. Er was specifieke competitie met de Fab HyHEL10 en met het camelid domain VHH D2-L24 voor binding. Er was zeker geen competitie met H06 human single VH domain die voornamelijk interageert met de active site cleft.
 
 //! Figure made with ChimeraX

@@ -1772,4 +1772,26 @@ Xu2017LNA:
     publisher: Wiley
     issue: 15
     volume: 38
+Pezo2013hnatemplate:
+  type: article
+  title: Binary Genetic Cassettes for Selecting XNA‐Templated DNA Synthesis In Vivo
+  author:
+  - Pezo, Valérie
+  - Liu, Feng Wu
+  - Abramov, Mikhail
+  - Froeyen, Mathy
+  - Herdewijn, Piet
+  - Marlière, Philippe
+  date: 2013-06
+  page-range: 8139
+  url: http://dx.doi.org/10.1002/anie.201303288
+  serial-number:
+    doi: 10.1002/anie.201303288
+    issn: 1521-3773
+  parent:
+    type: periodical
+    title: Angewandte Chemie International Edition
+    publisher: Wiley
+    issue: 31
+    volume: 52
 
