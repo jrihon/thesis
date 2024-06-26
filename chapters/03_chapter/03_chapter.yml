@@ -267,6 +267,7 @@ Dunn2017AptamerDiscovery:
   - Jimenez, Randi M.
   - Chaput, John C.
   date: 2017-10
+  page-range: 76
   url: http://dx.doi.org/10.1038/s41570-017-0076
   serial-number:
     doi: 10.1038/s41570-017-0076
@@ -359,6 +360,7 @@ Pinheiro2014CST:
   - Arangundy‐Franklin, Sebastian
   - Holliger, Philipp
   date: 2014-06
+  page-range: 9
   url: http://dx.doi.org/10.1002/0471142700.nc0909s57
   serial-number:
     doi: 10.1002/0471142700.nc0909s57
@@ -404,6 +406,9 @@ mattelaer2021PHD:
   author: Mattelaer, Charles-Alexandre
   date: 2021
   organization: Laboratory of Medicinal Chemistry, Rega Insitute for Medical Research, KU Leuven
+  url: https://lirias.kuleuven.be/retrieve/633139
+  serial-number:
+    doi: https://lirias.kuleuven.be/retrieve/633139
 DeGenst2006camelidHEL:
   type: article
   title: Molecular basis for the preferential cleft recognition by dromedary heavy-chain antibodies
@@ -674,6 +679,7 @@ Neese2020ORCA:
   - Becker, Ute
   - Riplinger, Christoph
   date: 2020-06
+  page-range: 224108
   url: http://dx.doi.org/10.1063/5.0004608
   serial-number:
     doi: 10.1063/5.0004608

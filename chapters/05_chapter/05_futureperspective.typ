@@ -118,3 +118,44 @@ While this observation might not have been obvious before this study, it rationa
 
 I am certain we can stil unearth some mathematical concepts and apply them for the objective classification of nucleic acid structures. I could consider researching this as a future hobby instead of taking up golf, when I retire.  
 
+=== Potential Research Outcomes
+
+While the research carried out during this thesis has a strictly fundamental nature, it is very well applicable to problems in R&D research.
+
++ Predictions of nucleic acid structures. It has been made evident in this thesis that it is a definite possibility to approximate - or even solve - NA models.
+  - We want to highlight the importance of experimental validation and emphasise that, although extremely useful, this data does not require to be of an atomistic nature. Validation can also be inferred through physicochemical methods like Circular Dichroism studies or understanding the affinity properties through mutational scans. 
+  - Creating a force field for linker- or nucleobase-modified chemistries requires less intensive protocols to solve for the correct parameters. With the studies performed for this thesis, we attempted to push the boundaries of backbone modifications with respect to accounting for the theoretical transition states of sugar puckering.
+
++ The research on melting temperatures of nucleic acid duplexes through _in silico_ means. With modelled structures at hand, we can use them for further studies on the binding energy of the strands.
+  - A great attempt has been made about a decade ago, using Molecular Mechanics to predict melting temperatures of DNA homoduplexes through MMGBSA and MMPBSA methods - two methods used to estimate potential binding energy #mcite(("Lomzov2015melt"), biblio). Upon inquiring, it was clarified that all simulation trajectories ran for a whole microsecond in order for the output of the energy estimates to correlate well with the given nearest neighbour parameters. For reference, a single model would take days to run on a standard GPU. A caveat I learned it that neither methodologies were ever validated on nucleic acid structures, but were meant for drug design purposes.
+  - A more promising line of research is that of Local Energy Decompositions, used in Quantum Mechanic studies. The core idea is that we can extract to pairwise energy contribution of every component in a model - the basepairs - and map this information to return a total energy value of a system. This can then be converted to the melting temperature of a duplex #mcite(("Schneider2016LED", "Kruse2018stack", "Hopfinger2020NN", "Altun2021bppredict"), biblio). This methodology requires heavy computational duty suited for a supercomputer.
+
++ The _in silico_ design of synthetic nucleic acids and XNA enzymes. 
+  - On one hand, we can perform docking studies with the produced models on NA processing enzymes, to see how the synthetic variants interact with the native enzymes. This would allow a rational approach to mutagenesis studies where we can target specific residues and get a realtime view of its effects for _Directed Evolution_ purposes. The goal would be to accodomate the new chemistry to artificial enzymes for SELEX or xenobiology.
+  - On the other hand, figuring out a way to predict properties like orthogonality would expedite and substantiate the applicability of a synthetic chemistry. Such properties would substantiate the utility of a chemistry even before going into the laboratory to synthesise it.
+//  - One prominent outcome is the combination of the two previous points. Predicting the structure of chimeric duplexes - where the two complementary strands are composed of a different chemistry - could determine if a designed XNA type were orthogonal. Research could be seriously expedited through these computational methods. Predicting such properties allows us to characterise key points that we can then exploit with specific pharmaceutical applications in mind.
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+#pagebreak()

@@ -73,10 +73,17 @@ Processing and using this information has been formalised as the _Central Dogma 
 Cells have a way of stably transferring the genetic code to their offspring. When a cell is signalled to multiply, it readies itself to divide into two equal parts (_mitosis_). To make sure that the genetic information is not lost, it makes copies (_replication_) of the DNA strands so that both daughter cells receive a copy of this data upon cell division.
 Important to note is the 5_'_ $arrow.r$ 3_'_ direction of the backbone here. When enzymes synthesise a new strand, nucleotide molecules are appended in this direction. Often, this direction is referred to as the _leading_ strand, while the _complementary_ strand follows the 3_'_ $arrow.r$ 5_'_ direction.
 //This is done by DNA processing enzymes that retrieve the stored helices and expose the genetic information for replication.
-#let content-dogma = [
+
 Cells are also in constant communication with themselves and the outside. The incessant impulses they are subjected to are important to maintain the homeostatis of the tissue they make up, and allow the cells to interact with their environment through biological responses.
 In turn, the cells respond by producing of a variety of proteins as a reaction to the impulses or to simply maintain the cell's physiology. Depending on the signals received, the impulses can be propagated to the cell's core where a reaction will be kickstarted.
+#v(-0.5em)
+#let content-dogma = [
+//Cells are also in constant communication with themselves and the outside. The incessant impulses they are subjected to are important to maintain the homeostatis of the tissue they make up, and allow the cells to interact with their environment through biological responses.
+//In turn, the cells respond by producing of a variety of proteins as a reaction to the impulses or to simply maintain the cell's physiology. Depending on the signals received, the impulses can be propagated to the cell's core where a reaction will be kickstarted.
 The DNA strands are transcribed then (_transcription_) to single stranded (ss) RNA.
+
+Important to clarify is that not the entire genome is fit for translation, but is divided into _introns_ and _exons_. These exons are the DNA sequences that are transcribed to become messenger RNA (mRNA). When transcribed, this mRNA is escorted outside of the nucleus and accepted by a protein complex, the ribosomes. These read the nucleic acid sequence by the codon - a triplet of nucleobases - and form a growing strand of amino acids, whose composition is determined by the codons read from mRNA sequence itself (_translation_). 
+//This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
 ]
 #let figure-dogma = [
   #figure(
@@ -88,8 +95,10 @@ The DNA strands are transcribed then (_transcription_) to single stranded (ss) R
   ) <fig-centraldogma>
 ]
 
-#grid(content-dogma, figure-dogma, columns: (1fr, 1.5fr), gutter: 1em) //#v(-0.5em)
+#grid(content-dogma, figure-dogma, columns: (1fr, 1.5fr), gutter: 1em) #v(-0.5em)
+This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
 //stranded (ss) RNA.
+
 Important to clarify is that not the entire genome is fit for translation, but is divided into _introns_ and _exons_. These exons are the DNA sequences that are transcribed to become messenger RNA (mRNA). When transcribed, this mRNA is escorted outside of the nucleus and accepted by a protein complex, the ribosomes. These read the nucleic acid sequence by the codon - a triplet of nucleobases - and form a growing strand of amino acids, whose composition is determined by the codons read from mRNA sequence itself (_translation_). This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
 A third division can be made for RNA molecules who provide a necessary functioning to the cell.
 
@@ -99,7 +108,6 @@ A third division can be made for RNA molecules who provide a necessary functioni
 A natural process in which mRNA translation is inhibited by other small RNA oligomers is through RNAi. Depending on the pathway, we encounter silencing RNA (siRNA) and microRNA (miRNA). 
 Though many enzymes exist that coordinate these pathways, the most known are guided by the family of _Argonaute_ (AGO) proteins.
 
-The siRNA typically originates from double stranded (ds) RNA, which was produced and released into the cells by exogenous sources like virusses. Here we need to understand that virusses sometimes depend on human cells for their protein synthesis. These dsRNA will be recognised by the RNA-induced silencing complex (RISC) in the cytoplasm in order to be processed down to the correct size of about 20 nucleotides (nt). As this constitutes dsRNA, one strand is assigned to be the guide, while its complement functions as the passenger. After manipulation by RISC, the pre-siRNA is managed by the AGO2 complex that will discard the passenger strand. This complex of enzyme:guide-siRNA will be able to bind to free floating ssRNA from viral origin and - given a matching complement - cleave those sequences, by having the guide strand bind to the target ssRNA and the enzyme exerting its catalytic activity (@fig-silencingRNA). Cleaved, viral RNA cannot function as a template for the ribosomes anymore, thereby prohibiting protein synthesis of the viral RNA. This mechanism is typically associated with the cell's innate, protective measures against foreign invasion.
 #figure(
   image("./figures/siRNA-complex.svg", width: 100%),
   caption: [
@@ -109,6 +117,7 @@ The siRNA typically originates from double stranded (ds) RNA, which was produced
     *C.* The enzyme:guide-siRNA binds to matching mRNA and cleaves it into non-functional strands. The complex can then be recycled.
   ]
 ) <fig-silencingRNA>
+The siRNA typically originates from double stranded (ds) RNA, which was produced and released into the cells by exogenous sources like virusses. Here we need to understand that virusses sometimes depend on human cells for their protein synthesis. These dsRNA will be recognised by the RNA-induced silencing complex (RISC) in the cytoplasm in order to be processed down to the correct size of about 20 nucleotides (nt). As this constitutes dsRNA, one strand is assigned to be the guide, while its complement functions as the passenger. After manipulation by RISC, the pre-siRNA is managed by the AGO2 complex that will discard the passenger strand. This complex of enzyme:guide-siRNA will be able to bind to free floating ssRNA from viral origin and - given a matching complement - cleave those sequences, by having the guide strand bind to the target ssRNA and the enzyme exerting its catalytic activity (@fig-silencingRNA). Cleaved, viral RNA cannot function as a template for the ribosomes anymore, thereby prohibiting protein synthesis of the viral RNA. This mechanism is typically associated with the cell's innate, protective measures against foreign invasion.
 
 The functioning of miRNA starts from an endogenous path and needs to be induced first by an endogenous signal. DNA will be transcribed to primary miRNA that will be processed accordingly and then translocated from the nucleus to the cytoplasm. It will undergo a similar treatment as with the siRNA in terms of RISC and the AGO family, but will eventually bind the target endogenous mRNA to repress translation of the sequence to a protein #mcite(("Ghildiyal2009rnainterference", "Zhang2023sirna"), biblio). This can be in response to an overabundance of proteins in the cytoplasm that the cell is producing or as a response to clean up the mRNA when its use has been fulfilled.
 
@@ -189,8 +198,8 @@ The 2_'_-modifications are amongst the most common and least structure-altering 
 By mentioning _The RNA world_ - the origin of life -, we note that simulated studies have been done under conditions close to when the first molecules were formed. This brought forth the Arabinose NA (ANA), Xylose NA (XyNA) and Threose NA (TNA) chemistries that would supposedly have competed against RNA in the evolutionary drag race #mcite(("Roche2022prebiotic", "Yi2022threoseformation"), biblio). While ANA is identical to RNA in atomic composition, the 2'-OH is epimerised and causes the chemistry to favour a B-DNA type structure. It is able to communicate well with DNA as it supports transcription from and to DNA #mcite(("MartnPintado2012ANA"), biblio).
 The others differ wildly from RNA in the way the backbone of the strands are formed. Even though XyNA follows the 5_'_ $arrow.r$ 3_'_ backbone, the 3_'_-OH is epimerised to an equatorial positioning to the ring, returning us with a ladderlike righthanded helix for double stranded XyNA #mcite(("Mattelaer2021xylose"), biblio). The Xylose chemistry is unable to form a complement to either of the native nucleic acids, a property known as _orthogonality_. The TNA nucleosides lack the 4_'_ substituents that play a crucial part of the standard nucleic acid backbone. Instead they form a 3_'_ $arrow.r$ 2_'_ chain, meaning their set of backbone angles is decremented by one and reaches only up to $epsilon$-angle. Because they miss one atomic bond, the TNA::TNA homoduplex forms a righthanded and very elongated duplex #mcite(("Ebert2008tna"), biblio), showing little similarity to the native structures (@fig-sugarmods C.).
 
-Not just furanose (five-membered rings) sugars, but pyranoses (six-membered rings) too have proven successful in mimicking the capabilities of their natural congeners. The most notable example is that of the 1_'_,5_'_-anhydrohexitol NA (HNA), where a methylene fragment has been inserted between the C1_'_ and O4_'_ of regular DNA. This XNA pairs perfectly with RNA and DNA molecules and allows cross-talking, meaning RNA or DNA can be used as a template for building HNA strands and vice versa #mcite(("Lescrinier2003difference","Pinheiro2012geneticpolymer"), biblio) . This insertion does imply an increment of the atom numbering (6_'_ $arrow.r$ 4_'_), but this changes little to the backbone.
-One particular pyranose that presents as an orthogonal chemistry, which dictates it is not able to cross-talk with the natural nucleosides, is β-homo-DNA. Building it into a duplex structure tells us it prefers to adopt a lefthanded ladderlike model #mcite(("Lescrinier2003difference"), biblio) (@fig-sugarmods D.). 
+//Not just furanose (five-membered rings) sugars, but pyranoses (six-membered rings) too have proven successful in mimicking the capabilities of their natural congeners. The most notable example is that of the 1_'_,5_'_-anhydrohexitol NA (HNA), where a methylene fragment has been inserted between the C1_'_ and O4_'_ of regular DNA. This XNA pairs perfectly with RNA and DNA molecules and allows cross-talking, meaning RNA or DNA can be used as a template for building HNA strands and vice versa #mcite(("Lescrinier2003difference","Pinheiro2012geneticpolymer"), biblio) . This insertion does imply an increment of the atom numbering (6_'_ $arrow.r$ 4_'_), but this changes little to the backbone.
+//One particular pyranose that presents as an orthogonal chemistry, which dictates it is not able to cross-talk with the natural nucleosides, is β-homo-DNA. Building it into a duplex structure tells us it prefers to adopt a lefthanded ladderlike model #mcite(("Lescrinier2003difference"), biblio) (@fig-sugarmods D.). 
 
 #figure(
   image("./figures/nucleicacids/mods-backbone.svg", width: 100%),
@@ -202,6 +211,9 @@ One particular pyranose that presents as an orthogonal chemistry, which dictates
     *E.* Full backbone modifications, to both linker and sugar moiety: MNA and ZNA.
   ]
 )<fig-sugarmods>
+
+Not just furanose (five-membered rings) sugars, but pyranoses (six-membered rings) too have proven successful in mimicking the capabilities of their natural congeners. The most notable example is that of the 1_'_,5_'_-anhydrohexitol NA (HNA), where a methylene fragment has been inserted between the C1_'_ and O4_'_ of regular DNA. This XNA pairs perfectly with RNA and DNA molecules and allows cross-talking, meaning RNA or DNA can be used as a template for building HNA strands and vice versa #mcite(("Lescrinier2003difference","Pinheiro2012geneticpolymer"), biblio) . This insertion does imply an increment of the atom numbering (6_'_ $arrow.r$ 4_'_), but this changes little to the backbone.
+One particular pyranose that presents as an orthogonal chemistry, which dictates it is not able to cross-talk with the natural nucleosides, is β-homo-DNA. Building it into a duplex structure tells us it prefers to adopt a lefthanded ladderlike model #mcite(("Lescrinier2003difference"), biblio) (@fig-sugarmods D.). 
 
 A last set of synthetic chemistries in need of discussing are the fully-modified backbone chemistries. 
 The morpholino nucleic acid (MNA) is a six-membered ring with a rigid backbone. While most chemistries contain a phosphodiester linkage between nucleosides, the morpholino residues are connected by a phosphoramidate bond directly onto the ring. A famous variation on the MNA is the substitution of one of the oxygen in the phosphate ester to a dimethylamino group (-N-(CH#sub("3"))#sub("2")), providing the MNA strands with a net charge of zero #mcite(("Moulton2017PMO"), biblio). 

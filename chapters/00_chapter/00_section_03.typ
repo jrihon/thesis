@@ -292,6 +292,7 @@ $<eq-h-fock-full>
 
 As stated before, the HF method does not explicitly account for electronic interactions when optimising for orbitals and hence minimising the uncertainty of the location of the electron. This is a significant caveat to the methodology. The two-electron operators in @eq-h-fock-full concern themselves with the average position of the respective electrons, which means that for overlapping orbitals it cannot be excluded that two electrons occupy the same position in space, which is an unrealistic outcome. While the HF method is still serving as a major contributions to the successes in QM, we can be more precise when it comes to treating electronic interactions. 
 
+#pagebreak()
 //
 //
 ==== Density Functional Theory (DFT)
@@ -395,14 +396,6 @@ Describing the dihedral or torsion angle in a set of four atoms is perhaps the m
 A dihedral is defined as the angle ($phi$) by which two planes intersect (@fig-torsionexplain A.). As a trigonometric axiom states that three points define a plane, two planes can be defined from a set of four directly bonded atoms. 
 A dihedral's importance lies in the 1-4 interaction it makes. In other words, the atoms d#sub("1") and d#sub("4") in the dihedral set are directly correlated with establishing a part of the potential energy. This is mainly asserted through their steric hindrance, which is the result of a combination of the effects of (i) the radii of the various atoms composing the dihedral, (ii) types of hybridisation in the set (which define bondlength and angles) and (iii) the dihedral angle $phi$.
 //
-#figure(
-  image("./figures/dihedraltorsions.svg", width: 100%),
-  caption: [
-    *A.* First plane (blue-greyish) consist of the set [d#sub("1"), d#sub("2"), d#sub("3")], the second plane (grey) contains the set [d#sub("2"), d#sub("3"), d#sub("4")]. One way to think of dihedrals is that the middle bond (d#sub("2")-d#sub("3")) is that one that rotates.
-    *B.* The difference in potential energy (y-axis) according to the change torsion angle $phi$ (x-axis). This depicts four consecutive carbon atoms, all sp#super("3")-hybridised. Angle expressed in radians ($pi$). To clarify, atom d#sub("2") is being eclipsed by d#sub("3"), as we are faced directly onto the middle bond of the dihedral.
-  ]
-) <fig-torsionexplain>
-//
 $
 E#sub("torsion") = sum_("dihedrals") frac(V#sub("n"), 2) [1 + cos(n phi - gamma)]
 $ <eq-torsions>
@@ -416,6 +409,13 @@ $
 #text(fill: rgb("#4B90A2"))[$0.29 [1 + cos(2phi - pi)]$] #h(1em)+ #h(1em)
 #text(fill: rgb("#81BDCC"))[$0.11 [1 + cos(1phi - 0)]$]
 $
+#figure(
+  image("./figures/dihedraltorsions.svg", width: 100%),
+  caption: [
+    *A.* First plane (blue-greyish) consist of the set [d#sub("1"), d#sub("2"), d#sub("3")], the second plane (grey) contains the set [d#sub("2"), d#sub("3"), d#sub("4")]. One way to think of dihedrals is that the middle bond (d#sub("2")-d#sub("3")) is that one that rotates.
+    *B.* The difference in potential energy (y-axis) according to the change torsion angle $phi$ (x-axis). This depicts four consecutive carbon atoms, all sp#super("3")-hybridised. Angle expressed in radians ($pi$). To clarify, atom d#sub("2") is being eclipsed by d#sub("3"), as we are faced directly onto the middle bond of the dihedral.
+  ]
+) <fig-torsionexplain>
 This is the typical profile of a (-CH#sub("2")-CH#sub("2")-CH#sub("2")-CH#sub("2")-) dihedral #mcite(("Wang2004GAFF"), biblio).
 The figure tells us that when the atom d#sub("4") eclipses d#sub("1"), synonymous with a _cis configuration_, the potential rests at a local minimum. By increasing $phi$, we give a slight rise to the potential because d#sub("4")'s hydrogen atoms are hindering vicinal atoms, causing an unfavourable predicament ($plus.minus frac(2pi,3)$). The system will want to strive for a minimum, which can be achieved by visiting the _trans configuration_, at $phi = pi$. Since the molecule is symmetrical in nature, increasing the torsion angle to $2pi$ will see the potential go through the same changes, ending at a full rotation of the angle $phi$.
 
@@ -444,7 +444,9 @@ $ <eq-charges-in-amber>
 //
 Deriving point charges from quantum mechanical information is done by population analysis (PA) schemes. Most famous are the Mulliken and Löwdin PA schemes #mcite(("Mulliken1955", "Lowdin1950"), biblio), whose applications are to directly use orbital density to fit charges onto the molecule #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
 In MM applications however, the PA schemes take on a different approach. In protocols like Merz-Kollman (MK) and CHELPG, charges are least-squared fitted onto the atoms from Electrostatic Potential (ESP) data.
-//This data is gathered from mapping the orbital information onto a defined grid, which calculate potential energy by the atom's positions. 
+
+The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
+From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an energy value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
 The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mkscheme). 
 #figure(
   image("./figures/chargederivation/MK-charge-derivation.svg", width: 100%),
@@ -456,8 +458,8 @@ The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mksch
     *D.* The ESP is fitted onto the atomic to form atomic point charges.
   ]
 ) <fig-mkscheme>
-The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
-From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an energy value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
+//The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
+//From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an energy value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
 By fitting the ESP, using the _Chirlian-Francl_ least-squared fitting procedure, we derived ESP-based partial charges #mcite(("Chirlian1987fit"), biblio) (@fig-mkscheme D.). 
 An additional procedure to these derived charges is the application of the Restraintive ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate semantically similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Restraints are also applied to account for buried atoms. Due to the grid being defined by the surface of the molecule, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
 
@@ -470,8 +472,8 @@ Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like 
 //
 //
 //
-===== Lennard-Jones potential
 #let content-lj = [
+===== Lennard-Jones potential
 Atoms are not only interacting through attraction and repulsion based on fixed charges, but also experience these forces through instantaneous dipole moment. These are fleeting moment in which atoms can induce a dipole in other atoms, creating an momentary shift in repulsive force. This phenomenom is known as the _London dispersion_. Due to the 'cloud' of electrons cloaking the core of an atom, they portray an _atomic radius_ that sterically hinders other atoms from getting too close as these clouds repulse each other (@fig-lennardjones).
 We often refer to @eq-lenardjones as the 12-6 potential or Lennard-Jones potential.
 

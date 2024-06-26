@@ -80,4 +80,104 @@ Xu2017lnafit:
     publisher: Wiley
     issue: 15
     volume: 38
+Lomzov2015melt:
+  type: article
+  title: Evaluation of the Gibbs Free Energy Changes and Melting Temperatures of DNA/DNA Duplexes Using Hybridization Enthalpy Calculated by Molecular Dynamics Simulation
+  author:
+  - Lomzov, Alexander A.
+  - Vorobjev, Yury N.
+  - Pyshnyi, Dmitrii V.
+  date: 2015-11
+  page-range: 15221
+  url: http://dx.doi.org/10.1021/acs.jpcb.5b09645
+  serial-number:
+    doi: 10.1021/acs.jpcb.5b09645
+    issn: 1520-5207
+  parent:
+    type: periodical
+    title: The Journal of Physical Chemistry B
+    publisher: American Chemical Society (ACS)
+    issue: 49
+    volume: 119
+Schneider2016LED:
+  type: article
+  title: Decomposition of Intermolecular Interaction Energies within the Local Pair Natural Orbital Coupled Cluster Framework
+  author:
+  - Schneider, Wolfgang B.
+  - Bistoni, Giovanni
+  - Sparta, Manuel
+  - Saitow, Masaaki
+  - Riplinger, Christoph
+  - Auer, Alexander A.
+  - Neese, Frank
+  date: 2016-09
+  page-range: 4778
+  url: http://dx.doi.org/10.1021/acs.jctc.6b00523
+  serial-number:
+    doi: 10.1021/acs.jctc.6b00523
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 10
+    volume: 12
+Kruse2018stack:
+  type: article
+  title: 'Investigations of Stacked DNA Base-Pair Steps: Highly Accurate Stacking Interaction Energies, Energy Decomposition, and Many-Body Stacking Effects'
+  author:
+  - Kruse, Holger
+  - Banáš, Pavel
+  - Šponer, Jiřı́
+  date: 2018-11
+  page-range: 95
+  url: http://dx.doi.org/10.1021/acs.jctc.8b00643
+  serial-number:
+    doi: 10.1021/acs.jctc.8b00643
+    issn: 1549-9626
+  parent:
+    type: periodical
+    title: Journal of Chemical Theory and Computation
+    publisher: American Chemical Society (ACS)
+    issue: 1
+    volume: 15
+Hopfinger2020NN:
+  type: article
+  title: Predictions and analyses of RNA nearest neighbor parameters for modified nucleotides
+  author:
+  - Hopfinger, Melissa C
+  - Kirkpatrick, Charles C
+  - Znosko, Brent M
+  date: 2020-08
+  page-range: 8901
+  url: http://dx.doi.org/10.1093/nar/gkaa654
+  serial-number:
+    doi: 10.1093/nar/gkaa654
+    issn: 1362-4962
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
+    issue: 16
+    volume: 48
+Altun2021bppredict:
+  type: article
+  title: Unveiling the complex pattern of intermolecular interactions responsible for the stability of the DNA duplex
+  author:
+  - Altun, Ahmet
+  - Garcia-Ratés, Miquel
+  - Neese, Frank
+  - Bistoni, Giovanni
+  date: 2021
+  page-range: 12785
+  url: http://dx.doi.org/10.1039/d1sc03868k
+  serial-number:
+    doi: 10.1039/d1sc03868k
+    issn: 2041-6539
+  parent:
+    type: periodical
+    title: Chemical Science
+    publisher: Royal Society of Chemistry (RSC)
+    issue: 38
+    volume: 12
 

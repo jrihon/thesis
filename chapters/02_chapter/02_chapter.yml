@@ -51,6 +51,7 @@ Gait2022historyna:
     type: book
     title: Antisense RNA Design, Delivery, and Analysis
     publisher: Springer US
+    volume: 2434
 Pinheiro2012geneticpolymer:
   type: article
   title: Synthetic Genetic Polymers Capable of Heredity and Evolution
@@ -97,17 +98,18 @@ Groaz2023hna:
     publisher: Springer Nature Singapore
 Lescrinier2003difference:
   type: article
-  title: Difference in conformational diversity between nucleic acids with a six-membered ‘sugar’unit and natural ‘furanose’nucleic acids
-  author:
-  - Lescrinier, Eveline
-  - Froeyen, Matheus
-  - Herdewijn, Piet
-  date: 2003
-  page-range: 2975–2989
+  title: Difference in conformational diversity between nucleic acids with a six-membered “sugar” unit and natural “furanose” nucleic acids
+  author: Lescrinier, E.
+  date: 2003-06
+  page-range: 2975
+  url: http://dx.doi.org/10.1093/nar/gkg407
+  serial-number:
+    doi: 10.1093/nar/gkg407
+    issn: 1362-4962
   parent:
     type: periodical
-    title: Nucleic acids research
-    publisher: Oxford University Press
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
     issue: 12
     volume: 31
 Koshkin1998lna:
@@ -205,6 +207,7 @@ Moulton2017using:
   title: Using Morpholinos to Control Gene Expression
   author: Moulton, Jon D.
   date: 2017-03
+  page-range: 4–30
   url: http://dx.doi.org/10.1002/cpnc.21
   serial-number:
     doi: 10.1002/cpnc.21
@@ -239,6 +242,7 @@ Chen2016synthesis:
     volume: 21
 Corey2001morpholino:
   type: article
+  title: 'Morpholino antisense oligonucleotides: tools for investigating vertebrate development'
   author:
   - Corey, David R
   - Abrams, John M
@@ -280,6 +284,7 @@ Nan2018antisense:
   - Nan, Yuchen
   - Zhang, Yan-Jin
   date: 2018-04
+  page-range: 349773
   url: http://dx.doi.org/10.3389/fmicb.2018.00750
   serial-number:
     doi: 10.3389/fmicb.2018.00750
@@ -347,6 +352,9 @@ Macke1996nab:
   author: Macke, Thomas Joel
   date: 1996
   organization: The Scripps Research Institute
+  url: https://casegroup.rutgers.edu/casegr-sh-2.2.html
+  serial-number:
+    doi: https://casegroup.rutgers.edu/casegr-sh-2.2.html
 Alenaizan2020pnab:
   type: article
   title: 'The proto-Nucleic Acid Builder: a software tool for constructing nucleic acid analogs'
@@ -415,6 +423,7 @@ Duffy2020nextgenxna:
   - Arangundy-Franklin, Sebastian
   - Holliger, Philipp
   date: 2020-09
+  page-range: 112
   url: http://dx.doi.org/10.1186/s12915-020-00803-6
   serial-number:
     doi: 10.1186/s12915-020-00803-6
@@ -473,6 +482,7 @@ Neese2020orca:
   - Becker, Ute
   - Riplinger, Christoph
   date: 2020-06
+  page-range: 224108
   url: http://dx.doi.org/10.1063/5.0004608
   serial-number:
     doi: 10.1063/5.0004608
@@ -507,6 +517,9 @@ Iupac1983nucleicacids:
   author: IUPAC-IUB, JCBN
   date: 1983
   page-range: 9–15
+  url: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
+  serial-number:
+    doi: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
   parent:
     type: periodical
     title: European Journal of Biochemistry
@@ -536,12 +549,13 @@ Deserno2004generate:
   type: article
   title: How to generate equidistributed points on the surface of a sphere
   author: Deserno, Markus
-  date: 2004
+  date: 2004-09
+  url: https://www.cmu.edu/biolphys/deserno/pdf/sphere_equi.pdf
+  serial-number:
+    doi: https://www.cmu.edu/biolphys/deserno/pdf/sphere_equi.pdf
   parent:
     type: periodical
-    title: If Polymerforshung (Ed.)
-    issue: 2
-    volume: 99
+    title: Max-Planck-Institut für Polymerforschung, Ackermannweg 10, 55128 Mainz, Germany
 Strauss1970conformational:
   type: article
   title: Conformational structure, energy, and inversion rates of cyclohexane and some related oxanes
@@ -898,6 +912,7 @@ Gourdon2020gamess:
   - Zahariev, Federico
   - Gordon, Mark S.
   date: 2020-04
+  page-range: 154102
   url: http://dx.doi.org/10.1063/5.0005188
   serial-number:
     doi: 10.1063/5.0005188
@@ -1051,6 +1066,7 @@ Davidchack2009langevin:
   - Handel, Richard
   - Tretyakov, M. V.
   date: 2009-06
+  page-range: 234101
   url: http://dx.doi.org/10.1063/1.3149788
   serial-number:
     doi: 10.1063/1.3149788
@@ -1265,7 +1281,7 @@ Lescrinier2000rnahna:
     issn: 1074-5521
   parent:
     type: periodical
-    title: Chemistry &amp; Biology
+    title: Chemistry & Biology
     publisher: Elsevier BV
     issue: 9
     volume: 7

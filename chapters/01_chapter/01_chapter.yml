@@ -1,16 +1,17 @@
 Lescrinier2003difference:
   type: article
-  title: Difference in conformational diversity between nucleic acids with a six-membered ‘sugar’unit and natural ‘furanose’nucleic acids
-  author:
-  - Lescrinier, Eveline
-  - Froeyen, Matheus
-  - Herdewijn, Piet
-  date: 2003
-  page-range: 2975–2989
+  title: Difference in conformational diversity between nucleic acids with a six-membered “sugar” unit and natural “furanose” nucleic acids
+  author: Lescrinier, E.
+  date: 2003-06
+  page-range: 2975
+  url: http://dx.doi.org/10.1093/nar/gkg407
+  serial-number:
+    doi: 10.1093/nar/gkg407
+    issn: 1362-4962
   parent:
     type: periodical
-    title: Nucleic acids research
-    publisher: Oxford University Press
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
     issue: 12
     volume: 31
 Babin2006umbrella:
@@ -22,6 +23,7 @@ Babin2006umbrella:
   - Darden, Thomas A.
   - Sagui, Celeste
   date: 2006-11
+  page-range: 204909
   url: http://dx.doi.org/10.1063/1.2393236
   serial-number:
     doi: 10.1063/1.2393236
@@ -229,6 +231,9 @@ Iupac1983nucleicacids:
   author: IUPAC-IUB, JCBN
   date: 1983
   page-range: 9–15
+  url: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
+  serial-number:
+    doi: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
   parent:
     type: periodical
     title: European Journal of Biochemistry
@@ -412,6 +417,7 @@ Rosenberg2023ramachandran:
   - Marx, Ailie
   - Bronstein, Alex M.
   date: 2023-10
+  page-range: e2301064120
   url: http://dx.doi.org/10.1073/pnas.2301064120
   serial-number:
     doi: 10.1073/pnas.2301064120
@@ -459,6 +465,7 @@ Neese2020orca:
   - Becker, Ute
   - Riplinger, Christoph
   date: 2020-06
+  page-range: 224108
   url: http://dx.doi.org/10.1063/5.0004608
   serial-number:
     doi: 10.1063/5.0004608
@@ -477,6 +484,7 @@ Caldeweyher2017d4corr:
   - Bannwarth, Christoph
   - Grimme, Stefan
   date: 2017-07
+  page-range: 34112
   url: http://dx.doi.org/10.1063/1.4993215
   serial-number:
     doi: 10.1063/1.4993215
@@ -499,6 +507,7 @@ Caldeweyher2019londondisp:
   - Bannwarth, Christoph
   - Grimme, Stefan
   date: 2019-04
+  page-range: 154122
   url: http://dx.doi.org/10.1063/1.5090222
   serial-number:
     doi: 10.1063/1.5090222
@@ -518,6 +527,7 @@ Grimme2010dftcorrection:
   - Ehrlich, Stephan
   - Krieg, Helge
   date: 2010-04
+  page-range: 154101
   url: http://dx.doi.org/10.1063/1.3382344
   serial-number:
     doi: 10.1063/1.3382344
@@ -710,6 +720,8 @@ Deserno2004equiglobe:
   author: Deserno, Markus
   date: 2004-09
   url: https://www.cmu.edu/biolphys/deserno/pdf/sphere_equi.pdf
+  serial-number:
+    doi: https://www.cmu.edu/biolphys/deserno/pdf/sphere_equi.pdf
   parent:
     type: periodical
     title: Max-Planck-Institut für Polymerforschung, Ackermannweg 10, 55128 Mainz, Germany

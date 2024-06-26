@@ -1,16 +1,17 @@
 Lescrinier2003difference:
   type: article
-  title: Difference in conformational diversity between nucleic acids with a six-membered ‘sugar’unit and natural ‘furanose’nucleic acids
-  author:
-  - Lescrinier, Eveline
-  - Froeyen, Matheus
-  - Herdewijn, Piet
-  date: 2003
-  page-range: 2975–2989
+  title: Difference in conformational diversity between nucleic acids with a six-membered “sugar” unit and natural “furanose” nucleic acids
+  author: Lescrinier, E.
+  date: 2003-06
+  page-range: 2975
+  url: http://dx.doi.org/10.1093/nar/gkg407
+  serial-number:
+    doi: 10.1093/nar/gkg407
+    issn: 1362-4962
   parent:
     type: periodical
-    title: Nucleic acids research
-    publisher: Oxford University Press
+    title: Nucleic Acids Research
+    publisher: Oxford University Press (OUP)
     issue: 12
     volume: 31
 Cornell19952ndgenff:
@@ -126,6 +127,9 @@ Iupac1983nucleicacids:
   author: IUPAC-IUB, JCBN
   date: 1983
   page-range: 9–15
+  url: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
+  serial-number:
+    doi: https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf
   parent:
     type: periodical
     title: European Journal of Biochemistry
@@ -710,6 +714,7 @@ Saenger1984:
     doi: 10.1007/978-1-4612-5190-3
   parent:
     type: book
+    publisher: Springer New York, NY
     issue: 1
 Groaz2023hna:
   type: chapter
@@ -746,7 +751,7 @@ Lescrinier2000rnahna:
     issn: 1074-5521
   parent:
     type: periodical
-    title: Chemistry &amp; Biology
+    title: Chemistry & Biology
     publisher: Elsevier BV
     issue: 9
     volume: 7
@@ -876,6 +881,7 @@ Zhang2023sirna:
     type: periodical
     title: International Journal of Nanomedicine
     publisher: Informa UK Limited
+    volume: 18
 McRae2024ribozyme:
   type: article
   title: Cryo-EM structure and functional landscape of an RNA polymerase ribozyme
@@ -891,6 +897,7 @@ McRae2024ribozyme:
   - Holliger, Philipp
   - Andersen, Ebbe S.
   date: 2024-01
+  page-range: e2313332121
   url: http://dx.doi.org/10.1073/pnas.2313332121
   serial-number:
     doi: 10.1073/pnas.2313332121
@@ -1198,6 +1205,7 @@ Yi2022threoseformation:
   - Krishnamurthy, Ramanarayanan
   - Liotta, Charles L.
   date: 2022-12
+  page-range: e202202816
   url: http://dx.doi.org/10.1002/chem.202202816
   serial-number:
     doi: 10.1002/chem.202202816
@@ -1288,6 +1296,7 @@ Roche2022prebiotic:
   - Schuster, Gary B.
   - Hud, Nicholas V.
   date: 2022-12
+  page-range: e202203036
   url: http://dx.doi.org/10.1002/chem.202203036
   serial-number:
     doi: 10.1002/chem.202203036
@@ -1435,6 +1444,7 @@ Moulton2017PMO:
   title: Using Morpholinos to Control Gene Expression
   author: Moulton, Jon D.
   date: 2017-03
+  page-range: 4–30
   url: http://dx.doi.org/10.1002/cpnc.21
   serial-number:
     doi: 10.1002/cpnc.21
@@ -1506,6 +1516,9 @@ mattelaer2021PHD:
   author: Mattelaer, Charles-Alexandre
   date: 2021
   organization: Laboratory of Medicinal Chemistry, Rega Insitute for Medical Research, KU Leuven
+  url: https://lirias.kuleuven.be/retrieve/633139
+  serial-number:
+    doi: https://lirias.kuleuven.be/retrieve/633139
 Li2015ljpotential:
   type: article
   title: Systematic Parameterization of Monovalent Ions Employing the Nonbonded Model
@@ -1743,6 +1756,7 @@ PabonMartinez2017LNA:
   - Smith, C. I. Edvard
   - Zain, Rula
   date: 2017-09
+  page-range: 11043
   url: http://dx.doi.org/10.1038/s41598-017-09147-8
   serial-number:
     doi: 10.1038/s41598-017-09147-8

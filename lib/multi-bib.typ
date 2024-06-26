@@ -148,12 +148,14 @@
   let parent = publication.at("parent", default: 404)
 
   if parent == 404 {
-    [#text("NO PARENT FOUND, ", style: "italic")]
+//    [#text("NO PARENT FOUND, ", style: "italic")]
+    [#text("")]
   } else {
 
     let journal = parent.at("title", default: 404)
     if journal == 404 {
-      [#text(str("NO JOURNAL, "), style: "italic")  ]
+//      [#text(str("NO JOURNAL, "), style: "italic")  ]
+      [#text(str(""), style: "italic")  ]
     } else {
       [#text(str(journal) + ", ", style: "italic")  ]
     }
@@ -166,7 +168,8 @@
   let parent = publication.at("parent", default: 404)
 
   if parent == 404 {
-    [#text("NO PARENT FOUND, ", style: "italic")]
+//    [#text("NO PARENT FOUND, ", style: "italic")]
+    [#text("")]
   } else {
 
 //    let issue = parent.at("issue", default: 404)
@@ -178,7 +181,8 @@
 
     let volume = parent.at("volume", default: 404)
     if volume == 404 {
-      [#text("(" + str("NO VOLUME") + "),")  ]
+//      [#text("(" + str("NO VOLUME") + "),")  ]
+      [#text("")]
     } else {
       [#text("vol. " + str(volume) + ", ")  ]
     }
@@ -189,7 +193,8 @@
   let pagerange = publication.at("page-range", default: 404)
 
   if pagerange == 404 {
-    [#text("NO PAGERANGE")]
+    [#text("")]
+//    [#text("NO PAGERANGE")]
   } else {
     [#text("pp. " + str(pagerange) + ", ")  ]
   }
