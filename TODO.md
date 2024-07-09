@@ -27,3 +27,10 @@ Deserno : No volume, no pagerange V
 ## 03
 - Lagoja : no pagerange V
 - CA phd thesis : no parent x2, no pagerange V
+
+
+
+# FINAL TODO : 
+[ ] Translate Abstract
+[X] 1.3 Fundamentals on the behaviour of molecules -> Rutherfordian model or Bohr's model?
+[ ] Rework Concluding Remarks

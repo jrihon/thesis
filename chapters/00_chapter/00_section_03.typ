@@ -18,13 +18,16 @@ By looking at how the electrons behave in the vicinity of other electrons and th
 
 #let figure-nucleielectron = [
   #figure(
+//    image("./figures/nucleus-electron-02.svg", width: 100%),
     image("./figures/nucleus-electron.svg", width: 100%),
     caption: [
-      The nucleus contains protons (red) and neutrons (blue), with electrons 'flying' about the nucleus.
+//      The nucleus contains protons (red) and neutrons (grey), with electrons (blue) 'orbitting' about the nucleus. Simplified representation of 
+      The nucleus contains protons (red) and neutrons (grey), with electrons (blue) 'flying' about the nucleus. Simplified Rutherfordian model (deprecated).
     ]
   ) <fig-nucleielectron>
 ]
-#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.35fr), gutter: 1em)
+//#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.5fr), gutter: 1em)
+#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.4fr), gutter: 1em)
 One of the pillars of Computational Chemistry is Quantum Mechanics (QM). This scientific field's main mission is to work with the Schrödinger equation in order to assess the properties of a molecule at their fundamental level. Since these calculations are extremely heavy on computational resources, we will also discuss the field of Molecular Mechanics (MM). We can differentiate either field by the timescale at which we study the molecules of interest. While QM studies a system by the positional snapshot of a molecule, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty we incur in favour of the information we receive. In order for the simulated molecules to virtually move according to their observed behaviour, we design _force fields_ to abstract and compact the information gathered from QM and bring it over to MM.   
 //Briefly, a force field makes it possible to compact the information from a molecule and use it for Molecular Mechanics (MM)studies. When employed, MM methodologies make it possible to move the molecules are efficiently and accurately, thereby allowing us to study interactions of i.e. small molecule drugs with their target protein. 
 //==Computational Chemistry
@@ -42,7 +45,7 @@ One of the pillars of Computational Chemistry is Quantum Mechanics (QM). This sc
 //
 === Quantum Mechanics
 // Discuss some formal objects and notations for people to understand and interpret concepts in QM
-The field of QM studies the principle that every particle, like electrons, holds a _quantized_ amount of energy. The goal is to be describe the total energy of a system, meaning a collection of atoms and molecules, by the energy of all the individual particles that make up the system.
+The field of QM studies the principle that every particle, such as an electron, holds a _quantized_ amount of energy. The goal is to be describe the total energy of a system, meaning a collection of atoms and molecules, by the energy of all the individual particles that make up the system.
 
 ==== The Schrödinger equation
 //The Schrödinger equation forms the foundation of all of compchem 
@@ -341,7 +344,7 @@ $
 E#sub("amber") = E#sub("bondstretch") + E#sub("anglebend")  + E#sub("torsion") + E#sub("electrostatic") + E#sub("LJ")
 $ <eq-AMBER>
 //@eq-AMBER gives a brief overview of how AMBER's simulation engine derives the potential energy of a system.
-The first three terms are defined as the bonded-term interactions. All bonded interactions can be condensed to bonds (two), angles (three) and dihedrals (four), which are respectively composed of atoms linked together.
+The first three terms are defined as the bonded-term interactions. All bonded interactions can be condensed to bonds, angles and dihedrals, which are respectively composed of two, three and four atoms linked together.
 The final two are the nonbonded-term interactions, concerned with attractive and repulsive effects within and around the molecule and at least one dihedral away #mcite(("Cornell19952ndgenff"), biblio).
 While the simulation runs, the atoms move within their bounds. Every shift in movement, all atoms in the system take a slightly different position within the box. Bad movements get penalized, while good movements are left as is. Deciding on the alignment of a movement depends on the results of @eq-AMBER.
 //

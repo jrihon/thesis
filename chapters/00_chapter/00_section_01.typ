@@ -25,8 +25,8 @@ The helical structure of this deoxyribose nucleic acid (DNA) later unveiled by W
 //! -> endocyclic angles (v0, v1 ...)
 //! 
 //The previous section gave us a brief overview into how important nucleic acid molecules are to all living organisms. Though we've discussed their biological potential, our invested interest is in the fundamental characterisation of DNA and RNA, and especially chemically modified variants thereof. Continuing into this chapter, we need to formalise the definitions we conventionally use when discussing nucleic acid molecules.
-Continuing into this chapter, we need to formalise the definitions we conventionally use when discussing nucleic acid molecules. These become important to us later on because our vested interest is in the fundamental characterisation of these molecular building blocks, and especially variants thereof.
-
+//Continuing into this chapter, we need to formalise the definitions we conventionally use when discussing nucleic acid molecules. These become important to us later on because our vested interest is in the fundamental characterisation of these molecular building blocks, and especially variants thereof.
+//
 The native nucleic acids, DNA and RNA, are composed of three core moieties: the ribose ring (sugar), the nucleobase and a phosphate (linker) (@fig-iupacnames A.). The two chemistries differ only by an hydroxyl on the C2_'_ in RNA. The sugar moiety is the central part of the molecule, with the phosphate linking two subsequent nucleosides together, hence their combination being referred to as the backbone of the nucleic acid helix. 
 Chaining multiple nucleotides together through phosphate linkage forms an oligonucleotide strand. A duplex is formed when two strands interact by their nucleobases to form a helical structure (@fig-iupacnames E.).
 
@@ -76,14 +76,16 @@ Important to note is the 5_'_ $arrow.r$ 3_'_ direction of the backbone here. Whe
 
 Cells are also in constant communication with themselves and the outside. The incessant impulses they are subjected to are important to maintain the homeostatis of the tissue they make up, and allow the cells to interact with their environment through biological responses.
 In turn, the cells respond by producing of a variety of proteins as a reaction to the impulses or to simply maintain the cell's physiology. Depending on the signals received, the impulses can be propagated to the cell's core where a reaction will be kickstarted.
-#v(-0.5em)
+The DNA strands are transcribed then (_transcription_) to single stranded (ss) RNA.
+
 #let content-dogma = [
 //Cells are also in constant communication with themselves and the outside. The incessant impulses they are subjected to are important to maintain the homeostatis of the tissue they make up, and allow the cells to interact with their environment through biological responses.
 //In turn, the cells respond by producing of a variety of proteins as a reaction to the impulses or to simply maintain the cell's physiology. Depending on the signals received, the impulses can be propagated to the cell's core where a reaction will be kickstarted.
-The DNA strands are transcribed then (_transcription_) to single stranded (ss) RNA.
+//The DNA strands are transcribed then (_transcription_) to single stranded (ss) RNA.
 
 Important to clarify is that not the entire genome is fit for translation, but is divided into _introns_ and _exons_. These exons are the DNA sequences that are transcribed to become messenger RNA (mRNA). When transcribed, this mRNA is escorted outside of the nucleus and accepted by a protein complex, the ribosomes. These read the nucleic acid sequence by the codon - a triplet of nucleobases - and form a growing strand of amino acids, whose composition is determined by the codons read from mRNA sequence itself (_translation_). 
-//This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
+This specific chain of amino acids will then be accepted by a machinery to be processed// and folded into a protein suitable to handle the incoming physiological signals. 
+//A third division can be made for RNA molecules who provide a necessary functioning to the cell.
 ]
 #let figure-dogma = [
   #figure(
@@ -96,11 +98,15 @@ Important to clarify is that not the entire genome is fit for translation, but i
 ]
 
 #grid(content-dogma, figure-dogma, columns: (1fr, 1.5fr), gutter: 1em) #v(-0.5em)
-This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
+and folded into a protein suitable to handle the incoming physiological signals. 
+A third division can be made for RNA molecules who provide a necessary functioning to the cell.
+
+//This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
+//A third division can be made for RNA molecules who provide a necessary functioning to the cell.
 //stranded (ss) RNA.
 
-Important to clarify is that not the entire genome is fit for translation, but is divided into _introns_ and _exons_. These exons are the DNA sequences that are transcribed to become messenger RNA (mRNA). When transcribed, this mRNA is escorted outside of the nucleus and accepted by a protein complex, the ribosomes. These read the nucleic acid sequence by the codon - a triplet of nucleobases - and form a growing strand of amino acids, whose composition is determined by the codons read from mRNA sequence itself (_translation_). This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
-A third division can be made for RNA molecules who provide a necessary functioning to the cell.
+//Important to clarify is that not the entire genome is fit for translation, but is divided into _introns_ and _exons_. These exons are the DNA sequences that are transcribed to become messenger RNA (mRNA). When transcribed, this mRNA is escorted outside of the nucleus and accepted by a protein complex, the ribosomes. These read the nucleic acid sequence by the codon - a triplet of nucleobases - and form a growing strand of amino acids, whose composition is determined by the codons read from mRNA sequence itself (_translation_). This specific chain of amino acids will then be accepted by a machinery to be processed and folded into a protein suitable to handle the incoming physiological signals. 
+//A third division can be made for RNA molecules who provide a necessary functioning to the cell.
 
 
 ==== ... as regulators of cellular functioning
@@ -117,7 +123,7 @@ Though many enzymes exist that coordinate these pathways, the most known are gui
     *C.* The enzyme:guide-siRNA binds to matching mRNA and cleaves it into non-functional strands. The complex can then be recycled.
   ]
 ) <fig-silencingRNA>
-The siRNA typically originates from double stranded (ds) RNA, which was produced and released into the cells by exogenous sources like virusses. Here we need to understand that virusses sometimes depend on human cells for their protein synthesis. These dsRNA will be recognised by the RNA-induced silencing complex (RISC) in the cytoplasm in order to be processed down to the correct size of about 20 nucleotides (nt). As this constitutes dsRNA, one strand is assigned to be the guide, while its complement functions as the passenger. After manipulation by RISC, the pre-siRNA is managed by the AGO2 complex that will discard the passenger strand. This complex of enzyme:guide-siRNA will be able to bind to free floating ssRNA from viral origin and - given a matching complement - cleave those sequences, by having the guide strand bind to the target ssRNA and the enzyme exerting its catalytic activity (@fig-silencingRNA). Cleaved, viral RNA cannot function as a template for the ribosomes anymore, thereby prohibiting protein synthesis of the viral RNA. This mechanism is typically associated with the cell's innate, protective measures against foreign invasion.
+The siRNA typically originates from double stranded (ds) RNA, which was produced by the cell itself or released into the cells by exogenous sources like virusses. Here we need to understand that virusses sometimes depend on human cells for their protein synthesis. These dsRNA will be recognised by the RNA-induced silencing complex (RISC) in the cytoplasm in order to be processed down to the correct size of about 20 nucleotides (nt). As this constitutes dsRNA, one strand is assigned to be the guide, while its complement functions as the passenger. After manipulation by RISC, the pre-siRNA is managed by the AGO2 complex that will discard the passenger strand. This complex of enzyme:guide-siRNA will be able to bind to free floating ssRNA from viral origin and - given a matching complement - cleave those sequences, by having the guide strand bind to the target ssRNA and the enzyme exerting its catalytic activity (@fig-silencingRNA). Cleaved, viral RNA cannot function as a template for the ribosomes anymore, thereby prohibiting protein synthesis of the viral RNA. This mechanism is typically associated with the cell's innate, protective measures against foreign invasion.
 
 The functioning of miRNA starts from an endogenous path and needs to be induced first by an endogenous signal. DNA will be transcribed to primary miRNA that will be processed accordingly and then translocated from the nucleus to the cytoplasm. It will undergo a similar treatment as with the siRNA in terms of RISC and the AGO family, but will eventually bind the target endogenous mRNA to repress translation of the sequence to a protein #mcite(("Ghildiyal2009rnainterference", "Zhang2023sirna"), biblio). This can be in response to an overabundance of proteins in the cytoplasm that the cell is producing or as a response to clean up the mRNA when its use has been fulfilled.
 
@@ -247,7 +253,7 @@ By acting as a chain terminator, Tenofovir is able to dismantle this process. An
 //
 //
 ==== Antisense Oligonucleotides
-The Antisense Oligonucleotides (ASO) are a particular class of drugs that are administered in order to emulate the effects of the endogenous RNAi pathways. Essentially, a ssNA chain is designed to complement a specific mRNA sequence; a sequence that would translate for a protein that is therapeutically interesting to interfere with. The most successful chemistry to date is that of the dimethylamino-phosphorodiamidate MNA (PMO, @fig-sugarmods E.) chemistry and has been applied to resolve a genetic defect in a particular variant of the Duchenne's musculodystrophy #mcite(("Roshmi2019viltolarsen"), biblio). 
+The Antisense Oligonucleotides (ASO) are a particular class of drugs that are administered in order to emulate the effects of the endogenous RNAi pathways. Essentially, a ssNA chain is designed to complement a specific mRNA sequence; a sequence that would translate for a protein that is therapeutically interesting to interfere with. The most successful chemistry to date is that of the dimethylamino-phosphorodiamidate MNA (PMO, @fig-sugarmods E.) chemistry and the thiophosphoramidate variant (TMO) has been applied to resolve a genetic defect in a particular variant of the Duchenne's musculodystrophy #mcite(("Roshmi2019viltolarsen", "Langner2020TMO"), biblio). 
 A protein is translated from mRNA, which is transcribed from multiple exon-sequences of the genomic DNA. In some of variants of this pathology, there exists a mutation in exon n°51 of the chain, causing instability of the distrophin protein - a functional protein that is key to the stability of the muscle fibers. By prohibiting transcription of this exon, the protein becomes truncated but functional, which ultimately improves the quality of life of the patients suffering from this disease.
 
 Another application of ASOs is in the usage in preclinical research, mainly on zebrafish. These animals are interesting because they are cheap to maintain, easy to manipulate and have a short lifecycle, lowering the time between experiments dramatically. 
@@ -259,7 +265,8 @@ By adminstering these short oligomers to the zebrafish, researchers can study th
 //
 //
 ==== Aptamers
-Aptamers are single-stranded NA strands capable of forming three dimensional structures. What defines such an aptamer is the application of the molecule, being able to recognise proteins with a high specificity and sensitivity. This is analogous with the common antibody. However, the production of an aptamer is comparatively cost-efficent and less labour-intensive, and this has gained them popularity in the pharmaceutical field. Aptamers are also able to bind and sequester small molecules, something antibodies are not capable of #mcite(("Mayer2009aptamer"), biblio).
+Aptamers are single-stranded NA strands capable of forming three dimensional structures. What defines such an aptamer is the application of the molecule, being able to recognise ligands with a high specificity and sensitivity. This is analogous with the common antibody, but ligands are not limited to just immunogenic proteins. Aptamers are also able to bind and sequester small molecules, something antibodies are not capable of.
+The production of an aptamer is comparatively cost-efficent and less labour-intensive, and this has gained them popularity in the pharmaceutical field #mcite(("Mayer2009aptamer"), biblio).
 
 Supposing that therapeutic aptamers would be composed of DNA or RNA, they would be rapidly made ineffective by the human body. Chemical modifications prove beneficial to make aptamers viable for therapeutic interventions. We can generate aptamer against specific targets through the usage of the SELEX methodology (more in this in @chap-chapterAptamer).
 When selecting for a suitable aptamer against a target - e.g. a surface receptor of a cell - modifications are applied to the nucleotide sequence in order to improve its nuclease resistance and to potentially finetune the affinity towards its target. 

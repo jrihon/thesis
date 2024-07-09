@@ -1808,4 +1808,23 @@ Pezo2013hnatemplate:
     publisher: Wiley
     issue: 31
     volume: 52
+Langner2020TMO:
+  type: article
+  title: Synthesis and Characterization of Thiophosphoramidate Morpholino Oligonucleotides and Chimeras
+  author:
+  - Langner, Heera K.
+  - Jastrzebska, Katarzyna
+  - Caruthers, Marvin H.
+  date: 2020-08
+  page-range: 16240
+  url: http://dx.doi.org/10.1021/jacs.0c04335
+  serial-number:
+    doi: 10.1021/jacs.0c04335
+    issn: 1520-5126
+  parent:
+    type: periodical
+    title: Journal of the American Chemical Society
+    publisher: American Chemical Society (ACS)
+    issue: 38
+    volume: 142
 

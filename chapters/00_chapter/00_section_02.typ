@@ -45,7 +45,7 @@ The degree of freedom these peptide chains have is immense, which explains why t
     *C.* Ramachandran plot with assigned location on where to find $phi-psi$ dyads for a given tertiary structure. The regions where we can find the $alpha$- and $beta$-motifs are assigned on the plot.
   ]
 )<fig-proteins>
-The amino acid monomer is simple compared to nucleic acids. The backbone consists of (-NH-C#sub($alpha$)-CO-) repeats that are linked through amide bonds, with a specific sidechain appended to the C#sub($alpha$) that defines the type of amino acid (@fig-proteins A.).
+The amino acid monomer is simple compared to nucleic acids. The backbone consists of (-NH-C#sub($alpha$)-CO-) repeats that are linked through amide bonds, defined by a specific sidechain appended to the C#sub($alpha$) (@fig-proteins A.).
 There are a total of twenty natural amino acids that make up human proteins; valine, histidine and glutamate to name a few. Because of the structural and sidechain diversity in proteins, they underpin almost all cellular functioning. They propagate biochemical signals, recognise and act upon changes in the environment, support the structural integrity of cells and many other purposes far beyond the scope of this explanation. 
 
 The structure of a protein can be divided into three typical motifs: _$alpha$-helices_ and _$beta$-strands_, and _loop_ regions that connect the $alpha$- and $beta$-motifs together.
@@ -98,7 +98,7 @@ Many of the formulas in this section come from various sources that each employ 
 ===== Altona-Sundaralingam (AS)
 A relationship was described between the values of the endocyclic torsion angles ($nu_(0 arrow.r 4)$) and the puckering itself #mcite(("Altona1968pseudorot"), biblio). The AS formalism was also the first to popularise the usage of puckering behaviour on the nucleic acid ribose sugar and introduces the pseudorotational wheel. The latter graphically depicts occurrences of the various puckers of the ribose sugars on a polar coordinate system when a nucleic acid crystal structure is determined (@fig-fivering B.) #mcite(("Altona1972formalism"), biblio).
 
-@eq-as-phaseangle details on a formula where all endocyclic angles are passed to a function to return the phase angle. This parameters allows @eq-as-amplitude to complete, given $j=0$ and a trivial rearrangement left to the reader.
+@eq-as-phaseangle details on a formula where all endocyclic angles are passed to a function to return the phase angle. This parameter allows @eq-as-amplitude to complete, given $j=0$ and a trivial rearrangement left to the reader.
 
 $
 tan(phi) = frac((nu_4 + nu_1) - (nu_3 + nu_0) , 2 nu_2 (sin(frac(pi,5)) + sin(frac(2pi,5))) ) 
@@ -129,7 +129,7 @@ $
 q_m cos phi_m = sqrt(frac(2,N)) sum^(N-1)_(j=0) z_j cos(frac(2 pi m j, N)) #h(2em) ; #h(2em)
 q_m sin phi_m = - sqrt(frac(2,N)) sum^(N-1)_(j=0) z_j sin(frac(2 pi m j, N))
 $<eq-odd-membered>
-We can @eq-odd-membered simplify for $N=5$: 
+We can simplify @eq-odd-membered for $N=5$, resulting in $m = 2$: 
 $
 q_2 cos phi_2 = sqrt(frac(2,5)) sum^4_(j=0) z_j cos(frac(4 pi j, 5)) #h(2em) ; #h(2em)
 q_2 sin phi_2 = - sqrt(frac(2,5)) sum^4_(j=0) z_j sin(frac(4 pi j, 5))
@@ -142,9 +142,6 @@ However, because the CP formalism is able to generalise the way it calculates th
 //
 //
 //
-#intermezzo("Spherical conventions")[
-The following definitions employ the physics convention for spherical coordinates ($r, theta, phi$), with $theta [0 arrow.r pi]$ and $phi [0 arrow.r 2pi]$. These differ from the mathematical convention as the latter swapped the meaning of $theta$ and $phi$. This information is relevant as projections onto a sphere, coming from a geographical perspective, use the mathematical convention.
-]
 //
 //
 ==== six-membered rings
@@ -179,6 +176,12 @@ commonly referred to as a _half-chair_, it makes much more sense to assign it as
 Consdering it was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical
 This formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: the set of improper dihedrals [$alpha$#sub("1"), $alpha$#sub("2"), $alpha$#sub("3")] and the set of angles [$beta$#sub("1"), $beta$#sub("2"), $beta$#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself. From @fig-spimpropers, we clearly see the six-membered ring partioned in a central triangle and three individual _flaps_ that will be able to fold in and out.
 As with Kilpatrick _et al._, this research made us of vibrational spectra involving angle bending and torsional parameters that are used to compute for the potential energy of the molecule itself. Through pseudorotational movement, the endocyclic angles vary and so will the potential energy. One important result of this formalism is the first usage of the spherical coordinates system ($r, theta, phi$) to represent a six-membered ring configuration.
+
+
+#intermezzo("Spherical conventions")[
+The definitions for six-membered rings employ the physics convention for spherical coordinates ($r, theta, phi$), with $theta [0 arrow.r pi]$ and $phi [0 arrow.r 2pi]$. These differ from the mathematical convention as the latter swapped the meaning of $theta$ and $phi$. This information is relevant as projections onto a sphere, coming from a geographical perspective, use the mathematical convention.
+]
+
 #let figure-sp = [
 #figure(
     image("./figures/conformers/SP_impropers.svg"),
@@ -204,7 +207,7 @@ The rest of the research papers makes use of calculating the potential energy of
 ===== Cremer-Pople (CP)
 Since the CP formalism is generalised to any $n$-membered ring ($n$ ≥ 4), an extra coordinate is added to the set to formalise a _3-tuple_ ($q_2, phi_2, q_3$) for six-membered rings. As a sidenote, the relation for the amount of coordinates for a given ring system is $N-3$ in the CP domain. This means that for a seven-membered ring system, we append an additional coordinate to the _3-tuple_; each increment in $N$ atoms increments the amount of coordinates needed to describe the out-of-plane displacement uniquely.
 
-For _even_-membered ring systems, @eq-odd-membered applies up to $m = N/2$.
+@eq-even-membered describes _even_-membered ring systems and applies up to $m = N/2$. We apply it for six-memberded rings.
 $
 q_m = sqrt(frac(1,N)) sum^(N-1)_(j=0) z_j (-1)^j #h(2em) arrow.r #h(2em) q_3 = sqrt(frac(1,6)) sum^5_(j=0) z_j (-1)^j
 $<eq-even-membered>
@@ -242,8 +245,13 @@ $<eq-even-locelevation>
 // 
 // 
 // 
+// 
 //
-=== A basis for definitions
+// 
+// 
+//
+//=== A basis for definitions
+=== Describing basepair orientations of nucleic acids
 
 At an EMBO (European Molecular Biology Organization) conference in Cambridge in 1988 #mcite(("Dickerson1989Cambridge"), biblio), a workshop _DNA Curvature and Bending_ was held by renowned nucleic acid chemists and biologist to attempt to resolve a particular issue: to quantitatively describe intra- and interbasepair orientations. This description was meant to prove useful in order to further expand the geometric descriptors of nucleic acid chains and helices. 
 Several groups  were tasked to come up with a program (e.g. Lavery group made Curves+ #mcite(("Lavery2009Curves"), biblio), Wilson group made 3DNA #mcite(("Lu20033DNA"), biblio)) that would be held against the following criteria: (i) follow IUPAC nomenclature #mcite(("Iupac1983nucleicacids"), biblio), (ii) make a general purpose software to describe polynucleotide chains, (iii) adhere to a specific set of instructions on how to construct reference basis frames in order to (iv) define parameters on rotations and translations of basepairs (see @fig-appendix-basepairorient for an overview of the defined basepair parameters).
