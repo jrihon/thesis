@@ -14,7 +14,7 @@
 }
 
 == Experimental studies
-=== Laboratory experiments (Collaborators's work)
+=== Laboratory experiments (Collaborators' work)
 The following laboratory experiments have been extensively detailed in Schofield _et al_. #mcite(("Schofield2023HNAaptamer"), biblio).
 ==== Truncation experiments
 //! een klein beetje vertellen over de manier hoe dat ze SPR en BLI gebruiken.

@@ -21,7 +21,7 @@ For the dA ribose ring, the inclusive range [-60. $arrow.r$ 60.] was divided in 
 For each generated datapoint, _pucke.rs_ generates a set of ($nu_1$, $nu_3$)-constraints (@fig-ConfSamplingExplained B.).
 Additional exocyclic constraints were applied to generate five-membered ring conformers for the CS experiment. $beta$: 180.1$degree$, $gamma$: 60.0$degree$, $epsilon$: 180.1$degree$ and $chi$: 210.59$degree$.
 
-For conformational sampling of an unsaturated six-membered ring, a set of datapoints is generated on the surface of the CP-sphere that represents the conformational space of six-membered rings. The CP formalism lets us invert from spherical coordinates to atomic coordinates, which are then used by the Strauss-Pickett formalism converts this information to impromper dihedrals ($alpha_1$, $alpha_2$, $alpha_3$). These are used as constraints are used to generate initial structures in the CS methodology (@fig-ConfSamplingExplained C.)
+For conformational sampling of an unsaturated six-membered ring, a set of datapoints is generated on the surface of the CP-sphere that represents the conformational space of six-membered rings. The CP formalism lets us invert from spherical coordinates to atomic coordinates, which are then used by the Strauss-Pickett formalism converts this information to impromper dihedrals ($alpha_1$, $alpha_2$, $alpha_3$). These are used as constraints to generate initial structures in the CS methodology (@fig-ConfSamplingExplained C.)
 The hexitol NA adenosine (hA) monomer sampling was imposed with the following constraints: $beta$: 180.1$degree$, $gamma$: 60.0$degree$, $epsilon$: 180.1$degree$ and $chi$: 210.59$degree$.
 //
 

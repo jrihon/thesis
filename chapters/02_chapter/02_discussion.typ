@@ -13,18 +13,19 @@ Ducque produced models of RNA and DNA duplexes as fast as the NAB tool.
   #figure(
     image("./figures/ion-to-backbone-justfig.svg"),
     caption : [
-      The K#super("+")-ion enclosed in the backbone. Notice the mA30's glycosidic bond angle having shifted to a _syn_ configuration. See Figure IonBackbone for an detailed look into the enclosed ion throughout the MD simulation. 
+      The K#super("+")-ion enclosed in the backbone. Notice the mA30's glycosidic bond angle having shifted to a _syn_ configuration. 
+//      See Figure IonBackbone for an detailed look into the enclosed ion throughout the MD simulation. 
     ]
   ) <fig-ion2bbjustfig>
 ]
 #let ionbbcontent = [
 The latter is part of the AMBER toolkit and requires other AMBER programs (like tLEaP) to run, whereas Ducque functions as a standalone software. Syntactically, Ducque reads in simple text files to directly generate a model, as opposed to NAB's DSL which writes like C code and requires compilation of and executing the produced binary.
-Produced initial models are highly similar for both model builders and provided the same results in a subsequent MD simulation in standard force fields of AMBER. In contrast to NAB, Ducque is not limited to ribose based nucleic acids. Low energy conformations for non-ribose based nucleosides with hexitol and xylose sugars were included in the Ducque library, among others, and served to build nucleic acid duplexes for which MD simulations could be performed using a parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
+Produced initial models are highly similar for both model builders and provided the same results in a subsequent MD simulation in standard force fields of AMBER. In contrast to NAB, Ducque is not limited to ribose based nucleic acids. Low energy conformations for non-ribose based nucleosides with hexitol and xylose sugars were included in the Ducque library, among others, and served to build nucleic acid duplexes for which //MD simulations could be performed using a parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
 ]
 //#wrap-content(ion-bb-fig, ionbbcontent)
 #wrap-content(ion-bb-fig, ionbbcontent, align: right)
-//#v(-0.5em)
-//MD simulations could be performed parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
+#v(-0.5em)
+MD simulations could be performed parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
 
 //
 //
@@ -33,7 +34,7 @@ Produced initial models are highly similar for both model builders and provided 
 //
 As sugar puckering is crucial for the backbone geometry and flexibility, we used Paramfit to optimise dihedral force field parameters on non-ribose nucleosides by fitting QM to MM energies of selected conformations of nucleosides after RESP charges had been calculated through the ORCA implementation. Linker parameters from GAFF2 were validated through QM approaches.
 
-The initial RNA::HNA duplex was built and remained stable during the MD round. Ducque’s model of dXyNA homoduplex with backbone dihedrals for a ladder-like structure converged towards the left-handed helical structure in the MD simulation, confirming what was predicted the dXyNA duplex #mcite(("Maiti2011deoxyxylose", "Ramaswamy2009xylonastruct", "Ramaswamy2017xylonastruct"), biblio) (Figure S13). This result, and that of the DNA::RNA heteroduplex, ensured that dihedral angles used for model building in Ducque did not determine the outcome of the MD simulation.  
+The initial RNA::HNA duplex was built and remained stable during the MD round. Ducque’s model of dXyNA homoduplex with backbone dihedrals for a ladder-like structure converged towards the left-handed helical structure in the MD simulation, confirming what was predicted the dXyNA duplex #mcite(("Maiti2011deoxyxylose", "Ramaswamy2009xylonastruct", "Ramaswamy2017xylonastruct"), biblio) (@fig-hna-dxylo C.). This result, and that of the DNA::RNA heteroduplex, ensured that dihedral angles used for model building in Ducque did not determine the outcome of the MD simulation.  
 
 The methodology described to derive charges for naturally occurring RNA modifications #mcite(("Aduri2007paramnuc"), biblio) starts off differently than the one described in this work, but has the same goal. At last, experiments were performed on an RNA::MNA duplex. The charges for the MNA chemistry were derived using the new ORCA implementation, that was evaluated on HNA. According to the proposed workflow, low energy conformations of nucleosides and linker are described by QM calculations and ported to the Ducque library. In line with the available crystal structure #mcite(("Zhang2019templatemna"), biblio), the #super("4'")C#sub("1'") chair having the nucleobase in an equatorial position turned out to be the lowest energy conformation of morpholino nucleosides according to QM. An initial model was produced by ducque and subjected to an mm simulation using a force field that was parametrised as described in the methods section. the rna::mna heteroduplex simulations yielded a right-handed helical structure that does not belong to the A- or B-type family #mcite(("Langner2020thiophosphoramidate"), biblio). 
 The morpholino rings remain predominantly in their chair conformation with an equatorial orientation of the nucleobase.

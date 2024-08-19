@@ -173,7 +173,7 @@ commonly referred to as a _half-chair_, it makes much more sense to assign it as
 //
 // SP formalism
 ===== Strauss-Pickett (SP)
-Consdering it was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical
+Considering it was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical
 This formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: the set of improper dihedrals [$alpha$#sub("1"), $alpha$#sub("2"), $alpha$#sub("3")] and the set of angles [$beta$#sub("1"), $beta$#sub("2"), $beta$#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself. From @fig-spimpropers, we clearly see the six-membered ring partioned in a central triangle and three individual _flaps_ that will be able to fold in and out.
 As with Kilpatrick _et al._, this research made us of vibrational spectra involving angle bending and torsional parameters that are used to compute for the potential energy of the molecule itself. Through pseudorotational movement, the endocyclic angles vary and so will the potential energy. One important result of this formalism is the first usage of the spherical coordinates system ($r, theta, phi$) to represent a six-membered ring configuration.
 
@@ -283,7 +283,7 @@ On the other hand, 3DNA #mcite(("Lu20033DNA"), biblio) takes on a very different
 // berekeningen waarop 3DNA zich heeft gebaseerd : ElHassan1995Calc3DNA
 // Leg even uitleg hier over, maak figuur af
 //
-Even though these tools all revolve around the same semantics, it cannot be ignored that the methodology in which these are computed are wildly different. Non-indentical reference basisframes give slightly different results and that has been known for a long time now #mcite(("Lu1999ConfDiscrepancy"), biblio). Every individual software released in the aftermath of the Cambridge Convention employs an independent protocol to set up and compute the parameters.
+Even though these tools all revolve around the same semantics, it cannot be ignored that the methodology in which these are computed are wildly different. Non-identical reference basisframes give slightly different results and that has been known for a long time now #mcite(("Lu1999ConfDiscrepancy"), biblio). Every individual software released in the aftermath of the Cambridge Convention employs an independent protocol to set up and compute the parameters.
 Even though the parameters result in numerically similar values, one cannot compare data from these various softwares in good conscience because the data will always be offset.
 
 The definitions were put in place over thirty years ago and since then, these orientation parameters have not shown profound relevance to the biological properties of the nucleic acid structure. It has even been shown that the orientation parameters between A-RNA and B-DNA models are rather the same #mcite(("Lu1999ConfDiscrepancy"), biblio)! In contrast, deformations like enlarged grooves and decrease in helical size (Å) have a direct implication for the nucleic acid structure to be accepted by its processing enzyme, thereby influencing a biological process. 

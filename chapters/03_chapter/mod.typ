@@ -10,7 +10,7 @@
 #boxed-text(
   title: "Characterization of an HNA aptamer suggests a non-canonical G-quadruplex motif.",
   authors: ("Schofield P.", "Taylor A.I.", "Rihon J.", "Peña Martinez C.D.", "Zinn S.", "Mattelaer C.-A.", "Jackson J.", "Dhaliwal G.",
-    "Schepers G.", "Herdwijn P.", "Lescrinier E", "Christ D.", "Holliger P."),
+    "Schepers G.", "Herdewijn P.", "Lescrinier E", "Christ D.", "Holliger P."),
   journal: "Nucleic Acids Research (NAR)",
   doi: "10.1093/nar/gkad592",
 )

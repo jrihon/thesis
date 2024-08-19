@@ -11,7 +11,8 @@ The crucial bits of information were often the most difficult to track down.
 
 The Ducque model builder is my personal hope to resolve the gap in this field, with a software tool that is truly modular for any type of chemistry - sugar, nucleobase and linker. This will propel the XNA field forward and to make many realise we are not that far off making robust predictions on the outcome of synthetic structures. 
 An important contribution we made with the Ducque publication is that we did not fragment the protocol into multiple articles.
-Case and point, the Ducque model builder could have been a publication on its own. The protocol itself could have been too. To slice through the pipeline would be dishonest to the reader. Combining an innovative tool with the protocol itself ensured we could convey all the information in one _dense_ paper.
+//Case and point, the Ducque model builder could have been a publication on its own. The protocol itself could have been too. To slice through the pipeline would be dishonest to the reader.
+Combining an innovative tool with the protocol itself ensured we could convey all the information in one _dense_ paper.
 
 In *Chapter 4* we were able to use the information from where the project had left off and use it to our advantage. With the additional _in vitro_ identification of the G-quadruplex, the mutational analysis of the hG residues and study on the ionic dependence lead us to find a structure that matches the findings from the biological experiments. While a hundred percent certainty on the structure can never be achieved, it serves as a great alternative to deterministic methods that weren't up to the task at hand.  
 

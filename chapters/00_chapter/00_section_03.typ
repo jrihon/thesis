@@ -10,7 +10,7 @@
 == Fundamentals on the behaviour of molecules
 #let content-nucleielectron = [
 Now that we've touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, we will delve into what constitutes a molecule and how we can accurately describe them fundamentally.
-A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. When we magnify our view on atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons.  
+A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. When we magnify our view on atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons (@fig-nucleielectron).  
 //The field of Computional Chemistry (compchem) concerns itself with describing atoms and molecules by the positioning of the electrons around their nuclei. Asserting their probable whereabouts lets us calculate the energy of the molecular system. 
 //In other words, by looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
 By looking at how the electrons behave in the vicinity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment. This lets us simulate their behaviour through rigorous computations, so we can look at the interactions a drug makes with the active site of an enzyme at the atomic scale, to give an example.
@@ -619,7 +619,7 @@ The $E_("direct")$ just employs the regular charge calculation (@eq-charges-in-a
 //https://www.quora.com/What-is-Ewald-summation-and-why-is-the-Particle-mesh-Ewald-approach-a-good-one
 
 To give some insight into the problem, the PBC require us to evaluate the charges in a pairwise fashion for atoms in neighbouring "boxes" to properly account for long-range interactions. This would cause an immense amount of time to iterate over every atom and over every pair of the respective atoms. 
-With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves. This means that we form a function that describes the field of 'infinite' charges very well. This function is then used by the Ewald Summation Formula to return the potential energy for longe-range electrostatics .
+With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves (@fig-pme-fft). This means that we form a function that describes the field of 'infinite' charges very well. This function is then used by the Ewald Summation Formula to return the potential energy for longe-range electrostatics .
 
 #figure(
   image("./figures/particlemesh.svg", width: 100%),
