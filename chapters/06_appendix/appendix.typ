@@ -155,7 +155,7 @@ colspanx(7)[],
   ),
 
   caption : [
-    Torsion angles of the RNA::MNA heteroduplex in comparison with the RNA::RNA homoduplex. Data extracted from the last 50 ns of the 200 ns simulation.
+    Torsion angles (in degrees, $degree$) of the RNA::MNA heteroduplex in comparison with the RNA::RNA homoduplex. Data extracted from the last 50 ns of the 200 ns simulation.
   ]
 ) <tbl-suppl-RNAMNA_backbone>
 
@@ -180,6 +180,6 @@ colspanx(7)[],
     [P-P distance],  [  6.02 ($plus.minus$  0.33)]       , [  6.03 ($plus.minus$  0.33)]             , [  6.03 ($plus.minus$  0.33)]    , [  6.05 ($plus.minus$  0.32)] ,
   ),
   caption: [
-        Backbone torsion angles of the RNA::RNA homoduplexes, run with restraints on the $chi$ angle at 189 $degree$ and 194 $degree$, respectively. Data sampled from the last 50 ns of the 200 ns simulation.}
+        Backbone torsion angles (in degrees, $degree$) of the RNA::RNA homoduplexes, run with restraints on the $chi$ angle at 189 $degree$ and 194 $degree$, respectively. Data sampled from the last 50 ns of the 200 ns simulation.}
   ]
 ) <tbl-suppl-chibackbone> 

@@ -109,9 +109,9 @@ Obtained PESs are compared with @tbl-wallclock) and the Consumables (@fig-supple
 ) <fig-PESALL>
 //
 //
-The selected GSQ, mp2q, were the heaviest computations, clocking in at roughly 548h or about 22.8 days of calculations. The geometry optimisation capped out at about 48 GiB of RAM, while at most 40 GiB of _tmp_-files were stored on disk by ORCA when ten conformations were optimised concurrently.
-The hf3c was logged for the same parameters and finished in about 0.7h, capping at almost 3GiB of RAM and almost 1 GiB in Disk Space in _tmp_-files.
-The GO experiment with hfq finished around the 30h mark and showed little hardware consumption compared to the GSQ, topping at 10 GiB of RAM with an excess of 6 GiB of _tmp_-files produced by ORCA at most. The pbeq consumed relatively the same as the hfq, but clocks in at 58h or 2.4 days (@fig-supplementary-consumables A.,B.).
+The selected GSQ, mp2q, were the heaviest computations, clocking in at roughly 548 h or about 22.8 days of calculations. The geometry optimisation capped out at about 48 GiB of RAM, while at most 40 GiB of _tmp_-files were stored on disk by ORCA when ten conformations were optimised concurrently.
+The hf3c was logged for the same parameters and finished in about 0.7 h, capping at almost 3 GiB of RAM and almost 1 GiB in Disk Space in _tmp_-files.
+The GO experiment with hfq finished around the 30 h mark and showed little hardware consumption compared to the GSQ, topping at 10 GiB of RAM with an excess of 6 GiB of _tmp_-files produced by ORCA at most. The pbeq consumed relatively the same as the hfq, but clocks in at 58 h or 2.4 days (@fig-supplementary-consumables A.,B.).
 //
 //
 //
@@ -142,13 +142,13 @@ The GO experiment with hfq finished around the 30h mark and showed little hardwa
 //
 When looking at @tbl-wallclock, we saw that the SPE calculations run at most a total of six hours to optimise all possible adenosine conformers.
 The hfq (max. 28.9 GiB) and mp2q (max. 28.6 GiB) had similar RAM requirements, while the latter still required a tremendous amount of free disk space to store _tmp_-files. All this in contrast to the pbeq that needed (max. 9 GiB) of additional space on disk to run successfully. 
-The SPE at the HF-3c consumed a maximum of 6 GiB and ran to completion in under ten minutes (@fig-supplementary-consumables C.,D.).
+The SPE at the HF-3c consumed a maximum of 6 GiB and ran to completion in less than ten minutes (@fig-supplementary-consumables C.,D.).
 //The SPE at the hf3c finished so quickly that only a couple of measurements could have been taken 
 The conclusion remains that the (hf3c - mp2q) combination still is a robust competitor in approximating the GSQ, as these calculations are perfectly manageable within a single workday, on hardware with 64 GiB of RAM and 32 cores.
-The established protocol by Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio) demonstrates high accuracy, uses half of the resources and only 1% of the runtime with respect to the GSQ.
+The established protocol by Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio) demonstrates high accuracy, uses half of the resources and only 1 % of the runtime with respect to the GSQ.
 //Still, the established methodology #mcite(("Mattelaer2021efficient"), biblio) returned a comparatively amazing result for the frugality of its expenditure.
 To combat the storing of _tmp_-files, one allocates more RAM per thread.
-To balance the resources for all the LoTs, a middle ground was sought to not exaggerate the resources allocated to the cheaper methods (HF3c , pbeq), while avoiding bottlenecking the expensive methods. This made comparing consumables more straightforward. These protocols, which are targetted for studies on organic compounds, can be further optimised along the available computational hardware of the researcher.
+To balance the resources for all the LoTs, a middle ground was sought to not exaggerate the resources allocated to the cheaper methods (hf3c , pbeq), while avoiding bottlenecking the expensive methods. This made comparing consumables more straightforward. These protocols, which are targetted for studies on organic compounds, can be further optimised along the available computational hardware of the researcher.
 //In the interest of the research, a concession had to be made towards the cheaper LoTs , by not exaggerating the resources allocated with respect to their computational requirements.
 //A comparison between (mp2q vs. mp2t) and (hfq vs. hfnorijk) is presented in Suppl. Fig. SIConsumablesExtra.
 //  

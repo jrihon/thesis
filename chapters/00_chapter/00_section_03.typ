@@ -9,7 +9,7 @@
 #show "FockOp": $accent(f, "^")$
 == Fundamentals on the behaviour of molecules
 #let content-nucleielectron = [
-Now that we've touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, we will delve into what constitutes a molecule and how we can accurately describe them fundamentally.
+Now that we have touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, we will delve into what constitutes a molecule and how we can accurately describe them fundamentally.
 A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. When we magnify our view on atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons (@fig-nucleielectron).  
 //The field of Computional Chemistry (compchem) concerns itself with describing atoms and molecules by the positioning of the electrons around their nuclei. Asserting their probable whereabouts lets us calculate the energy of the molecular system. 
 //In other words, by looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
@@ -28,7 +28,12 @@ By looking at how the electrons behave in the vicinity of other electrons and th
 ]
 //#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.5fr), gutter: 1em)
 #grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.4fr), gutter: 1em)
-One of the pillars of Computational Chemistry is Quantum Mechanics (QM). This scientific field's main mission is to work with the Schrödinger equation in order to assess the properties of a molecule at their fundamental level. Since these calculations are extremely heavy on computational resources, we will also discuss the field of Molecular Mechanics (MM). We can differentiate either field by the timescale at which we study the molecules of interest. While QM studies a system by the positional snapshot of a molecule, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty we incur in favour of the information we receive. In order for the simulated molecules to virtually move according to their observed behaviour, we design _force fields_ to abstract and compact the information gathered from QM and bring it over to MM.   
+One of the pillars of computational chemistry is quantum mechanics (QM). This scientific field's main mission is to assess the properties of a molecule at a fundamental level.
+QM calculations rely on approximations to the Schrödinger equation for multi-electron systems.
+Since these calculations are extremely heavy on computational resources, computational chemists have also introduced molecular mechanics (MM).
+We can differentiate either field by the timescale at which we study the molecules of interest. While QM studies a system by the positional snapshot of a molecule, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty in favour of the received information. 
+The simulated behaviour of molecules is described by a _force field_, which contains information gathered from QM experiments and empirical observations.
+//In order for the simulated molecules to virtually move according to their observed behaviour, we design _force fields_ to abstract and compact the information gathered from QM and bring it over to MM.   
 //Briefly, a force field makes it possible to compact the information from a molecule and use it for Molecular Mechanics (MM)studies. When employed, MM methodologies make it possible to move the molecules are efficiently and accurately, thereby allowing us to study interactions of i.e. small molecule drugs with their target protein. 
 //==Computational Chemistry
 //https://www.youtube.com/@TMPChem/videos
@@ -51,14 +56,13 @@ The field of QM studies the principle that every particle, such as an electron, 
 //The Schrödinger equation forms the foundation of all of compchem 
 In the early 20#super("th") century, scientists attempted to understand the nature of atoms and how electron particles behave.
 Before considering electrons, a lot of work was done on understanding light phenomena to be able to describe them mathematically.
-At first, it was postulated by Albert Einstein that, for a light wave to carry energy, it should also be made up of particles that carry this energy. These photons - which are massless particles - portray a _particle-wave duality_ that was previously unheard of.
-//At first, photons - the massless particle that carry energy in light waves - were eventually determined to portray as both particles and as a wave, which was postulated by Albert Einstein.
+At first, it was postulated by Albert Einstein that, for a light wave to carry energy, it should also be made up of particles that carry this energy. These photons - which are massless particles - portray a _wave-particle duality_ that was previously unheard of.
 Two decades later, de Broglie postulated, through analogy with photons, that electrons could also be characterised by this property. This was then confirmed through the _double slit_ experiment, ran by Davisson and Germer. Because the _wave-particle duality_ could be attributed to these particles, it would then be conceivable to analytically describe their behaviour by a _wave function_. 
 
-In @eq-base-schrodinger we encounter the wave function ($Psi$) that describes the position of the electrons in a system. The Hamiltonian (HamilSym) acts an operator over the wave function and describes how we can calculate for the energy of a system based on the position of these electrons.
+In @eq-base-schrodinger we encounter the wave function ($Psi$) that describes the position of the electrons in a system. The Hamiltonian (HamilOp) acts an operator over the wave function and describes how we can calculate for the energy of a system based on the position of these electrons.
 On the righthand side of the equation, we find the energy $E$ which is the eigenvalue to the eigenfunction $Psi$. This just means that $E Psi$ can be evaluated to the most elementary form of the position of the electrons and this is associated with a discrete amount of energy. 
 $
-ℋ Psi = E Psi
+accent("HamilSym", "^") Psi = E Psi
 $ <eq-base-schrodinger>
 //This function gives us the $accent(ℋ, "^")$ operator, which describes the kinetic ($accent(T, "^")$) and potential ($accent(V, "^")$) energy of the system. We can further divide all this in blablabla
 //The $Psi$ is the wave function of system. Squaring the wave function gives us the probability density of finding an electron within a normalised space ($Psi^2$).
@@ -66,7 +70,7 @@ $ <eq-base-schrodinger>
 
 #intermezzo("Operator")[ An operator is just a mathematical entity that takes in a group of values or a function and modifies it. For example, the _summation_ operator '+' is the transformation of adding N amount of values together to output a single value. Here, the HamilOp operator influences the outcome of the wave function $Psi$ by mapping a transformation over all the described electrons of the wave function to return the energy of the electrons.
 ]
-When we expand on the HamilSym, we understand that it defines the kinetic ($T$) and the potential ($V$) energy of the system. 
+When we expand on the HamilOp, we understand that it defines the kinetic ($accent("T", "^")$) and the potential ($accent("V", "^")$) energy of the system. 
 $
 accent("HamilSym", "^") = accent(T, "^") + accent(V, "^")
 $ <eq-hamiltonian-simple>
@@ -103,7 +107,7 @@ The fourth term considers the pairwise evaluation of each electron with all the 
     *B.* The principal quantum number $n$ divides the 'shells' of the system, where the 'hidden layers' can be defined through $l$ and $m_l$ which we use describe the energy of the various electrons.
   ]
 ) <fig-zeeman>
-One of the reasons why Quantum Mechanics holds its name is due to the nature of the electrons. As we have discussed, this field of study attempts to determine the position of the electron in a system of atoms in order to calculate for its energy. What we need to clarify here is that the amount - or quantity - an electron can hold and emit back to the world lies in a discrete spectrum. In other words, we can say that an electron can absorb energy until it is 'full' and then expels that energy to the environment  in the form of photons. Energy transfer is often done through heating or by light emission.
+One of the reasons why quantum mechanics holds its name is due to the nature of the electrons. As we have discussed, this field of study attempts to determine the position of the electron in a system of atoms in order to calculate for its energy. What we need to clarify here is that the amount - or quantity - an electron can hold and emit back to the world lies in a discrete spectrum. In other words, we can say that an electron can absorb energy until it is 'full' and then expels that energy to the environment  in the form of photons. Energy transfer is often done through heating or by light emission.
 
 //We have mentioned already that in the field of QM, we study the positioning of the electrons in the vinicity of other electrons and nuclei and try to calculate the energy ($E$) of the system. To be accurate, we must understand that the quantity of energy an electron can hold lies in a discrete spectrum.
 //This means that electrons only emit photons after absorbing a set amount of energy, be that through heating or light, before releasing it into their environment.
@@ -122,7 +126,7 @@ The two latter quantum numbers are used to differentiate into sublevels using co
 Before discussing the quantum numbers further, we need to understand a key property of the wave function itself. To remind you, the wave function is an equation that tells us where the electrons are located around the nuclei of a system.
 #let content-1d-distr = [
 ===== Probability density distribution
-To solve the Schrodinger equation, we need to be able to employ both the momentum of particle, for $T$ and to determine their position for $V$ (@eq-hamiltonian-simple).
+To solve the Schrödinger equation, we need to be able to employ both the momentum of particle, for $accent("T", "^")$ and to determine their position for $accent("V", "^")$ (@eq-hamiltonian-simple).
 The _Heisenberg's uncertainty principle_ tells us we cannot determine both the position and the momentum of an electron at a given time. This stems from either variable to depend on the other one, something we refer to as _conjugate variables_. Because of this uncertainty, we will always need to approximate both parameters to the best of our ability. 
 
 With this in mind, we can use the wave function to our advantage.
@@ -137,7 +141,7 @@ With this in mind, we can use the wave function to our advantage.
   ) <fig-1d-phisquared>
 ]
 #grid(content-1d-distr, figure-1d-distr, columns: (2fr, 1fr), gutter: 1em) #v(-0.5em)
-It has the particular property that when taking its square ($Psi^2$), we get returned with the probability distribution of the whereabouts of an electron (@fig-1d-phisquared). This is applied by taking the complex conjugate ($Psi ^*$) of the wave function and apply the dot product to the original wave function ($Psi$). 
+It has the particular property that when squaring ($Psi^2$), we get the probability distribution of the whereabouts of an electron (@fig-1d-phisquared). This is applied by taking the complex conjugate ($Psi ^*$) of the wave function and apply the dot product to the original wave function ($Psi$). 
 $
 angle.l Psi bar.v Psi angle.r = integral^(+ infinity)_(- infinity) Psi^* (x) Psi (x) d x = 1
 $<eq-1d-phisquared>
@@ -188,7 +192,7 @@ The spin itself does not contribute to the HamilOp.
 //
 ==== Solving the wave function $Psi$
 Because the full equation @eq-hamiltonian-full can be so incredibly complex to compute for, researchers are always searching for ways to downsize an equation analytically in order to make the computational cost of solving it cheaper.
-These simplifications instantiated the _variational theorem_ that states we could then never achieve the true energy $E$ of the wave function this way, but merely an approximated value $E'$ that will always be slightly higher in energy.
+Some of these simplifications instantiated the _variational theorem_ that states we could then never achieve the true energy $E$ of the wave function this way, but merely an approximated value $E'$ that will always be slightly higher in energy.
 Nevertheless, the introduction of the _Born-Oppenheimer approximation_ is one paradigm that has faciliated research on atomic systems.
 
 //
@@ -244,7 +248,7 @@ $<eq-basisset>
 @eq-basisset denotes that a linear combination of basis sets $chi_i$, with their respective coefficient $c_(s,i)$, can define an atomic orbital. 
 The coefficient $c_(s,i)$ itself acts as a weighting factor to the $chi_i$ itself. Since we start from predefined orbitals, we still need to optimise the $phi.alt_i$ for the specific system we want to study. This is achieved by doing an iterative search for the optimal values of the coefficients. The optimised set of $c_(s,i)$ should yield the lowest energy possible for a given molecular system. This numerical approach is the most time-consuming step in the HF method, as convergence of a value for $E$ needs to be reached. This method is called the _Self Consistent Field_ (SCF). The more atoms present, the larger the amount of basis functions and the more coefficients in need of optimisation.
 
-One thing to mention is that we can define the $chi_i$ from established principles of Quantum Mechanics without extrinsic information needed. If we can predict how the orbital should look like, we can optimise basis functions for it. This is what we call _ab initio_ QM. This is as opposed to _semi-empirical_ QM that reaches for data from wet lab experiments.
+One thing to mention is that we can define the $chi_i$ from established principles of quantum mechanics without extrinsic information needed. If we can predict how the orbital should look like, we can optimise basis functions for it. This is what we call _ab initio_ QM, as opposed to _semi-empirical_ QM that reaches for data from wet lab experiments.
 //===== LCAO
 //Because we simplify to the independent positioning of the electrons, we ultimately simplify the idea of what a molecular orbital ($psi_i$) is. By defining a hybridised orbital as a _Linear Combination of Atomic Orbital_ (LCAO) and add the contribution of their possible _overlap_ in atomic orbitals to the energy of the system. These _overlap integrals_ simulate as though the $phi.alt_i$ were actually hybridised into a $psi_i$.
 
@@ -281,7 +285,7 @@ With the SCF methodology, we can consider the Fock operator (FockOp) that works 
 $
 accent(f, "^") phi.alt_i = epsilon.alt_i phi.alt_i
 $<eq-h-fock>
-Assuming uncorrelated movement of the electrons does not mean we can forgo entirely on the terms that describe electron-electron interactions. In @eq-h-fock-full, #math.accent("h", "^") describes to energy of the individual electrons. The #math.accent("J", "^") describes the coulombic repulsion between electrons, while the exchange operator #math.accent("K", "^") accounts for the antisymmetric contribution.
+Assuming uncorrelated movement of the electrons does not mean we can forgo entirely on the terms that describe electron-electron interactions. In @eq-h-fock-full, #math.accent("h", "^") describes the energy of the individual electrons. The #math.accent("J", "^") describes the coulombic repulsion between electrons, while the exchange operator #math.accent("K", "^") accounts for the antisymmetric contribution.
 $
 accent(f, "^") = 
 overbrace(
@@ -302,14 +306,14 @@ As stated before, the HF method does not explicitly account for electronic inter
 //The DFT method differs in two ways from the HF method. For starters, instead of assessing the position of electrons, it deals with the electron density $rho(r)$ of an electron's orbital.
 //The second is that by this density $rho(r)$, it allows to treat electron correlation implicitly.
 We remember @eq-probability-allelectrons, where squaring $Psi$ gives us the probability of encountering an electron in a normalised range, where integrating over the position ($x,y,z$) returned a volume ($d v$) in which the electron could be found. Instead of searching the most probable position of an electron, the Density Functional Theory exploits the volume ($d v$) to work out the electron density in the given volume. These Kohn-Sham orbitals $phi.alt^(K S)$ - named after both scientists that worked on the problem - deal with the electron density within the one-electron orbitals rather than the uncertainty of their position.
-When starting a computation - analogous to the HF method - an initial guess is made towards the density of the $phi.alt^(K S)$. Every iteration, the density of the orbital is optimised until convergence is reached, meaning a minimal energy $E[rho]$ is reached stably. One main difference to point out in this methodology w.r.t. the HF method is that, because the various $phi.alt^(K S)_i$ are affected by a _repulsion term_, the densities can be optimised in a way that the movement of the electrons are implicitly correlated. 
+When starting a computation - analogous to the HF method - an initial guess is made towards the density of the $phi.alt^(K S)$. Every iteration, the density of the orbital is optimised until convergence is reached, meaning a minimal energy $E[rho]$ is reached. One main difference to point out in this methodology, with respect to the HF method, is that because the various $phi.alt^(K S)_i$ are affected by a _repulsion term_, the densities can be optimised in a way that the movement of the electrons are implicitly correlated. 
 
 //
 //
 //
 //==== Møller-Plesset Perturbation Theory (MPn)
 ==== Correlated Wave Function Theory (WFT)
-Up to now, we've always discussed the Schrödinger equation in terms of populated orbitals for a set amount of electrons. For Wave Function Theory, we are able to explicitly correlate the interactions between the electrons by adding a correlation term $Phi_(c o r r)$ and to make use of an additional set of unoccupied - or virtual - orbitals.
+Up to now, we've always discussed the Schrödinger equation in terms of populated orbitals for a set amount of electrons. For wave function theory, we are able to explicitly correlate the interactions between the electrons by adding a correlation term $Phi_(c o r r)$ and to make use of an additional set of unoccupied - or virtual - orbitals.
 How this correlation works is that electrons are moved to these virtual orbitals, leaving behind a unoccupied orbital themselves. This impacts the exchange operator $accent(K, "^") $ and thus the Slater Determinant (SD) $Phi_(S D)$. Depending on how many electrons are exchanged to virtual orbitals at a time - one, two, three or more - we obtain a new SD for _single_ ($Phi_S$), _double_ ($Phi_D$), _triple_ ($Phi_T$) or more excitation states. Every determinant now contains information on the effects of the absence of electrons in the system, which gives us the correlation between electrons. We can think of this as the difference in exchange contribution before and after one or more electrons 'leaves' the system. A linear combination of the various $Phi_(S D, i)$ gives us the $Phi_(c o r r)$.
 To clarify, these are not orbitals in higher energetic states - as the _excitation_ could suggests - but simply fictive orbitals that have a functional purpose for the methodology. 
 
@@ -332,7 +336,7 @@ Fundamentally speaking, the energy of a molecule is defined by the relative posi
 
 In our lab, we employ the AMBER software package to run calculations where we simulate the behaviour of the molecules we want to study. 
 To encapsulate the essence of a standard Molecular Dynamics (MD) simulation, a set of molecules are spawned inside a virtually limitless box where they are 'free' to roam about. The properties of the molecules are defined by the _force field_, which tells us how the molecules are allowed to behave, and most important, restricts unfavoured behaviour.
-Every MM software package, like AMBER, has a specific interpretation of a force field.
+Every MM software package, like AMBER (@eq-AMBER), has a specific implementation of a force field.
 
 //The quantum mechanical section makes the reader understand that the energy of a molecular system is defined by the position of the nuclei, to which the electrons will accomodate for an optimal position in space. We know that molecules are dynamic in nature, but trying to log the movement of a large set of atoms - like a protein - through QM would be nearly impossible as these calculations are incredibly resource intensive. 
 //By abstracting properties of the molecules we want to describe, we can achieve make these molecules move and interact with eachother through classical particle physics. 
@@ -356,7 +360,7 @@ While the simulation runs, the atoms move within their bounds. Every shift in mo
 //
 ==== Bonded-term parameters
 ===== Bond stretching and angle bending
-As Molecular Mechanics rests on principle of classical mechanics, a
+as molecular mechanics rests on principle of classical mechanics, a
 #v(-0.4em)
 #let fig-bondangle = [#figure(
   image("./figures/bondlength-and-bondangle.svg", width: 100%),
@@ -395,15 +399,15 @@ These parameters are originally derived from spectroscopy data and normal mode a
 //
 ===== Fitting torsional parameters <sec-intro-dihedrals>
 //https://en.wikipedia.org/wiki/Fourier_series
-Describing the dihedral or torsion angle in a set of four atoms is perhaps the most complicated aspect of creating a force field that approximates molecular realism.  
-A dihedral is defined as the angle ($phi$) by which two planes intersect (@fig-torsionexplain A.). As a trigonometric axiom states that three points define a plane, two planes can be defined from a set of four directly bonded atoms. 
+Describing the dihedral or torsion angle in a set of four atoms is perhaps the most complicated part of fitting bonded-term parameters, to create a force field that approximates molecular realism.
+A dihedral is defined as the angle ($phi$) by which two planes intersect (@fig-torsionexplain A.). As a trigonometric axiom states that three points define a plane, two planes can be defined from a set of four directly bonded atoms if they share two communal points. 
 A dihedral's importance lies in the 1-4 interaction it makes. In other words, the atoms d#sub("1") and d#sub("4") in the dihedral set are directly correlated with establishing a part of the potential energy. This is mainly asserted through their steric hindrance, which is the result of a combination of the effects of (i) the radii of the various atoms composing the dihedral, (ii) types of hybridisation in the set (which define bondlength and angles) and (iii) the dihedral angle $phi$.
 //
 $
 E#sub("torsion") = sum_("dihedrals") frac(V#sub("n"), 2) [1 + cos(n phi - gamma)]
 $ <eq-torsions>
 //
-@fig-torsionexplain B. is to be understood alongside @eq-torsions. The change of potential as a result of torsional rotation is defined through Fourier series #mcite(("Kania2021Fouriertorsion"), biblio). Fourier series are composed of multiple periodical functions and our torsion terms are no different.
+@fig-torsionexplain B. is to be understood alongside @eq-torsions. The change of potential as a result of torsional rotation is defined through Fourier series #mcite(("Kania2021Fouriertorsion"), biblio). Fourier series are composed of multiple periodical functions, which are used to describe these torsion terms.
 @eq-torsions describes the _force constant_ ($V_n$) which defines the height of the amplitude, the _multiplicity_ ($n$) defines the amount of minima in the continuous function and ($gamma$) is the _phase_ of the function. The $phi$ angle here is the empirical dihedral angle.
  For example, the resultant periodic in @fig-torsionexplain B. is the summation of the following periods :
 $
@@ -454,7 +458,7 @@ The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mksch
 #figure(
   image("./figures/chargederivation/MK-charge-derivation.svg", width: 100%),
   caption: [
-    Data retrieved from ORCA-implementation of the MK scheme, written by Jérôme Rihon.
+    Data retrieved from ORCA-implementation of the MK scheme, written as part of this dissertation.
     *A.* The morpholino adenosine molecule that will be subjected to a charge derivation.
     *B.* The SAS is determined by the prompted atomic radii. Multiple layers of this surface are generated, returning us with a grid.
     *C.* Orbital density information is mapped onto this grid, which makes the ESP data we need.
@@ -464,9 +468,9 @@ The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mksch
 //The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
 //From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an energy value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
 By fitting the ESP, using the _Chirlian-Francl_ least-squared fitting procedure, we derived ESP-based partial charges #mcite(("Chirlian1987fit"), biblio) (@fig-mkscheme D.). 
-An additional procedure to these derived charges is the application of the Restraintive ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate semantically similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Restraints are also applied to account for buried atoms. Due to the grid being defined by the surface of the molecule, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
+An additional procedure to these derived charges is the application of the restrainted ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate semantically similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Restraints are also applied to account for buried atoms. Due to the grid being defined by the surface of the molecule, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
 
-Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like grid generation (like cubic grids) and the applied basissets and methods used #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
+Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like grid generation (e.g. cubic grids) and the applied basissets and methods used #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
 
 //
 //
@@ -527,8 +531,8 @@ $ <eq-ions-nonbonded>
 === Molecular Mechanics
 //To encapsulate the essence of a standard Molecular Dynamics simulations, a set of molecules are spawned inside a virtually limitless box. The properties of the molecules are defined in several files located on the machine - the _force field_. These files supply the simulation engine with information on how the molecules are allowed to behave, and most important, restrict unfavoured behaviour. The engine itself is the program that lets the molecules move about, logs and corrects the motion of molecules.
 ==== Making the molecules move
-While Quantum Mechanics approximates the Schrödinger equation to retrieve the energy of small molecules, Molecular Mechanics performs atomistic simulations that can handle thousands of atoms at a time. One way of applying this, is by carrying out a Molecular Dynamics simulation: a long and continuous calculation that is steered by the provided force field. The word simulation is important here because we attempt to recreate what happens to the molecules we want to study in real life. The virtual atoms are 'free' to move about and are left to make instantaneous interactions with the possibility of stabilising.
-To correctly represent the movement of the atoms, MM makes use of classical mechanics to model the dynamic trajectory through Newton's equation of motion : 
+While quantum mechanics approximates the Schrödinger equation to retrieve the energy of small molecules, molecular mechanics performs atomistic simulations that can handle thousands of atoms at a time. One way of applying this, is by carrying out a molecular dynamics simulation: a long and continuous calculation that is steered by the provided force field. The word simulation is important here because we attempt to recreate what happens to the molecules we want to study in real life. The virtual atoms are 'free' to move about and are left to make instantaneous interactions with the possibility of stabilising.
+To correctly represent the movement of the atoms, MD makes use of classical mechanics to model the dynamic trajectory through Newton's equation of motion : 
 $
 f_i = m_i a_i #h(1em) arrow.r #h(1em) f_i = m_i frac(d^2 r_i, d t^2) = - frac(diff, diff r_i) U(r_1, r_2, ... r_N)
 $ <eq-classnewtion>
@@ -547,7 +551,7 @@ $ <eq-discrete-numerical>
 //#intermezzo("Differential equations")[
 #intermezzo("Analytical vs numerical")[
 //What makes @eq-classnewtion non linear is that the variable $m_i$ - the mass of the $i#super("th")$ atom - acts as a coefficient on the second order derivative, whereas a constant value would make it linear. 
-What makes it analytically unsolvable is that we cannot write this equation as a linear combination of elementary functions; i.e. a possible linear combination of polynomial and logarithmic functions. To return values for the potential energy however, we have to integrate the function and solve per each timestep of motion - a numerical solution. This is computationally less efficient but gets the job done.
+What makes it analytically unsolvable is that we cannot write this equation as a linear combination of elementary functions; i.e. a possible linear combination of polynomial and logarithmic functions. To return values for the potential energy however, we have to integrate the function and solve per timestep of motion - a numerical solution. This is computationally less efficient but gets the job done.
 ]
 
 To make this workable, we can make use of a Taylor expansion by: 
@@ -584,7 +588,7 @@ At the start of an MD simulation, we have to account for the fact that $r_i (t -
 ==== Periodic boundaries
 When an MD experiment starts, the atoms of the system are spawned inside a virtual box. An enclosed box with boundaries that atoms would collide with will impact the course of motion of all atoms in the system. To circumvent this problem, periodic boundaries are implemented. This benefits the engine as it does not need to account for atoms wandering off into infinity - this would cause a simulation to crash anyway - and this simplifies keeping the modelled pressure and temperature constant during the experiment. To clarify this last part, we account for environmental factors to properly model the kinetic energy of a system, which impacts the total energy.  
 
-We can make an analogy of these periodic boundaries to the 1980's Japanese retro game Pac-man. When playing, we can teleport from to right side to the left and vice versa to evade to ghosts. This is the same with atoms, whenever an atom goes out-of-bounds, it is spawned on the opposite side of the box (@fig-periodic B).
+We can make an analogy of these periodic boundaries to the 1980's Japanese retro game Pac-man. When playing, we can teleport from to right side to the left and vice versa to evade ghosts. This is the same with atoms, whenever an atom goes out-of-bounds, it is spawned on the opposite side of the box (@fig-periodic B).
 #figure(
   image("./figures/periodicbounds.svg", width: 100%),
   caption: [
@@ -593,7 +597,7 @@ We can make an analogy of these periodic boundaries to the 1980's Japanese retro
   ]
 ) <fig-periodic>
 ==== Computational optimisations to MD simulations
-These calculations require quite the resources to run, especially considering the fact that these calculations have been around since at least the 1980's and optimisations were a necessity and not a luxury. To give some perspective, computers only had a single core CPU with a memory capacity (RAM) of 512 KiB to roughly 2MiB at best. Nowadays, my five-year old laptop has six cores and a RAM capacity of about 12 GiB - 6000 times more than a common household personal computer of that time. Presumably, a computational lab would have had slightly better resources. 
+These calculations require quite the resources to run, especially considering the fact that these calculations have been around since at least the 1980's and optimisations were a necessity and not a luxury. To give some perspective, computers only had a single core CPU with a memory capacity (RAM) of 512 KiB to roughly 2 MiB at best. Nowadays, my five-year old laptop has six cores and a RAM capacity of about 12 GiB - 6000 times more than a common personal computer of that time. Presumably, a computational lab would have had slightly better resources. 
 
 Being efficient with storing data in memory and downsizing the amount of calculations needed for the entire simulation was a must. There are several ways to do so that are still of use in today's time : 
 
@@ -613,7 +617,7 @@ While this requires some additional RAM to store the lists in, a table lookup is
 ===== Particle Mesh Ewald (PME)
 //https://murillo-group.github.io/sarkas/theory/PPPM.html
 //https://computecanada.github.io/molmodsim-md-theory-lesson-novice/aio/index.html#particle-mesh-ewald-pme
-This method is particularly applied to electrostatic interactions between atoms that make use of Periodic Boundary Conditions (PBC) (@fig-periodic B.), where the system's net charge is equal to zero.
+This method is particularly applied to electrostatic interactions between atoms that make use of periodic boundary conditions (PBC) (@fig-periodic B.), where the system's net charge is equal to zero.
 The method differentiates two types of $E_("electrostatic")$ , namely the short-range ($E_("direct")$) and the long-range ($E_("reciprocal")$).
 The $E_("direct")$ just employs the regular charge calculation (@eq-charges-in-amber), which is a pairwise computation between the nearest atoms based off the Verlet list we just discussed. To not dramatically increase the time complexity of the calculation, the long-range term exploits the Particle Mesh Ewald method to compute the $E_("reciprocal")$ for all atoms just one time per timestep. This greatly reduces the time spent calculation for electrostatic interactions - the nonbonded-term dominant in determing the potential.
 //https://www.quora.com/What-is-Ewald-summation-and-why-is-the-Particle-mesh-Ewald-approach-a-good-one
@@ -624,7 +628,7 @@ With the Particle Mesh method, we can discretise the point charges of the molecu
 #figure(
   image("./figures/particlemesh.svg", width: 100%),
   caption: [
-    For a 2D distribution of atomic charges, we overlay a mesh (or commonly a grid) on the field. We then distribute the charges evenly on the gridpoints. With this discrete distribution of points, we can apply the FFT to get an analytical solution to the charge distribution. With the analytical charge distribution, we can derive the potential energy of the electrostatic potential for the $E_("reciprocal")$. \
+    For a 2D distribution of atomic charges, we overlay a mesh (or commonly a grid) on the field. We then distribute the charges evenly on the gridpoints. With this discrete distribution of points, we can apply the FFT to get an analytical solution to the charge distribution. With the analytical charge distribution, we can derive the potential energy of the electrostatic potential for the $E_("reciprocal")$.
     _Nota bene_, this is a 2D representation of the PME protocol. The Q#sub("magnitude") just gives a visual to the analytic function. In reality we deal with 3D molecular systems and thus a three dimensional FFT.
   ]
 ) <fig-pme-fft>

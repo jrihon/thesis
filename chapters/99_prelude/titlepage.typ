@@ -10,10 +10,10 @@
       top: 2.0cm,
       bottom: 2.0cm,
     ),
+    numbering: none
   )
 
 
-#counter(page).update(1)                // Reset page counters
 
 ///////////////
 ///

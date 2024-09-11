@@ -2,50 +2,52 @@
 #set page(columns: 2)
 
 = GLOSSARY
+
 #v(1em)
+
 #let glossary-layout(name, content) = {
   [*#name* : #content \ ]
 }
 // Numbers
 #glossary-layout(
   "2'-O-MeRNA",
-  "2'-O-Methyl RNA"
+  "2'-O-methyl RNA"
 )
 
 #glossary-layout(
   "2'-O-MOE",
-  "2'-O-Methoxyethyl RNA"
+  "2'-O-methoxyethyl RNA"
 )
 
 // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 #glossary-layout(
   "A",
-  "Adenine/Adenosine"
+  "adenine/adenosine"
 )
 
-#glossary-layout(
-  "Å (Ångstrom)",
-  "a measure of distance equal to " + $10^(-10)$ + "meters"
-)
+//#glossary-layout(
+//  "Å (Ångstrom)",
+//  "a measure of distance equal to " + $10^(-10)$ + "meters"
+//)
 
 #glossary-layout(
   "Ab",
-  "Antibody"
+  "antibody"
 )
 
 #glossary-layout(
   "AGOx",
-  "Argonaute protein family"
+  "argonaute protein family"
 )
 
 #glossary-layout(
   "AMBER",
-  "Assisted Model Building with Energy Refinement. The MM package of choice."
+  "Assisted Model Building with Energy Refinement."
 )
 
 #glossary-layout(
   "ANA",
-  "Arabinose Nucleic Acid"
+  "arabinose NA"
 )
 
 #glossary-layout(
@@ -55,12 +57,12 @@
 
 #glossary-layout(
   "ASL",
-  "Anticodon-Stem Loop"
+  "anticodon-stem loop"
 )
 
 #glossary-layout(
   "ASO",
-  "Antisense Oligonucleotide"
+  "antisense oligonucleotide"
 )
 
 // BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
@@ -70,34 +72,34 @@
 )
 
 #glossary-layout(
-  $beta$ + "homo-DNA",
-  $beta$ + "-D-glucopyranosyl NA"
+  $beta$ + "-homo-DNA",
+  $beta$ + "-D-Glucopyranosyl NA"
 )
 
 #glossary-layout(
   "BLI",
-  "Biolayer Interferometry"
+  "Bio-layer Interferometry"
 )
 
 // CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 #glossary-layout(
   "C",
-  "Cytidine/Cytosine"
+  "cytidine/cytosine"
 )
 
 #glossary-layout(
   "CeNA",
-  "Cyclohexenyl NA"
+  "cyclohexenyl NA"
 )
 
 #glossary-layout(
   "CLI",
-  "Commandline Interface"
+  "commandline interface"
 )
 
 #glossary-layout(
   "Comp.chem",
-  "Computational Chemistry"
+  "computational chemistry"
 )
 
 #glossary-layout(
@@ -107,48 +109,48 @@
 
 #glossary-layout(
   "CS",
-  "Conformational Sampling"
+  "conformational sampling"
 )
 
 #glossary-layout(
   "CST",
-  "Compartmentalized Self-Tagging"
+  "compartmentalized self-tagging"
 )
 
 // DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 #glossary-layout(
   "DDD",
-  "Drew Dickerson Dodecamer"
+  "Drew Dickerson dodecamer"
 )
 
 #glossary-layout(
   "DE",
-  "Directed Evolution"
+  "directed evolution"
 )
 
 #glossary-layout(
   "DFT",
-  "Density Functional Theory"
+  "density functional theory"
 )
 
 #glossary-layout(
   "DG",
-  "Differential Geometry"
+  "differential geometry"
 )
 
 #glossary-layout(
   "DNA",
-  "Deoxyribose Nucleic Acid"
+  "deoxyribose NA"
 )
 
 #glossary-layout(
   "d(A,C,G,T)",
-  "DNA (Adenosine, Cytidine, Guanosine, Thymidine)"
+  "DNA (adenosine, cytidine, guanosine, thymidine)"
 )
 
 #glossary-layout(
   "DP",
-  "Dynamic Programming"
+  "dynamic programming"
 )
 
 #glossary-layout(
@@ -158,12 +160,12 @@
 
 #glossary-layout(
   "DSL",
-  "Domain Specific Language"
+  "domain specific language"
 )
 
 #glossary-layout(
   "dXyNA",
-  "Deoxylose Nucleic Acid"
+  "Deoxylose NA"
 )
 
 // EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
@@ -174,13 +176,13 @@
 
 #glossary-layout(
   "ESP",
-  "Electrostatic Potential"
+  "electrostatic potential"
 )
 
 // FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 #glossary-layout(
   "FF",
-  "Force field"
+  "force field"
 )
 
 #glossary-layout(
@@ -196,17 +198,17 @@
 // GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 #glossary-layout(
   "G",
-  "Guanine/Guanosine"
+  "guanine/guanosine"
 )
 
 #glossary-layout(
   "GAFF",
-  "General Amber Force Field"
+  "general AMBER force field"
 )
 
 #glossary-layout(
   "GO",
-  "Geometry Optimisation"
+  "geometry optimisation"
 )
 
 #glossary-layout(
@@ -216,18 +218,18 @@
 
 #glossary-layout(
   "GSQ",
-  "Gold Standard Quality"
+  "gold standard quality"
 )
 
 #glossary-layout(
   "GUI",
-  "Graphic User Interface"
+  "graphic user interface"
 )
 
 // HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 #glossary-layout(
   "HEL",
-  "Hen Egg Lyzosyme"
+  "hen egg lyzosyme"
 )
 
 #glossary-layout(
@@ -242,17 +244,17 @@
 
 #glossary-layout(
   "HIV",
-  "Human Immunodeficiency Virus"
+  "human immunodeficiency virus"
 )
 
 #glossary-layout(
   "HNA",
-  "Hexitol Nucleic Acid or 2',3'-dideoxy-1',5'-anhydro-D-arabino-hexitol"
+  "Hexitol NA or 2',3'-dideoxy-1',5'-anhydro-D-arabino-Hexitol"
 )
 
 #glossary-layout(
   "h(A,C,G,T)",
-  "HNA (Adenosine, Cytidine, Guanosine, Thymidine)"
+  "HNA (adenosine, cytidine, guanosine, thymidine)"
 )
 
 // IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
@@ -266,23 +268,23 @@
 // LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
 #glossary-layout(
   "LNA",
-  "Locked Nucleic Acid"
+  "locked NA"
 )
 
 #glossary-layout(
   "LoT",
-  "Level of Theory"
+  "level of theory"
 )
 
 // MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 #glossary-layout(
   "MD",
-  "Molecular Dynamics"
+  "molecular dynamics"
 )
 
 #glossary-layout(
   "miRNA",
-  "micro RNA"
+  "microRNA"
 )
 
 #glossary-layout(
@@ -292,22 +294,22 @@
 
 #glossary-layout(
   "MM",
-  "Molecular mechanics"
+  "molecular mechanics"
 )
 
 #glossary-layout(
   "MNA",
-  "Morpholino Nucleic Acid"
+  "morpholino NA"
 )
 
 #glossary-layout(
   "m(A,C,G,T)",
-  "MNA (Adenosine, Cytidine, Guanosine, Thymidine)"
+  "MNA (adenosine, cytidine, guanosine, thymidine)"
 )
 
 #glossary-layout(
   "MPn",
-  "Møller–Plesset n" + sub("th") + " order perturbation theory"
+  "Møller–Plesset n" + super("th") + " order perturbation theory"
 )
 
 #glossary-layout(
@@ -317,7 +319,7 @@
 
 #glossary-layout(
   "MSA",
-  "Multiple Sequence Alignment"
+  "multiple sequence alignment"
 )
 
 // NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
@@ -333,17 +335,17 @@
 
 #glossary-layout(
   "Nb",
-  "Nanobody"
+  "nanobody"
 )
 
 #glossary-layout(
   "NGS",
-  "Next-Generation Sequencing"
+  "next-generation sequencing"
 )
 
 #glossary-layout(
   "NMR",
-  "Nuclear Magnetic Resonance"
+  "nuclear magnetic resonance"
 )
 
 #glossary-layout(
@@ -359,38 +361,38 @@
 // OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 #glossary-layout(
   "ON",
-  "Oligonucleotide"
+  "oligonucleotide"
 )
 
 // PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 #glossary-layout(
   "PA",
-  "Population Analysis"
+  "population analysis"
 )
 
 #glossary-layout(
   "PBC",
-  "Periodic Boundary Conditions"
+  "periodic boundary conditions"
 )
 
 #glossary-layout(
   "PCR",
-  "Polymerase Chain Reaction"
+  "polymerase chain reaction"
 )
 
 #glossary-layout(
   "PES",
-  "Potential Energy Surface"
+  "potential energy surface"
 )
 
 #glossary-layout(
   "PME",
-  "Particle Mesh Ewald"
+  "particle mesh ewald"
 )
 
 #glossary-layout(
   "PMO",
-  "Dimethylamino-phosphorodiamidate MNA"
+  "dimethylamino-phosphorodiamidate MNA"
 )
 
 #glossary-layout(
@@ -401,28 +403,28 @@
 // QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 #glossary-layout(
   "QM",
-  "Quantum mechanics"
+  "quantum mechanics"
 )
 
 // RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 #glossary-layout(
   "RAM",
-  "Random Access Memory"
+  "random access memory"
 )
 
 #glossary-layout(
   "RBS",
-  "Ribosome Binding Site"
+  "ribosome binding site"
 )
 
 #glossary-layout(
   "REMD",
-  "Replica Exchange MD"
+  "replica exchange MD"
 )
 
 #glossary-layout(
   "RESP",
-  "Restraint ESP"
+  "restraint ESP"
 )
 
 #glossary-layout(
@@ -432,38 +434,38 @@
 
 #glossary-layout(
   "RMSD",
-  "Root-Mean-Square Deviation"
+  "root-mean-square deviation"
 )
 
 #glossary-layout(
   "RNA",
-  "Ribose Nucleic Acid"
+  "ribose NA"
 )
 
 #glossary-layout(
   "r(A,C,G,U)",
-  "RNA (Adenosine, Cytidine, Guanosine, Uridine)"
+  "RNA (adenosine, cytidine, guanosine, uridine)"
 )
 
 // SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 #glossary-layout(
   "SA",
-  "Simulated Annealing"
+  "simulated annealing"
 )
 
 #glossary-layout(
   "SAS(A)",
-  "Solvent Accessible Surface (Area)"
+  "solvent accessible surface (area)"
 )
 
 #glossary-layout(
   "SELEX",
-  "Systematic Evolution of Ligands by EXponential enrichment"
+  "systematic evolution of ligands by exponential enrichment"
 )
 
 #glossary-layout(
   "SES",
-  "Solvent Excluded Surface"
+  "solvent excluded surface"
 )
 
 #glossary-layout(
@@ -478,12 +480,12 @@
 
 #glossary-layout(
   "SPE",
-  "Single Point Evaluation"
+  "single point evaluation"
 )
 
 #glossary-layout(
   "SPR",
-  "Surface Plasmon Resonance"
+  "surface plasmon resonance"
 )
 
 #glossary-layout(
@@ -494,12 +496,12 @@
 // TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 #glossary-layout(
   "T",
-  "Thymine/Thymidine"
+  "thymine/thymidine"
 )
 
 #glossary-layout(
   "TNA",
-  "Threose Nucleic Acid"
+  "threose NA"
 )
 
 #glossary-layout(
@@ -510,7 +512,7 @@
 // UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
 #glossary-layout(
   "U",
-  "Uridine/Uracil"
+  "uridine/uracil"
 )
 
 // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
@@ -522,25 +524,25 @@
 
 #glossary-layout(
   "WFT",
-  "Wave Function Theory"
+  "wave function theory"
 )
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 #glossary-layout(
   "XNA",
-  "Xenobiotic Nucleic Acid"
+  "xenobiotic nucleic acid"
 )
 
 #glossary-layout(
   "XyNA",
-  "Xylose Nucleic Acid"
+  "xylose NA"
 )
 
 // YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 // ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 #glossary-layout(
   "ZNA",
-  "Phosphonomethyl Glycol Nucleic Acid"
+  "phosphonomethyl glycol NA"
 )
 
 //Lastly, the symbol for  is a measure of distance equal to $10^(-10)$ meters, or also 0.1 nanometer. To put this on a rough scale, nucleic acid monomers are relative to humans in size as humans are to the distance from the earth to the sun. \ 
