@@ -10,7 +10,7 @@
 //
 //
 //
-=== Characterisation of the nucleosides through Quantum Mechanics
+=== Characterisation of the nucleosides through quantum mechanics
 The conformational sampling method has been previously reported and applied on DNA, RNA, HNA and dXyNA, in Mattelaer _et al._ #mcite(("Mattelaer2021efficient"), biblio). For MNA, the Cremer-Pople (CP) coordinates can be reversed engineered to Strauss-Pickett (SP) improper dihedrals (#link("https://github.com/Marcello-Sega/sugar-puckering")[github.com/Marcello-Sega/sugar-puckering]), by generating equidistributed coordinate points on the surface of a sphere 
 #mcite(("Deserno2004generate"), biblio).
 The generated spherical coordinates ($r$, $theta$, $phi$) are converted to local elevation (z#sub("j")) from a mean plane per respective atom #mcite(("Cremer1975general"), biblio), by assuming bond lengths and angles, which positions the atoms in the ring in cartesian space. From the atomic coordinates, the improper dihedrals ($alpha_1$, $alpha_2$, $alpha_3$) can be calculated for #mcite(("Strauss1970conformational"), biblio). Graphical representations of these formalisms have been added (@fig-sixring, @fig-spimpropers).
@@ -103,7 +103,7 @@ A customised CF atom type was created, which was made equivalent to the standard
 //
 //
 //
-=== Molecular Mechanics simulations
+=== Molecular mechanics simulations
 The Molecular Dynamics simulations were run using the AMBER18 software package #mcite(("Case2005amber", "Salomon2013amberpackage"), biblio) joined with AMBERTools19, employing the Particle Mesh Ewald (PMEMD) simulation engine #mcite(("Darden1993pmemd"), biblio). The MNA force field was imported into LEaP, together with the DNA.OL15 and the RNA.OL3 FF #mcite(("Zgarbova2015dnaol15", "Zgarbova2011rnaol3"), biblio). The TIP3P water model is used for the explicit solvation, in a truncated octahedron box, and the charges were neutralised.
 dXyNA parameters #mcite(("Mattelaer2021dxylose"), biblio) use the DNA.OL15 FF, HNA parameters were derived from a similar methodology as the one described in this article #mcite(("Schofield2023hnaaptamer"), biblio). Torsion angles for the linker were taken from the GAFF2 parameters, in combination with phosphate parameters from _parm10.dat_.
 A cutoff distance of 12 $angstrom$ was used for non-bonded interactions. The minimisation ran for a total of 30 000 cycles, with the first 22 500 cycles employing the steepest descent method and the last 7 500 the conjugate gradient method. The SHAKE algorithm #mcite(("Krautler2001shake"), biblio) was employed to allow a timestep of 2 fs. An initial heating was performed for 50 ps, from 0 K to 100 K with _vlimit_ set to 15. The rest of the heating, from 100 K to 300 K, ran for an additional 50 ps. Density and equilibration ran for 100 ps each, with density set at 1 g/mL. The Langevin thermostat #mcite(("Davidchack2009langevin"), biblio) and the Berendsen barostat #mcite(("Berendsen1984molecular"), biblio) were used to keep the temperature and density at a constant value. The production simulations were run for 200 ns, unless stated otherwise. Trajectory analysis of the simulations calculated through Cpptraj #mcite(("Roe2013cpptraj"), biblio). MD simulations were run on NVIDIA GeForce RTX 2070 and 2060 through the _cuda_ accelerated simulation engine #mcite(("Salomon2013cuda1", "Legrand2013spfpcuda2"), biblio).

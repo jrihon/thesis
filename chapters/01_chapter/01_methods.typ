@@ -25,7 +25,7 @@ For conformational sampling of an unsaturated six-membered ring, a set of datapo
 The hexitol NA adenosine (hA) monomer sampling was imposed with the following constraints: $beta$: 180.1$degree$, $gamma$: 60.0$degree$, $epsilon$: 180.1$degree$ and $chi$: 210.59$degree$.
 //
 
-=== Quantum Mechanics
+=== Quantum mechanics
 The CS methodology is subjected to various computational chemistry approaches to assess consumption of resources and quality of their results.
 Each initial structure is subjected to a constrained GO and an SPE through QM approaches. Here the DNA adenosine nucleoside is used for benchmarking since its Potential Energy Surface (PES) is well described #mcite(("Huang2014improve", "Mattelaer2021efficient"), biblio).
 This study utilises ORCA v5.0.4 #mcite(("Neese2020orca"), biblio), as this version applies the latest correction on the D4 dampening #mcite(("Caldeweyher2017d4corr", "Caldeweyher2019londondisp"), biblio), courtesy of Grimme lab. 

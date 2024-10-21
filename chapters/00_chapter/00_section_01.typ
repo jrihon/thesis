@@ -60,7 +60,6 @@ They are characterised by differences in major and minor grooves (Å), and helic
 //=== What are nucleic acids
 //! -> Three moieties: sugar, phosphate and nucleobase
 //! -> Driving force to form nucleic acid helices: basepairing and stacking
-//==== central dogma shizzle
 //
 
 === Nucleic acids 

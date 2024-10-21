@@ -5,7 +5,7 @@
 #import "bib_05_chapter.typ": biblio
 
 
-= Future perspective and \ concluding remarks 
+= Future perspective and concluding remarks 
 
 #include {"./05_futureperspective.typ"}
 #include {"./05_concludingremarks.typ"}

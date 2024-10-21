@@ -24,7 +24,7 @@
 }
 
 #box-env()
-== List of Publications
+== List of publications
 #set enum(numbering: "[1]", indent: 1em, body-indent: 1em)
 
 + *Rihon, J.*, Mattelaer, C.-A., Montalvão, R.W., Froeyen, M., Pinheiro, V.B., Lescrinier, E. (2024). Structural insights into the morpholino nucleic acid/RNA duplex using the new XNA builder Ducque in a molecular modeling pipeline. _Nucleic Acids Research_ , #link("https://doi.org/10.1093/nar/gkae135")[10.1093/nar/gkae135]

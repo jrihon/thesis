@@ -32,7 +32,7 @@ Being able to unambiguously define conformations allows us to also define when a
 //
 //
 //
-==== peptides
+==== Peptides
 // Ramachandran plots
 // Maak kleine svg bestanden, ipv een volledige figuur, en insert deze in de tekst om de conformatie te duiden
 Proteins are composed of chains of amino acid monomers that are interconnected by peptide bonds.
@@ -58,7 +58,7 @@ While the description of proteins is not limited to just these definitions, they
 // Pseudorotational wheel 
 // Mean plane stuff, show that with the conformation. 
 //
-==== five-membered rings
+==== Five-membered rings
 When talking about abstracting the conformation of a five-membered ring, such as a ribose sugar moiety in nucleic acids, the concept of pseudorotation or _puckering_ is the first thing in need of clarification. While dihedral angles in a linear fragment are able to move the whole 360° range, the torsion angles of a ring are constrained and cannot achieve this feat - hence the term _pseudorotation_. 
 #let content-fivering= [
 The ribose sugar can vary in its endocyclic torsion angles ($nu_(0 arrow.r 4)$), meaning atoms in the molecule will move out-of-plane (@fig-fivering A.). For five-membered rings, we recognise two distinct puckering modes: the Envelope (E#super("x")) and the Twist (#super("x")T#sub("y")).
@@ -144,7 +144,7 @@ However, because the CP formalism is able to generalise the way it calculates th
 //
 //
 //
-==== six-membered rings
+==== Six-membered rings
 
 #let content-sixring = [
 The concept of pseudorotation is also ascribed to six-membered rings, and any $n$-membered ring for that matter where $n$ ≥ 4. The definition of puckering here is particularly important to us in the field of synthetic nucleic acids, as we are able to substitute the ribose moiety for another ring system in the field of XNA. This modification can bring about improved properties for pharmaceutical applications.

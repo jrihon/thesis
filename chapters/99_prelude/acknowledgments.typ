@@ -23,14 +23,14 @@ You are all part of my most treasured memories and you've allowed me to be vulne
 
 // Thank you to all colleagues turned friends
 To all the people I started calling colleagues and ended up considering the friends I cherish dearly. *Charles-Alexandre Mattelaer*, *Shamal Withanage*, *Santiago Chaillou*, *Paola Handal Marquez*, *Rinaldo Wander Montalvão*, *Kiyo Costa Higuchi*, *Sten Reynders*, *Hoai Nguyen*, *Saphyra Thonon*, *Rosa-Maria Määttälä*, *Sisi Lu*, *Marlies Derden*, *Eline Goffin*, *Margaux Billen*, *Stijn Lenders*, *Radu Bulai*, *Frédérick Coosemans*, *Guy Schepers*. Thank you for those five wonderful years at the Rega.
-Thank you to all people I have had the pleasure of sharing the floor with during my time as a teaching assistent. *Thibault Vantieghem*, *Yannick Hoffert*, *Sofie Heylen*, *Simon Leekens*, *Sai Kocherlakota*, *Marie Pardon*, *Brecht Goovaerts*, *Arno Van Camp* and *Juan Aspromonte* made the lab practicals so much more enjoyable. I will always think fondly of the laughs we shared during the practicals and the evenings when going for a drink. Thank you to the didactic staff for managing the lab practicals so I could have more fun than I actually deserved while teaching.
+Thank you to all people I have had the pleasure of sharing the floor with during my time as a teaching assistant. *Thibault Vantieghem*, *Yannick Hoffert*, *Sofie Heylen*, *Simon Leekens*, *Sai Kocherlakota*, *Marie Pardon*, *Brecht Goovaerts*, *Arno Van Camp* and *Juan Aspromonte* made the lab practicals so much more enjoyable. I will always think fondly of the laughs we shared during the practicals and the evenings when going for a drink. Thank you to the didactic staff for managing the lab practicals so I could have more fun than I actually deserved while teaching.
 Reminiscing about my time spent with all of you will forever leave a genuine smile on my face and a warm feeling in my heart. I hope we will keep on encountering each other in life.
 
 // Thank the secretary's office
 I want to extend my gratitude towards the administrative staff of the Rega Institute : *Chantal Biernaux*, *Inge Aerts*, *Cathy De Meyer*, *Dominique Brabants*, *Patrick Briers*, *Myriam Cornelis* and *Jean-Marie Dirix* for their patience and pragmatic help. 
 
 // Thank you to LHC Plutonica, Farmaceutica and Hades.
-I want to thank the people that have flavoured my life since I started out with my Pharmaceutical Sciences degree. The student associations of *Farmaceutica*, *LHC Plutonica* and *Hades* have played a formative part in my life as a student. The fun, the sorrow, the modest beginnings and the going out with a bang. I have played my swan song before when retiring from the student life and I will play it again to close off this chapter. 
+I want to thank the people that have flavoured my life since the moment I started out with my Pharmaceutical Sciences degree. The student associations of *Farmaceutica*, *LHC Plutonica* and *Hades* have played a formative part in my life as a student. The fun, the sorrow, the modest beginnings and the going out with a bang. I have played my swan song before when retiring from the student life and I will play it again to close off this chapter. 
 
 #align(right)[_ \~ Bibamus laeti merum, Non est mutatio rerum \~ _]
 #pagebreak()

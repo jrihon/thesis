@@ -34,7 +34,6 @@ Since these calculations are extremely heavy on computational resources, computa
 We can differentiate either field by the timescale at which we study the molecules of interest. While QM studies a system by the positional snapshot of a molecule, MM provides us with means to let molecules move about and interact with each other, giving us a realtime view of how they behave at a nanosecond ($10^(-9)$) to microsecond ($10^(-6)$) timescale. While these calculations are several order of magnitude faster, they bring along an accuracy penalty in favour of the received information. 
 The simulated behaviour of molecules is described by a _force field_, which contains information gathered from QM experiments and empirical observations.
 //In order for the simulated molecules to virtually move according to their observed behaviour, we design _force fields_ to abstract and compact the information gathered from QM and bring it over to MM.   
-//Briefly, a force field makes it possible to compact the information from a molecule and use it for Molecular Mechanics (MM)studies. When employed, MM methodologies make it possible to move the molecules are efficiently and accurately, thereby allowing us to study interactions of i.e. small molecule drugs with their target protein. 
 //==Computational Chemistry
 //https://www.youtube.com/@TMPChem/videos
 //
@@ -330,7 +329,6 @@ This can be further expanded by several methods, of which the Møller-Plesset Pe
 //
 //
 === Force fields : the ultimate interface
-//The research carried out during this thesis has always employed the AMBER MD software package. As every Molecular Mechanics (MM) package has their specific interpretation on how to calculate the total energy (hamiltonian) of a system, we will confine the explanation to this scientific software package. 
 //
 Fundamentally speaking, the energy of a molecule is defined by the relative positioning of the orbitals in a molecule. Because these QM computations are expensive to run, attempting to model the movement of the atoms for molecules like large proteins becomes inconceivable. However, by abstracting atomic properties to classical mechanics concepts, we are able to reduce the expensiveness of the calculations. 
 
@@ -528,7 +526,7 @@ $ <eq-ions-nonbonded>
 //
 //
 //
-=== Molecular Mechanics
+=== Molecular mechanics
 //To encapsulate the essence of a standard Molecular Dynamics simulations, a set of molecules are spawned inside a virtually limitless box. The properties of the molecules are defined in several files located on the machine - the _force field_. These files supply the simulation engine with information on how the molecules are allowed to behave, and most important, restrict unfavoured behaviour. The engine itself is the program that lets the molecules move about, logs and corrects the motion of molecules.
 ==== Making the molecules move
 While quantum mechanics approximates the Schrödinger equation to retrieve the energy of small molecules, molecular mechanics performs atomistic simulations that can handle thousands of atoms at a time. One way of applying this, is by carrying out a molecular dynamics simulation: a long and continuous calculation that is steered by the provided force field. The word simulation is important here because we attempt to recreate what happens to the molecules we want to study in real life. The virtual atoms are 'free' to move about and are left to make instantaneous interactions with the possibility of stabilising.

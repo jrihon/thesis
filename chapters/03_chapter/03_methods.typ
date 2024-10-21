@@ -120,7 +120,7 @@ At first, a conformational path through which the HNA chemistry could naturally 
 #figure(
   image("./figures/conformationpathway.svg", width: 100%),
   caption: [
-    Adapted figure from " _Structure and folding of XNA aptamers studied by computational and experimental methods_ (Figure 4.5)" #mcite(("mattelaer2021PHD"), biblio).\
+    Adapted figure from " _Structure and folding of XNA aptamers studied by computational and experimental methods_ (Figure 4.5)" #mcite(("mattelaer2021PHD"), biblio).
     Two distinct pathway for an HNA nucleoside to go from #conform("C", "4'", "1'") (North Pole pucker) to #conform("C", "1'", "4'") (South Pole pucker).
     *A.* First pathway goes #conform("C", "4'", "1'") $arrow.r$ #conform("H", "O'", "1'") $arrow.r$ #conform("S", "3'", "1'") $arrow.r$ #conform("H", "3'", "4'") $arrow.r$ #conform("C", "1'", "4'").
     *B.* Second pathway goes #conform("C", "4'", "1'") $arrow.r$ #conform("H", "O'", "5'") $arrow.r$ #conform("S", "O'", "2'") $arrow.r$ #conform("H", "3'", "2'") $arrow.r$ #conform("C", "1'", "4'"). 
@@ -131,7 +131,7 @@ At first, a conformational path through which the HNA chemistry could naturally 
 
 #grid(text-confs, fig-confs, columns: (1fr, 1fr), column-gutter: 1em)
 //==== Forcefield
-==== Molecular Mechanics
+==== Molecular mechanics
 //#lorem(20)
 
 ===== Simulated Annealing (SA)
