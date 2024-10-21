@@ -13,6 +13,7 @@
     "Schepers G.", "Herdewijn P.", "Lescrinier E", "Christ D.", "Holliger P."),
   journal: "Nucleic Acids Research (NAR)",
   doi: "10.1093/nar/gkad592",
+  extra: "Volume 51, pp. 7736, July 2023"
 )
 
 #include {"./03_introduction.typ"}

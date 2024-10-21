@@ -11,6 +11,7 @@
   authors: ("Rihon J.", "Mattelaer C.-A.", "Montalvão R.W.", "Froeyen M.", "Pinheiro V.B.", "Lescrinier E."),
   journal: "Nucleic Acid Research (NAR)",
   doi: "10.1093/nar/gkae135",
+  extra: "Volume 52, pp. 2836, February 2024"
 )
 
 //= The Ducque model builder  The Ducque model builder

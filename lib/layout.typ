@@ -343,7 +343,7 @@
 //! BOX STYLE TEXT
 //! 
 //! 
-#let boxed-text(title: "", authors: "", journal: "", doi: "") = {
+#let boxed-text(title: "", authors: "", journal: "", doi: "", extra: "") = {
 
   // Start content
 
@@ -375,6 +375,11 @@
 
 //  let lightColour = colour.components()
 //  lightColour.at(3) = 10% // set alpha to 30%
+
+  // add extra content
+  if extra != "" {
+    contents += extra + ". "
+  }
 
   v(1.5em)
   let pat = pattern(
