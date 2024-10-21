@@ -4,4 +4,9 @@
 [X] Rework Concluding Remarks
 
 
-[ ] FINISH DECLARATIONS
+
+[X] comments HDW
+[ ] comments KD
+[ ] comments JS
+[ ] comments JH
+    - [ ] Finish declarations
