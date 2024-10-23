@@ -95,13 +95,13 @@ So far, any model builder 'on the market' only provided builds of experimentally
 ==== No modified nucleobases just yet ... 
 Implementing a dynamic way to build along a given backbone made it possible to surmount the biggest hurdle of XNA model building. The next problem - figuring out a way to implement modified nucleobases - would prove difficult in a different way. Where the former was a mathematical problem, the latter is a user experience conundrum.
 //One big issue that I had was to implement a way in which the user could also provide their own set of nucleobases to the software and that Ducque would simply build with it.
-For Ducque to build a complementary strand, it appoints specific atoms of the nucleobase basepair to function as a plane and performs operations onto this plane (@fig-buildmethod B.). Figuring out a way to build with modified nucleobases that does not mess up the building of the complementary strand could go two ways. It either requires  extensive documentation and the goodwill of the user to learn a bit of mathematics, or this part of the builder would be tabled until a good idea came along.
+For Ducque to build a complementary strand, it appoints specific atoms of the nucleobase basepair to function as a plane and performs operations onto this plane (@fig-buildmethod B.). Figuring out a way to build with modified nucleobases that does not mess up the building of the complementary strand could go two ways. It either requires  extensive documentation and the goodwill of the user to learn a bit of mathematics, or this part of the builder would be set aside until a good idea came along.
 Picking the first option would have damaged Ducque's reputation. Implemented good solutions require elegance and should be intuitive for the user. 
 //In all honesty, if I had picked the first option, Ducque would've been ugly. I want to solve this issue in a way to make it simple for myself to implement and intuitive for the user to apply. An ugly solution would damage the reputation of Ducque, whereas an elegant solution will be beneficial for everyone in the long run.
 
 ==== Eureka!
 //Two months after Ducque's official release - February 2024 - it finally hit me while I was videochatting with Shamal. The funny thing is that we were just having a catch-up about our lives and my mind wandered off - as it often tends to do - only to find a solution to this problem. Instead of implementing it during the build process, I alter existing models by the queried nucleobase.
-Two months after Ducque's official release - February 2024 - it occured that instead of using modified nucleobases in the build process, it would be much easier for both parties - maintainer and user - to  alter existing models by the queried nucleobase. 
+Two months after Ducque's official release (February 2024), it dawned on the maintainer that instead of using modified nucleobases in the build process, it would be much easier for both them and the user to alter existing models by the queried nucleobase. 
 //The funny thing is that we were just having a catch-up about our lives and my mind wandered off - as it often tends to do - only to find a solution to this problem. Instead of implementing it during the build process, I alter existing models by the queried nucleobase.
 
 #figure(
@@ -113,7 +113,7 @@ Two months after Ducque's official release - February 2024 - it occured that ins
 ) <fig-nucleobase-modify>
 
 The issue resolves two huge problems. First, implementing modified nucleobases this way would require minimal effort from the user. From a developer's point of view, the assumption can be made that the user is responsible to satisfy their basepairing and modification needs. Ducque just supplies a way to automate implementing modifications.
-A second two-birds-with-one-stone solution resolves the fact that all moieties are interchangeable. The sugar, the nucleobase and the linker originate from separate files, resulting in synthetic modifications that can be mixed and matched at the will of the user. The original backbone is defined by the sugar moiety, which is required to build the structure and assign basepairs with one of the five canonical nucleobases. A linker moiety can be associated with any backbone. A nucleobase moiety can be associated with any sugar and can have its orientation manipulated (@fig-nucleobase-modify).
+The second resolve brings about that all moieties are now interchangeable. The sugar, the nucleobase and the linker originate from separate files, resulting in synthetic modifications that can be mixed and matched at the will of the user. The original backbone is defined by the sugar moiety, which is required to build the structure and assign basepairs with one of the five canonical nucleobases. A linker moiety can be associated with any backbone. A nucleobase moiety can be associated with any sugar and can have its orientation manipulated (@fig-nucleobase-modify).
 //
 //
 //

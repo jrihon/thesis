@@ -7,7 +7,7 @@
    viewBox="0 0 300 133.00001"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
    sodipodi:docname="vert-spectrum.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.52850975"
-     inkscape:cx="543.03634"
-     inkscape:cy="232.72986"
+     inkscape:zoom="1.4325658"
+     inkscape:cx="225.12054"
+     inkscape:cy="239.08151"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="1920"
@@ -34,7 +34,9 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      inkscape:snap-global="true"
-     height="133.00002mm" />
+     height="133.00002mm"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs2">
     <inkscape:path-effect
@@ -1935,15 +1937,15 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-size:5.64444px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
-         x="51.93935"
+         style="font-size:5.64444px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;stroke-width:0.264583"
+         x="26.293888"
          y="196.47928"
          id="text53493-7"><tspan
            sodipodi:role="line"
            id="tspan53491-7"
-           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';stroke-width:0.264583"
-           x="51.93935"
-           y="196.47928">Emmission spectrum</tspan></text>
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';text-align:start;text-anchor:start;stroke-width:0.264583"
+           x="26.293888"
+           y="196.47928">Emission spectrum</tspan></text>
     </g>
     <g
        id="g4347"
@@ -1958,7 +1960,7 @@
            id="tspan53491-1-6"
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Math';-inkscape-font-specification:'Latin Modern Math';text-align:start;text-anchor:start;stroke-width:0.264583"
            x="173.06496"
-           y="196.01318">Emmission spectrum under non-zero magnetic field</tspan></text>
+           y="196.01318">Emission spectrum under non-zero magnetic field</tspan></text>
       <g
          id="g4151"
          transform="translate(-118.85297,131.5614)">

@@ -10,7 +10,7 @@
 == Fundamentals on the behaviour of molecules
 #let content-nucleielectron = [
 Now that we have touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, we will delve into what constitutes a molecule and how we can accurately describe them fundamentally.
-A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. When we magnify our view on atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons (@fig-nucleielectron).  
+A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. If we magnify and investigate atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons (@fig-nucleielectron).  
 //The field of Computional Chemistry (compchem) concerns itself with describing atoms and molecules by the positioning of the electrons around their nuclei. Asserting their probable whereabouts lets us calculate the energy of the molecular system. 
 //In other words, by looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
 By looking at how the electrons behave in the vicinity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment. This lets us simulate their behaviour through rigorous computations, so we can look at the interactions a drug makes with the active site of an enzyme at the atomic scale, to give an example.
@@ -56,10 +56,12 @@ The field of QM studies the principle that every particle, such as an electron, 
 In the early 20#super("th") century, scientists attempted to understand the nature of atoms and how electron particles behave.
 Before considering electrons, a lot of work was done on understanding light phenomena to be able to describe them mathematically.
 At first, it was postulated by Albert Einstein that, for a light wave to carry energy, it should also be made up of particles that carry this energy. These photons - which are massless particles - portray a _wave-particle duality_ that was previously unheard of.
-Two decades later, de Broglie postulated, through analogy with photons, that electrons could also be characterised by this property. This was then confirmed through the _double slit_ experiment, ran by Davisson and Germer. Because the _wave-particle duality_ could be attributed to these particles, it would then be conceivable to analytically describe their behaviour by a _wave function_. 
+Two decades later, de Broglie postulated, through analogy with photons, that electrons could also be characterised by this property. This was then confirmed through the _double slit_ experiment, conducted by Davisson and Germer. Because the _wave-particle duality_ could be attributed to these particles, it would then be conceivable to analytically describe their behaviour by a _wave function_. 
 
-In @eq-base-schrodinger we encounter the wave function ($Psi$) that describes the position of the electrons in a system. The Hamiltonian (HamilOp) acts an operator over the wave function and describes how we can calculate for the energy of a system based on the position of these electrons.
-On the righthand side of the equation, we find the energy $E$ which is the eigenvalue to the eigenfunction $Psi$. This just means that $E Psi$ can be evaluated to the most elementary form of the position of the electrons and this is associated with a discrete amount of energy. 
+In @eq-base-schrodinger we encounter the wave function ($Psi$) that describes the position of atomic particles - nuclei and electrons - in a system. The Hamiltonian (HamilOp) acts an operator over the wave function and describes how we can calculate for the energy of a system based on the position of these particles.
+On the righthand side of the equation, we find the energy $E$ which is the eigenvalue to the eigenfunction $Psi$. 
+//This just means that $E Psi$ can be evaluated to the most elementary form of the position of the electrons and this is associated with a discrete amount of energy. 
+This just means that there will be a discrete amount of energy $E$ associated with a system of particles, and that energy is determined by the position of the atoms and their electrons within that system.
 $
 accent("HamilSym", "^") Psi = E Psi
 $ <eq-base-schrodinger>
@@ -67,8 +69,10 @@ $ <eq-base-schrodinger>
 //The $Psi$ is the wave function of system. Squaring the wave function gives us the probability density of finding an electron within a normalised space ($Psi^2$).
 //This is for one-dimensional and this is for three-dimensional. This represents an orbital, a volumetric space in which we are very likely to find the electron we are computing for.
 
-#intermezzo("Operator")[ An operator is just a mathematical entity that takes in a group of values or a function and modifies it. For example, the _summation_ operator '+' is the transformation of adding N amount of values together to output a single value. Here, the HamilOp operator influences the outcome of the wave function $Psi$ by mapping a transformation over all the described electrons of the wave function to return the energy of the electrons.
-]
+//#intermezzo("Operator")[ An operator is just a mathematical entity that takes in a group of values or a function and modifies it. For example, the _summation_ operator '+' is the transformation of adding N amount of values together to output a single value. Here, the HamilOp operator influences the outcome of the wave function $Psi$ by mapping a transformation over all the described electrons of the wave function to return the energy of the electrons. ]
+#intermezzo("Operator")[ An operator is just a mathematical entity that takes in a group of values or a function and modifies it. For example, the _summation_ operator '+' is the transformation of adding N amount of values together to output a single value.
+Here, the HamilOp operator acts on the wave function $Psi$ by mapping over all the described atomic particles of the wave function to return the energy $E$ (eigenvalue) of the system and the wave function itself $Psi$ (eigenfunction). ]
+
 When we expand on the HamilOp, we understand that it defines the kinetic ($accent("T", "^")$) and the potential ($accent("V", "^")$) energy of the system. 
 $
 accent("HamilSym", "^") = accent(T, "^") + accent(V, "^")
@@ -112,12 +116,11 @@ One of the reasons why quantum mechanics holds its name is due to the nature of 
 //This means that electrons only emit photons after absorbing a set amount of energy, be that through heating or light, before releasing it into their environment.
 //
 //Before the effects of the magnetic field were published, the spectra of several elements had already been studied (@fig-zeeman A.). However, this was thought to be a property of the atoms themselves.
-The absorption- and emissionspectra of several elements had already been studied (@fig-zeeman A.) but this discrete distribution was initially thought to be a property of the atoms themselves. A scientist by the name of Zeeman considered an experiment where a magnetic field would be brought into play when documenting the spectra of particular elements.
+The absorption and emission spectra of several elements had already been studied (@fig-zeeman A.) but this discrete distribution was initially thought to be a property of the atoms themselves. A scientist by the name of Zeeman considered an experiment where a magnetic field would be brought into play when documenting the spectra of particular elements.
 The Zeeman effect showed us that this emission would become split to reveal a discrete subspectrum at certain levels of energy. It wasn't understood until later that when the magnetic field was applied to the molecules, it influences the angular momentum of the electron with respect to the nucleus.
 
-The discrete energy levels were finally categorised into distinct levels that can be computed for using the _quantum numbers_ ($n$, $l$, $m_l$) and formalised into the theory of orbitals we nowadays use to assign the various electrons to discrete levels of energy of a system.  
-//We differentiate between three numbers that are to be used to calculate for the energy of a specific electron.
-The principal _n_, the orbital angular momentum _l_ and the magnetic _m#sub("l")_. To keep it as simple as possible, the principal quantum numbers determines the level in which the electrons reside in. It can be thought of as the atomic model that Niels Bohr proposed, where the electrons circle around in different _shells_ around the nucleus in a fixed orbit. 
+The discrete energy levels were finally categorised into distinct levels that can be computed for using the _quantum numbers_ ($n$, $l$, $m_l$) and formalised into the theory of orbitals we nowadays use to assign the various electrons to discrete levels of energy of a system:  the principal _n_, the orbital angular momentum _l_ and the magnetic _m#sub("l")_.
+To keep it as simple as possible, the principal quantum number determines the level in which the electrons reside in. It can be thought of as the atomic model that Niels Bohr proposed, where the electrons circle around in different _shells_ around the nucleus in a fixed orbit. 
 The two latter quantum numbers are used to differentiate into sublevels using concepts from spherical harmonics (@fig-zeeman B.).
 //however, we see that the discrete spectrum becomes split. As it turns out, the emitted spectra are what we consider to be degenerate and consist of multiple hidden layers that are observable under select conditions.
 
@@ -162,19 +165,18 @@ To summarise, we can describe the probability of finding an electron within a ce
 ===== Spherical harmonics
 This specific volume in space in which the electron will likely appear in, is tightly linked with the amount of energy the electron holds. As mentioned and illustrated through @fig-zeeman, the quantity of energy they carry lies in a discrete spectrum. For convenience sake, we convert the current equations from a Cartesian system ($x, y, z$) to a spherical system ($r, theta, phi$) to simplify the calculations in the following equations.
 
-To represent the probable volume in which these electrons can appear in, we make use of a concept called _spherical harmonics_. This constitutes a set of orthonormal functions in with which we can represent the probability of finding an electron. Through a transformation of the coordinate system, we get @eq-spherharmonics.  
+To represent the probable volume in which these electrons can appear in, we make use of a concept called _spherical harmonics_. This constitutes a set of orthonormal functions with which we can represent the probability of finding an electron. Through a transformation of the coordinate system, we get the general form of approximating electron positioning (@eq-spherharmonics).  
 $
 Psi (x, y ,z) => Psi (r, theta, phi) = 
 overbrace(
 R_(n, l) (r), "Radial component" 
 )
-+ 
 underbrace(
 Y_(l, m_l) (theta, phi), "Angular component" 
 )
 $<eq-spherharmonics>
 The radial component is further determined by dependence of the nucleic charge of the atom. This means that we can explain why the electrons behave slightly different for particular element we want to describe. The radial component influences the spectra - like those in @fig-zeeman A. - by shifting the wavelength at which absorption and emission happens.
-The angular component actually describes the spherical harmonics part. 
+The angular component actually describes the spherical harmonics part. This latter component expands into a set of _Legendre polynomials_.
 #figure(
   image("./figures/orbitals/orbitals-3d.svg", width: 100%), 
   caption: [
@@ -190,14 +192,14 @@ The spin itself does not contribute to the HamilOp.
 //
 //
 ==== Solving the wave function $Psi$
-Because the full equation @eq-hamiltonian-full can be so incredibly complex to compute for, researchers are always searching for ways to downsize an equation analytically in order to make the computational cost of solving it cheaper.
+Because the full expression in @eq-hamiltonian-full can be so incredibly complex to compute for, researchers are always searching for ways to simplify an equation in order to make the computational cost of solving it cheaper.
 Some of these simplifications instantiated the _variational theorem_ that states we could then never achieve the true energy $E$ of the wave function this way, but merely an approximated value $E'$ that will always be slightly higher in energy.
 Nevertheless, the introduction of the _Born-Oppenheimer approximation_ is one paradigm that has faciliated research on atomic systems.
 
 //
 //
 ===== Born-Oppenheimer approximation
-This simplification of the Schrödinger equation stems from the fact that the nucleus moves at a much slower pace than electrons do. This is because the mass of protons is roughly two thousand times larger. We can consider that in the timeframe in which the electrons travel a particular distance, the protons would remain stationary. Applying this principle of _frozen nuclei_ - frozen in space, mind you - we can analytically derive the _electronic Schrödinger equation_. 
+This simplification of the Schrödinger equation stems from the fact that the nucleus moves at a much slower pace than electrons do. This is because the mass of protons is roughly two thousand times larger. We can consider that in the timeframe in which the electrons travel a particular distance, the protons would remain stationary. Applying this principle of _frozen nuclei_ - frozen in space, mind you - we can derive the _electronic Schrödinger equation_. 
 $
 accent("HamilSym", "^")_e = 
 underbrace(
@@ -213,14 +215,14 @@ overbrace(
 , "Potential Operator" accent(V, "^")
 )
 $<eq-electron-schrodinger>
-If we consider the nuclei at a standstill, this means their kinetic energy goes to zero as they portray no velocity. Since they do not move, we do not need to account for a change in positions of the nuclei with respect to their repulsion. In other words, we can safely assume that the nucleic repulsion term will not vary, therefore becoming a constant value. What we end up with is an analytical equation where we consider (i) the kinetic energy of the individual electrons (ii) the attraction of the electrons to the stationary nuclei (iii) the repulsion of the electrons with one another and lastly (iv) the repulsion of stationary nuclei - a constant value (@eq-electron-schrodinger).
+If we consider the nuclei at a standstill, this means their kinetic energy goes to zero as they hold no velocity. Since they do not move, we do not need to account for a change in positions of the nuclei with respect to their repulsion. In other words, we can safely assume that the nucleic repulsion term will not vary, therefore becoming a constant value. What we end up with is an expression where we consider (i) the kinetic energy of the individual electrons (ii) the attraction of the electrons to the stationary nuclei (iii) the repulsion of the electrons by each other and lastly (iv) the repulsion of stationary nuclei - a constant value (@eq-electron-schrodinger).
 
 //
 //
 ===== Many-body problem for electrons
-Continuing this subsection, we need to highlight the fact that for a system with more than two electrons it is impossible to analytically solve the @eq-electron-schrodinger, even with the Born-Oppenheimer approximation. The main reason lies in the _electronic repulsion term_. 
+Continuing this subsection, we need to highlight the fact that for a system with more than two electrons it is impossible to analytically solve @eq-electron-schrodinger, even with the Born-Oppenheimer approximation. The main reason lies in the _electronic repulsion term_. 
 
-Consider a set of electrons $S(e_1, e_2, e_3, e_4, ... e_N)$. While they move about freely, they experience repulsion from other electrons. This means that the momentum and position of $e_1$ depends on the movement and positions of ($e_2, e_3, e_4, ... e_N$), same goes for $e_2$ depending on ($e_1, e_3, e_4, ... e_N$) and so on. The problem becomes too convoluted, as there arise too many factors and variables to account for, for which we know no analytical solution to. This particular problem is generalisable to _classical mechanics_, where it even occupied the likes of Sir Newton with respect to the movement of celestial bodies.
+Consider a set of electrons $S(e_1, e_2, e_3, e_4, ... e_N)$. While they move about freely, they experience repulsion from other electrons. This means that the momentum and position of $e_1$ depends on the movement and positions of ($e_2, e_3, e_4, ... e_N$), same goes for $e_2$ depending on ($e_1, e_3, e_4, ... e_N$) and so on. The problem becomes too convoluted, as there arise too many factors and variables to account for, for which we know no analytical solution to. This particular problem is generalisable to _classical mechanics_, where it even occupied the likes of Sir Isaac Newton with respect to the movement of celestial bodies.
 
 Handling the electrons in this way would make it impossible to derive a good estimate of the electronic repulsion term.
 Luckily, we can further simplify the equation so that we may nonetheless derive a value close to the true $E$ that accompagnies the state of its eigenfunction $Psi$.
@@ -242,10 +244,10 @@ One way to simplify this repulsion term is by considering the idea that the elec
 ===== Basis sets
 Before we touch on the actual HF method, we need to clarify what a basis set is. When initialising the computations, it is necessary to define the atomic orbitals ($phi.alt_i$) to calculate for the energy of an electron. However, starting from scratch every time would make calculating for the position of the electron wildly more time intensive. Instead, we predefine a set of basis function ($chi_i$) that closely resembles the orbitals ($phi.alt_i$) already. These basis functions are described through an adaptation of the spherical harmonics. A set of basis functions is called a basis set, which comprises finetuned functions for every element it describes. This means that whenever we start a new computation, we can query the desired basis functions for a set of electrons and get rather close to the most favourable shape of the atomic orbitals already.
 $
-phi.alt_i = sum^b_(i=1) c_(s,i) chi_i
+phi.alt_i = sum^b_(s=1) c_(s i) chi_s
 $<eq-basisset>
-@eq-basisset denotes that a linear combination of basis sets $chi_i$, with their respective coefficient $c_(s,i)$, can define an atomic orbital. 
-The coefficient $c_(s,i)$ itself acts as a weighting factor to the $chi_i$ itself. Since we start from predefined orbitals, we still need to optimise the $phi.alt_i$ for the specific system we want to study. This is achieved by doing an iterative search for the optimal values of the coefficients. The optimised set of $c_(s,i)$ should yield the lowest energy possible for a given molecular system. This numerical approach is the most time-consuming step in the HF method, as convergence of a value for $E$ needs to be reached. This method is called the _Self Consistent Field_ (SCF). The more atoms present, the larger the amount of basis functions and the more coefficients in need of optimisation.
+@eq-basisset denotes that a linear combination of basis functions $chi_i$, with their respective coefficient $c_(s i)$, can define an atomic orbital. 
+The coefficient $c_(s i)$ itself acts as a weighting factor to the $chi_i$ itself. Since we start from predefined orbitals, we still need to optimise the $phi.alt_i$ for the specific system we want to study. This is achieved by doing an iterative search for the optimal values of the coefficients. The optimised set of $c_(s i)$ should yield the lowest energy possible for a given molecular system. This numerical approach is the most time-consuming step in the HF method, as convergence of a value for $E$ needs to be reached. This method is called the _Self Consistent Field_ (SCF). The more atoms present, the larger the amount of basis functions and the more coefficients in need of optimisation.
 
 One thing to mention is that we can define the $chi_i$ from established principles of quantum mechanics without extrinsic information needed. If we can predict how the orbital should look like, we can optimise basis functions for it. This is what we call _ab initio_ QM, as opposed to _semi-empirical_ QM that reaches for data from wet lab experiments.
 //===== LCAO
@@ -255,13 +257,13 @@ One thing to mention is that we can define the $chi_i$ from established principl
 //
 //
 ===== Slater Determinant (SD) 
-The Slater Determinant is a parameter that follows from the Pauli principle to make sure the wave function $Psi$ is antisymmetric. We understand that every electron is labelled by a particular position and spin orbital.
+The Slater Determinant follows from the Pauli principle to make sure the wave function $Psi$ is antisymmetric. We understand that every electron is labelled by a particular position and spin orbital.
 Suppose we have two electrons : $x_1 = phi.alt_(1s)(r_1) alpha(s_1)$ and $x_2 = phi.alt_(2s)(r_2) beta(s_2)$.
 To satisfy the antisymmetry rule, the wave function should change sign when $x_1$ and $x_2$ have been exchanged from their respective position and spin orbital. This entails swapping the second electron's position $x_2(r_2)$ to $phi.alt_(1s)$ and its spin direction $x_2(s_2)$ to $alpha$, and vice versa.
 $
 Psi (x_1, x_2) = - Psi (x_2, x_1)
 $ <eq-incorrect-antisym>
-From experimental calculations it was determined that exchanging the electrons from position and spin orbital did not result in the inversion of the sign of the wave function. This can be remedied by :
+It was determined that exchanging the electrons from position and spin orbital did not result in the inversion of the sign of the wave function. This can be remedied by :
 $
 Psi(x_1, x_2) = frac(1, sqrt(2)) phi.alt_(1s)(r_1) phi.alt_(2s)(r_2) 
 overbrace(
@@ -284,7 +286,7 @@ With the SCF methodology, we can consider the Fock operator (FockOp) that works 
 $
 accent(f, "^") phi.alt_i = epsilon.alt_i phi.alt_i
 $<eq-h-fock>
-Assuming uncorrelated movement of the electrons does not mean we can forgo entirely on the terms that describe electron-electron interactions. In @eq-h-fock-full, #math.accent("h", "^") describes the energy of the individual electrons. The #math.accent("J", "^") describes the coulombic repulsion between electrons, while the exchange operator #math.accent("K", "^") accounts for the antisymmetric contribution.
+Assuming uncorrelated movement of the electrons does not mean we can abandon the terms that describe electron-electron interactions. In @eq-h-fock-full, #math.accent("h", "^") describes the energy of the individual electrons. The #math.accent("J", "^") describes the coulombic repulsion between electrons, while the exchange operator #math.accent("K", "^") accounts for the antisymmetric contribution.
 $
 accent(f, "^") = 
 overbrace(
@@ -296,16 +298,19 @@ underbrace(
 )
 $<eq-h-fock-full>
 
-As stated before, the HF method does not explicitly account for electronic interactions when optimising for orbitals and hence minimising the uncertainty of the location of the electron. This is a significant caveat to the methodology. The two-electron operators in @eq-h-fock-full concern themselves with the average position of the respective electrons, which means that for overlapping orbitals it cannot be excluded that two electrons occupy the same position in space, which is an unrealistic outcome. While the HF method is still serving as a major contributions to the successes in QM, we can be more precise when it comes to treating electronic interactions. 
+As stated before, the HF method does not explicitly deal with electron correlation when optimising for orbitals and hence minimising the uncertainty of the location of the electron. This is a significant caveat to the methodology. The two-electron operators in @eq-h-fock-full concern themselves with the average position of the respective electrons, which means that for overlapping orbitals it cannot be excluded that two electrons occupy the same position in space, which is an unrealistic outcome. While the HF method is still serving as a major contributions to the successes in QM, we can be more precise when it comes to treating electronic interactions. 
 
-#pagebreak()
+//#pagebreak()
 //
 //
 ==== Density Functional Theory (DFT)
 //The DFT method differs in two ways from the HF method. For starters, instead of assessing the position of electrons, it deals with the electron density $rho(r)$ of an electron's orbital.
 //The second is that by this density $rho(r)$, it allows to treat electron correlation implicitly.
-We remember @eq-probability-allelectrons, where squaring $Psi$ gives us the probability of encountering an electron in a normalised range, where integrating over the position ($x,y,z$) returned a volume ($d v$) in which the electron could be found. Instead of searching the most probable position of an electron, the Density Functional Theory exploits the volume ($d v$) to work out the electron density in the given volume. These Kohn-Sham orbitals $phi.alt^(K S)$ - named after both scientists that worked on the problem - deal with the electron density within the one-electron orbitals rather than the uncertainty of their position.
-When starting a computation - analogous to the HF method - an initial guess is made towards the density of the $phi.alt^(K S)$. Every iteration, the density of the orbital is optimised until convergence is reached, meaning a minimal energy $E[rho]$ is reached. One main difference to point out in this methodology, with respect to the HF method, is that because the various $phi.alt^(K S)_i$ are affected by a _repulsion term_, the densities can be optimised in a way that the movement of the electrons are implicitly correlated. 
+We remember @eq-probability-allelectrons, where squaring $Psi$ gives us the probability of encountering an electron in a normalised range, where integrating over the position ($x,y,z$) returned a volume ($d v$) in which the electron could be found. Instead of searching the most probable position of an electron, the Density Functional Theory exploits the volume ($d v$) to work out the electron density ($rho$) in the given volume.
+One of the most notable approaches is the Kohn-Sham (KS) approximation, which estimates the electronic repulsion term as the density of all the electrons. However, they reintroduce one-electron orbitals ($phi.alt^(K S)$) in the field of DFT to more accurately account for the kinetic energy $T$ in electron-electron interactions.
+The condition of this approach is that the electrons that occupy the KS-orbitals ($phi.alt^(K S)$) are supposedly part of a hypothetical system in which the electrons are non-interacting, which allows us to treat the kinetic energy $T$ as a sum of all the $phi.alt^(K S)_i$. This is similar to the HF method. Appended to it all is the _exchange correlation_ contribution, a correction term to improve the accuracy of the energy estimate. As we can iteratively optimise for the optimal density of a system, we can say that DFT implicitly correlates the movement of electrons. 
+//These Kohn-Sham orbitals $phi.alt^(K S)$ - named after both scientists that worked on the problem - deal with the electron density within the one-electron orbitals rather than the uncertainty of their position.
+//When starting a computation - analogous to the HF method - an initial guess is made towards the density of the $phi.alt^(K S)$. Every iteration, the density of the orbital is optimised until convergence is reached, meaning a minimal energy $E[rho]$ is reached. One main difference to point out in this methodology, with respect to the HF method, is that because the various $phi.alt^(K S)_i$ are affected by a _repulsion term_, the densities can be optimised in a way that the movement of the electrons are implicitly correlated. 
 
 //
 //
@@ -370,9 +375,9 @@ as molecular mechanics rests on principle of classical mechanics, a
 ) <fig-bondsangleparams>
 ]
 #let content-bondangle = [
-bond between two atoms can be represented through an adapted Newtonian potential energy equation (@eq-ballspring), commonly referred to as the _ball-spring_ model. Here, the _K#sub("r")_ refers to the _stifness_ of the spring that connects the atoms. Like a spring, the bond between two atoms, here a#sub("1") and a#sub("2"), can compress and stretch ever so slightly.
+bond between two atoms can be represented through an adapted Newtonian potential energy equation (@eq-ballspring), commonly referred to as the _ball-spring_ model. Here, the _K#sub("r")_ refers to the _stiffness_ of the spring that connects the atoms. Like a spring, the bond between two atoms, here a#sub("1") and a#sub("2"), can compress and stretch ever so slightly.
 They are allowed to vary around
-their equilbrium value (_r#sub("eq")_), meaning they constantly dance around a set distance, a length defined by the force field (@fig-bondsangleparams A.). //Angle bending is little different from bond stretching, but involves a semantic spring between two atoms, b#sub("1") and b#sub("3"), being indirectly linked 
+their equilbrium value (_r#sub("eq")_), meaning they constantly dance around a set distance, a length defined by the force field (@fig-bondsangleparams A.). //Angle bending is little different from bond stretching, but involves a virtual spring between two atoms, b#sub("1") and b#sub("3"), being indirectly linked 
 
 ]
 //and _K#sub(math.theta)_
@@ -383,7 +388,7 @@ their equilbrium value (_r#sub("eq")_), meaning they constantly dance around a s
 $
 E_("bondstretch") = sum_("bonds") K_("r") (r - r_("eq"))^2 #h(1em) ; #h(1em) E_("anglebend") = sum_("angles") K_(theta) (theta - theta_("eq"))^2
 $ <eq-ballspring>
-Angle bending is little different from bond stretching, but involves a semantic spring between two atoms, b#sub("1") and b#sub("3"), being indirectly linked through b#sub("2"). The _K#sub(math.theta)_ parameter defines the rigidity of this particular spring, which hovers around the equilbrium angle _θ#sub("eq")_.
+Angle bending is little different from bond stretching, but involves a virtual spring between two atoms, b#sub("1") and b#sub("3"), being indirectly linked through b#sub("2"). The _K#sub(math.theta)_ parameter defines the rigidity of this particular spring, which hovers around the equilbrium angle _θ#sub("eq")_.
 These parameters are originally derived from spectroscopy data and normal mode analysis, but can also be retrieved from NMR and _ab initio_ computations, and have remained relatively stable since they were established #mcite(("Cornell19952ndgenff", "Wang2004GAFF"), biblio). This especially holds true for ground-state organic molecules. 
  
 //
@@ -422,7 +427,7 @@ $
   ]
 ) <fig-torsionexplain>
 This is the typical profile of a (-CH#sub("2")-CH#sub("2")-CH#sub("2")-CH#sub("2")-) dihedral #mcite(("Wang2004GAFF"), biblio).
-The figure tells us that when the atom d#sub("4") eclipses d#sub("1"), synonymous with a _cis configuration_, the potential rests at a local minimum. By increasing $phi$, we give a slight rise to the potential because d#sub("4")'s hydrogen atoms are hindering vicinal atoms, causing an unfavourable predicament ($plus.minus frac(2pi,3)$). The system will want to strive for a minimum, which can be achieved by visiting the _trans configuration_, at $phi = pi$. Since the molecule is symmetrical in nature, increasing the torsion angle to $2pi$ will see the potential go through the same changes, ending at a full rotation of the angle $phi$.
+The figure tells us that when the atom d#sub("4") eclipses d#sub("1"), synonymous with a _syn configuration_, the potential rests at a local minimum. By increasing $phi$, we give a slight rise to the potential because d#sub("4")'s hydrogen atoms are hindering vicinal atoms, causing an unfavourable predicament ($plus.minus frac(2pi,3)$). The system will want to strive for a minimum, which can be achieved by visiting the _anti configuration_, at $phi = pi$. Since the molecule is symmetrical in nature, increasing the torsion angle to $2pi$ will see the potential go through the same changes, ending at a full rotation of the angle $phi$.
 
 By populating a force field with suitable parameters for $V_n$, $n$ and $gamma$ pertaining the specific dihedrals, we can evaluate any rotation of the torsional angle occurring during a Molecular Dynamics simulation.
 //
@@ -439,7 +444,7 @@ By populating a force field with suitable parameters for $V_n$, $n$ and $gamma$ 
 // Say that ORCA's vpot works by using the orbital densities from QM and effectively uses the functions in order to return ESP values on the respective gridpoints.
 ===== Point charge derivation
 //From the field of QM, we know that the charge distribution of atoms in a molecule can be described through the MO functions. Exploiting the information on orbitals directly would prove extremely inefficient when going into classical mechanics. This is because movement of the molecule during the simulation would need constant reevaluation of the orbitals, in order to calculate the dipole moment between two respective atoms.
-An abstraction to the coulombic contribution is applied by designing point charges. This type of charge is uniform across the atom and static during the simulation, meaning the value of the charge is queried from the force field instead of a continuous calculation of the specific parameter, which is an extreme gain in computational efficiency. @eq-charges-in-amber describes pairwise energy evaluation between atoms involved in intra- and intermolecular interactions.
+The coulombic contribution is applied by the design of point charges. This type of charge is uniform across the atom and static during the simulation, meaning the value of the charge is queried from the force field instead of a continuous calculation of the specific parameter, which is an extreme gain in computational efficiency. @eq-charges-in-amber describes pairwise energy evaluation between atoms involved in intra- and intermolecular interactions.
 The $q_i$ and $q_j$ parameters are the charges of the two atoms being evaluated and $r_("ij")$ is the distance between them. 
 //
 $
@@ -451,7 +456,7 @@ Deriving point charges from quantum mechanical information is done by population
 In MM applications however, the PA schemes take on a different approach. In protocols like Merz-Kollman (MK) and CHELPG, charges are least-squared fitted onto the atoms from Electrostatic Potential (ESP) data.
 
 The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
-From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an energy value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
+From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an potential value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
 The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mkscheme). 
 #figure(
   image("./figures/chargederivation/MK-charge-derivation.svg", width: 100%),
@@ -466,7 +471,7 @@ The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mksch
 //The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
 //From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an energy value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
 By fitting the ESP, using the _Chirlian-Francl_ least-squared fitting procedure, we derived ESP-based partial charges #mcite(("Chirlian1987fit"), biblio) (@fig-mkscheme D.). 
-An additional procedure to these derived charges is the application of the restrainted ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate semantically similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Restraints are also applied to account for buried atoms. Due to the grid being defined by the surface of the molecule, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
+An additional procedure to these derived charges is the application of the restrainted ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Restraints are also applied to account for buried atoms. Due to the grid being defined by the surface of the molecule, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
 
 Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like grid generation (e.g. cubic grids) and the applied basissets and methods used #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
 
@@ -498,7 +503,7 @@ The $R_("min,ij")$ is the optimal distance between two atoms where the Lennard-J
 To give a physical representation, we think of the $R_("min,ij")$  and $epsilon_("ij")$ parameters as a link to Van der Waals radii of the atoms #mcite(("Li2015ljpotential", "Sengupta2021ljpotential"), biblio). 
 
 $
-E_("LJ") = sum_(i<j) epsilon_("ij") (frac(R_("min,ij"), r_("ij")))^12 - 2(frac(R_("min,ij"), r_("ij")))^6 
+E_("LJ") = sum_(i<j) epsilon_("ij") [ (frac(R_("min,ij"), r_("ij")))^12 - 2(frac(R_("min,ij"), r_("ij")))^6 ]
 $ <eq-lenardjones>
 //Keeping consistent with the symbols, the $r_("ij")$ parameter represents the distance between 
 
@@ -511,11 +516,12 @@ $ <eq-lenardjones>
 //
 //
 ===== Special cases for ions in nonbonded-term interactions
-To account for ionic atoms, the nonbonded-term need specific revisions. For @eq-charges-in-amber, the valence of the ion is taken into account by the parameter $e$, relevant in multivalent ions like Mg#super("2+") and Fe#super("3+"). For the Lennard-Jones potential, ions represent a particular population of atoms that induce strong dipole moments in other atoms. To account for this, @eq-lenardjones is appended with a final term, making it the 12-6-4 potential. 
+To account for ionic atoms, the nonbonded-term need specific revisions. For the Lennard-Jones potential, ions represent a particular population of atoms that induce strong dipole moments in other atoms. To account for this, @eq-lenardjones is appended with a final term, making it the 12-6-4 potential. 
+In @eq-ions-nonbonded, the proton charge of the ion is taken into account by the parameter $e$, relevant in multivalent ions like Mg#super("2+") and Fe#super("3+") #mcite("Li2015ljpotential", biblio). 
 These additions are extremely important, as many biomolecular simulations are run using ions to simulate biological conditions.
 //The final term $ - frac(C_4, r_("ij"))$ is the ion-dipole interaction that should be accounted for to correctly represent then when interacting with organic compounds.
 $
-E#sub("electrostatic") = sum_(i<j)  frac(e^2 q_i q_j, r_("ij")) #h(1em) ; #h(1em) E#sub("LJ") = sum_(i<j) epsilon_("ij") ((frac(R_("min,ij"), r_("ij")))^12 - 2(frac(R_("min,ij"), r_("ij")))^6 ) - frac(C_4, r_("ij") #super("4"))
+E#sub("electrostatic") = sum_(i<j)  frac(e^2 q_i q_j, r_("ij")) #h(1em) ; #h(1em) E#sub("LJ") = sum_(i<j) epsilon_("ij") [ (frac(R_("min,ij"), r_("ij")))^12 - 2(frac(R_("min,ij"), r_("ij")))^6 ] - frac(C_4, r_("ij") #super("4"))
 $ <eq-ions-nonbonded>
 //
 //
@@ -536,7 +542,7 @@ f_i = m_i a_i #h(1em) arrow.r #h(1em) f_i = m_i frac(d^2 r_i, d t^2) = - frac(di
 $ <eq-classnewtion>
 The $r_i$ represent the $i#super("th")$ atom's position in cartesian space. The potential energy function $U(r_1, r_2, ..., r_N)$ is determined by the force field (@eq-AMBER) and calculates the potential based on those positions, for a total of $N$ particles #mcite(("Gonzalez2011ffandmd"), biblio).
 
-@eq-classnewtion is a non linear second order differential equation that cannot be solved exactly. This is the reason why we need a numerical integrator that partitions the trajectory into small, discrete segments. Every segment is what is called a timestep, an amount of time spanning before and after the movement of the atoms. Because these particles are almost infathomably tiny, they move around quickly and therefore the timestep to observe their movement needs to be small as well; usually around 1 femtosecond ($10^(-12)$ s). 
+@eq-classnewtion is a non linear second order differential equation that cannot be solved exactly. This is the reason why we need a numerical integrator that partitions the trajectory into small, discrete segments. Every segment is what is called a timestep, an amount of time spanning before and after the movement of the atoms. Because these particles are almost infathomably tiny, they move around quickly and therefore the timestep to observe their movement needs to be small as well; usually around 1 femtosecond ($10^(-15)$ s). 
 When we discretise this equation, we essentially want to know the position of the atoms ($r_i$) as a function over the elapsed time ($t_0 + Delta t$) (@eq-discrete-numerical) (@fig-periodic A.).
 $
 r_i (t_0) #h(1em) arrow.r #h(1em) r_i (t_0 + Delta t) #h(1em) arrow.r #h(1em) r_i (t_0 + 2Delta t) #h(1em) arrow.r #h(1em) ... #h(1em) arrow.r #h(1em) r_i (t_0 + n Delta t) 
@@ -577,7 +583,7 @@ If we substitute for the acceleration term, we get :
 $
 r_i (t_0 + Delta t) = - r_i (t_0 - Delta t) + 2 r_i (t_0) + a_i (t_0) Delta t^2 +  𝒪 (Delta t^4)  
 $ <eq-verlet-integration-simp>
-As it turns out, summing both equations in @eq-verlet-sum and analytically solving for $r_i (t_0 + Delta t)$ cancels out the velocity and the jerk.
+As it turns out, summing both equations in @eq-verlet-sum and solving for $r_i (t_0 + Delta t)$ cancels out the velocity and the jerk.
 The neat part is that when we actually calculate for the next position (@eq-verlet-integration), we can already fill in $r_i (t - Delta t)$ as this has just been computed in the previous timestep.
 This means that whenever we need to calculate the next position of the atoms, we only need to current position $r_i$ - found by a simple lookup, the precomputed previous position $r_i (t_0 - Delta t)$ and the current acceleration $a_i$ (@eq-verlet-integration-simp).
 
@@ -595,7 +601,11 @@ We can make an analogy of these periodic boundaries to the 1980's Japanese retro
   ]
 ) <fig-periodic>
 ==== Computational optimisations to MD simulations
-These calculations require quite the resources to run, especially considering the fact that these calculations have been around since at least the 1980's and optimisations were a necessity and not a luxury. To give some perspective, computers only had a single core CPU with a memory capacity (RAM) of 512 KiB to roughly 2 MiB at best. Nowadays, my five-year old laptop has six cores and a RAM capacity of about 12 GiB - 6000 times more than a common personal computer of that time. Presumably, a computational lab would have had slightly better resources. 
+Performing MD simulations requires the necessary hardware to run these demanding calculations. 
+When these simulations were gaining traction in the scientific fields (ca. 1980's), computational resources were limited.
+//especially considering the fact that these calculations have been around since at least the 1980's and optimisations were a necessity and not a luxury.
+To give some perspective, computers only had a single core CPU with a memory capacity (RAM) of 512 KiB to roughly 2 MiB at best. Nowadays, my five-year old laptop has six cores and a RAM capacity of about 12 GiB - 6000 times more than a common personal computer of that time. Presumably, a computational lab would have had slightly better resources. 
+//These calculations require quite the resources to run, especially considering the fact that these calculations have been around since at least the 1980's and optimisations were a necessity and not a luxury. To give some perspective, computers only had a single core CPU with a memory capacity (RAM) of 512 KiB to roughly 2 MiB at best. Nowadays, my five-year old laptop has six cores and a RAM capacity of about 12 GiB - 6000 times more than a common personal computer of that time. Presumably, a computational lab would have had slightly better resources. 
 
 Being efficient with storing data in memory and downsizing the amount of calculations needed for the entire simulation was a must. There are several ways to do so that are still of use in today's time : 
 
@@ -604,7 +614,7 @@ Being efficient with storing data in memory and downsizing the amount of calcula
 // https://computecanada.github.io/molmodsim-md-theory-lesson-novice/02-Fast_Methods_to_Evaluate_Forces/index.html
 ===== Verlet list
 There is no way to go around computing the bonded-term interactions, but having to calculate the pairwise interaction potential (@eq-charges-in-amber, @eq-lenardjones) between atom#sub("i") and all other atoms in the system would be a gargantuan task and beyond a certain distance this would garner negligible additions to the potential.
-To remedy this, a simulation employs a cut-off distance at which the nonbonded-terms are not evaluated anymore. This is formalised by the _Verlet list_ #mcite(("Chialvo1990verlet"), biblio).
+To remedy this, a simulation employs a _cut-off_ distance at which the nonbonded-terms are not evaluated anymore. This is formalised by the _Verlet list_ #mcite(("Chialvo1990verlet"), biblio).
 
 Suppose we set the cut-off distance $d_c$ at 10 Å from atom#sub("i") and a buffer distance $d_b$ at an additional half of $d_c$. Every iteration, a distance check is in place before evaluating the terms. If an atom#sub("j") strays further than 15 Å, the Verlet list for that atom#sub("i") is re-evaluated to include a new set of atoms within $d_c + d_b$.
 While this requires some additional RAM to store the lists in, a table lookup is much faster than evaluating all the atoms in the system on every iteration considering the euclidian distance is just $d = sqrt((x_i - x_j) + (y_i - y_j) +(z_i - z_j))$.
@@ -616,8 +626,8 @@ While this requires some additional RAM to store the lists in, a table lookup is
 //https://murillo-group.github.io/sarkas/theory/PPPM.html
 //https://computecanada.github.io/molmodsim-md-theory-lesson-novice/aio/index.html#particle-mesh-ewald-pme
 This method is particularly applied to electrostatic interactions between atoms that make use of periodic boundary conditions (PBC) (@fig-periodic B.), where the system's net charge is equal to zero.
-The method differentiates two types of $E_("electrostatic")$ , namely the short-range ($E_("direct")$) and the long-range ($E_("reciprocal")$).
-The $E_("direct")$ just employs the regular charge calculation (@eq-charges-in-amber), which is a pairwise computation between the nearest atoms based off the Verlet list we just discussed. To not dramatically increase the time complexity of the calculation, the long-range term exploits the Particle Mesh Ewald method to compute the $E_("reciprocal")$ for all atoms just one time per timestep. This greatly reduces the time spent calculation for electrostatic interactions - the nonbonded-term dominant in determing the potential.
+The method differentiates two types of $E_("electrostatic")$ , namely the short-range ($E_("direct")$) and the long-range ($E_("reciprocal")$). This range is decided by the cut-off distance.
+The $E_("direct")$ just employs the regular charge calculation (@eq-charges-in-amber), which is a pairwise computation between the nearest atoms based off the Verlet list we just discussed. To not dramatically increase the time complexity of the calculation, the long-range term exploits the Particle Mesh Ewald method to compute the $E_("reciprocal")$ for all atoms at once a single time per timestep. This greatly reduces the time spent calculation for electrostatic interactions - the nonbonded-term dominant in determing the potential.
 //https://www.quora.com/What-is-Ewald-summation-and-why-is-the-Particle-mesh-Ewald-approach-a-good-one
 
 To give some insight into the problem, the PBC require us to evaluate the charges in a pairwise fashion for atoms in neighbouring "boxes" to properly account for long-range interactions. This would cause an immense amount of time to iterate over every atom and over every pair of the respective atoms. 

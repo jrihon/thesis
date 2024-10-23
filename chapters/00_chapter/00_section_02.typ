@@ -63,7 +63,7 @@ When talking about abstracting the conformation of a five-membered ring, such as
 #let content-fivering= [
 The ribose sugar can vary in its endocyclic torsion angles ($nu_(0 arrow.r 4)$), meaning atoms in the molecule will move out-of-plane (@fig-fivering A.). For five-membered rings, we recognise two distinct puckering modes: the Envelope (E#super("x")) and the Twist (#super("x")T#sub("y")).
 
-The ribose sugar is the most notable five-membered ring we find in nature as it constitutes the backbone of our genetic material. Thanks to years of structural research through of usage methods like X-ray crystallography and nuclear magnetic resonance (NMR), we know that the DNA chemistry favours the #super("2'")T#sub("3'") conformation,// while RNA adopts (#super("3")T#sub("2")) under normal conditions.
+The ribose sugar is the most notable five-membered ring we find in nature as it constitutes the backbone of our genetic material. Thanks to years of structural research through usage of methods like X-ray crystallography and nuclear magnetic resonance (NMR), we know that the DNA chemistry favours the #super("2'")T#sub("3'") conformation,// while RNA adopts (#super("3")T#sub("2")) under normal conditions.
 //proclivity for a specific conformer makes it so that we were able to assign typical structures of NA helices as B-DNA and A-RNA respectively. These structures are recognised by processing enzymes, like ligases and polymerases, by the structural features of the helix itself. 
 ]
 #let figure-fivering = [
@@ -82,7 +82,9 @@ This proclivity for a specific conformer of the sugar ring ultimately defines th
 If the biopolymers do not fit the required shape, they cannot be processed.
 //This has implications in i.e. ASO research, where this can be exploited to halt physiological processes.
 
-In 1947, Kilpatrick _et al._ devised a relation to the potential energy of the molecule and the out-of-plane displacement of the atoms of a five-membered ring, specifically on the cyclopentane molecule #mcite(("Kilpatrick1947pseudorotation"), biblio). To calculate the energy of the various conformers of the ring, @eq-kilpatrick was produced in order to define deviations per atom. The parameter $q$ is the magnitude of the deviation and $phi$ is the phase that assigns the atoms to deviate. The integer $j$ represents iterating over the amounts of atoms (0-based indexing). Seeing as their data consists of vibrational spectra, the deviations proved favourable as they calculated that bond angles were strained in a planar position when keeping bondlengths constant.
+In 1947, Kilpatrick _et al._ devised a relation to the potential energy of the molecule and the out-of-plane displacement of the atoms of a five-membered ring, specifically on the cyclopentane molecule #mcite(("Kilpatrick1947pseudorotation"), biblio). To calculate the energy of the various conformers of the ring, @eq-kilpatrick was produced in order to define deviations per atom. The parameter $q$ is the magnitude of the deviation and $phi$ is the phase that assigns the atoms to deviate. The integer $j$ represents iterating over the amounts of atoms (0-based indexing). 
+By using vibrational spectra of the five-membered ring molecule, they were able to calculate that out-of-plane deviations of the atoms with respect to the ring proved favourable for the potential energy. The bond angles were found to be strained when keeping bondlengths constant, when the ring assumed a planar position. 
+//Seeing as their data consists of vibrational spectra, the deviations proved favourable as they calculated that bond angles were strained in a planar position when keeping bondlengths constant.
 $
 z_j = sqrt(frac(2,5)) q · cos(2(frac(2 pi j,5) + phi))
 $<eq-kilpatrick>
@@ -91,14 +93,14 @@ This particular research brought the concept of puckering to a wider public. In 
 // intermezzo paragraph -> formalise this
 //
 #intermezzo("Symbols and semantics")[
-Many of the formulas in this section come from various sources that each employ a set of symbols to define the same parameters. As some papers were released prior to the IUPAC convention #mcite(("Iupac1983nucleicacids"), biblio), I took it upon myself to formalise all semantically equivalent symbols and employ IUPAC nomeclature.
+Many of the formulas in this section come from various sources that each employ a set of symbols to define the same parameters. As some papers were released prior to the IUPAC convention #mcite(("Iupac1983nucleicacids"), biblio), I took it upon myself to formalise all semantically equivalent symbols and employ IUPAC nomenclature.
 ]
 
 // AS formalism
 ===== Altona-Sundaralingam (AS)
 A relationship was described between the values of the endocyclic torsion angles ($nu_(0 arrow.r 4)$) and the puckering itself #mcite(("Altona1968pseudorot"), biblio). The AS formalism was also the first to popularise the usage of puckering behaviour on the nucleic acid ribose sugar and introduces the pseudorotational wheel. The latter graphically depicts occurrences of the various puckers of the ribose sugars on a polar coordinate system when a nucleic acid crystal structure is determined (@fig-fivering B.) #mcite(("Altona1972formalism"), biblio).
 
-@eq-as-phaseangle details on a formula where all endocyclic angles are passed to a function to return the phase angle. This parameter allows @eq-as-amplitude to complete, given $j=0$ and a trivial rearrangement left to the reader.
+@eq-as-phaseangle details a formula where all endocyclic angles are passed to a function to return the phase angle. This parameter allows @eq-as-amplitude to complete, given $j=0$ and a trivial rearrangement left to the reader.
 
 $
 tan(phi) = frac((nu_4 + nu_1) - (nu_3 + nu_0) , 2 nu_2 (sin(frac(pi,5)) + sin(frac(2pi,5))) ) 
@@ -117,9 +119,11 @@ $
 sum^(N-1)_(j=0) z_j cos((2 pi j)/N) = 0 #h(2em) ; #h(2em) sum^(N-1)_(j=0) z_j sin((2 pi j)/N) = 0
 $<eq-cp-cossinplane>
 
-Computing for the set of displacements, by virtue of @eq-cp-cossinplane, we can define the mean plane by taking the cross product $n = R' times R''$ (@eq-cp-crossplane). The $R_j$ parameter represents iterating over the atomic coordinates of the ring system. This equation produces two vectors that define said mean plane.
+//Computing for the set of displacements, by virtue of @eq-cp-cossinplane, we can define the mean plane by taking the cross product $n = R' times R''$ (@eq-cp-crossplane). The $R_j$ parameter represents iterating over the atomic coordinates of the ring system. This equation produces two vectors that define said mean plane.
+//By virtue of @eq-cp-cossinplane, we can define the mean plane by taking the cross product $n = R' times R''$. 
+In @eq-cp-crossplane, the $R_j$ parameter represents iterating over the atomic coordinates of the ring system. Two small equation respectively produce a single vector, whose cross product defines the mean plane ($n$). It is from this mean plane that we can derive the out-of-plane displacements of the atoms in the ring.
 $
-R' = sum^(N-1)_(j=0) R_j sin((2 pi j)/N) #h(2em) ; #h(2em) R'' = sum^(N-1)_(j=0) R_j cos((2 pi j)/N)
+R' = sum^(N-1)_(j=0) R_j sin((2 pi j)/N) #h(2em) ; #h(2em) R'' = sum^(N-1)_(j=0) R_j cos((2 pi j)/N) #h(2em) ; #h(2em) n = R' times R''
 $<eq-cp-crossplane>
  Setting the geometrical center of the ring to the origin of the cartesian coordinate system ($x,y,z$), we can apply the dot product of the normalised $n$ to every atom to get the displacements per atom ($z_j = R_j · n$).
 
@@ -173,9 +177,10 @@ commonly referred to as a _half-chair_, it makes much more sense to assign it as
 //
 // SP formalism
 ===== Strauss-Pickett (SP)
-Considering it was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical.
+Before this formalism was devised (1970), many scientists considered only the C and B conformer as valid puckering modes for six-membered rings. With this research, the strictly theoretical conformers suddenly became relevant.
+//Considering it was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical.
 The SP formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: the set of improper dihedrals [$alpha$#sub("1"), $alpha$#sub("2"), $alpha$#sub("3")] and the set of angles [$beta$#sub("1"), $beta$#sub("2"), $beta$#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself. From @fig-spimpropers, we clearly see the six-membered ring partioned in a central triangle and three individual _flaps_ that will be able to fold in and out.
-As with Kilpatrick _et al._, this research made us of vibrational spectra involving angle bending and torsional parameters that are used to compute for the potential energy of the molecule itself. Through pseudorotational movement, the endocyclic angles vary and so will the potential energy. One important result of this formalism is the first usage of the spherical coordinates system ($r, theta, phi$) to represent a six-membered ring configuration.
+As with Kilpatrick _et al._, this research made use of vibrational spectra involving angle bending and torsional parameters that are used to compute the potential energy of the molecule itself. Through pseudorotational movement, the endocyclic angles vary and so will the potential energy. One important result of this formalism is the first usage of the spherical coordinates system ($r, theta, phi$) to represent a six-membered ring configuration.
 
 
 #intermezzo("Spherical conventions")[
@@ -253,7 +258,7 @@ $<eq-even-locelevation>
 //=== A basis for definitions
 === Describing basepair orientations of nucleic acids
 
-At an EMBO (European Molecular Biology Organization) conference in Cambridge in 1988 #mcite(("Dickerson1989Cambridge"), biblio), a workshop _DNA Curvature and Bending_ was held by renowned nucleic acid chemists and biologist to attempt to resolve a particular issue: to quantitatively describe intra- and interbasepair orientations. This description was meant to prove useful in order to further expand the geometric descriptors of nucleic acid chains and helices. 
+At an EMBO (European Molecular Biology Organization) conference in Cambridge in 1988 #mcite(("Dickerson1989Cambridge"), biblio), a workshop _DNA Curvature and Bending_ was held by renowned nucleic acid scientists to attempt to resolve a particular issue: to quantitatively describe intra- and interbasepair orientations. This description was meant to prove useful in order to further expand the geometric descriptors of nucleic acid chains and helices. 
 Several groups  were tasked to come up with a program (e.g. Lavery group made Curves+ #mcite(("Lavery2009Curves"), biblio), Wilson group made 3DNA #mcite(("Lu20033DNA"), biblio)) that would be held against the following criteria: (i) follow IUPAC nomenclature #mcite(("Iupac1983nucleicacids"), biblio), (ii) make a general purpose software to describe polynucleotide chains, (iii) adhere to a specific set of instructions on how to construct reference basis frames in order to (iv) define parameters on rotations and translations of basepairs (see @fig-appendix-basepairorient for an overview of the defined basepair parameters).
 
 Over the years, the two aforementioned packages have blown the competition out of the field. Their usage is applied to parametrising groove widths, helical size of duplexes and of course basepair orientations.
@@ -261,7 +266,11 @@ Unfortunately, there are gaping problems with the current set of definitions emp
 //
 ==== The problem with the current definitions
 @fig-referenceframes visually represents the algebra that goes on in the backend - the logic and calculations - of the respective software that will be discussed.
-At present, one key problem is the report of the convention #mcite(("Dickerson1989Cambridge"), biblio) basing the definitions off of the HELIB software, a tool and its publication that have been lost to the annals of science. This is quite the problem because the way basisframes were defined had to follow the reasoning of the authors that designed HELIB. The point made in the previous paragraph (iii) lacks substance, because definitions were based on tradition and not on objective matters.
+At present, one key problem is the report of the convention #mcite(("Dickerson1989Cambridge"), biblio) basing the definitions off of the HELIB software, a tool and its publication that have been lost to the annals of science. 
+//This is quite the problem because the way basisframes were defined had to follow the reasoning of the authors that designed HELIB.
+To impose the definition set of the authors that designed HELIB would require information should remain publicly available to this day.
+//Seeing as basisframes had to be defined by following the reasoning of the authors that designed HELIB, the problem quickly becomes apparent. 
+The point made in the previous paragraph (iii) lacks substance, because definitions were based on tradition and not on objective matters.
 For a reference system to be an objective way of quantification, it must not be biased and yet the report dictates the orientation and location of an arbitrary orthonormal basis. It is stated that the x-axis needs to be pointed into the major groove, the y-axis towards the backbone and the z-axis is the cross product of this plane. 
 
 For instance with Curves+ (@fig-referenceframes A.), the basisframe is decided by the orientation of the glycosidic bond of the nucleotides. A normal vector $accent(v_z, arrow)$ is produced from $accent(j_1, arrow)$ #sub("(N1"+$arrow$+"C1')") $times accent(j_2, arrow) #sub("(N1"+$arrow$+"C2)")$ 
@@ -284,7 +293,7 @@ On the other hand, 3DNA #mcite(("Lu20033DNA"), biblio) takes on a very different
 // Leg even uitleg hier over, maak figuur af
 //
 Even though these tools all revolve around the same semantics, it cannot be ignored that the methodology in which these are computed are wildly different. Non-identical reference basisframes give slightly different results and that has been known for a long time now #mcite(("Lu1999ConfDiscrepancy"), biblio). Every individual software released in the aftermath of the Cambridge Convention employs an independent protocol to set up and compute the parameters.
-Even though the parameters result in numerically similar values, one cannot compare data from these various softwares in good conscience because the data will always be offset.
+Even though the parameters result in numerically similar values, one cannot compare data from these various softwares because the data will always be offset.
 
 The definitions were put in place over thirty years ago and since then, these orientation parameters have not shown profound relevance to the biological properties of the nucleic acid structure. It has even been shown that the orientation parameters between A-RNA and B-DNA models are rather the same #mcite(("Lu1999ConfDiscrepancy"), biblio)! In contrast, deformations like enlarged grooves and decrease in helical size (Å) have a direct implication for the nucleic acid structure to be accepted by its processing enzyme, thereby influencing a biological process. 
 The only somewhat relevant parameters are interbasepair rotation, especially the twist, but that is directly related to the amount of basepairs per helical turn ($frac("bp", 2pi)$) and thus the helical size ($frac("Å", 2pi)$).
