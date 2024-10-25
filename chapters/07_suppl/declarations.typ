@@ -17,7 +17,7 @@ To dr. Elisabetta Groaz and dr. Yuqing Xu for allowing me to help them in their 
 To dr. Anne-Sophie Depuydt, dr. Olivier Cheneval, dr. Christina I. Schroeder, prof. dr. David J. Craik, dr. Steve Peigneur and prof. dr. Jan Tytgat for inviting me to work on a project completely beyond my scope. It was truly an enjoyable collaboration we were able to produce together.
 
 
-== Personal contributions
+== Scientific contributions
 
 The enumerated contributions follows the ordering of the _List of Publications_ subsection in _Published Works_. Only the personal contributions of the author are mentioned in this subsection.
 

@@ -10,7 +10,7 @@
 //}
 
 == Characterisation of biomolecular structures
-Before any technical section, it is always a good idea to exactly define the terms used to remove ambiguity from the proverbial equations. 
+Before any technical section, it is always a good idea to exactly define the terms used to remove any ambiguity for the reader. 
 As it stands, this is the vision statement of the _International Union for Pure and Applied Chemistry_ (IUPAC) #mcite(("Iupac1983nucleicacids"), biblio).
 
 //
@@ -22,7 +22,7 @@ As it stands, this is the vision statement of the _International Union for Pure 
 //-> IUPAC_conformational_nomenclature_on_five and sixrings.pdf
 
 //A lengthy title to a paragraph like this one signifies a mathematical section is coming ahead.
-The purpose of abstracting conformers is to denote a simple description of an otherwise complex structural positioning of the atoms in a molecule, that is numerically verifiable and unambiguous with respect to other conformations. To simplify, the quantitative abstraction _measures_ the conformations and returns a set of values that can be used to distinguish it from other conformations.
+The purpose of abstracting conformers is to denote a simple description of an otherwise complex structural positioning of the atoms in a molecule, that is numerically verifiable and unambiguous with respect to other conformations. Simply put, the quantitative abstraction _measures_ the conformations and returns a set of values that can be used to distinguish it from other conformations.
 
 A common analogy to highlight the importance of describing the conformation - or the shape - of a molecule can be done by referring to the _Lock and Key_ analogy. For a drug to act upon a receptor or enzyme, it must fit in the active or allosteric site of that protein. This fit is defined by specific interactions between drug and protein and by the conformation the molecule favours to adopt. This shape-specificity is crucial for all physiological processes in the biochemical world.
 
@@ -78,7 +78,7 @@ The ribose sugar is the most notable five-membered ring we find in nature as it 
 #grid(content-fivering, figure-fivering, columns: (1fr, 1.5fr), gutter: 1em) #v(-0.5em)
 //chemistry favours the #super("2")T#sub("3") conformation,
 while RNA adopts #super("3'")T#sub("2'") under normal conditions.
-This proclivity for a specific conformer of the sugar ring ultimately defines the form of NA helices. These structures are recognised by processing enzymes, whose interactions are driven by the fact that these enzymes only accept specific shapes of duplexes. The 2_'_-OH in RNA supplements the interactions with the enzyme further.
+This proclivity for a specific conformer of the sugar ring ultimately defines the shape of NA helices. These structures are recognised by processing enzymes, whose interactions are driven by the fact that these enzymes only accept specific shapes of duplexes. The 2_'_-OH in RNA supplements the interactions with the enzyme further.
 If the biopolymers do not fit the required shape, they cannot be processed.
 //This has implications in i.e. ASO research, where this can be exploited to halt physiological processes.
 
@@ -100,7 +100,7 @@ Many of the formulas in this section come from various sources that each employ 
 ===== Altona-Sundaralingam (AS)
 A relationship was described between the values of the endocyclic torsion angles ($nu_(0 arrow.r 4)$) and the puckering itself #mcite(("Altona1968pseudorot"), biblio). The AS formalism was also the first to popularise the usage of puckering behaviour on the nucleic acid ribose sugar and introduces the pseudorotational wheel. The latter graphically depicts occurrences of the various puckers of the ribose sugars on a polar coordinate system when a nucleic acid crystal structure is determined (@fig-fivering B.) #mcite(("Altona1972formalism"), biblio).
 
-@eq-as-phaseangle details a formula where all endocyclic angles are passed to a function to return the phase angle. This parameter allows @eq-as-amplitude to complete, given $j=0$ and a trivial rearrangement left to the reader.
+@eq-as-phaseangle details a formula where all endocyclic angles are passed to a function to return the phase angle $phi$. This parameter allows @eq-as-amplitude to be solved for the amplitude $q$, given $j=0$ and a trivial rearrangement left to the reader.
 
 $
 tan(phi) = frac((nu_4 + nu_1) - (nu_3 + nu_0) , 2 nu_2 (sin(frac(pi,5)) + sin(frac(2pi,5))) ) 
@@ -116,26 +116,26 @@ Defining the local elevation $z_j$ requires defining a plane going through the m
 @fig-fivering A. depicts the mean plane for the various puckering modes in gray. 
 From this follows another condition to satisfy that every mean plane constitutes a unique puckering mode (@eq-cp-cossinplane). 
 $
-sum^(N-1)_(j=0) z_j cos((2 pi j)/N) = 0 #h(2em) ; #h(2em) sum^(N-1)_(j=0) z_j sin((2 pi j)/N) = 0
+sum^(N-1)_(j=0) z_j cos((2 pi j)/N) = 0 #h(2em) | #h(2em) sum^(N-1)_(j=0) z_j sin((2 pi j)/N) = 0
 $<eq-cp-cossinplane>
 
 //Computing for the set of displacements, by virtue of @eq-cp-cossinplane, we can define the mean plane by taking the cross product $n = R' times R''$ (@eq-cp-crossplane). The $R_j$ parameter represents iterating over the atomic coordinates of the ring system. This equation produces two vectors that define said mean plane.
 //By virtue of @eq-cp-cossinplane, we can define the mean plane by taking the cross product $n = R' times R''$. 
 In @eq-cp-crossplane, the $R_j$ parameter represents iterating over the atomic coordinates of the ring system. Two small equation respectively produce a single vector, whose cross product defines the mean plane ($n$). It is from this mean plane that we can derive the out-of-plane displacements of the atoms in the ring.
 $
-R' = sum^(N-1)_(j=0) R_j sin((2 pi j)/N) #h(2em) ; #h(2em) R'' = sum^(N-1)_(j=0) R_j cos((2 pi j)/N) #h(2em) ; #h(2em) n = R' times R''
+R' = sum^(N-1)_(j=0) R_j sin((2 pi j)/N) #h(2em) | #h(2em) R'' = sum^(N-1)_(j=0) R_j cos((2 pi j)/N) #h(2em) arrow.r #h(2em) n = R' times R''
 $<eq-cp-crossplane>
  Setting the geometrical center of the ring to the origin of the cartesian coordinate system ($x,y,z$), we can apply the dot product of the normalised $n$ to every atom to get the displacements per atom ($z_j = R_j · n$).
 
 The displacements $z_j$ are employed to calculate the actual puckering coordinates that define the CP formalism.
 This leads to the generalisation of @eq-kilpatrick for any type of _odd_-membered cyclic molecule, where $N$ is equal to the amount of atoms in the ring and $m = (N-1)/2$ :  
 $
-q_m cos phi_m = sqrt(frac(2,N)) sum^(N-1)_(j=0) z_j cos(frac(2 pi m j, N)) #h(2em) ; #h(2em)
+q_m cos phi_m = sqrt(frac(2,N)) sum^(N-1)_(j=0) z_j cos(frac(2 pi m j, N)) #h(2em) | #h(2em)
 q_m sin phi_m = - sqrt(frac(2,N)) sum^(N-1)_(j=0) z_j sin(frac(2 pi m j, N))
 $<eq-odd-membered>
 We can simplify @eq-odd-membered for $N=5$, resulting in $m = 2$: 
 $
-q_2 cos phi_2 = sqrt(frac(2,5)) sum^4_(j=0) z_j cos(frac(4 pi j, 5)) #h(2em) ; #h(2em)
+q_2 cos phi_2 = sqrt(frac(2,5)) sum^4_(j=0) z_j cos(frac(4 pi j, 5)) #h(2em) | #h(2em)
 q_2 sin phi_2 = - sqrt(frac(2,5)) sum^4_(j=0) z_j sin(frac(4 pi j, 5))
 $<eq-cp-five-membered>
 @eq-cp-five-membered gives us the puckering coordinates we can use to represented the abstracted conformation of a five-membered ring. The keen observer might have noticed the recurrence of the parameters $q$ and $phi$. It is because these values - or coordinate as we tend to name them - relate to the same semantics as with the AS formalism.
@@ -155,31 +155,31 @@ The concept of pseudorotation is also ascribed to six-membered rings, and any $n
 
 //Six-membered sugars, like glucose and derivatives, are conventionally considered in topics like glycosylation of protein residues and the Krebs cycle. As it stands, these molecules are often studied for their biochemical properties, like the former often being involved in interactions of antibodies with proteins on the surface of the cell.
 //In our research, we desire to quantify the degree of puckering in order to measure differences in behaviour of the molecule.
-A common modification is that of the hexitol NA (@fig-sugarmods D), a sturdy modification that is able to pair well with RNA oligonucleotides and has the potential to function as a genetic biopolymer #mcite(("Groaz2023hna", "Lescrinier2000rnahna"), biblio).
-Like five-membered rings, these six-membered rings are categorised into different conformations. As an extra atom was added to the molecule, the dimensionality of the puckering has increased, resulting in five distinct puckering modes. The Chair (#super("Z")C#sub("W")) and Boat (B#sub("Z,W")) are most well known. Adjacent to the latter, we encounter the _Skew_ (#super("Z")S#sub("X")), also labeled a _half-boat_. Equivalent to the five-membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire. While the T-conformer is more// commonly referred to as a _half-chair_, it makes much more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
+A common modification is that of the HNA (@fig-sugarmods D), a sturdy modification that is able to pair well with RNA oligonucleotides and has the potential to function as a genetic biopolymer #mcite(("Groaz2023hna", "Lescrinier2000rnahna"), biblio).
+Like five-membered rings, these six-membered rings are categorised into different conformations. As an extra atom was added to the molecule, the dimensionality of the puckering has increased, resulting in five distinct puckering modes. The Chair (#super("Z")C#sub("W")) and Boat (B#sub("Z,W")) are most well known. Adjacent to the latter, we encounter the Skew (#super("Z")S#sub("X")), also labeled a _half-boat_. Equivalent to the five-membered ring, the six-membered ring includes the Envelope (E#super("Z")) and the Twist  (#super("Z")T#sub("Y")) in its repertoire. While the T-conformer is more commonly referred to as a _half-chair_, it makes much //more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
 ]
 #let figure-sixring = [
 #figure(
   image("./figures/conformers/six-memberedring-conformation.svg", width: 100%),
   caption: [
-    *A.* The five distinct conformers a six-membered ring can adopt: Twist, Envelope, Chair, Boat and Skew.
+    *A.* The five distinct conformers a six-membered ring can adopt: Twist (brown), Envelope (coral), Chair (dark purple), Boat (moss) and Skew (green).
     *B.* Representation of the puckering modes of a six-membered ring, projected on the surface of the Cremer-Pople globe. The amplitude $q$ is abstracted as it is nearly constant for biologically relevant puckers #mcite(("Haasnoot1992sixrings"), biblio).
   ]
 ) <fig-sixring>
 ]
 
 #grid(content-sixring, figure-sixring, columns: (1fr, 1fr), gutter: 1em) #v(-0.5em)
-//encounter the _Skew_ configuration (#super("Z")S#sub("X")), also labeled a _half-boat_. As to the five- membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire (@fig-sixring A.). While the T-conformer is more
-commonly referred to as a _half-chair_, it makes much more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
+//encounter the _Skew_ configuration (#super("Z")S#sub("X")), also labeled a _half-boat_. As to the five- membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire (@fig-sixring A.). While the T-conformer is more commonly referred to as a _half-chair_, it makes much 
+more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
 
 //
 //
 //
 // SP formalism
 ===== Strauss-Pickett (SP)
-Before this formalism was devised (1970), many scientists considered only the C and B conformer as valid puckering modes for six-membered rings. With this research, the strictly theoretical conformers suddenly became relevant.
+Before this formalism was devised (1970), many scientists considered only the Chair and Boat conformer as valid puckering modes for six-membered rings. With this research, the strictly theoretical conformers were made relevant.
 //Considering it was the 1970's when this formalism was devised, the reader must understand that conformations other than C and B evaded many scientists and remained strictly theoretical.
-The SP formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: the set of improper dihedrals [$alpha$#sub("1"), $alpha$#sub("2"), $alpha$#sub("3")] and the set of angles [$beta$#sub("1"), $beta$#sub("2"), $beta$#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself. From @fig-spimpropers, we clearly see the six-membered ring partioned in a central triangle and three individual _flaps_ that will be able to fold in and out.
+The SP formalism deals not in puckering coordinates, but rather assigns a set of _internal_ coordinates: a set of improper dihedrals [$alpha$#sub("1"), $alpha$#sub("2"), $alpha$#sub("3")] and a set of angles [$beta$#sub("1"), $beta$#sub("2"), $beta$#sub("3")] #mcite(("Strauss1970conformational"), biblio). By these internal coordinates, it is possible to denote a specific conformation and even reconstruct the molecule itself. From @fig-spimpropers, we clearly see the six-membered ring partioned in a central triangle and three individual _flaps_ that will be able to fold in and out.
 As with Kilpatrick _et al._, this research made use of vibrational spectra involving angle bending and torsional parameters that are used to compute the potential energy of the molecule itself. Through pseudorotational movement, the endocyclic angles vary and so will the potential energy. One important result of this formalism is the first usage of the spherical coordinates system ($r, theta, phi$) to represent a six-membered ring configuration.
 
 
@@ -202,10 +202,11 @@ $
 alpha_j = r [ cos theta + 2 [ cos(frac(4 pi j, 3) - frac(2pi,3) + phi )] sin theta]
 $<eq-sp-sixring>
 Here, a coordinate on a globe can reflect the puckering of a six-membered ring (@fig-sixring B.). This is a particularly convenient observation, as we recall that five-membered rings can be reflected by a set of polar coordinates. 
-The rest of the research papers makes use of calculating the potential energy of a variety of conformations, by relating ring-bending parameters derived from vibrational spectra. The result is a Potential Energy Surface (PES) where we can observe transition states and energy difference in between the puckering modes in a single figure. 
+The rest of the research papers makes use of calculating the potential energy of a variety of conformations, by relating ring-bending parameters derived from vibrational spectra. The result is a Potential Energy Surface (PES) where we can observe transition states //and energy difference in between the puckering modes in a single figure. 
 ]
 
-#grid(content-sp, figure-sp, columns: (2fr, 1fr), gutter: 1em)
+#grid(content-sp, figure-sp, columns: (2fr, 1fr), gutter: 1em) #v(-0.5em)
+and energy difference in between the puckering modes in a single figure. 
 
 //
 // CP formalism
@@ -235,7 +236,7 @@ $
 z_j = sqrt(frac(2,N)) sum^((N)/2-1)_(m=2) q_m cos(phi_m frac(2 pi m j, N)) + frac(q_(N/2),N)  (-1)^j #h(1em) arrow.r #h(1em) z_j = sqrt(frac(1,3)) sum^2_(m=2) q_2 cos(phi_2 frac(4 pi j, 6)) + frac(q_3,6) (-1)^j
 $<eq-even-locelevation>
 
-@fig-cp-inversionprotocol below gives a simplified representation on how to invert CP coordinates to their original structure, which was analytically described by Cremer _et al._ #mcite(("Cremer1990analytical"), biblio).
+@fig-cp-inversionprotocol below gives a simplified representation on how to invert CP coordinates to their original structure, which was described by Cremer _et al._ #mcite(("Cremer1990analytical"), biblio).
 #figure(
   image("./figures/cp_inversion.svg", width: 100%),
   caption: [
@@ -262,13 +263,13 @@ At an EMBO (European Molecular Biology Organization) conference in Cambridge in 
 Several groups  were tasked to come up with a program (e.g. Lavery group made Curves+ #mcite(("Lavery2009Curves"), biblio), Wilson group made 3DNA #mcite(("Lu20033DNA"), biblio)) that would be held against the following criteria: (i) follow IUPAC nomenclature #mcite(("Iupac1983nucleicacids"), biblio), (ii) make a general purpose software to describe polynucleotide chains, (iii) adhere to a specific set of instructions on how to construct reference basis frames in order to (iv) define parameters on rotations and translations of basepairs (see @fig-appendix-basepairorient for an overview of the defined basepair parameters).
 
 Over the years, the two aforementioned packages have blown the competition out of the field. Their usage is applied to parametrising groove widths, helical size of duplexes and of course basepair orientations.
-Unfortunately, there are gaping problems with the current set of definitions employed to describe these basepair orientations. While widths, size and inclination degree per basepair are unequivocally defined by the objective atomic positioning, the protocols on how the reference basisframes are derived - an orthonormal basis used to compute for the orientations - are decided at the sole discretion of the group coding the software. 
+Unfortunately, there are gaping problems with the current set of definitions employed to describe these basepair orientations. While widths, size and inclination degree per basepair are unequivocally defined by the objective atomic positioning, the protocols on how the reference basisframes - an orthonormal basis used to compute for the orientations - are derived are decided at the sole discretion of the group coding the software. 
 //
 ==== The problem with the current definitions
 @fig-referenceframes visually represents the algebra that goes on in the backend - the logic and calculations - of the respective software that will be discussed.
 At present, one key problem is the report of the convention #mcite(("Dickerson1989Cambridge"), biblio) basing the definitions off of the HELIB software, a tool and its publication that have been lost to the annals of science. 
 //This is quite the problem because the way basisframes were defined had to follow the reasoning of the authors that designed HELIB.
-To impose the definition set of the authors that designed HELIB would require information should remain publicly available to this day.
+To impose the definition set of the authors that designed HELIB would require information that should be publicly available, even to this day.
 //Seeing as basisframes had to be defined by following the reasoning of the authors that designed HELIB, the problem quickly becomes apparent. 
 The point made in the previous paragraph (iii) lacks substance, because definitions were based on tradition and not on objective matters.
 For a reference system to be an objective way of quantification, it must not be biased and yet the report dictates the orientation and location of an arbitrary orthonormal basis. It is stated that the x-axis needs to be pointed into the major groove, the y-axis towards the backbone and the z-axis is the cross product of this plane. 

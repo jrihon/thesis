@@ -23,7 +23,7 @@ This methodology could be further popularised with the aid of computational tool
 // https://www.rcsb.org/stats/growth/growth-rna
 // https://www.rcsb.org/stats/explore/polymer_entity_type
 One other key problem is the lack of virtual _pdb_ models to use for molecular dynamics studies. At the time of writing this - May 2024 - the entire RCSB data bank #mcite(("Berman2000rcsb"), biblio) accounts for almost 215 000 protein structures. The share of nucleic acid models is about 18 000, with nearly 75 % of them complexed to a protein. Of the remaining standalone models, many are just DNA and RNA with unique three dimensional shapes. A minority of those determined NA models exhibit rather unique modifications to either of the three core moieties that NAs exhibit. There is a high diversity in published XNA, which makes it difficult to characterise their behaviour based on a few structures per distinct chemistry.
-Added to this, using organic synthesis to make the XNA building blocks labour and resource intensive and can take months, if not an entire year, to create a set of compounds. This does not account testing their viability in one of the applicative fields.
+Added to this, using organic synthesis to make the XNA building blocks is labour and resource intensive and can take months, if not an entire year, to create a set of compounds. This does not account testing their viability in one of the applicative fields.
 
 The field currently lacks a streamlined way to carry out computational studies on synthetic nucleic acids by a standard protocol.
 A number of issues are at the cause, where the first one is

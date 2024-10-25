@@ -67,11 +67,6 @@
 
 // BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 #glossary-layout(
-  "bp",
-  "basepair"
-)
-
-#glossary-layout(
   $beta$ + "-homo-DNA",
   $beta$ + "-D-Glucopyranosyl NA"
 )
@@ -79,6 +74,11 @@
 #glossary-layout(
   "BLI",
   "Bio-layer Interferometry"
+)
+
+#glossary-layout(
+  "bp",
+  "basepair"
 )
 
 // CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -366,6 +366,11 @@
 
 // PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 #glossary-layout(
+  $Psi$,
+  "Pseudo-uracil"
+)
+
+#glossary-layout(
   "PA",
   "population analysis"
 )
@@ -395,11 +400,6 @@
   "dimethylamino-phosphorodiamidate MNA"
 )
 
-#glossary-layout(
-  $Psi$,
-  "Pseudo-uracil"
-)
-
 // QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 #glossary-layout(
   "QM",
@@ -424,7 +424,7 @@
 
 #glossary-layout(
   "RESP",
-  "restraint ESP"
+  "restrained ESP"
 )
 
 #glossary-layout(

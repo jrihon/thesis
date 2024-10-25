@@ -12,8 +12,8 @@
 Now that we have touched upon the application potential of XNAs and discussed how we can geometrically characterise the molecules themselves, we will delve into what constitutes a molecule and how we can accurately describe them fundamentally.
 A molecule like a DNA nucleoside is simply a bunch of atoms grouped in such a way it became relevant to life on earth. If we magnify and investigate atoms, we see that they are composed of a nucleus - protons and neutrons - and are cloaked by electrons (@fig-nucleielectron).  
 //The field of Computional Chemistry (compchem) concerns itself with describing atoms and molecules by the positioning of the electrons around their nuclei. Asserting their probable whereabouts lets us calculate the energy of the molecular system. 
-//In other words, by looking at how the electrons behave in the vinicity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
-By looking at how the electrons behave in the vicinity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment. This lets us simulate their behaviour through rigorous computations, so we can look at the interactions a drug makes with the active site of an enzyme at the atomic scale, to give an example.
+//In other words, by looking at how the electrons behave in the vicinity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment.
+By looking at how the electrons behave in the vicinity of other electrons and the surrounding nuclei, we can eventually make predictions on how molecules interact with other molecules and their environment. This lets us simulate their behaviour through rigorous computations, so we can look at the interactions that e.g. a drug makes within the active site of an enzyme at the atomic scale.
 ]
 
 #let figure-nucleielectron = [
@@ -27,7 +27,7 @@ By looking at how the electrons behave in the vicinity of other electrons and th
   ) <fig-nucleielectron>
 ]
 //#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.5fr), gutter: 1em)
-#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.4fr), gutter: 1em)
+#grid(content-nucleielectron, figure-nucleielectron, columns: (1fr, 0.5fr), gutter: 1em)
 One of the pillars of computational chemistry is quantum mechanics (QM). This scientific field's main mission is to assess the properties of a molecule at a fundamental level.
 QM calculations rely on approximations to the Schrödinger equation for multi-electron systems.
 Since these calculations are extremely heavy on computational resources, computational chemists have also introduced molecular mechanics (MM).
@@ -56,7 +56,7 @@ The field of QM studies the principle that every particle, such as an electron, 
 In the early 20#super("th") century, scientists attempted to understand the nature of atoms and how electron particles behave.
 Before considering electrons, a lot of work was done on understanding light phenomena to be able to describe them mathematically.
 At first, it was postulated by Albert Einstein that, for a light wave to carry energy, it should also be made up of particles that carry this energy. These photons - which are massless particles - portray a _wave-particle duality_ that was previously unheard of.
-Two decades later, de Broglie postulated, through analogy with photons, that electrons could also be characterised by this property. This was then confirmed through the _double slit_ experiment, conducted by Davisson and Germer. Because the _wave-particle duality_ could be attributed to these particles, it would then be conceivable to analytically describe their behaviour by a _wave function_. 
+Two decades later, de Broglie postulated, through analogy with photons, that electrons could also be characterised by this property. This was then confirmed through the _double slit_ experiment, conducted by Davisson and Germer. Because the _wave-particle duality_ could be attributed to these particles, it would then be conceivable to express their behaviour by a _wave function_. 
 
 In @eq-base-schrodinger we encounter the wave function ($Psi$) that describes the position of atomic particles - nuclei and electrons - in a system. The Hamiltonian (HamilOp) acts an operator over the wave function and describes how we can calculate for the energy of a system based on the position of these particles.
 On the righthand side of the equation, we find the energy $E$ which is the eigenvalue to the eigenfunction $Psi$. 
@@ -176,7 +176,7 @@ Y_(l, m_l) (theta, phi), "Angular component"
 )
 $<eq-spherharmonics>
 The radial component is further determined by dependence of the nucleic charge of the atom. This means that we can explain why the electrons behave slightly different for particular element we want to describe. The radial component influences the spectra - like those in @fig-zeeman A. - by shifting the wavelength at which absorption and emission happens.
-The angular component actually describes the spherical harmonics part. This latter component expands into a set of _Legendre polynomials_.
+The angular component actually describes the spherical harmonics part. This latter component expands into a set of _Legendre polynomials_, which is a collection of predefined polynomials used to practically compute for the angular component.
 #figure(
   image("./figures/orbitals/orbitals-3d.svg", width: 100%), 
   caption: [
@@ -193,7 +193,7 @@ The spin itself does not contribute to the HamilOp.
 //
 ==== Solving the wave function $Psi$
 Because the full expression in @eq-hamiltonian-full can be so incredibly complex to compute for, researchers are always searching for ways to simplify an equation in order to make the computational cost of solving it cheaper.
-Some of these simplifications instantiated the _variational theorem_ that states we could then never achieve the true energy $E$ of the wave function this way, but merely an approximated value $E'$ that will always be slightly higher in energy.
+These approximations instantiated the _variational theorem_ that states we could then never achieve the true energy $E$ of the wave function this way, but merely an approximated value $E'$ that will always be slightly higher in energy.
 Nevertheless, the introduction of the _Born-Oppenheimer approximation_ is one paradigm that has faciliated research on atomic systems.
 
 //
@@ -335,10 +335,10 @@ This can be further expanded by several methods, of which the Møller-Plesset Pe
 //
 === Force fields : the ultimate interface
 //
-Fundamentally speaking, the energy of a molecule is defined by the relative positioning of the orbitals in a molecule. Because these QM computations are expensive to run, attempting to model the movement of the atoms for molecules like large proteins becomes inconceivable. However, by abstracting atomic properties to classical mechanics concepts, we are able to reduce the expensiveness of the calculations. 
+Fundamentally speaking, the energy of a molecule is defined by the relative positioning of the orbitals in a molecule. Because these QM computations are expensive to run, attempting to model the movement of the atoms for molecules like large proteins becomes nearly inconceivable. However, by abstracting atomic properties to classical mechanics concepts, we are able to reduce the expensiveness of the calculations. 
 
 In our lab, we employ the AMBER software package to run calculations where we simulate the behaviour of the molecules we want to study. 
-To encapsulate the essence of a standard Molecular Dynamics (MD) simulation, a set of molecules are spawned inside a virtually limitless box where they are 'free' to roam about. The properties of the molecules are defined by the _force field_, which tells us how the molecules are allowed to behave, and most important, restricts unfavoured behaviour.
+To encapsulate the essence of a standard molecular dynamics (MD) simulation, a set of molecules are spawned inside a virtually limitless box where they are 'free' to roam about. The properties of the molecules are defined by the _force field_, which tells us how the molecules are allowed to behave, and most important, restricts unfavoured behaviour.
 Every MM software package, like AMBER (@eq-AMBER), has a specific implementation of a force field.
 
 //The quantum mechanical section makes the reader understand that the energy of a molecular system is defined by the position of the nuclei, to which the electrons will accomodate for an optimal position in space. We know that molecules are dynamic in nature, but trying to log the movement of a large set of atoms - like a protein - through QM would be nearly impossible as these calculations are incredibly resource intensive. 
@@ -352,7 +352,7 @@ E#sub("amber") = E#sub("bondstretch") + E#sub("anglebend")  + E#sub("torsion") +
 $ <eq-AMBER>
 //@eq-AMBER gives a brief overview of how AMBER's simulation engine derives the potential energy of a system.
 The first three terms are defined as the bonded-term interactions. All bonded interactions can be condensed to bonds, angles and dihedrals, which are respectively composed of two, three and four atoms linked together.
-The final two are the nonbonded-term interactions, concerned with attractive and repulsive effects within and around the molecule and at least one dihedral away #mcite(("Cornell19952ndgenff"), biblio).
+The final two are the nonbonded-term interactions, concerned with attractive and repulsive effects within and around the molecule and at least one dihedral's length away #mcite(("Cornell19952ndgenff"), biblio).
 While the simulation runs, the atoms move within their bounds. Every shift in movement, all atoms in the system take a slightly different position within the box. Bad movements get penalized, while good movements are left as is. Deciding on the alignment of a movement depends on the results of @eq-AMBER.
 //
 //
@@ -386,7 +386,7 @@ their equilbrium value (_r#sub("eq")_), meaning they constantly dance around a s
 #grid(fig-bondangle, content-bondangle, columns: (2fr, 1fr), gutter: 1em) #v(-0.5em)
 
 $
-E_("bondstretch") = sum_("bonds") K_("r") (r - r_("eq"))^2 #h(1em) ; #h(1em) E_("anglebend") = sum_("angles") K_(theta) (theta - theta_("eq"))^2
+E_("bondstretch") = sum_("bonds") K_("r") (r - r_("eq"))^2 #h(1em) | #h(1em) E_("anglebend") = sum_("angles") K_(theta) (theta - theta_("eq"))^2
 $ <eq-ballspring>
 Angle bending is little different from bond stretching, but involves a virtual spring between two atoms, b#sub("1") and b#sub("3"), being indirectly linked through b#sub("2"). The _K#sub(math.theta)_ parameter defines the rigidity of this particular spring, which hovers around the equilbrium angle _θ#sub("eq")_.
 These parameters are originally derived from spectroscopy data and normal mode analysis, but can also be retrieved from NMR and _ab initio_ computations, and have remained relatively stable since they were established #mcite(("Cornell19952ndgenff", "Wang2004GAFF"), biblio). This especially holds true for ground-state organic molecules. 
@@ -402,7 +402,7 @@ These parameters are originally derived from spectroscopy data and normal mode a
 //
 ===== Fitting torsional parameters <sec-intro-dihedrals>
 //https://en.wikipedia.org/wiki/Fourier_series
-Describing the dihedral or torsion angle in a set of four atoms is perhaps the most complicated part of fitting bonded-term parameters, to create a force field that approximates molecular realism.
+Describing the dihedral angle or torsion angle in a set of four atoms is perhaps the most complicated part of fitting bonded-term parameters, to create a force field that approximates molecular realism.
 A dihedral is defined as the angle ($phi$) by which two planes intersect (@fig-torsionexplain A.). As a trigonometric axiom states that three points define a plane, two planes can be defined from a set of four directly bonded atoms if they share two communal points. 
 A dihedral's importance lies in the 1-4 interaction it makes. In other words, the atoms d#sub("1") and d#sub("4") in the dihedral set are directly correlated with establishing a part of the potential energy. This is mainly asserted through their steric hindrance, which is the result of a combination of the effects of (i) the radii of the various atoms composing the dihedral, (ii) types of hybridisation in the set (which define bondlength and angles) and (iii) the dihedral angle $phi$.
 //
@@ -429,7 +429,7 @@ $
 This is the typical profile of a (-CH#sub("2")-CH#sub("2")-CH#sub("2")-CH#sub("2")-) dihedral #mcite(("Wang2004GAFF"), biblio).
 The figure tells us that when the atom d#sub("4") eclipses d#sub("1"), synonymous with a _syn configuration_, the potential rests at a local minimum. By increasing $phi$, we give a slight rise to the potential because d#sub("4")'s hydrogen atoms are hindering vicinal atoms, causing an unfavourable predicament ($plus.minus frac(2pi,3)$). The system will want to strive for a minimum, which can be achieved by visiting the _anti configuration_, at $phi = pi$. Since the molecule is symmetrical in nature, increasing the torsion angle to $2pi$ will see the potential go through the same changes, ending at a full rotation of the angle $phi$.
 
-By populating a force field with suitable parameters for $V_n$, $n$ and $gamma$ pertaining the specific dihedrals, we can evaluate any rotation of the torsional angle occurring during a Molecular Dynamics simulation.
+By populating a force field with suitable parameters for $V_n$, $n$ and $gamma$ pertaining the specific dihedrals, we can evaluate any rotation of the torsional angle occurring during an MD simulation.
 //
 //
 //
@@ -455,9 +455,9 @@ $ <eq-charges-in-amber>
 Deriving point charges from quantum mechanical information is done by population analysis (PA) schemes. Most famous are the Mulliken and Löwdin PA schemes #mcite(("Mulliken1955", "Lowdin1950"), biblio), whose applications are to directly use orbital density to fit charges onto the molecule #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
 In MM applications however, the PA schemes take on a different approach. In protocols like Merz-Kollman (MK) and CHELPG, charges are least-squared fitted onto the atoms from Electrostatic Potential (ESP) data.
 
+The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mkscheme). 
 The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
 From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an potential value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
-The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mkscheme). 
 #figure(
   image("./figures/chargederivation/MK-charge-derivation.svg", width: 100%),
   caption: [
@@ -465,15 +465,15 @@ The MK scheme is the protocol used for AMBER-compatible force fields (@fig-mksch
     *A.* The morpholino adenosine molecule that will be subjected to a charge derivation.
     *B.* The SAS is determined by the prompted atomic radii. Multiple layers of this surface are generated, returning us with a grid.
     *C.* Orbital density information is mapped onto this grid, which makes the ESP data we need.
-    *D.* The ESP is fitted onto the atomic to form atomic point charges.
+    *D.* The ESP is fitted onto the atoms to form atomic point charges.
   ]
 ) <fig-mkscheme>
 //The surface around the molecule is defined by the Connolly algorithm #mcite(("Connolly1983SASA"), biblio), which asserts the Solvent-Accesssible Surface (SAS) around the molecule - e.g. a morpholino adenosine (@fig-mkscheme A.). By modifying atomic radii by a respective factor of 1.4, 1.6, 1.8 and 2.0, a grid is defined that encloses the molecule (@fig-mkscheme B.). 
 //From the QM side, a calculation is carried out at the HF/6-31G\* level - the HF method using the 6-31G\* basis set. The information on the orbital density from this calculation is mapped onto the grid, assigning an energy value to every grid point. The collection of energised grid points is called the ESP (@fig-mkscheme C.). This ESP will be determined by the presence, or conversely the absence, of electrons in that particular volume. 
-By fitting the ESP, using the _Chirlian-Francl_ least-squared fitting procedure, we derived ESP-based partial charges #mcite(("Chirlian1987fit"), biblio) (@fig-mkscheme D.). 
-An additional procedure to these derived charges is the application of the restrainted ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Restraints are also applied to account for buried atoms. Due to the grid being defined by the surface of the molecule, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
+By fitting the ESP onto the atoms, using the _Chirlian-Francl_ least-squared fitting procedure, we derived ESP-based partial charges #mcite(("Chirlian1987fit"), biblio) (@fig-mkscheme D.). 
+An additional procedure to these derived charges is the application of the restrained ESP (RESP) protocol #mcite(("Bayly1993resp"), biblio). This protocol is necessary to equate similar atoms, like the hydrogens (HN41, HN42) in the amine of the purine. Restraints are also applied to account for buried atoms. Due to the grid being defined by the surface of the molecule, atoms like the carbons in the methylene moieties (-CH#sub("2")-) of the morpholino ring will be underrepresented, since they are shadowed by their hydrogens. Restraining these _degenerate hydrogens_ will balance out the result. Upon completing the scheme, the user is returned with point charges for all the atoms in the system.
 
-Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like grid generation (e.g. cubic grids) and the applied basissets and methods used #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
+Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like grid generation (e.g. cubic grids) and the applied basis sets and methods used #mcite(("Sigfridsson1998ComparePAschemes"), biblio).
 
 //
 //
@@ -484,7 +484,7 @@ Other charge derivation schemes, like CHELPG and CHELMO differ in protocol like 
 //
 #let content-lj = [
 ===== Lennard-Jones potential
-Atoms are not only interacting through attraction and repulsion based on fixed charges, but also experience these forces through instantaneous dipole moment. These are fleeting moment in which atoms can induce a dipole in other atoms, creating an momentary shift in repulsive force. This phenomenom is known as the _London dispersion_. Due to the 'cloud' of electrons cloaking the core of an atom, they portray an _atomic radius_ that sterically hinders other atoms from getting too close as these clouds repulse each other (@fig-lennardjones).
+Atoms are not only interacting through attraction and repulsion based on fixed charges, but also experience these forces through instantaneous dipole moment. These are fleeting moment in which atoms can induce a dipole in other atoms, creating an momentary shift in repulsive force. This phenomenom is known as the _London dispersion_. Due to the 'cloud' of electrons cloaking the core of an atom, they portray an _atomic radius_ that sterically hinder other atoms from getting too close as these clouds repulse each other (@fig-lennardjones).
 We often refer to @eq-lenardjones as the 12-6 potential or Lennard-Jones potential.
 
 Keeping consistent with the symbols, the $r_("ij")$ //parameter represents the distance between the //two atoms $i$ and $j$.
@@ -500,7 +500,7 @@ Keeping consistent with the symbols, the $r_("ij")$ //parameter represents the d
 #grid(content-lj, fig-lj, columns: (1fr, 1.25fr), column-gutter: 1em) #v(-0.5em)
 parameter represents the distance between the two atoms $i$ and $j$.
 The $R_("min,ij")$ is the optimal distance between two atoms where the Lennard-Jones potential is at its minimum at a well depth $epsilon_("ij")$.
-To give a physical representation, we think of the $R_("min,ij")$  and $epsilon_("ij")$ parameters as a link to Van der Waals radii of the atoms #mcite(("Li2015ljpotential", "Sengupta2021ljpotential"), biblio). 
+To give a physical representation, we can think of the $R_("min,ij")$  and $epsilon_("ij")$ parameters as a link to Van der Waals radii of the atoms #mcite(("Li2015ljpotential", "Sengupta2021ljpotential"), biblio). 
 
 $
 E_("LJ") = sum_(i<j) epsilon_("ij") [ (frac(R_("min,ij"), r_("ij")))^12 - 2(frac(R_("min,ij"), r_("ij")))^6 ]
@@ -521,7 +521,7 @@ In @eq-ions-nonbonded, the proton charge of the ion is taken into account by the
 These additions are extremely important, as many biomolecular simulations are run using ions to simulate biological conditions.
 //The final term $ - frac(C_4, r_("ij"))$ is the ion-dipole interaction that should be accounted for to correctly represent then when interacting with organic compounds.
 $
-E#sub("electrostatic") = sum_(i<j)  frac(e^2 q_i q_j, r_("ij")) #h(1em) ; #h(1em) E#sub("LJ") = sum_(i<j) epsilon_("ij") [ (frac(R_("min,ij"), r_("ij")))^12 - 2(frac(R_("min,ij"), r_("ij")))^6 ] - frac(C_4, r_("ij") #super("4"))
+E#sub("electrostatic") = sum_(i<j)  frac(e^2 q_i q_j, r_("ij")) #h(1em) | #h(1em) E#sub("LJ") = sum_(i<j) epsilon_("ij") [ (frac(R_("min,ij"), r_("ij")))^12 - 2(frac(R_("min,ij"), r_("ij")))^6 ] - frac(C_4, r_("ij") #super("4"))
 $ <eq-ions-nonbonded>
 //
 //
@@ -603,7 +603,6 @@ We can make an analogy of these periodic boundaries to the 1980's Japanese retro
 ==== Computational optimisations to MD simulations
 Performing MD simulations requires the necessary hardware to run these demanding calculations. 
 When these simulations were gaining traction in the scientific fields (ca. 1980's), computational resources were limited.
-//especially considering the fact that these calculations have been around since at least the 1980's and optimisations were a necessity and not a luxury.
 To give some perspective, computers only had a single core CPU with a memory capacity (RAM) of 512 KiB to roughly 2 MiB at best. Nowadays, my five-year old laptop has six cores and a RAM capacity of about 12 GiB - 6000 times more than a common personal computer of that time. Presumably, a computational lab would have had slightly better resources. 
 //These calculations require quite the resources to run, especially considering the fact that these calculations have been around since at least the 1980's and optimisations were a necessity and not a luxury. To give some perspective, computers only had a single core CPU with a memory capacity (RAM) of 512 KiB to roughly 2 MiB at best. Nowadays, my five-year old laptop has six cores and a RAM capacity of about 12 GiB - 6000 times more than a common personal computer of that time. Presumably, a computational lab would have had slightly better resources. 
 
@@ -617,7 +616,7 @@ There is no way to go around computing the bonded-term interactions, but having 
 To remedy this, a simulation employs a _cut-off_ distance at which the nonbonded-terms are not evaluated anymore. This is formalised by the _Verlet list_ #mcite(("Chialvo1990verlet"), biblio).
 
 Suppose we set the cut-off distance $d_c$ at 10 Å from atom#sub("i") and a buffer distance $d_b$ at an additional half of $d_c$. Every iteration, a distance check is in place before evaluating the terms. If an atom#sub("j") strays further than 15 Å, the Verlet list for that atom#sub("i") is re-evaluated to include a new set of atoms within $d_c + d_b$.
-While this requires some additional RAM to store the lists in, a table lookup is much faster than evaluating all the atoms in the system on every iteration considering the euclidian distance is just $d = sqrt((x_i - x_j) + (y_i - y_j) +(z_i - z_j))$.
+While this requires some additional RAM to store the lists in, a table lookup is much faster than evaluating the distance between all the atoms in the system on every iteration, considering the euclidian distance is determined through $d = sqrt((x_i - x_j)^2 + (y_i - y_j)^2 +(z_i - z_j)^2)$.
 //While this requires some additional RAM to store the lists in, a table lookup is much faster than evaluating all the atoms in the system on every iteration considering the euclidian distance is simply calculated by $d = sqrt((x_i - x_j) + (y_i - y_j) +(z_i - z_j))$ 
 
 //
@@ -631,7 +630,7 @@ The $E_("direct")$ just employs the regular charge calculation (@eq-charges-in-a
 //https://www.quora.com/What-is-Ewald-summation-and-why-is-the-Particle-mesh-Ewald-approach-a-good-one
 
 To give some insight into the problem, the PBC require us to evaluate the charges in a pairwise fashion for atoms in neighbouring "boxes" to properly account for long-range interactions. This would cause an immense amount of time to iterate over every atom and over every pair of the respective atoms. 
-With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves (@fig-pme-fft). This means that we form a function that describes the field of 'infinite' charges very well. This function is then used by the Ewald Summation Formula to return the potential energy for longe-range electrostatics .
+With the Particle Mesh method, we can discretise the point charges of the molecular system onto a grid with equidistributed vertices. Applying the Fast Fourier Transform (FFT), we get an analytical approximation to the charge distribution of the system, in the form of Gaussian curves (@fig-pme-fft). This means that we form a function that describes the field of 'infinite' charges very well. This function is then used by the Ewald Summation Formula to return the potential energy for long-range electrostatics .
 
 #figure(
   image("./figures/particlemesh.svg", width: 100%),
@@ -640,7 +639,7 @@ With the Particle Mesh method, we can discretise the point charges of the molecu
     _Nota bene_, this is a 2D representation of the PME protocol. The Q#sub("magnitude") just gives a visual to the analytic function. In reality we deal with 3D molecular systems and thus a three dimensional FFT.
   ]
 ) <fig-pme-fft>
-The explanation might seem unclear as to why this methodology is more efficient, but this is because the FFT is so incredibly powerful. For some background, the FFT algorithm is used in all fields of engineering due its proven efficiency. A previous application of the PME method (the particle-particle particle mesh algorithm, P#super("3")M) scaled at an exponential time complexity $O(N^2)$, meaning it slowed down when introducing more atoms to the system. The PME method scales at a linear rate $O(N log(N))$ per increasing amount of particles. 
+The explanation might seem unclear as to why this methodology is more efficient, but this is because the FFT is so incredibly powerful. For some background, the FFT algorithm is used in all fields of engineering due its proven efficiency. A previous application of the PME method (the particle-particle particle mesh algorithm, P#super("3")M) scaled at an exponential time complexity $O(N^2)$, meaning it slowed down significantly when introducing more atoms to the system. The PME method scales at a linear rate $O(N log(N))$ per increasing amount of particles. 
 
 The Ewald method is a way to compute for the potential in a periodic system using the charge distribution, derived from the _Poisson summation formula_, and was initially derived to calculate the potential energy of an ionic crystal lattice system.
 The inners of the EWF and by extension the Poisson Summation Formula involve complex mathematics are beyond the scope of this thesis #mcite(("Darden1993pmemd", "Essmann1995spme"), biblio).
@@ -672,7 +671,7 @@ Starting from the second generation of AMBER force fields #mcite(("Cornell19952n
 One major advantage they have is that DNA and RNA are extremely well described through conventional deterministic methods like NMR. Fortunately for us, all optimisations were carried out through computational chemistry methods, which have become more and more common place over the years thanks to the advances in computer hardware. Knowing this should lower the bar for any researcher to design a force field for a set of synthetic analogs.
 
 Unfortunately, researchers in the field sometimes employ force fields meant for small molecules to represent their XNAs _in silico_. If for example a torsion angle is poorly evaluated in one monomer, this means that every monomer in a duplex will carry this error and this fault is then propagated throughout the entire model. A force field that was designed to represent small molecules ligands for drug design purposes does not have the capacity to accurately represent the global minimum and transition states a nucleoside can go through.
-One of the reasonings behind this is that setting up such a force field is incredibly labour intensive. Additionally, since XNAs are scarcely distributed in the databank of experimentally determined structure #mcite(("Berman2000rcsb"), biblio), it makes it sometimes impossible to know how it behaves and to validate the given force field against known structures.
+One of the reasonings behind this is that setting up such a force field is incredibly labour intensive. Additionally, since XNAs are scarcely distributed in the database of experimentally determined structure #mcite(("Berman2000rcsb"), biblio), it makes it sometimes impossible to know how it behaves and to validate the given force field against known structures.
 
 Although research groups have been successful in parametrising the Locked NA #mcite(("Condon2014LNA", "PabonMartinez2017LNA", "Xu2017LNA"), biblio), this modification results in a single puckering mode that prevails as the structures is chemically incapable of adopting any other configuration. The trick for nearly all chemical modifications to the backbone would be to be able to represent the different conformers it can visit during the MD simulation. In order to do that, we can realise the behaviour of the modification through a _Conformational Sampling_ #mcite(("Mattelaer2021efficient"), biblio). This methodology manages to map all the different conformations a molecule can adopt and evaluates them all, for amino acids, five-membered rings and six-membered rings respectively, which are representable on either the Ramachandran Plot (@fig-proteins C.), the Pseudorotational wheel (@fig-fivering B.) or the CP sphere (@fig-sixring).
-This can be used to our advantage to computationally describe XNAs through pure _in silico_ methods.
+This can be used to our advantage to computationally describe and model XNAs through pure _in silico_ methods.

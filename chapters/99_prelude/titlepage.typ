@@ -25,7 +25,7 @@
 KU Leuven
 Group Biomedical Sciences
 Faculty of Pharmaceutical Sciences
-Department Pharmaceutical and Pharmacological Sciences
+Department of Pharmaceutical and Pharmacological Sciences
 Laboratory of Medicinal Chemistry
 Rega Institute for Medical Research"
 )
@@ -84,7 +84,7 @@ Pharmaceutical Sciences"
 KU Leuven
 Groep Biomedische Wetenschappen
 Faculteit Farmaceutische Wetenschappen
-Departement  Farmaceutische en Farmacologische Wetenschappen
+Departement Farmaceutische en Farmacologische Wetenschappen
 Laboratorium van Medicinale Chemie
 Rega Instituut voor Medisch Onderzoek"
 )
