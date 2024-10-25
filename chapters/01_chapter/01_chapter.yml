@@ -799,4 +799,22 @@ Schofield2023hnaaptamer:
     publisher: Oxford University Press (OUP)
     issue: 15
     volume: 51
+Sure2013hf3c:
+  type: article
+  title: Corrected small basis set Hartree‐Fock method for large systems
+  author:
+  - Sure, Rebecca
+  - Grimme, Stefan
+  date: 2013-05
+  page-range: 1672
+  url: http://dx.doi.org/10.1002/jcc.23317
+  serial-number:
+    doi: 10.1002/jcc.23317
+    issn: 1096-987X
+  parent:
+    type: periodical
+    title: Journal of Computational Chemistry
+    publisher: Wiley
+    issue: 19
+    volume: 34
 
