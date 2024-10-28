@@ -314,7 +314,6 @@
 //    text(element, font: "Roboto", colourPalette.fountain)
 //  } else if element.element.level == 1 {
 //    text(element, font: "Roboto", colourPalette.fountain)
-
   if element.element.level == 1 {
     text(element, font: "Roboto", colourPalette.lightblueslate)
 //    let string = to-string(element.body).at(0)

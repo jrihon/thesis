@@ -87,7 +87,7 @@
 //
 //
 === Nucleobase modifications for Ducque 
-The Ducque model builder resolved a big issue in the field of XNA modeling. The challenge was to figure out a model builder that makes it possible to accept all kinds of modifications without limits. This means accepting sugar, linker and nucleobase modifications, without constraining the user. 
+The Ducque model builder resolved a big issue in the field of XNA modeling. The challenge was to figure out a model builder that makes it possible to accept all kinds of modifications. This means accepting sugar, linker and nucleobase modifications, without limiting the user. 
 //Because I couldn't account for all modifications in the field, a unique feature of the software should provide users to implement their own chemistries.
 A unique feature of the software should be to provide users to implement their own chemistries.
 So far, any model builder 'on the market' only provided builds of experimentally determined structures and only provides builds with preset chemistries given by the maintainers.
@@ -118,7 +118,7 @@ The second resolve brings about that all moieties are now interchangeable. The s
 //
 //
 ==== No rhymes, no embellishments
-The Ducque's design philosophy has always been _What you see is what you get_. The problem with other model builders is that they constrain the user by implementing a small set of modifications that have been finetuned to only produce a good result, while discarding anything that does not work. Freed from these constraints, Ducque promises to build by whatever the user queries and truly delivers on that respect. The caveat here is that the inputs should be optimised by the user in order to build suitable models, but Ducque has always been clear about this. The only certainty one has in trying to predict or refine structures of underresearched chemistries is the certainty of forever tinkering with the source code.     
+The Ducque's design philosophy has always been _What you see is what you get_. The problem with other model builders is that they constrain the user by implementing a small set of modifications that have been finetuned to only produce a good result, while discarding anything that does not work. Freed from these constraints, Ducque promises to build by whatever the user queries and truly delivers on that respect. The caveat here is that the inputs should be optimised by the user in order to build suitable models, but Ducque has always been clear about this. // The only certainty one has in trying to predict or refine structures of underresearched chemistries is the certainty of forever tinkering with the preset inputs.     
 
 To provide a way to actually model the structure, we append an all-purpose methodology to design a force field for the built models. A good force field in combination with a well established simulation engine is going to give far better results than minimising along parameters meant for small molecules.
 Ducque is concise, depends on extremely stable packages and builds by simple queried inputs. The ease of its maintainability and its modularity is why the reason Ducque will be able to stand the tests for at least the upcoming decade.
@@ -138,7 +138,7 @@ Ducque is concise, depends on extremely stable packages and builds by simple que
 === Clear protocols for fitting nucleoside backbones
 Coupling a model builder like Ducque to a protocol on creating a force field for any desired chemistry proved to be robust. Fitting for nucleobase torsional parameters is incredibly simple, since these moieties are forced to remain planar during the simulation.
 //Emulating the puckering behaviour of endocyclic systems, however, is one can of worms I have not been able open explicitly just yet. 
-Emulating the puckering behaviour of endocyclic systems, however, is one can of worms that remains unopened during this research. 
+Manually emulating the puckering behaviour of endocyclic systems, however, is one can of worms that remains unopened during this research. 
 
 While we were successful in describing the behaviour of the MNA (Chapter 3) and HNA (Chapter 4) puckering, the fitting of the parameters was done by fitting to the overall energy of the whole nucleoside using the _paramfit_ tool within AMBER. This meant that one needs to include all bonded-term parameters that already describe the bond, angles and dihedrals well and assign torsional angles that were in need of fitting. With multiple conformers, the torsional parameters are fitted along a linear regression against the energy of the entire molecule.
 
@@ -149,7 +149,7 @@ This could then be done for all conformations we want to include in the force fi
 
 Another thing to consider is the fitting of the $chi$ dihedral angle of endocyclic systems, which was also highlighted by my predecessor in the conclusion of his thesis. While the standard DNA and RNA parameters do provide good estimates of this particular angle, the energy profile of the $chi$ angle is a big determinant for the basepairing capability and stability of a particular chemistry.
 A small project in the final stretch of this PhD, on the R-ZNA and S-ZNA chemistries, allowed us to gather insight on manual parametrisation protocols. 
-Having the knowledge to parametrise molecules with high fidelity and maintaing this knowledge in-house will keep us at the forefront of Xenobiotic Nucleic Acid sciences. 
+Having the knowledge to parametrise molecules with high fidelity and maintaining this knowledge in-house will keep us at the forefront of Xenobiotic Nucleic Acid sciences. 
 
 #v(1em)
 
@@ -190,10 +190,10 @@ While the research carried out during this thesis has a strictly fundamental nat
 
 + The research on melting temperatures of nucleic acid duplexes through _in silico_ means. With modelled structures at hand, we can use them for further studies on the binding energy of the strands.
   - A great attempt has been made about a decade ago, using molecular mechanics to predict melting temperatures of DNA homoduplexes through MMGBSA and MMPBSA methods - two methods used to estimate potential binding energy #mcite(("Lomzov2015melt"), biblio). Upon inquiring, it was clarified that all simulation trajectories ran for a whole microsecond in order for the output of the energy estimates to correlate well with the given nearest neighbour parameters. For reference, a single model would take days to run on a standard GPU. A caveat I learned is that neither methodologies were ever validated on nucleic acid structures, but were meant for drug design purposes.
-  - A more promising line of research is that of Local Energy Decompositions, used in quantum mechanic studies. The core idea is that we can extract to pairwise energy contribution of every component in a model - the basepairs - and map this information to return a total energy value of a system. This can then be converted to the melting temperature of a duplex #mcite(("Schneider2016LED", "Kruse2018stack", "Hopfinger2020NN", "Altun2021bppredict"), biblio). This methodology requires heavy computational duty suited for a supercomputer.
+  - A more promising line of research is that of Local Energy Decompositions, used in quantum mechanic studies. The core idea is that we can extract the pairwise energy contribution of every component in a model - the basepairs - and map this information to return a total energy value of a system. This can then be converted to the melting temperature of a duplex #mcite(("Schneider2016LED", "Kruse2018stack", "Hopfinger2020NN", "Altun2021bppredict"), biblio). This methodology requires heavy computational duty suited for a supercomputer.
 
 + The _in silico_ design of synthetic nucleic acids and XNA enzymes. 
-  - On one hand, we can perform docking studies with the produced models on NA processing enzymes, to see how the synthetic variants interact with the native enzymes. This would allow a rational approach to mutagenesis studies where we can target specific residues and get a realtime view of its effects for _Directed Evolution_ purposes. The goal would be to accodomate the new chemistry to artificial enzymes for SELEX or xenobiology.
+  - On one hand, we can perform docking studies with the produced models on NA processing enzymes, to see how the synthetic variants interact with the native enzymes. This would allow a rational approach to mutagenesis studies where we can target specific residues and get a realtime view of its effects for _Directed Evolution_ purposes. The goal would be to accommodate the new chemistry to artificial enzymes for SELEX or xenobiology.
   - On the other hand, figuring out a way to predict properties like orthogonality would expedite and substantiate the applicability of a synthetic chemistry. Such properties would substantiate the utility of a chemistry even before going into the laboratory to synthesise it.
 //  - One prominent outcome is the combination of the two previous points. Predicting the structure of chimeric duplexes - where the two complementary strands are composed of a different chemistry - could determine if a designed XNA type were orthogonal. Research could be seriously expedited through these computational methods. Predicting such properties allows us to characterise key points that we can then exploit with specific pharmaceutical applications in mind.
 

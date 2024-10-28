@@ -17,7 +17,7 @@
 There has been a tremendous effort to rationalise the three-dimensional structure of the HNA aptamer #mcite(("Pinheiro2012geneticpolymer"), biblio).
 Truncating the ssHNA sequence made it possible to lower the degrees of freedom, while retaining and even improving on the activity of the molecule against the HEL target.
 Had this not been the case and would this have required for the modeling of the original HAPT, this would have increased the time complexity of the search exponentially.
-Identifyig the Gq motif and the correct hG residues of the complex aided to the cause.
-In NA structures that contain such Gq motifs tend to consists mainly of them and little else. The fact that this motif was discovered, meant it needeed to be supported by motifs that also form planar constructs, like the hG15:hC19 basepair keeping the K#super("+") ion in check, the hT2:hT12:hT24 triplet and the hT3:HA11:hT31+hC26 quadruplex that support the Gq motif. 
+Identifying the Gq motif and the correct hG residues of the complex aided to the cause.
+In NA structures that contain such Gq motifs tend to consists mainly of such constructs and little else. The fact that this motif was discovered, meant it needed to be supported by motifs that also form planar constructs, like the hG#sub("15"):hC#sub("19") basepair keeping the K#super("+") ion in check, the hT#sub("2"):hT#sub("12"):hT#sub("24") triplet and the hT#sub("3"):hA#sub("11"):hT#sub("31")+hC#sub("26") quadruplex that support the Gq motif. 
 
 The structure corrobates the empirically determined data and was attained through mixing and matching of the different modes of interactions possible. We end with a plausible model to describe the elusive HNA aptamer.
