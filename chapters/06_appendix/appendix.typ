@@ -58,9 +58,9 @@
   image("../01_chapter/figures/consumables_total.svg", width: 98%),
   caption: [
     *A.* The RAM usage and 
-    *B.* Disk Space usage during the geometry optimisation protocol of the set of the LoTs, as mentioned in the Methods section. The mp2q surpasses the computational requirements of the second most demanded pbeq by large, requiring almost ten times more time and four times more virtual resources to complete. 
+    *B.* disk space usage during the geometry optimisation protocol of the set of the LoTs, as mentioned in the Methods section. The mp2q surpasses the computational requirements of the second most demanded pbeq by large, requiring almost ten times more time and four times more virtual resources to complete. 
     *C.* The RAM usage and 
-    *D.* Disk Space usage during the single point evaluation protocol. The hfq seems to be on par with the RAM usage to that of mp2q. While for Disk Space usage, the hfq and pbeq tend to run relatively similar. The mp2q, however, tumultuous. This is likely due to 35 SPE calculations are happening concurrently, and finishing at relatively the same pace. This means that tmp-files are constantly being written to, from and deleted, which gives rise to a high fluctuation in the storage on disk. On all graphs, the hf3c is barely visible as it finished so quickly and requires barely any resources to run successfully.
+    *D.* disk space usage during the single point evaluation protocol. The hfq seems to be on par with the RAM usage to that of mp2q. While for disk space usage, the hfq and pbeq tend to run relatively similar. The mp2q, however, tumultuous. This is likely due to 35 SPE calculations are happening concurrently, and finishing at relatively the same pace. This means that tmp-files are constantly being written to, from and deleted, which gives rise to a high fluctuation in the storage on disk. On all graphs, the hf3c is barely visible as it finished so quickly and requires barely any resources to run successfully.
   ]
 ) <fig-supplementary-consumables>
 

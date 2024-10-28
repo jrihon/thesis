@@ -2,7 +2,7 @@
 
 *Chapter 2* and *3* revolved around the methodological advances made for the field of computational research on synthetic nucleic acids.
 
-The _pucke.rs_ toolkit should facilitate and empower the computational chemist to explore the Conformational Sampling methodology through simple Shell or Python scripting.
+The _pucke.rs_ toolkit should facilitate and empower the computational chemist to explore the conformational sampling methodology through simple Shell or Python scripting.
 The mathematics behind the different puckering formalisms can be daunting, especially as older literature has this self-evident way of writing. 
 //Another difficulty lies in retrieving the articles that the original authors refer to. 
 Authors forget that reiterating the literature could be crucial to our understanding of the definitions they employ, especially for articles written 50 years ago where the cited references are lost to time.
