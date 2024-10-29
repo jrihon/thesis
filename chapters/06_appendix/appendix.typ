@@ -50,8 +50,7 @@
 //
 //
 //
-== Chapter 2: The _pucke.rs_ toolkit to calculation puckers values of biomolecular monomers
-
+== Chapter 2: The _pucke.rs_ toolkit to calculation puckers of biomolecular monomers.
 
 #figure(
   supplement: [Appendix],
@@ -70,7 +69,7 @@
   supplement: [Appendix],
   image("../01_chapter/figures/suppl_inf_diffEnergy.svg", width: 100%),
   caption: [
-    All the PESs (@fig-PESALL) are compared against the GSQ, returning the results of a ∆∆E PES. Ranges from [0. $arrow.r$ 3.0] kcal/mol . The bottom row is rather monochromous because the scale of the plot has been magnified, with respect to the scale in @fig-diffErelRMSD A. The bottom right square is the GSQ, which depicts a flat off-white colour equal to the value of zero.
+    All the PESs (@fig-PESALL) are compared against the GSQ, returning the results of a ∆∆E PES. Ranges from [-3.0 $arrow.r$ 3.0] kcal/mol . The bottom row is rather monochromous because the scale of the plot has been magnified in @fig-diffErelRMSD A. with respect to this figure The bottom right square is the GSQ, which depicts a flat off-white colour equal to the value of zero.
   ]
 ) <fig-supplementary-deltaEnergy>
 
@@ -169,7 +168,7 @@ colspanx(7)[],
     stroke: 0.5pt + colourPalette.lightblueslate,
     // Header
     rowspanx(2)[*Backbone*]        , colspanx(2)[#align(center)[*RNA::RNA $chi_(189)$*]], ()                                , colspanx(2)[#align(center)[*RNA::RNA $chi_(194)$*]] , () ,
-           ()            ,  [RNA]                               , [MNA]                                     , [RNA]                            , [RNA]                         ,
+           ()            ,  [RNA]                               , [RNA]                                     , [RNA]                            , [RNA]                         ,
     [Alpha   ($alpha$)  ],  [285.42 ($plus.minus$ 13.89)]       , [284.91 ($plus.minus$ 15.35)]             , [284.64 ($plus.minus$ 14.32)]    , [284.58 ($plus.minus$ 14.07)] ,
     [Beta    ($beta$)   ],  [173.70 ($plus.minus$  9.78)]       , [174.04 ($plus.minus$ 10.81)]             , [173.09 ($plus.minus$  9.55)]    , [173.24 ($plus.minus$ 10.94)] ,
     [Gamma   ($gamma$)  ],  [ 65.65 ($plus.minus$ 12.04)]       , [ 65.71 ($plus.minus$ 13.79)]             , [ 65.52 ($plus.minus$ 12.25)]    , [ 65.19 ($plus.minus$ 12.82)] ,
@@ -180,6 +179,6 @@ colspanx(7)[],
     [P-P distance],  [  6.02 ($plus.minus$  0.33)]       , [  6.03 ($plus.minus$  0.33)]             , [  6.03 ($plus.minus$  0.33)]    , [  6.05 ($plus.minus$  0.32)] ,
   ),
   caption: [
-        Backbone torsion angles (in degrees, $degree$) of the RNA::RNA homoduplexes, run with restraints on the $chi$ angle at 189 $degree$ and 194 $degree$, respectively. Data sampled from the last 50 ns of the 200 ns simulation.}
+        Backbone torsion angles (in degrees, $degree$) of the RNA::RNA homoduplexes, run with restraints on the $chi$ angle at 189 $degree$ and 194 $degree$, respectively. Data sampled from the last 50 ns of the 200 ns simulation.
   ]
 ) <tbl-suppl-chibackbone> 

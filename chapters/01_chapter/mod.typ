@@ -14,7 +14,7 @@
 #show "hfq": [HF#super("Q")]
 #show "hfnorijk": [HF#super("Q-" + strike("RIJK", offset: -0.75em))]
 
-= The _pucke.rs_ toolkit to calculation puckers values of biomolecular monomers.
+= The _pucke.rs_ toolkit to calculation puckers of biomolecular monomers.
 #boxed-text(
   title: "The pucke.rs toolkit to facilitate sampling the conformational space of biomolecular monomers.",
   authors: ("Rihon J.", "Reynders S.", "Pinheiro V.B.", "Lescrinier E."),
