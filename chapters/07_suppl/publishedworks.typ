@@ -55,7 +55,7 @@
 ]
 
 #let figure-embo = [#figure(
-  image("../../src/svg/EMBO-EMBL_poster_design.png")
+  image("figures/EMBO-EMBL_poster_design.png")
 )]
 #grid(content-embo, figure-embo, columns: 2, gutter: 1em)
 #pagebreak()
