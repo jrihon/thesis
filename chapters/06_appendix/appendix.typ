@@ -50,7 +50,7 @@
 //
 //
 //
-== Chapter 2: The _pucke.rs_ toolkit to calculation puckers of biomolecular monomers.
+== Chapter 2: The _pucke.rs_ toolkit to quantitatively describe biomolecular monomers
 
 #figure(
   supplement: [Appendix],
