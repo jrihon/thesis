@@ -1,0 +1,4 @@
+# change .bib files to appear as `typst` in the repository, because this entire repository 
+# contains no `tex`, as it suggests
+# https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml
+*.bib linguist-language=Typst
