@@ -22,14 +22,11 @@ $ cd thesis/ && mkdir output/
 ```
 </br>
 
-The `build.sh` is a one-time build script.
-```shell
-$ ./build.sh 
-```
 
-The `wbuild` sets the Typst compiler in `watch` mode, for continuous compilation.
 ```shell
-$ ./wbuild.sh 
+$ ./build.sh    # The `build.sh` is a one-time build script.
+#
+$ ./wbuild.sh   # The `wbuild` for `watch` mode (continuous compilation).
 ```
 
 Pdf appears in `output/`. 
@@ -54,6 +51,18 @@ The usage of all figures in this repository is permitted, as long as I am proper
 ##### Cite the PhD thesis
 ```
 Rihon, J., Lescrinier, E., Bernardes Pinheiro, V., & Froeyen, M. (2024). Molecular modeling tools to improve and expand computational research on synthetic nucleic acids.
+```
+```bib
+@phdthesis{RihonPhd2025,
+  title        = {Molecular modeling tools to improve and expand computational research on synthetic nucleic acids.},
+  author       = {Rihon, Jérôme and Lescrinier, Eveline and Pinheiro, Vitor Bernardes and Froeyen, Mathy},
+  year         = 2025,
+  month        = {March},
+  address      = {Herestraat 49, 3000 Leuven, Belgium},
+  note         = {Available at \url{https://lirias.kuleuven.be/retrieve/785308}},
+  school       = {KU Leuven},
+  type         = {PhD thesis}
+}
 ```
 
 ##### Cite the Ducque paper
