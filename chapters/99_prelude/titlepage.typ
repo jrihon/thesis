@@ -63,7 +63,7 @@ Pharmaceutical Sciences"
   )
 
 #v(2fr)
-#layout-title.set_date("March 2024")
+#layout-title.set_date("March 2025")
 
 
 
@@ -126,7 +126,7 @@ Farmaceutische Wetenschappen"
 )
 
 #v(2fr)
-#layout-title.set_date("March 2024")
+#layout-title.set_date("Maart 2025")
 
 
 
