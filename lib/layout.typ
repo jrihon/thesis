@@ -1,6 +1,41 @@
 // Layout template file
 #import "colours.typ": colourPalette
 
+//#let PAGEFORMAT = "a4"
+//#let FONT-2PT = 2pt
+//#let FONT-8PT = 8pt
+//#let FONT-9PT = 9pt
+//#let FONT-10PT = 10pt
+//#let FONT-11PT = 11pt
+//#let FONT-12PT = 12pt
+//#let FONT-14PT = 14pt
+//#let FONT-16PT = 16pt
+//#let FONT-18PT = 18pt
+//#let FONT-76PT = 76pt
+//#let FONT-100PT = 100pt
+//#let SIZE-2CM = 2cm
+//#let INSET-5PT = 5pt
+//#let INSET-10PT = 10pt
+//#let v-height-toc = -6.5mm
+
+#let RATIO = 0.786725
+#let PAGEWIDTH = 16cm
+#let PAGEHEIGHT = 24cm
+#let FONT-2PT = 2pt * RATIO
+#let FONT-8PT = 8pt * RATIO
+#let FONT-9PT = 9pt * RATIO
+#let FONT-10PT = 10pt * RATIO
+#let FONT-11PT = 11pt * RATIO
+#let FONT-12PT = 12pt * RATIO
+#let FONT-14PT = 14pt * RATIO
+#let FONT-16PT = 16pt * RATIO
+#let FONT-18PT = 18pt * RATIO
+#let FONT-76PT = 76pt * RATIO
+#let FONT-100PT = 100pt * RATIO
+#let SIZE-2CM = 2cm * RATIO
+#let INSET-5PT = 5pt * RATIO
+#let INSET-10PT = 10pt * RATIO
+#let v-height-toc = -6.25mm * RATIO
 
 // https://github.com/typst/typst/issues/2196 -- recursively join content into string
 #let to-string(content) = {
@@ -152,7 +187,7 @@
       } else {
         // check the position of the next-subsection-pos on the page.
         // If its y-position is further away than about ` y : 100pt `, we call on the next subsection to be filled in
-        if next-subsection-pos.y < 100pt {
+        if next-subsection-pos.y < FONT-100PT {
            place-next-subsection(loc)
         } else { 
           place-current-subsection(loc)
@@ -182,16 +217,18 @@
 //    weight: "light",
 //    font: "Cormorant Garamond",
     weight: "regular", // standard typst font is probably best font, also smallest font and is well-readable
-    size: 11pt,
+    size: FONT-11PT,
   )
   set align(left)
   set page(
-    paper: "a4",
+//    paper: PAGEFORMAT, // original format
+    width: PAGEWIDTH, // reformatted
+    height: PAGEHEIGHT, // reformatted
     margin: (
-      left: 2cm,
-      right: 2cm,
-      top: 2cm,
-      bottom: 2cm,
+      left: SIZE-2CM,
+      right: SIZE-2CM,
+      top: SIZE-2CM,
+      bottom: SIZE-2CM,
     ),
     header: make-headernotes(colour),
     numbering: numbering(pagenumbers, 1),
@@ -217,22 +254,22 @@
 #let headingstate = state("headingcount", 1)
 
 #let prelude_heading(body, colour) = {
-    text(body.body, size: 18pt, font: "Roboto", colour, weight: "medium")
+    text(body.body, size: FONT-18PT, font: "Roboto", colour, weight: "medium")
 }
 #let prelude_subheading(body, colour) = {
-    text(body.body, size: 14pt, font: "Roboto", colour, weight: "light")
+    text(body.body, size: FONT-14PT, font: "Roboto", colour, weight: "light")
 }
 
 #let headingL1(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 18pt, weight: "regular")
+  set text(font: "Roboto", colour, size: FONT-18PT, weight: "regular")
   set align(left)
 
   // Place title
   box(width: 85%, upper(element.body))
 
   if element.outlined { // if the element is not in the outline() (ToC)
-    place(top + right, text(headingstate.display(), size: 76pt))
+    place(top + right, text(headingstate.display(), size: FONT-76PT))
   }
   headingstate.update(x => x + 1)
 
@@ -240,7 +277,7 @@
 
 #let headingL2(element, colour) = {
 
-  set text(font: "Roboto", colour, size: 16pt, weight: "regular")
+  set text(font: "Roboto", colour, size: FONT-16PT, weight: "regular")
   set align(left)
   let c = counter(heading).display()
 //  [#c #element.body]
@@ -253,7 +290,7 @@
 #let headingL3(element, colour) = {
 
 
-  set text(font: "Roboto", colour, size: 12pt, weight: "regular")
+  set text(font: "Roboto", colour, size: FONT-12PT, weight: "regular")
   set align(left)
 
   let c = counter(heading).display()
@@ -269,8 +306,7 @@
 #let headingL4(element, colour) = {
 
 
-//  set text(font: "Roboto", colour, size: 11pt, weight: "light")
-  set text(font: "Roboto", colour, size: 12pt, weight: "regular")
+  set text(font: "Roboto", colour, size: FONT-12PT, weight: "regular")
   set align(left)
 
 //  let original = read("../src/svg/chevron-arrow.svg")
@@ -285,8 +321,7 @@
 
 #let headingL5(element, colour) = {
 
-//  set text(font: "Roboto", colour, size: 11pt, weight: "light")
-  set text(font: "Roboto", colour, size: 11pt, weight: "regular")
+  set text(font: "Roboto", colour, size: FONT-11PT, weight: "regular")
   [#element.body]
 }
 
@@ -300,7 +335,7 @@
 
   // Outlines the table of contents
   outline(
-    title: text("CONTENTS\n", size: 18pt, font: "Roboto", colour),
+    title: text("CONTENTS\n", size: FONT-18PT, font: "Roboto", colour),
     depth: 3,
     fill: repeat("  .  "), // optionally, fill in blank space
     indent: 1em, // `auto`  only works with numbered headers
@@ -310,31 +345,13 @@
 
 #let format-entries(element) = { 
 
-//  if element.element.numbering == none {
-//    text(element, font: "Roboto", colourPalette.fountain)
-//  } else if element.element.level == 1 {
-//    text(element, font: "Roboto", colourPalette.fountain)
   if element.element.level == 1 {
     text(element, font: "Roboto", colourPalette.lightblueslate)
-//    let string = to-string(element.body).at(0)
-//    if string == "1" {
-//      text(element, font: "Roboto", colourPalette.darkpurple)
-//    } else if string == "2" {
-//      text(element, font: "Roboto", colourPalette.darkrose)
-//    } else if string == "3" {
-//      text(element, font: "Roboto", colourPalette.fountain)
-//    } else if string == "4" {
-//      text(element, font: "Roboto", colourPalette.myrtlegreen)
-//    } else if string == "5" {
-//      text(element, font: "Roboto", colourPalette.yellow)
-//    } else if string == "6" {
-//      text(element, font: "Roboto", colourPalette.roseorange)
-//    }
   } else {
     text(element, font: "Roboto")
 
   }
-  v(-6.5mm)
+  v(v-height-toc) // need to revise this for other layouts
 }
 
 //! 
@@ -391,7 +408,7 @@
 //    fill: rgb(..lightColour), // unpack array into the rgb() function
     fill: pat,
     radius: 2pt,
-    inset: 10pt,
+    inset: INSET-10PT,
     // body
     text(fill: colourPalette.blueslate, contents)
   )
@@ -477,8 +494,8 @@
 #let make-quote(content, author) = {
 
   set align(center)
-  author = text("~ " + author + " ~", style: "italic", size: 10pt)
-  content = text("\" " + content + " \"", size: 12pt)
+  author = text("~ " + author + " ~", style: "italic", size: FONT-10PT)
+  content = text("\" " + content + " \"", size: FONT-12PT)
 
   let lightColour = colourPalette.lightblueslate.components()
   lightColour.at(3) = 50% // set alpha to 30%
@@ -496,7 +513,8 @@
         bottom: rgb(..lightColour),
         right: rgb(..lightColour),
         ),
-      inset: 0.75em
+//      inset: 0.75em
+      inset: INSET-10PT
     )
   )
 
@@ -530,7 +548,7 @@
     width: 100%,
     fill: rgb(..lightColour), // unpack array into the rgb() function
     radius: 2pt,
-    inset: 10pt,
+    inset: INSET-10PT,
     breakable: false,
     content
   )

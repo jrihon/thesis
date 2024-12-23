@@ -230,7 +230,8 @@
   let bibyml = yaml(biblio.bibyml)
 
   set par(leading: 0.5em)
-  set text(size: 8pt)
+//  set text(size: 8pt) // original
+  set text(size: 8pt * 0.7925)
 
   let basename = basename_yml(biblio.bibyml)
 

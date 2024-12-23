@@ -2,6 +2,7 @@
 #import "../../lib/multi-bib.typ": mcite
 #import "bib_01_chapter.typ": biblio
 #import "@preview/tablex:0.0.8": tablex
+#import "../../lib/layout.typ": INSET-5PT
 
 #show "SICodeExamples" : [#link("https://github.com/jrihon/puckepy/blob/main/docs/documentation.md")[https://github.com/jrihon/puckepy/blob/main/docs/documentation.md]]
 == Result & Discussion
@@ -121,6 +122,7 @@ The geometry optimisation experiment with hfq finished around the 30 h mark and 
 #figure(
   supplement: [Table],
   tablex(
+    inset: INSET-5PT,
     columns: 5,
     map-cells: cell => (..cell, content: text(cell.content, size: 10pt)),
     stroke: 0.5pt + colourPalette.lightblueslate,

@@ -38,7 +38,7 @@
 // we need to add the figure formatting after the prelude and page counting update
 //
 // Format figure captions for the entire document
-#show figure.caption: set text(font: "Liberation Sans", size: FONT-8PT, style: "italic")
+#show figure.caption: set text(font: "Liberation Sans", size: 8pt, style: "italic")
 #show figure.caption: set align(left)
 #show: set figure(numbering: num => figure-numbering(num))
 

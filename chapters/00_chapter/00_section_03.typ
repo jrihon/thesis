@@ -383,8 +383,9 @@ their equilbrium value (_r#sub("eq")_), meaning they constantly dance around a s
 //and _K#sub(math.theta)_
 // and _θ#sub("eq")_ 
 //and angle bending 
-#grid(fig-bondangle, content-bondangle, columns: (2fr, 1fr), gutter: 1em) #v(-0.5em)
-
+#grid(fig-bondangle, content-bondangle, columns: (1.87fr, 1fr), gutter: 1em) #v(-0.5em) //FORMAT
+//#grid(fig-bondangle, content-bondangle, columns: (1.87fr, 1fr), gutter: 1em) #v(-0.5em)
+//
 $
 E_("bondstretch") = sum_("bonds") K_("r") (r - r_("eq"))^2 #h(1em) | #h(1em) E_("anglebend") = sum_("angles") K_(theta) (theta - theta_("eq"))^2
 $ <eq-ballspring>

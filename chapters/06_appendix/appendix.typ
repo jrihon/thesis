@@ -1,7 +1,7 @@
 //#import "../../lib/multi-bib.typ": mcite
 #import "../../lib/colours.typ": colourPalette
 #import "@preview/tablex:0.0.8": tablex, rowspanx, colspanx
-//#import "bib_06_chapter.typ": biblio
+#import "../../lib/layout.typ": FONT-11PT, INSET-5PT
 
 #show "hf3c": "HF-3c"
 #show "mp2q": [MP2#super("Q")]
@@ -94,8 +94,9 @@
 #figure(
   supplement: [Appendix],
   tablex(
+    inset: INSET-5PT,
     columns: 7,
-    map-cells: cell => (..cell, content: text(cell.content, size: 11pt)),
+    map-cells: cell => (..cell, content: text(cell.content, size: FONT-11PT)),
     stroke: 0.5pt + colourPalette.lightblueslate,
     // Header
 [*Sequence*] , [*RMSD #super($kappa$)*] , [*$Delta$tilt #super($lambda$)*] , [*$Delta$roll #super($lambda$)*] , [*$Delta$twist #super($lambda$)*] , [*NAB#super($kappa$) trj.*] , [*Ducque#super($kappa$) trj.*] ,
@@ -137,8 +138,9 @@ colspanx(7)[],
 #figure(
   supplement: [Appendix],
   tablex(
+    inset: INSET-5PT,
     columns: 5,
-    map-cells: cell => (..cell, content: text(cell.content, size: 11pt)),
+    map-cells: cell => (..cell, content: text(cell.content, size: FONT-11PT)),
     stroke: 0.5pt + colourPalette.lightblueslate,
     // Header
     rowspanx(2)[*Backbone*]        , colspanx(2)[#align(center)[*RNA::MNA*]], ()                                , colspanx(2)[#align(center)[*RNA::RNA*]] , () ,
@@ -163,8 +165,9 @@ colspanx(7)[],
 #figure(
   supplement: [Appendix],
   tablex(
+    inset: INSET-5PT,
     columns: 5,
-    map-cells: cell => (..cell, content: text(cell.content, size: 11pt)),
+    map-cells: cell => (..cell, content: text(cell.content, size: FONT-11PT)),
     stroke: 0.5pt + colourPalette.lightblueslate,
     // Header
     rowspanx(2)[*Backbone*]        , colspanx(2)[#align(center)[*RNA::RNA $chi_(189)$*]], ()                                , colspanx(2)[#align(center)[*RNA::RNA $chi_(194)$*]] , () ,

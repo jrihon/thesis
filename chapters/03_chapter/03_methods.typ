@@ -1,4 +1,4 @@
-#import "../../lib/layout.typ": headingL5, pdb-code
+#import "../../lib/layout.typ": headingL5, pdb-code, FONT-10PT, FONT-9PT, FONT-11PT, INSET-5PT
 #import "../../lib/multi-bib.typ": mcite
 #import "../../lib/colours.typ": colourPalette
 #import "bib_03_chapter.typ": biblio
@@ -22,9 +22,9 @@ The following laboratory experiments have been extensively detailed in Schofield
 Sequences of the original _Lys-S8-19_ aptamer, hereafter HAPT (referring to its size of 50 nucleotides) were shortened on head and tail ends, to search for the motif with the maximum potential. Enzymatic processing employed the HNA polymerase with the usage of specifically designed DNA templates with in-house synthesised hNTPs #mcite(("Lagoja2003HNAsynthesis"), biblio).
 Truncated HNA aptamers were subjected to a Surface Plasmon Resonance (SPR) study #mcite(("Homola2008SPR", "Rubio2016SPR"), biblio). To highlight, SPR is a label-free, optical detection method for the binding affinity and kinetics of molecular interactions. Elaborating further, a solid gold plate contains excitable electrons. Upon pointing a polarised light source at this gold plate, electrons will absorb some of the emitted energy. A detector can measure the loss of intensity and the refracted angle of the outgoing light. In this particular experiment, the HEL enzyme is affixed to the gold plate, where this plate is in direct contact with a glass sheet that allows for reflection of the incoming light. Binding of the ligand (the truncated aptamers) to the stationary protein will influence the behaviour of the electrons in the plate. Subsequent application of polarised light onto the surface will return a difference in angle (Refractive Index) and intensity. This change can be measured and directly correlated with dissociation constants, giving us information on kinetics and affinity. This methodology makes it possible to measure the rate of interaction with the various aptamers against the HEL enzyme. As a result, the Core-14#super("38") and Core-13#super("33") (@tbl-aptamerSequences) showed longer retention and enhanced affinity towards the enzyme. A BioLayer Interferometry (BLI) study confirmed a binding affinity of 31nM for the HAPT #mcite(("Schofield2023HNAaptamer"), biblio).
 
-#show table.cell.where(y: 1): set text(size: 9pt)
-#show table.cell.where(y: 2): set text(size: 9pt)
-#show table.cell.where(y: 3): set text(size: 9pt)
+#show table.cell.where(y: 1): set text(size: FONT-9PT)
+#show table.cell.where(y: 2): set text(size: FONT-9PT)
+#show table.cell.where(y: 3): set text(size: FONT-9PT)
 #let tag1(name) = table.cell(text(fill: rgb("#fff6d4").darken(30%), name))
 #let tag3(name) = table.cell(text(fill: rgb("#dbcee6").darken(30%), name))
 #let core(name) = table.cell(align(center, name))
@@ -32,11 +32,12 @@ Truncated HNA aptamers were subjected to a Surface Plasmon Resonance (SPR) study
 #figure(
   supplement: [Table],
   tablex(
+    inset: INSET-5PT,
     columns: 6,
     map-cells: cell => {
     if cell.y > 0  {
       cell.content = {
-        set text(size: 9pt)
+        set text(size: FONT-9PT)
         cell.content // also return the cell content
       }
     }

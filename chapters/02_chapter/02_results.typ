@@ -1,6 +1,7 @@
 #import "../../lib/multi-bib.typ": mcite
 #import "../../lib/colours.typ": colourPalette
 #import "bib_02_chapter.typ": biblio
+#import "../../lib/layout.typ": FONT-10PT, INSET-5PT
 
 // https://github.com/PgBiel/typst-tablex/
 #import "@preview/tablex:0.0.8": tablex, colspanx
@@ -109,8 +110,9 @@ A third experiment was performed with the dXyNA homoduplex. The dXyNA homoduplex
 #figure(
   supplement: [Table],
   tablex(
+    inset: INSET-5PT,
     columns: 6,
-    map-cells: cell => (..cell, content: text(cell.content, size: 10pt)),
+    map-cells: cell => (..cell, content: text(cell.content, size: FONT-10PT)),
     stroke: 0.5pt + colourPalette.lightblueslate,
     // Header
 //    [Conformer]  , [mA#super($diamond.filled$)] , [mG#super($diamond.filled$)] , [mC#super($diamond.filled$)] , [mT#super($diamond.filled$)] , [$(theta, phi_2)$],
@@ -207,8 +209,9 @@ As this obvious abnormality is attributable to an odd occurrence of the simulati
   placement: top,
   supplement: [Table],
   tablex(
+    inset: INSET-5PT,
     columns: 3, 
-    map-cells: cell => (..cell, content: text(cell.content, size: 10pt)),
+    map-cells: cell => (..cell, content: text(cell.content, size: FONT-10PT)),
     stroke: 0.5pt + colourPalette.lightblueslate,
 
     // Header 1
