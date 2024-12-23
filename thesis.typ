@@ -25,12 +25,18 @@
 // style link elements as a different colour
 #show link: element => style_href(element, colour00)
 
+// to make the first page of the first chapter appear on the righthand side
+#pagebreak()
+#pagebreak(to: "odd")
+
 //!
 //!
 //! CHAPTER 00 : Introduction
 //!
 //!
 #show: document => layout(document, "1", "1.1.1", colour00)  // Set page counter to arabic numbers
+
+
 #counter(page).update(1)                // Reset page counters
 
 //
@@ -56,6 +62,10 @@
 // Include manuscript
 #include {"./chapters/00_chapter/mod.typ"} 
 
+
+// to make the first page of the second chapter appear on the righthand side
+#pagebreak()
+#pagebreak(to: "odd")
 //!
 //!
 //! CHAPTER 01: PUCKERS
@@ -65,6 +75,9 @@
 // Include manuscript
 #include {"./chapters/01_chapter/mod.typ"} 
 
+// to make the first page of the third chapter appear on the righthand side
+#pagebreak()
+#pagebreak(to: "odd")
 //!
 //!
 //! CHAPTER 02: DUCQUE
@@ -73,6 +86,9 @@
 // Include manuscript
 #include {"./chapters/02_chapter/mod.typ"} 
 
+// to make the first page of the fourth chapter appear on the righthand side
+#pagebreak()
+#pagebreak(to: "odd")
 //!
 //!
 //! CHAPTER 03: APTAMER
@@ -91,6 +107,8 @@
 // Include manuscript
 //#include {"./chapters/04_chapter/mod.typ"} 
 
+// to make the first page of the fifth chapter appear on the righthand side
+#pagebreak()
 //!
 //!
 //! CHAPTER 05: CONCLUSION
@@ -100,6 +118,8 @@
 #include {"./chapters/05_chapter/mod.typ"} 
 
 
+// to make the first page of the appendix appear on the righthand side
+#pagebreak()
 //!
 //!
 //! APPENDIX

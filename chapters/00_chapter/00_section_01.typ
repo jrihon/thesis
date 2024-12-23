@@ -98,7 +98,7 @@ This specific chain of amino acids will then be accepted by a machinery to be //
   ) <fig-centraldogma>
 ]
 
-#grid(content-dogma, figure-dogma, columns: (1fr, 1.5fr), gutter: 1em) #v(-0.65em)
+#grid(content-dogma, figure-dogma, columns: (1fr, 1.4fr), gutter: 1em) #v(-0.65em)
 processed and folded into a protein suitable to handle the incoming physiological signals. 
 A third division can be made for RNA molecules who provide a necessary functioning to the cell.
 

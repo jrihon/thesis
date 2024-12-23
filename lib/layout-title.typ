@@ -1,9 +1,11 @@
 #import "colours.typ": colourPalette
+#import "layout.typ": FONT-10PT, FONT-14PT, FONT-20PT 
+
 // Place affiliations
 #let affiliations(content) = {
   place(
     top + left,
-    text(content, size: 10pt)
+    text(content, size: FONT-10PT)
   )
 }
 
@@ -20,7 +22,7 @@
 
 #let set_title(title) = {
   text(title,
-    size: 20pt,
+    size: FONT-20PT,
     weight: "bold",
     colourPalette.jet
   )
@@ -28,13 +30,13 @@
 
 #let set_name(name) = {
   text(name,
-    size: 14pt,
+    size: FONT-14PT,
   )
 }
 
 #let set_date(date) = {
   align(center,
-    text(date, size: 10pt),
+    text(date, size: FONT-10PT),
   )
 }
 

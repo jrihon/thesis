@@ -142,7 +142,7 @@ With this in mind, we can use the wave function to our advantage.
     ]
   ) <fig-1d-phisquared>
 ]
-#grid(content-1d-distr, figure-1d-distr, columns: (2fr, 1fr), gutter: 1em) #v(-0.5em)
+#grid(content-1d-distr, figure-1d-distr, columns: (2fr, 0.9fr), gutter: 1em) #v(-0.5em)
 It has the particular property that when squaring ($Psi^2$), we get the probability distribution of the whereabouts of an electron (@fig-1d-phisquared). This is applied by taking the complex conjugate ($Psi ^*$) of the wave function and apply the dot product to the original wave function ($Psi$). 
 $
 angle.l Psi bar.v Psi angle.r = integral^(+ infinity)_(- infinity) Psi^* (x) Psi (x) d x = 1
@@ -300,7 +300,7 @@ $<eq-h-fock-full>
 
 As stated before, the HF method does not explicitly deal with electron correlation when optimising for orbitals and hence minimising the uncertainty of the location of the electron. This is a significant caveat to the methodology. The two-electron operators in @eq-h-fock-full concern themselves with the average position of the respective electrons, which means that for overlapping orbitals it cannot be excluded that two electrons occupy the same position in space, which is an unrealistic outcome. While the HF method is still serving as a major contributions to the successes in QM, we can be more precise when it comes to treating electronic interactions. 
 
-//#pagebreak()
+#pagebreak()
 //
 //
 ==== Density Functional Theory (DFT)
@@ -498,7 +498,7 @@ Keeping consistent with the symbols, the $r_("ij")$ //parameter represents the d
     ]
   ) <fig-lennardjones>
 ]
-#grid(content-lj, fig-lj, columns: (1fr, 1.25fr), column-gutter: 1em) #v(-0.5em)
+#grid(content-lj, fig-lj, columns: (1fr, 1.0fr), column-gutter: 1em) #v(-0.5em)
 parameter represents the distance between the two atoms $i$ and $j$.
 The $R_("min,ij")$ is the optimal distance between two atoms where the Lennard-Jones potential is at its minimum at a well depth $epsilon_("ij")$.
 To give a physical representation, we can think of the $R_("min,ij")$  and $epsilon_("ij")$ parameters as a link to Van der Waals radii of the atoms #mcite(("Li2015ljpotential", "Sengupta2021ljpotential"), biblio). 

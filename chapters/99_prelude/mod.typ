@@ -1,5 +1,5 @@
 
-#include {"cover.typ"}
+//#include {"cover.typ"}
 #include {"titlepage.typ"}
 #include {"acknowledgments.typ"}
 #include {"abstract.typ"}

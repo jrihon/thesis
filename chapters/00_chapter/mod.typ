@@ -1,9 +1,8 @@
 // Main file of Chapter 00
 #import "../../lib/colours.typ": colourPalette
-#import "../../lib/layout.typ": boxed-text, make-quote
+#import "../../lib/layout.typ": boxed-text, make-quote, FONT-10PT
 #import "../../lib/multi-bib.typ": mbibliography
 #import "bib_00_chapter.typ": biblio
-
 
 =  General introduction
 
@@ -26,7 +25,7 @@
 //    fill: rgb(..lightColour), // unpack array into the rgb() function
     fill: pat,
     radius: 2pt,
-    inset: 10pt,
+    inset: FONT-10PT,
     // body
     text(fill: colourPalette.blueslate, contents)
   )

@@ -94,7 +94,7 @@
 #figure(
   supplement: [Appendix],
   tablex(
-    inset: INSET-5PT,
+    inset: 3.1pt,
     columns: 7,
     map-cells: cell => (..cell, content: text(cell.content, size: FONT-11PT)),
     stroke: 0.5pt + colourPalette.lightblueslate,

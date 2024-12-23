@@ -11,6 +11,7 @@
 //#let FONT-14PT = 14pt
 //#let FONT-16PT = 16pt
 //#let FONT-18PT = 18pt
+//#let FONT-20PT = 20pt
 //#let FONT-76PT = 76pt
 //#let FONT-100PT = 100pt
 //#let SIZE-2CM = 2cm
@@ -30,6 +31,7 @@
 #let FONT-14PT = 14pt * RATIO
 #let FONT-16PT = 16pt * RATIO
 #let FONT-18PT = 18pt * RATIO
+#let FONT-20PT = 20pt * RATIO
 #let FONT-76PT = 76pt * RATIO
 #let FONT-100PT = 100pt * RATIO
 #let SIZE-2CM = 2cm * RATIO
@@ -106,6 +108,21 @@
 
     // get current page
     let currentpage = loc.page()
+
+    // hardcoded aspect. If page is equal to one of these, then return as well.
+    // These are inserted whitepages for printing purposes
+    // Returns the page number for this location.
+    // Note that this does not return the value of the page counter at this location, but the true page number (starting from one).
+    // available empty pages
+    for pg in (51, 52, 65, 66, 85, 86, 96, 102) {
+      // if the current page is empty
+      if pg == currentpage { 
+        // Place a line but ...
+        line(length: 100%, stroke: colour)
+        // ... do not add any headers
+        return 
+      }
+    }
 
     // get the pages containing all the `level: 1` headings and find their pages
     let nextheading-L1 = query(heading.where(level: 1), loc)

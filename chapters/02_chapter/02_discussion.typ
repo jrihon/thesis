@@ -1,7 +1,7 @@
 #import "../../lib/multi-bib.typ": mcite
 #import "bib_02_chapter.typ": biblio
 // https://github.com/ntjess/wrap-it
-#import "@preview/wrap-it:0.1.0": wrap-content
+//#import "@preview/wrap-it:0.1.0": wrap-content
 
 
 == Discussion
@@ -23,7 +23,7 @@ The latter is part of the AMBER toolkit and requires other AMBER programs (like 
 Produced initial models are highly similar for both model builders and provided the same results in a subsequent MD simulation in standard force fields of AMBER. In contrast to NAB, Ducque is not limited to ribose based nucleic acids. Low energy conformations for non-ribose based nucleosides with hexitol and xylose sugars were included in the Ducque library, among others, and served to build nucleic acid duplexes for which //MD simulations could be performed using a parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
 ]
 //#wrap-content(ion-bb-fig, ionbbcontent)
-#wrap-content(ion-bb-fig, ionbbcontent, align: right)
+#grid(ionbbcontent, ion-bb-fig, columns: (1.1fr, 1fr), column-gutter: 1em)
 #v(-0.5em)
 MD simulations could be performed using newly parametrised force fields within AMBER #mcite(("Schofield2023hnaaptamer", "Mattelaer2021dxylose"), biblio).
 

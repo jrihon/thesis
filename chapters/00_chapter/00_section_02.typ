@@ -75,7 +75,7 @@ The ribose sugar is the most notable five-membered ring we find in nature as it 
     ]
   )<fig-fivering>
 ]
-#grid(content-fivering, figure-fivering, columns: (1fr, 1.5fr), gutter: 1em) #v(-0.5em)
+#grid(content-fivering, figure-fivering, columns: (1fr, 1.4fr), gutter: 1em) #v(-0.5em)
 //chemistry favours the #super("2")T#sub("3") conformation,
 while RNA adopts #super("3'")T#sub("2'") under normal conditions.
 This proclivity for a specific conformer of the sugar ring ultimately defines the shape of NA helices. These structures are recognised by processing enzymes, whose interactions are driven by the fact that these enzymes only accept specific shapes of duplexes. The 2_'_-OH in RNA supplements the interactions with the enzyme further.
@@ -168,7 +168,7 @@ Like five-membered rings, these six-membered rings are categorised into differen
 ) <fig-sixring>
 ]
 
-#grid(content-sixring, figure-sixring, columns: (1fr, 1fr), gutter: 1em) #v(-0.5em)
+#grid(content-sixring, figure-sixring, columns: (1fr, 0.95fr), gutter: 1em) #v(-0.5em)
 //encounter the _Skew_ configuration (#super("Z")S#sub("X")), also labeled a _half-boat_. As to the five- membered ring, the six-membered ring includes the _Envelope_ (E#super("Z")) and the _Twist_  (#super("Z")T#sub("Y")) in its repertoire (@fig-sixring A.). While the T-conformer is more commonly referred to as a _half-chair_, it makes much 
 more sense to assign it as a _Twist_, as with both five- and six-membered rings this defines a configuration where two consecutive atoms are displaced out-of-plane in opposite directions.
 
@@ -205,7 +205,7 @@ Here, a coordinate on a globe can reflect the puckering of a six-membered ring (
 The rest of the research papers makes use of calculating the potential energy of a variety of conformations, by relating ring-bending parameters derived from vibrational spectra. The result is a Potential Energy Surface (PES) where we can observe transition states //and energy difference in between the puckering modes in a single figure. 
 ]
 
-#grid(content-sp, figure-sp, columns: (2fr, 1fr), gutter: 1em) #v(-0.5em)
+#grid(content-sp, figure-sp, columns: (2fr, 0.9fr), gutter: 1em) #v(-0.5em)
 and energy difference in between the puckering modes in a single figure. 
 
 //
