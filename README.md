@@ -2,6 +2,8 @@
 
 ## My PhD thesis
 
+DISCLAIMER : This thesis version has specifically been formatted for printing the thesis booklets! Go to the main branch for the `A4` formatted version.
+
 All formatting has been personally designed and coded in the `typst` language.
 This thesis employs [multi-bibs](https://github.com/jrihon/multi-bibs), a library I wrote to support multiple bibliographies using the `typst` language.
 
