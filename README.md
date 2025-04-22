@@ -83,6 +83,23 @@ Rihon, J., Lescrinier, E., Bernardes Pinheiro, V., & Froeyen, M. (2024). Molecul
 }
 ```
 
+##### Cite the pucke.rs paper
+```bib 
+@article{Rihon_2025,
+    title={The pucke.rs toolkit to facilitate sampling the conformational space of biomolecular monomers},
+    volume={17},
+    ISSN={1758-2946},
+    url={http://dx.doi.org/10.1186/s13321-025-00977-7},
+    DOI={10.1186/s13321-025-00977-7},
+    number={1},
+    journal={Journal of Cheminformatics},
+    publisher={Springer Science and Business Media LLC},
+    author={Rihon, Jérôme and Reynders, Sten and Bernardes Pinheiro, Vitor and Lescrinier, Eveline},
+    year={2025},
+    month=apr
+}
+``` 
+
 ##### Cite the HNA aptamer paper
 ```bib 
 @article{Schofield_2023,
